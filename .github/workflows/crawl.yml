@@ -1,0 +1,39 @@
+name: 공지사항 크롤링 스케줄러
+
+on:
+  schedule:
+    # 매일 오전 6시(KST) = UTC 21시에 크롤링 실행
+    - cron: "0 21 * * *"
+  workflow_dispatch:  # 수동 실행도 가능
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Python 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: 의존성 설치
+        run: pip install -r requirements.txt
+
+      - name: Playwright 브라우저 설치
+        run: playwright install chromium
+
+      - name: 공지사항 크롤링
+        run: python -m crawler.hansung_pw --pages 5 --output data/crawled_notices.json
+
+      - name: 데이터 적재
+        run: python scripts/ingest.py --json-path data/crawled_notices.json
+
+      - name: 변경사항 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/crawled_notices.json
+          git diff --cached --quiet || git commit -m "chore: 공지사항 자동 크롤링 업데이트 $(date +'%Y-%m-%d')"
+          git push
