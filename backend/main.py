@@ -134,7 +134,7 @@ async def query(request: QueryRequest):
 
     start = time.time()
     try:
-        result = rag_instance.query(request.question)
+        result = rag_instance.query(request.question, top_k=request.top_k)
     except Exception as e:
         logger.error("RAG 질의 실패: %s", str(e))
         raise HTTPException(status_code=500, detail=f"질의 처리 실패: {str(e)}")

@@ -10,7 +10,7 @@ import logging
 from langchain_core.documents import Document
 from langchain_core.language_models import BaseLLM
 from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
+from langchain_core.runnables import RunnableLambda
 
 import config
 from core.embedder import get_chroma_vectorstore
@@ -81,13 +81,18 @@ class CampusRAG:
             tokenizer=tokenizer,
             max_new_tokens=config.LOCAL_LLM_MAX_NEW_TOKENS,
             return_full_text=False,  # 프롬프트 제외, 생성 텍스트만 반환
-            do_sample=True,
-            temperature=0.4,
-            top_p=0.9,
+            do_sample=False,
             repetition_penalty=1.2,
         )
 
-        return HuggingFacePipeline(pipeline=pipe)
+        def chat_prompt(prompt):
+            return tokenizer.apply_chat_template(
+                [{"role": "user", "content": prompt.to_string()}],
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+
+        return RunnableLambda(chat_prompt) | HuggingFacePipeline(pipeline=pipe)
 
     def _load_gemini_llm(self) -> BaseLLM:
         """Google Gemini API를 LLM으로 로드한다."""
@@ -123,16 +128,7 @@ class CampusRAG:
 
     def _build_chain(self):
         """LangChain LCEL 체인을 구성한다."""
-        chain = (
-            {
-                "context": self.retriever | format_retrieved_docs,
-                "question": RunnablePassthrough(),
-            }
-            | RAG_PROMPT
-            | self.llm
-            | StrOutputParser()
-        )
-        return chain
+        return RAG_PROMPT | self.llm | StrOutputParser()
 
     def retrieve(self, query: str, top_k: int | None = None) -> list[Document]:
         """
@@ -152,7 +148,7 @@ class CampusRAG:
         logger.info("검색 결과: %d건", len(results))
         return results
 
-    def query(self, question: str) -> dict:
+    def query(self, question: str, top_k: int | None = None) -> dict:
         """
         RAG 전체 파이프라인을 수행한다.
         유사도 검색 → LLM 생성 → 요약 응답 + 출처 정보 반환.
@@ -175,10 +171,25 @@ class CampusRAG:
         logger.info("RAG 질의: '%s'", question)
 
         # 출처 정보를 별도로 가져옴
-        sources = self.retrieve(question)
+        sources = self.retrieve(question, top_k=top_k)
 
         # LLM 체인으로 답변 생성
-        answer = self.chain.invoke(question)
+        if not sources:
+            return {"answer": "관련 공지를 찾지 못했습니다.", "sources": []}
+        if all(doc.metadata.get("content_status") == "title_only" for doc in sources):
+            # 이미지 공지에 본문이 없으면 LLM이 일정 등을 지어내지 않도록 안내한다.
+            first = sources[0].metadata
+            answer = (
+                f"검색된 공지 {len(sources)}건이 있습니다: 「{first.get('title', '')}」 "
+                f"({first.get('date', '')}, {first.get('source', '')}).\n"
+                "수집된 정보가 제목뿐이므로 신청 기간 등 세부 내용을 확인할 수 없습니다. "
+                "아래 원문 보기에서 이미지·첨부파일을 확인해 주세요."
+            )
+        else:
+            answer = self.chain.invoke({
+                "question": question,
+                "context": format_retrieved_docs(sources),
+            })
 
         return {
             "answer": answer,

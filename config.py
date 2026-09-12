@@ -18,6 +18,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
 CHROMA_PERSIST_DIR = str(DATA_DIR / "chroma_db")
+NOTICES_PATH = str(DATA_DIR / "crawled_notices.json")
 SAMPLE_NOTICES_PATH = str(DATA_DIR / "sample_notices.json")
 
 # ──────────────────────────────────────────────

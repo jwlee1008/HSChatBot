@@ -5,6 +5,7 @@ JSON 형태의 공지사항 데이터를 읽어 벡터 임베딩을 생성하고
 Chroma DB에 적재하는 기능을 담당한다.
 """
 
+import hashlib
 import json
 import logging
 from pathlib import Path
@@ -53,6 +54,7 @@ def load_notices_from_json(json_path: str) -> list[Document]:
             "category": notice["category"],
             "date": notice["date"],
             "url": notice["url"],
+            "content_status": notice.get("content_status", "title_only" if notice["content"].strip() == notice["title"].strip() else "text"),
         }
         documents.append(Document(page_content=page_content, metadata=metadata))
 
@@ -64,6 +66,7 @@ def ingest_to_chroma(
     documents: list[Document],
     persist_directory: str | None = None,
     collection_name: str | None = None,
+    replace: bool = False,
 ) -> Chroma:
     """
     Document 리스트를 Chroma DB에 임베딩하여 적재한다.
@@ -87,12 +90,25 @@ def ingest_to_chroma(
         col_name,
     )
 
-    vectorstore = Chroma.from_documents(
-        documents=documents,
-        embedding=embeddings,
+    if not documents:
+        raise ValueError("빈 데이터로 기존 DB를 교체할 수 없습니다.")
+    vectorstore = Chroma(
+        embedding_function=embeddings,
         persist_directory=persist_dir,
         collection_name=col_name,
     )
+    # URL이 동일한 고정 공지/재수집 공지는 하나의 문서로 upsert한다.
+    unique = {}
+    for doc in documents:
+        key = doc.metadata.get("url") or doc.metadata["id"]
+        doc_id = hashlib.sha256(key.encode()).hexdigest()
+        unique[doc_id] = doc
+    old_ids = set(vectorstore.get()["ids"]) if replace else set()
+    vectorstore.add_documents(list(unique.values()), ids=list(unique))
+    # 신규 적재 성공 후에만 이전 샘플/중복/수집 범위 밖 문서를 제거한다.
+    stale_ids = old_ids - unique.keys()
+    if stale_ids:
+        vectorstore.delete(ids=list(stale_ids))
 
     logger.info("Chroma DB 적재 완료: %d건", len(documents))
     return vectorstore

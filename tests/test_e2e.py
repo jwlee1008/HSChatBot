@@ -16,6 +16,8 @@ FastAPI 백엔드 + Streamlit 프론트엔드 모두 실행 중이어야 한다.
 import subprocess
 import sys
 import time
+from urllib.error import URLError
+from urllib.request import urlopen
 from pathlib import Path
 
 import pytest
@@ -24,39 +26,57 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 
 @pytest.fixture(scope="module")
-def servers():
-    """백엔드 + 프론트엔드 서버를 기동하고 테스트 후 종료한다."""
-    venv_python = str(Path(__file__).resolve().parent.parent / ".venv" / "bin" / "python")
-
-    # 백엔드 서버 기동
-    backend = subprocess.Popen(
-        [venv_python, "-m", "uvicorn", "backend.main:app", "--port", "8000"],
-        cwd=str(Path(__file__).resolve().parent.parent),
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-    )
-
-    # 프론트엔드 서버 기동
-    frontend = subprocess.Popen(
-        [
-            venv_python, "-m", "streamlit", "run", "frontend/app.py",
-            "--server.port", "8501", "--server.headless", "true",
-        ],
-        cwd=str(Path(__file__).resolve().parent.parent),
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-    )
-
-    # 서버 기동 대기
-    time.sleep(8)
-
-    yield {"backend": backend, "frontend": frontend}
-
-    # 테스트 후 서버 종료
-    backend.terminate()
-    frontend.terminate()
-    backend.wait(timeout=5)
-    frontend.wait(timeout=5)
+def servers(tmp_path_factory):
+    """현재 Python으로 서버를 실행하고 준비 상태와 실패 로그를 확인한다."""
+    root = Path(__file__).resolve().parent.parent
+    log_dir = tmp_path_factory.mktemp("e2e_servers")
+    commands = {
+        "backend": [sys.executable, "-m", "uvicorn", "backend.main:app", "--port", "8000"],
+        "frontend": [sys.executable, "-m", "streamlit", "run", "frontend/app.py",
+                     "--server.port", "8501", "--server.headless", "true"],
+    }
+    endpoints = {
+        "backend": "http://localhost:8000/health",
+        "frontend": "http://localhost:8501/_stcore/health",
+    }
+    processes = {}
+    logs = {}
+    try:
+        for name, command in commands.items():
+            logs[name] = (log_dir / f"{name}.log").open("w")
+            processes[name] = subprocess.Popen(
+                command, cwd=str(root), stdout=logs[name], stderr=subprocess.STDOUT,
+            )
+        deadline = time.monotonic() + 90
+        pending = set(processes)
+        while pending and time.monotonic() < deadline:
+            for name in list(pending):
+                if processes[name].poll() is not None:
+                    pytest.fail(f"{name} 서버 조기 종료")
+                try:
+                    with urlopen(endpoints[name], timeout=1) as response:
+                        if response.status == 200:
+                            pending.remove(name)
+                except (URLError, TimeoutError):
+                    pass
+            if pending:
+                time.sleep(0.5)
+        if pending:
+            pytest.fail(f"서버 준비 시간 초과: {sorted(pending)}")
+        yield processes
+    finally:
+        for process in processes.values():
+            process.terminate()
+        for process in processes.values():
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+                process.wait(timeout=5)
+        for name, log in logs.items():
+            log.close()
+            # pytest가 실패한 테스트/fixture의 캡처 출력에 로그를 첨부한다.
+            print(f"{name} server log:\n{(log_dir / f'{name}.log').read_text()}")
 
 
 class TestE2EStreamlit:

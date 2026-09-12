@@ -45,7 +45,9 @@ pip install -r requirements.txt
 cp .env.example .env
 # .env 파일에서 필요한 값을 수정
 
-# 5. 샘플 데이터 적재
+# 5. 실제 공지 수집 및 적재
+playwright install chromium
+python -m crawler.hansung_pw --pages 5 --with-content
 python scripts/ingest.py
 
 # 6. 검색 테스트
@@ -88,3 +90,23 @@ MIT License
 ## 👥 팀
 
 한성대학교 캡스톤디자인 프로젝트
+
+## 공지 링크 / 답변 데이터 복구
+
+`data/sample_notices.json`은 테스트용 가상 공지이며 원문 URL은 실제 공지가 아닙니다.
+운영 DB에 샘플을 섞지 마세요. 기본 적재 파일은 `data/crawled_notices.json`입니다.
+기존 샘플과 중복 문서를 정리하려면 서버를 종료하고 `data/chroma_db`를 백업한 뒤 실행하세요.
+
+```bash
+python -m crawler.hansung_pw --pages 5 --with-content
+python scripts/ingest.py --json-path data/crawled_notices.json --replace
+# FastAPI 서버 재시작
+uvicorn backend.main:app --port 8000
+```
+
+`--replace`는 입력 JSON에 없는 기존 문서도 제거하므로, 유지할 공지를 포함한 파일을 사용하세요.
+일반 적재는 URL 기준 upsert로 동일 공지의 본문/메타데이터를 갱신합니다.
+국가장학금은 최신 전체 목록에 없을 수 있어 제목 검색 목록도 수집합니다.
+이미지 전용 공지는 OCR을 하지 않으며, 제목과 원문을 제공하고 세부 내용 확인이 필요함을 안내합니다.
+GitHub Actions에서 생성한 DB는 실행 중인 서버에 자동 전달되지 않습니다.
+갱신된 JSON을 서비스에 반영한 후 적재하고 서버를 재시작해야 합니다.

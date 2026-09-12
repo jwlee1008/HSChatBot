@@ -2,14 +2,15 @@
 한성대학교 공지사항 Playwright 크롤러
 
 JavaScript 렌더링이 필요한 한성대 웹사이트를 Playwright로 크롤링한다.
-BeautifulSoup 기반 크롤러의 한계를 극복하여 동적 페이지를 처리할 수 있다.
 
 사용법:
     python -m crawler.hansung_pw
     python -m crawler.hansung_pw --pages 3 --output data/crawled_notices.json
+    python -m crawler.hansung_pw --pages 3 --with-content  # 상세 본문도 크롤링
 """
 
 import argparse
+import hashlib
 import json
 import logging
 import sys
@@ -17,6 +18,7 @@ import time
 from dataclasses import asdict, dataclass
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urljoin, urlparse, parse_qsl, urlencode, urlunparse
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -37,9 +39,11 @@ class Notice:
     category: str
     date: str
     url: str
+    content_status: str = "title_only"
 
 
 # ── 크롤링 대상 정의 ──────────────────────────
+# 한성대 게시판 URL 구조: /bbs/hansung/{boardId}/artclList.do
 TARGETS = [
     {
         "name": "학교본부",
@@ -47,9 +51,9 @@ TARGETS = [
         "url": "https://www.hansung.ac.kr/bbs/hansung/2127/artclList.do",
     },
     {
-        "name": "대학뉴스",
-        "category": "뉴스",
-        "url": "https://www.hansung.ac.kr/bbs/hansung/2183/artclList.do",
+        "name": "학교본부",
+        "category": "장학",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/artclList.do?findType=sj&findWord=국가장학금",
     },
 ]
 
@@ -57,17 +61,19 @@ TARGETS = [
 class HansungPlaywrightCrawler:
     """Playwright 기반 한성대학교 공지사항 크롤러."""
 
-    def __init__(self, headless: bool = True):
+    BASE = "https://www.hansung.ac.kr"
+
+    def __init__(self, headless: bool = True, with_content: bool = True):
         self.headless = headless
+        self.with_content = with_content
         self.notices: list[Notice] = []
 
-    def crawl_board(
-        self, target: dict, max_pages: int = 3
-    ) -> list[Notice]:
+    def crawl_board(self, target: dict, max_pages: int = 3) -> list[Notice]:
         """게시판 한 개를 크롤링한다."""
         from playwright.sync_api import sync_playwright
 
         notices = []
+        seen_urls = set()
         name = target["name"]
         category = target["category"]
         base_url = target["url"]
@@ -79,106 +85,121 @@ class HansungPlaywrightCrawler:
             page = browser.new_page()
 
             try:
+                # 1단계: 목록 페이지에서 메타데이터 수집
                 for page_num in range(1, max_pages + 1):
-                    url = f"{base_url}?page={page_num}" if page_num > 1 else base_url
-                    logger.info("  페이지 %d 로딩: %s", page_num, url)
+                    parts = urlparse(base_url)
+                    params = dict(parse_qsl(parts.query))
+                    params["page"] = str(page_num)
+                    url = urlunparse(parts._replace(query=urlencode(params)))
+                    logger.info("  페이지 %d 로딩", page_num)
 
-                    page.goto(url, wait_until="networkidle", timeout=15000)
-                    page.wait_for_timeout(1000)  # JS 렌더링 대기
+                    response = page.goto(url, wait_until="networkidle", timeout=15000)
+                    if response is None or not response.ok:
+                        raise RuntimeError(f"목록 HTTP 오류: {url}")
+                    page.wait_for_timeout(1000)
 
-                    # 게시판 행 탐색 — 한성대 공지사항 게시판 구조에 맞게 셀렉터 시도
-                    rows = page.query_selector_all(
-                        "table tbody tr, "
-                        ".board-list-content .board-list-item, "
-                        "._artclTdTitle, "
-                        ".artclList tr, "
-                        "#board-list tbody tr"
-                    )
-
-                    if not rows:
-                        # 대체 셀렉터: 제목 링크를 직접 탐색
-                        rows = page.query_selector_all("a._artclTdTitle, .board-td-title a")
-
+                    rows = page.query_selector_all("table tbody tr")
                     logger.info("  발견된 행: %d개", len(rows))
 
                     for i, row in enumerate(rows):
-                        try:
-                            notice = self._parse_row(page, row, name, category, page_num, i)
-                            if notice:
-                                notices.append(notice)
-                        except Exception as e:
-                            logger.debug("  행 파싱 실패: %s", e)
-                            continue
+                        notice = self._parse_row(row, name, category, page_num, i, base_url)
+                        if notice and notice.url not in seen_urls:
+                            seen_urls.add(notice.url)
+                            notices.append(notice)
 
-                    time.sleep(0.5)  # 서버 부하 방지
+                    time.sleep(0.5)
+
+                # 2단계: 상세 페이지에서 본문 크롤링 (옵션)
+                if self.with_content:
+                    logger.info("  상세 본문 크롤링 시작 (%d건)", len(notices))
+                    for j, notice in enumerate(notices):
+                        if notice.url:
+                            body = self._fetch_detail(page, notice.url)
+                            if body is None:
+                                notice.content_status = "fetch_failed"
+                            elif body:
+                                notice.content = body
+                                notice.content_status = "text"
+                            if (j + 1) % 10 == 0:
+                                logger.info("    %d/%d 완료", j + 1, len(notices))
+                            time.sleep(0.3)
 
             except Exception as e:
                 logger.error("크롤링 오류 (%s): %s", name, e)
             finally:
                 browser.close()
 
+        notices = [n for n in notices if n.content_status != "fetch_failed"]
         logger.info("크롤링 완료: %s — %d건", name, len(notices))
         return notices
 
-    def _parse_row(self, page, row, source: str, category: str, page_num: int, idx: int) -> Notice | None:
-        """게시판 행 하나를 파싱하여 Notice로 반환한다."""
-        # 제목 + 링크 추출
-        title_el = row.query_selector("a") if row.query_selector("a") else row
-        if not title_el:
+    def _parse_row(
+        self, row, source: str, category: str, page_num: int, idx: int, base_url: str | None = None
+    ) -> Notice | None:
+        """게시판 행 하나를 파싱한다."""
+        cells = row.query_selector_all("td")
+        if len(cells) < 5:
             return None
 
-        title = title_el.inner_text().strip()
-        if not title or title in ("제목", "공지", "번호"):
-            return None  # 헤더 행 건너뛰기
+        # td[0]: 번호, td[1]: 제목(링크), td[2]: 작성자, td[3]: 파일, td[4]: 날짜, td[5]: 조회수
+        title_cell = cells[1]
+        link_el = title_cell.query_selector("a")
+        if not link_el:
+            return None
 
-        href = title_el.get_attribute("href") or ""
-        if href and not href.startswith("http"):
-            href = f"https://www.hansung.ac.kr{href}"
+        title = link_el.inner_text().strip()
+        if not title:
+            return None
 
-        # 날짜 추출
-        date_str = ""
-        date_el = row.query_selector("td:nth-child(4), .board-td-date, .artcl-date")
-        if date_el:
-            date_str = date_el.inner_text().strip()
+        href = link_el.get_attribute("href") or ""
+        href = urljoin(base_url or self.BASE, href)
+        if urlparse(href).scheme not in {"http", "https"} or "artclView.do" not in urlparse(href).path:
+            return None
+
+        # 날짜: td.td-date (형식: 2026.09.07)
+        date_str = cells[4].inner_text().strip() if len(cells) > 4 else ""
         date_normalized = self._normalize_date(date_str)
 
-        # 본문은 목록에서 미리보기만 가져옴 (상세 크롤링은 선택)
-        content = title  # 기본값: 제목을 내용으로 사용
+        # 작성자
+        writer = cells[2].inner_text().strip() if len(cells) > 2 else ""
 
-        notice_id = f"{source}-p{page_num}-{idx+1:04d}"
+        # 본문: 기본값은 제목 (상세 본문은 2단계에서 크롤링)
+        content = title
+
+        notice_id = hashlib.sha256(href.encode()).hexdigest()
 
         return Notice(
             id=notice_id,
             title=title,
             content=content,
-            source=source,
+            source=f"{source} ({writer})" if writer else source,
             category=category,
             date=date_normalized,
             url=href,
         )
 
-    def crawl_detail(self, page, url: str) -> str:
-        """공지사항 상세 페이지에서 본문을 크롤링한다."""
+    def _fetch_detail(self, page, url: str) -> str | None:
+        """상세 페이지에서 본문 텍스트를 가져온다."""
         try:
-            page.goto(url, wait_until="networkidle", timeout=10000)
-            page.wait_for_timeout(500)
-
-            content_el = page.query_selector(
-                ".artclView, .board-view-content, "
-                ".view-content, #bo_v_con, .bbs-view-body"
-            )
+            response = page.goto(url, wait_until="networkidle", timeout=10000)
+            if response is None or not response.ok:
+                logger.warning("상세 페이지 HTTP 오류: %s", url)
+                return None
+            # 제목/조회수/첨부파일명을 본문으로 잘못 수집하지 않는다.
+            content_el = page.query_selector(".view.viewCont .txt")
             if content_el:
                 return content_el.inner_text().strip()
         except Exception as e:
-            logger.debug("상세 페이지 크롤링 실패 (%s): %s", url, e)
-        return ""
+            logger.warning("상세 페이지 실패 (%s): %s", url, e)
+            return None
+        return None
 
     def _normalize_date(self, date_str: str) -> str:
         """날짜 형식을 YYYY-MM-DD로 정규화한다."""
         if not date_str:
             return datetime.now().strftime("%Y-%m-%d")
 
-        for fmt in ["%Y-%m-%d", "%Y.%m.%d", "%Y/%m/%d", "%y.%m.%d"]:
+        for fmt in ["%Y.%m.%d", "%Y-%m-%d", "%Y/%m/%d"]:
             try:
                 return datetime.strptime(date_str.strip()[:10], fmt).strftime("%Y-%m-%d")
             except ValueError:
@@ -193,9 +214,9 @@ class HansungPlaywrightCrawler:
             notices = self.crawl_board(target, max_pages=max_pages)
             all_notices.extend(notices)
 
-        self.notices = all_notices
+        self.notices = list({n.url: n for n in all_notices}.values())
         logger.info("전체 크롤링 완료: 총 %d건", len(all_notices))
-        return all_notices
+        return self.notices
 
     def save_to_json(self, output_path: str) -> None:
         """크롤링 결과를 JSON 파일로 저장한다."""
@@ -210,23 +231,24 @@ class HansungPlaywrightCrawler:
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="한성대학교 공지사항 Playwright 크롤러"
-    )
+    parser = argparse.ArgumentParser(description="한성대학교 공지사항 Playwright 크롤러")
     parser.add_argument("--pages", type=int, default=3, help="크롤링할 페이지 수")
     parser.add_argument("--output", type=str, default="data/crawled_notices.json", help="출력 경로")
     parser.add_argument("--headed", action="store_true", help="브라우저 UI 표시 (디버깅용)")
+    parser.add_argument("--with-content", action=argparse.BooleanOptionalAction, default=True, help="상세 페이지 본문 수집 (기본: 활성화)")
     args = parser.parse_args()
 
-    crawler = HansungPlaywrightCrawler(headless=not args.headed)
+    crawler = HansungPlaywrightCrawler(
+        headless=not args.headed,
+        with_content=args.with_content,
+    )
     crawler.crawl_all(max_pages=args.pages)
 
     if crawler.notices:
         crawler.save_to_json(args.output)
         print(f"\n✅ 크롤링 완료: {len(crawler.notices)}건 → {args.output}")
     else:
-        print("\n⚠️ 크롤링 결과가 없습니다. 사이트 구조를 확인하세요.")
-        print("디버깅: --headed 옵션으로 브라우저를 표시하여 확인하세요.")
+        raise SystemExit("크롤링 결과가 없습니다. 기존 JSON을 유지합니다.")
 
 
 if __name__ == "__main__":

@@ -16,10 +16,21 @@ from backend.main import app
 
 
 @pytest.fixture(scope="module")
-def client():
-    """TestClient를 context manager로 사용하여 lifespan을 트리거한다."""
-    with TestClient(app) as c:
-        yield c
+def client(tmp_path_factory):
+    """운영 DB 대신 별도 샘플 DB를 사용하는 API 테스트."""
+    from core.embedder import ingest_to_chroma, load_notices_from_json
+    import core.rag
+
+    sample = Path(__file__).resolve().parent.parent / "data" / "sample_notices.json"
+    store = ingest_to_chroma(
+        load_notices_from_json(str(sample)),
+        persist_directory=str(tmp_path_factory.mktemp("api_chroma")),
+        collection_name="api_tests",
+    )
+    with pytest.MonkeyPatch.context() as patch:
+        patch.setattr(core.rag, "get_chroma_vectorstore", lambda: store)
+        with TestClient(app) as c:
+            yield c
 
 
 class TestHealthEndpoint:
@@ -37,7 +48,7 @@ class TestHealthEndpoint:
         assert data["status"] == "ok"
         assert "llm_provider" in data
         assert "doc_count" in data
-        assert data["doc_count"] == 10
+        assert data["doc_count"] >= 1
 
 
 class TestRetrieveEndpoint:

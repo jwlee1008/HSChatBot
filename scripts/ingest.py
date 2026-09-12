@@ -33,7 +33,7 @@ def main():
     parser.add_argument(
         "--json-path",
         type=str,
-        default=config.SAMPLE_NOTICES_PATH,
+        default=config.NOTICES_PATH,
         help="공지사항 JSON 파일 경로",
     )
     parser.add_argument(
@@ -42,6 +42,7 @@ def main():
         default=config.CHROMA_PERSIST_DIR,
         help="Chroma DB 영속화 디렉토리",
     )
+    parser.add_argument("--replace", action="store_true", help="적재 성공 후 입력에 없는 기존 문서 제거 (실행 전 DB 백업 권장)")
     args = parser.parse_args()
 
     logger.info("=" * 50)
@@ -55,7 +56,7 @@ def main():
     logger.info("로드된 공지사항: %d건", len(documents))
 
     # 2. Chroma DB에 적재
-    vectorstore = ingest_to_chroma(documents, persist_directory=args.persist_dir)
+    vectorstore = ingest_to_chroma(documents, persist_directory=args.persist_dir, replace=args.replace)
 
     # 3. 적재 결과 검증
     collection = vectorstore._collection
