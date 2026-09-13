@@ -17,6 +17,9 @@ env/
 # ChromaDB 영속화 데이터
 data/chroma_db/
 
+# 다운로드 및 OCR 파일 캐시
+data/cache/
+
 # HuggingFace 모델 캐시 (필요 시)
 models/
 

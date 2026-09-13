@@ -15,7 +15,7 @@ import json
 import logging
 import sys
 import time
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlparse, parse_qsl, urlencode, urlunparse
@@ -40,6 +40,11 @@ class Notice:
     date: str
     url: str
     content_status: str = "title_only"
+    images: list[dict] = field(default_factory=list)
+    attachments: list[dict] = field(default_factory=list)
+    has_ocr: bool = False
+    has_attachment: bool = False
+    extraction_summary: str = ""
 
 
 # ── 크롤링 대상 정의 ──────────────────────────
@@ -63,10 +68,20 @@ class HansungPlaywrightCrawler:
 
     BASE = "https://www.hansung.ac.kr"
 
-    def __init__(self, headless: bool = True, with_content: bool = True):
+    def __init__(
+        self,
+        headless: bool = True,
+        with_content: bool = True,
+        enrich_attachments: bool = False,
+    ):
         self.headless = headless
         self.with_content = with_content
+        self.enrich_attachments = enrich_attachments
         self.notices: list[Notice] = []
+        self._enricher = None
+        if enrich_attachments:
+            from core.extractor.pipeline import NoticeEnricher
+            self._enricher = NoticeEnricher()
 
     def crawl_board(self, target: dict, max_pages: int = 3) -> list[Notice]:
         """게시판 한 개를 크롤링한다."""
@@ -120,6 +135,23 @@ class HansungPlaywrightCrawler:
                             elif body:
                                 notice.content = body
                                 notice.content_status = "text"
+
+                            if self.enrich_attachments and self._enricher and body is not None:
+                                try:
+                                    html_content = page.content()
+                                    enriched = self._enricher.enrich_notice(
+                                        asdict(notice), detail_html=html_content
+                                    )
+                                    notice.content = enriched.get("content", notice.content)
+                                    notice.content_status = enriched.get("content_status", notice.content_status)
+                                    notice.images = enriched.get("images", [])
+                                    notice.attachments = enriched.get("attachments", [])
+                                    notice.has_ocr = enriched.get("has_ocr", False)
+                                    notice.has_attachment = enriched.get("has_attachment", False)
+                                    notice.extraction_summary = enriched.get("extraction_summary", "")
+                                except Exception as e:
+                                    logger.warning("첨부파일/OCR 처리 중 오류 (%s): %s", notice.url, e)
+
                             if (j + 1) % 10 == 0:
                                 logger.info("    %d/%d 완료", j + 1, len(notices))
                             time.sleep(0.3)
@@ -236,11 +268,13 @@ def main():
     parser.add_argument("--output", type=str, default="data/crawled_notices.json", help="출력 경로")
     parser.add_argument("--headed", action="store_true", help="브라우저 UI 표시 (디버깅용)")
     parser.add_argument("--with-content", action=argparse.BooleanOptionalAction, default=True, help="상세 페이지 본문 수집 (기본: 활성화)")
+    parser.add_argument("--enrich-attachments", action="store_true", help="이미지 OCR 및 첨부파일 텍스트 추출 활성화")
     args = parser.parse_args()
 
     crawler = HansungPlaywrightCrawler(
         headless=not args.headed,
         with_content=args.with_content,
+        enrich_attachments=args.enrich_attachments,
     )
     crawler.crawl_all(max_pages=args.pages)
 

@@ -4,7 +4,7 @@ WORKDIR /app
 
 # 시스템 의존성
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends gcc && \
+    apt-get install -y --no-install-recommends gcc tesseract-ocr tesseract-ocr-kor && \
     rm -rf /var/lib/apt/lists/*
 
 # 파이썬 의존성 (캐시 활용을 위해 먼저 복사)

@@ -55,6 +55,16 @@ def load_notices_from_json(json_path: str) -> list[Document]:
             "date": notice["date"],
             "url": notice["url"],
             "content_status": notice.get("content_status", "title_only" if notice["content"].strip() == notice["title"].strip() else "text"),
+            "has_ocr": bool(notice.get("has_ocr", False)),
+            "has_attachment": bool(notice.get("has_attachment", False)),
+            "extraction_summary": str(notice.get("extraction_summary", "")),
+            "extractions_json": json.dumps(
+                {
+                    "images": notice.get("images", []),
+                    "attachments": notice.get("attachments", []),
+                },
+                ensure_ascii=False,
+            ) if ("images" in notice or "attachments" in notice) else "",
         }
         documents.append(Document(page_content=page_content, metadata=metadata))
 
