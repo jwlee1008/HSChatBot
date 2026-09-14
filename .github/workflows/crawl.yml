@@ -9,6 +9,8 @@ on:
 jobs:
   crawl:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 
@@ -18,22 +20,33 @@ jobs:
           python-version: "3.12"
           cache: "pip"
 
+      - name: 시스템 패키지 및 OCR 언어 데이터 설치
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y tesseract-ocr tesseract-ocr-kor
+
       - name: 의존성 설치
         run: pip install -r requirements.txt
 
       - name: Playwright 브라우저 설치
         run: playwright install chromium
 
-      - name: 공지사항 크롤링
+      - name: 공지사항 크롤링 (HTML 수집)
         run: python -m crawler.hansung_pw --pages 5 --with-content --output data/crawled_notices.json
 
-      - name: 데이터 적재
-        run: python scripts/ingest.py --json-path data/crawled_notices.json
+      - name: 이미지 OCR 및 첨부파일 텍스트 보강
+        run: python scripts/enrich_notices.py --input data/crawled_notices.json --output data/crawled_notices_enriched.json
+
+      - name: 데이터 적재 (보강된 공지사항 기준)
+        run: python scripts/ingest.py --json-path data/crawled_notices_enriched.json
+
+      - name: 적재 및 데이터 상태 진단
+        run: python scripts/check_data_status.py --json-path data/crawled_notices_enriched.json
 
       - name: 변경사항 커밋
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/crawled_notices.json
-          git diff --cached --quiet || git commit -m "chore: 공지사항 자동 크롤링 업데이트 $(date +'%Y-%m-%d')"
+          git add data/crawled_notices.json data/crawled_notices_enriched.json
+          git diff --cached --quiet || git commit -m "chore: 공지사항 자동 크롤링 및 보강 업데이트 $(date +'%Y-%m-%d')"
           git push

@@ -17,8 +17,8 @@ load_dotenv()
 # ──────────────────────────────────────────────
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
-CHROMA_PERSIST_DIR = str(DATA_DIR / "chroma_db")
-NOTICES_PATH = str(DATA_DIR / "crawled_notices.json")
+CHROMA_PERSIST_DIR = os.getenv("CHROMA_PERSIST_DIR", str(DATA_DIR / "chroma_db"))
+NOTICES_PATH = os.getenv("NOTICES_PATH", str(DATA_DIR / "crawled_notices.json"))
 SAMPLE_NOTICES_PATH = str(DATA_DIR / "sample_notices.json")
 
 # ──────────────────────────────────────────────
@@ -52,7 +52,8 @@ OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 # RAG 파이프라인 설정
 # ──────────────────────────────────────────────
 TOP_K = int(os.getenv("TOP_K", "3"))  # 유사도 검색 반환 개수
-CHROMA_COLLECTION_NAME = "campus_notices"
+CHROMA_COLLECTION_NAME = os.getenv("CHROMA_COLLECTION_NAME", "campus_notices")
+RELEVANCE_THRESHOLD = float(os.getenv("RELEVANCE_THRESHOLD", "0.25"))  # 원시 코사인 유사도 최소 임계값 (0.25)
 
 # ──────────────────────────────────────────────
 # 디바이스 설정 (Apple Silicon MPS 자동 감지)

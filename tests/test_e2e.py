@@ -13,6 +13,7 @@ FastAPI 백엔드 + Streamlit 프론트엔드 모두 실행 중이어야 한다.
     pytest tests/test_e2e.py -v
 """
 
+import os
 import subprocess
 import sys
 import time
@@ -30,6 +31,7 @@ def servers(tmp_path_factory):
     """현재 Python으로 서버를 실행하고 준비 상태와 실패 로그를 확인한다."""
     root = Path(__file__).resolve().parent.parent
     log_dir = tmp_path_factory.mktemp("e2e_servers")
+    home_dir = tmp_path_factory.mktemp("st_home")
     commands = {
         "backend": [sys.executable, "-m", "uvicorn", "backend.main:app", "--port", "8000"],
         "frontend": [sys.executable, "-m", "streamlit", "run", "frontend/app.py",
@@ -41,11 +43,14 @@ def servers(tmp_path_factory):
     }
     processes = {}
     logs = {}
+    env = dict(os.environ)
+    env["HOME"] = str(home_dir)
+    env["STREAMLIT_SERVER_HEADLESS"] = "true"
     try:
         for name, command in commands.items():
             logs[name] = (log_dir / f"{name}.log").open("w")
             processes[name] = subprocess.Popen(
-                command, cwd=str(root), stdout=logs[name], stderr=subprocess.STDOUT,
+                command, cwd=str(root), stdout=logs[name], stderr=subprocess.STDOUT, env=env,
             )
         deadline = time.monotonic() + 90
         pending = set(processes)

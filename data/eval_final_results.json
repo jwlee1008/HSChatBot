@@ -1,0 +1,732 @@
+{
+  "metadata": {
+    "git_commit": "a154575d43f6f3742681f08d2edc79d03823f00c",
+    "is_dirty": true,
+    "git_dirty_hash": "62234ab73c33",
+    "dataset_sha256": "727485c7fb7d40b1d4abdd4ce5809f941d022dd1aef5ce2b726e3c20933a3bdd",
+    "executed_at": "2026-09-14T01:00:03.095819+09:00",
+    "model_config": {
+      "llm_model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "embedding_model": "jhgan/ko-sroberta-multitask",
+      "relevance_threshold": 0.25,
+      "top_k": 3,
+      "device": "mps"
+    }
+  },
+  "metrics": {
+    "sample_count": 20,
+    "split": "all",
+    "pass_count": 16,
+    "pass_rate": 0.8,
+    "fail_count": 3,
+    "fail_rate": 0.15,
+    "needs_review_count": 1,
+    "needs_review_rate": 0.05,
+    "hit_top1_count": 14,
+    "hit_top1_rate": 0.875,
+    "hit_top3_count": 15,
+    "hit_top3_rate": 0.9375,
+    "abstain_count": 4,
+    "abstain_success_count": 3,
+    "abstain_rate": 0.75,
+    "cold_start_sec": 7.856287002563477,
+    "latency_p50_sec": 2.6684075593948364,
+    "latency_p95_sec": 14.279886829853059,
+    "latency_mean_sec": 4.687972438335419
+  },
+  "details": [
+    {
+      "id": "dev-md-01",
+      "split": "dev",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "different_schedules",
+      "question": "2026학년도 2학기 폐강 강좌 수강신청 정정 기간이 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 9일(수), 10일(목) 17시까지 정정",
+      "actual_answer": "2026학년도 2학기 폐강 강좌 수강신청 정정 기간은 2026년 9월 9일(수), 10일(목)부터 17:00까지입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 3.0665509700775146
+    },
+    {
+      "id": "dev-md-02",
+      "split": "dev",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "apply_method_contact",
+      "question": "폐강 강좌 수강신청 정정은 어디로 연락해서 신청해야 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"
+      ],
+      "expected_facts": "수강을 원하는 과목의 개설 트랙/학과/전공에 전화연락",
+      "actual_answer": "폐강 강좌 수강신청 정정은 해당 강좌의 개설 트랙/학과/전공에 직접 전화를 걸어 신청해야 합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 0.5,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 1.6064677238464355
+    },
+    {
+      "id": "dev-md-03",
+      "split": "dev",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "year_semester_round",
+      "question": "2026학년도 2학기 학부 재학생 등록금 분할납부 1차 신청 기간은 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223725/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223662/artclView.do"
+      ],
+      "expected_facts": "8월 20일(목)부터 8월 23일(일)까지",
+      "actual_answer": "2026학년도 2학기 학부 재학생 등록금 분할납부 1차 신청 기간은 2026년 8월 20일부터 8월 23일까지입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223662/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223662/artclView.do"
+        ],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": true,
+        "score": 0.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 2.518112897872925
+    },
+    {
+      "id": "dev-md-04",
+      "split": "dev",
+      "category": "scholarship",
+      "domain": "scholarship",
+      "situation": "target_and_condition",
+      "question": "2026학년도 2학기 인송문화재단 신규장학생 지원 자격이 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do"
+      ],
+      "expected_facts": "정규학기 재학생, 1개 이상 학기 이수, 졸업까지 2개 이상 학기 남은 자 (졸업학기생 지원 불가)",
+      "actual_answer": "2026학년도 2학기 인송문화재단 신규장학생 지원 자격은 다음과 같습니다:\n\n1. 정규학기 재학생으로서 본교에서 1개 이상의 학기를 이수하였으며, 졸업까지 2개 이상의 학기가 남아있는 자 (현재 졸업학기생 지원 불가)\n2. 직전학기 이수학점 12학점 이상이며 평점평균 80점 이상인 자\n3. 2026학년도 2학기 기준 소득분위 8분위 이내인 자(한국장학재단 기준)\n4. 2026학년도 2학기 타 장학금을 수혜받지 않은 자\n\n또한, 교외장학금(타 장학재단, 기업, 지자체 등) 수혜자 지원 불가 (인송장학금 수혜 이후 타 장학금 지원 및 수혜는 가능)이며, 생활비(교내장학금) 51만원 이상 수혜자 지원 불가입니다. 또한, 국가장학금 및 교내장학금, 근로 및 봉사장학금 등 전체 학생 대상 장학금 수혜자는 지원 가능합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 11.13258409500122
+    },
+    {
+      "id": "dev-md-05",
+      "split": "dev",
+      "category": "scholarship",
+      "domain": "scholarship",
+      "situation": "attachment_extraction",
+      "question": "국가전문자격시험 합격생 장학금 대상에 공인회계사랑 세무사도 포함돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do"
+      ],
+      "expected_facts": "네, 공인회계사(CPA), 세무사, 변리사, 감정평가사, 관세사 등이 포함됩니다.",
+      "actual_answer": "국가전문자격시험 합격생 장학금 대상에는 공인회계사와 세무사가 포함되지 않습니다. 장학금 대상은 국가기관 또는 이에 상당하다고 인정되는 기관에서 시행한 고등고시 및 전문자격시험에 대한 합격자로, 공인회계사와 세무사는 해당 시험에 포함되지 않습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 0.75,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 3.522491931915283
+    },
+    {
+      "id": "dev-md-06",
+      "split": "dev",
+      "category": "extracurricular",
+      "domain": "extracurricular",
+      "situation": "extended_deadline",
+      "question": "제26회 TOPCIT 정기평가 한성대 단체접수 마감일이 언제까지로 연장됐어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do"
+      ],
+      "expected_facts": "9월 9일(수)까지 연장",
+      "actual_answer": "제26회 TOPCIT 정기평가 한성대 단체접수 마감일이 9월 11일(금) 13시 00분까지 연장되었습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 0.5,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 2.3261799812316895
+    },
+    {
+      "id": "dev-md-07",
+      "split": "dev",
+      "category": "extracurricular",
+      "domain": "extracurricular",
+      "situation": "missing_info_in_notice",
+      "question": "제26회 TOPCIT 정기평가 시험 당일 고사장 입실 완료 시간이 몇 시야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "expected_facts": "해당 세부 내용(입실 완료 시간)은 본 공지에서 확인할 수 없습니다.",
+      "actual_answer": "제26회 TOPCIT 정기평가 시험 당일 고사장 입실 완료 시간은 9시 10분입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do"
+        ],
+        "hit_top1": false,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 0.7
+      },
+      "answer_eval": {
+        "status": "FAIL",
+        "is_abstained": false,
+        "fact_matched": false,
+        "score": 0.0,
+        "reason": "공지 미기재 사실을 명시하지 않고 임의 추측/환각 답변 생성"
+      },
+      "latency_sec": 1.9238581657409668
+    },
+    {
+      "id": "dev-md-08",
+      "split": "dev",
+      "category": "career",
+      "domain": "career",
+      "situation": "apply_method_link",
+      "question": "2026 런던 글로벌 창업교육 프로그램 신청은 어떻게 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224552/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224552/artclView.do"
+      ],
+      "expected_facts": "구글폼 작성 제출 및 모두의 창업 2기 참가 신청(멘토기관 한성대학교 지정)",
+      "actual_answer": "2026 런던 글로벌 창업교육 프로그램의 신청 방법은 다음과 같습니다:\n\n1. **구글폼 작성 후 제출**: 구글폼을 통해 지원서를 작성하고 제출합니다.\n2. **구글폼 내 제출서류**: \n   - 「모두의 창업 2기」 지원서\n   - 사업계획서 PPT (분량 15p 이내)\n\n3. **신청기간**: 2026년 9월 17일(목) 16:00까지\n\n4. **추진일정**:\n   - **참가자 모집**: 2026년 9월 17일(목) 16:00까지\n   - **1차 선발결과 발표**: 2026년 10월 예정\n   - **사업계획서 서류평가**: 2026년 11월 예정\n   - **국내 사전교육**: 2026년 11월 예정\n   - **1차 선발자 대상 개별 안내**: 2026년 12월 예정\n   - **런던 현지교육**: 2027년 1월 중 2주간 예정\n   - **항공비, 숙박비, 현지 교육비 등 전액 지원**: 2027년 1월 중 2주간 예정\n\n이러한 일정을 참고하여 신청을 진행하시면 됩니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224552/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224552/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 0.6666666666666666,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 12.393826007843018
+    },
+    {
+      "id": "dev-md-09",
+      "split": "dev",
+      "category": "campus_no_notice",
+      "domain": "campus_no_notice",
+      "situation": "school_related_no_grounding",
+      "question": "한성대학교 상상파크 열람실 좌석 예약 앱 이름이 뭐야?",
+      "should_abstain": true,
+      "expected_urls": [],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224672/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224670/artclView.do"
+      ],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "actual_answer": "죄송합니다, 현재 검색된 공지사항에서 상상파크 열람실 좌석 예약 앱에 대한 정보를 찾을 수 없습니다. 하지만 일반적으로 학교의 공지사항에서는 이와 관련된 정보를 제공하지 않습니다. 이 문제에 대해 더 구체적인 정보를 원하신다면, 해당 공지사항을 다시 확인해보시거나 학교의 관계자에게 문의해 보시는 것이 좋겠습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224672/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224670/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224670/artclView.do"
+        ],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": false,
+        "score": 0.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": true,
+        "fact_matched": true,
+        "constraint_violated": false,
+        "score": 1.0,
+        "reason": "정상 유보"
+      },
+      "latency_sec": 4.2391088008880615
+    },
+    {
+      "id": "dev-md-10",
+      "split": "dev",
+      "category": "irrelevant",
+      "domain": "irrelevant",
+      "situation": "irrelevant_query",
+      "question": "파이썬으로 이진 탐색 트리 구현하는 방법 알려줘",
+      "should_abstain": true,
+      "expected_urls": [],
+      "actual_sources": [],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "actual_answer": "관련 공지를 찾지 못했습니다.",
+      "retrieval": {
+        "top_urls": [],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": true,
+        "fact_matched": true,
+        "constraint_violated": false,
+        "score": 1.0,
+        "reason": "정상 유보"
+      },
+      "latency_sec": 0.0223391056060791
+    },
+    {
+      "id": "test-md-01",
+      "split": "test",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "no_period_specified",
+      "question": "편입생 전적대학 학점 재인정 신청 대상자가 누구야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "expected_facts": "일반편입생(외국인 유학생 제외) 중 전적대학 학점 추가인정 또는 재인정 신청 대상자",
+      "actual_answer": "편입생 전적대학 학점 재인정 신청 대상자는 편입생입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "NEEDS_REVIEW",
+        "fact_matched": false,
+        "fact_ratio": 0.3333333333333333,
+        "score": 0.5,
+        "reason": "근거 일부 일치: 원문 대조 필요"
+      },
+      "latency_sec": 1.6893079280853271
+    },
+    {
+      "id": "test-md-02",
+      "split": "test",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "date_and_time",
+      "question": "2026학년도 2학기 편입생 전적대학 학점 재인정 신청 접수 기간이 언제까지야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "expected_facts": "2026. 9. 10.(목) 10:00 ~ 9. 18.(금) 17:00",
+      "actual_answer": "편입생 전적대학 학점 재(추가)인정 신청의 신청 접수 기간은 2026년 9월 10일(목) 10:00부터 9월 18일(금) 17:00까지입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 2.818702220916748
+    },
+    {
+      "id": "test-md-03",
+      "split": "test",
+      "category": "scholarship",
+      "domain": "scholarship",
+      "situation": "title_only_notice",
+      "question": "2026학년도 장학제도 개편 및 국가장학금 2유형 세부 개편 내용이 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/219720/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/219720/artclView.do"
+      ],
+      "expected_facts": "관련 공지는 있으나 본문에서 세부 내용을 확인할 수 없어 원문 보기를 확인해야 함",
+      "actual_answer": "검색된 공지 「한성공지\n2026학년도 장학제도 개편 및 국가장학금Ⅱ유형 관련 안내」 (2026-02-13, 학교본부 (학생복지팀))는 수집된 정보가 제목뿐이므로 세부 내용을 확인할 수 없습니다. 아래 원문 보기에서 이미지·첨부파일을 확인해 주세요.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/219720/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": false,
+        "fact_matched": true,
+        "score": 1.0,
+        "reason": "본문 미확보(title_only) 안내 및 원문 확인 정상 유도"
+      },
+      "latency_sec": 0.019405126571655273
+    },
+    {
+      "id": "test-md-04",
+      "split": "test",
+      "category": "scholarship",
+      "domain": "scholarship",
+      "situation": "deadline_and_submission",
+      "question": "인송문화재단 신규장학생 서류 접수 마감일이 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 14일(월) 마감",
+      "actual_answer": "인송문화재단 신규장학생 서류 접수 마감일은 2026년 9월 14일입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 0.6666666666666666,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 1.6200718879699707
+    },
+    {
+      "id": "test-md-05",
+      "split": "test",
+      "category": "extracurricular",
+      "domain": "extracurricular",
+      "situation": "title_only_notice",
+      "question": "2027학년도 1학기 중화권 파견 교환학생 지원 자격과 선발 기준 알려줘",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224592/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224592/artclView.do"
+      ],
+      "expected_facts": "수집된 본문에서 세부 내용을 확인할 수 없으므로 원문 보기를 확인해야 함",
+      "actual_answer": "검색된 공지 「국제\n2027학년도 1학기 중화권 파견 교환학생 선발안내」 (2026-09-08, 학교본부 (국제교류지원팀))는 수집된 정보가 제목뿐이므로 세부 내용을 확인할 수 없습니다. 아래 원문 보기에서 이미지·첨부파일을 확인해 주세요.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224592/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": false,
+        "fact_matched": true,
+        "score": 1.0,
+        "reason": "본문 미확보(title_only) 안내 및 원문 확인 정상 유도"
+      },
+      "latency_sec": 0.0196688175201416
+    },
+    {
+      "id": "test-md-06",
+      "split": "test",
+      "category": "career",
+      "domain": "career",
+      "situation": "attachment_qualification",
+      "question": "51기 WFK 청년봉사단 단장 지원하려면 어떤 자격이 필요해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224545/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224545/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224543/artclView.do"
+      ],
+      "expected_facts": "대학생 해외 봉사활동 또는 봉사활동 인솔 경험이 있는 분 등",
+      "actual_answer": "51기 WFK 청년봉사단 단장 지원에 필요한 자격은 다음과 같습니다:\n\n1. **대학생 해외 봉사활동 또는 봉사활동 인솔 경험이 있는 분**\n2. **파견팀별 활동 내용에 해당 전공자 및 특기를 가진 분**\n3. **파견국 언어 또는 영어로 의사소통 가능한 분**\n4. **인솔자와 협업이 가능하며, 단원 관리에 적극적이며 책임감이 있는 분**\n\n참가비는 없으며, 선발방법은 다음과 같습니다:\n\n1. **(1차) 소속대학 추천**\n   - 지원서 상 기재된 사항(학력, 경력 등) 및 지원 자격 여부 점검\n2. **(2차) 비대면 면접심사 (외부심사)**\n   - 비대면 면접 및 제출 서류 심사\n   - 단장으로서 갖추어야 할 기본소양, 직무수행능력 평가\n     - 최근 3년(2024년~2026년) 간 회비납부가 1회도 없을 시, 면접 및 선발 대상에서 제외\n       - (대사협 회비 납부내역 문의는 소속 대학 담당자에게 문의)\n\n단, 지원 기간은 2026년 9월 7일부터 9월 30일까지입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224545/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224545/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224543/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 13.02306318283081
+    },
+    {
+      "id": "test-md-07",
+      "split": "test",
+      "category": "career",
+      "domain": "career",
+      "situation": "mentoring_deadline",
+      "question": "2026학년도 2학기 전공연계 협업형 진로·취업멘토링 참가자 신청 기간이 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 10일(목)부터 9월 17일(목) 15:00까지 (제목 6.11 오타 보정)",
+      "actual_answer": "2026학년도 2학기 전공연계 협업형 진로·취업멘토링 참가자 신청 기간은 2026년 9월 10일 목요일부터 2026년 6월 11일 목요일까지입니다. 신청 기간은 매주 목요일 15:00까지이며, 자세한 정보는 아래 링크를 참조하시면 됩니다:\n\n[공지] 한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00) (등록일: 2026-09-08, 출처: 학교본부 (진로취업지원팀))\n\n참가자 모집은 3~4회 진행되는 멘토링 일정 모두 참여, 비교과 만족도 조사 필수 참여로 이루어져 있으며, 100% 출석시 비교과 포인트 40p를 받을 수 있습니다. 또한, 향후 우수 자기소개서 선발 시 장학금 지급이 가능합니다. 자세한 멘토링 프로그램 참여방법은 아래 ppt첨부파일을 확인해주세요.\n\n자세한 멘토링 프로그램 참여방법은 아래 링크를 참조하시면 됩니다:\n\n★취업멘토링 신청하기: https://hsportal.hansung.ac.kr/ko/program/all/view/14083\n\n★진로멘토링 신청하기: https://hsportal.hansung.ac.kr/ko/program/all/view/14084",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "FAIL",
+        "fact_matched": false,
+        "violated_constraints": [
+          "6월 11일"
+        ],
+        "score": 0.0,
+        "reason": "부정 제약 위반: ['6월 11일']"
+      },
+      "latency_sec": 14.531024932861328
+    },
+    {
+      "id": "test-md-08",
+      "split": "test",
+      "category": "extracurricular",
+      "domain": "extracurricular",
+      "situation": "fee_and_benefit",
+      "question": "한성대 SW중심대학사업단 통해서 TOPCIT 접수하면 응시료 지원돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do"
+      ],
+      "expected_facts": "네, 시험 응시료(10,000원) 전액 지원 및 2만원 상당 기념품 증정",
+      "actual_answer": "**답변:**  \n**제목:** [SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내  \n**출처:** 학교본부 (SW중심대학사업단)  \n**등록일:** 2026-09-04  \n**링크:** https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do  \n\n**내용:**  \n과학기술정보통신부에서 주최하는 '제26회 TOPCIT(소프트웨어 역량검정 시험)에 접수하는 본교 학생들에게 혜택을 드리기 위해, 한성대학교 SW중심대학사업단에서 별도의 단체접수를 받고 있습니다.  \nSW중심대학사업단을 통해서 본 시험을 접수하는 경우 시험 응시료(10,000원)를 전액 지원하고, 응시자 전원 정가 2만원 이상의 기념품 증정(추후 안내)할 예정입니다.  \n참여 가능 학생들은 한성대학교 성적 우수자(상위 9명) 장학금 지급(대상 50만원), 응시자 전원 기념품 증정(2만원 이상의 물품), 비교과 포인트 최대 50점 지급(추후 별도 안내, 개별신청 필요), 응시료 전액 지원(10,000원)을 받을 수 있습니다.  \n\n**문의:**  \n- 한성대학교 SW중심대학사업단 (02-760-4243)",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 14.266669034957886
+    },
+    {
+      "id": "test-md-09",
+      "split": "test",
+      "category": "campus_no_notice",
+      "domain": "campus_no_notice",
+      "situation": "school_related_no_grounding",
+      "question": "한성대 기숙사 우촌학사 야간 통금 시간이 몇 시야?",
+      "should_abstain": true,
+      "expected_urls": [],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224636/artclView.do"
+      ],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "actual_answer": "죄송합니다, 현재 제공된 공지사항에서 한성대 기숙사 야간 통금 시간에 대한 정보는 없습니다. 공지사항에서 언급된 정보는 인문과학연구원 행정전담인력 채용 공고에 해당하는 내용입니다. 다른 질문이 있으시면 도와드리겠습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224636/artclView.do"
+        ],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": false,
+        "score": 0.0
+      },
+      "answer_eval": {
+        "status": "FAIL",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": true,
+        "score": 0.0,
+        "reason": "수집 근거 없는 질문에 대해 불필요한 공지 안내 또는 환각 발생"
+      },
+      "latency_sec": 3.001828908920288
+    },
+    {
+      "id": "test-md-10",
+      "split": "test",
+      "category": "irrelevant",
+      "domain": "irrelevant",
+      "situation": "irrelevant_query",
+      "question": "아이폰 16 프로 디스플레이 주사율 알려줘",
+      "should_abstain": true,
+      "expected_urls": [],
+      "actual_sources": [],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "actual_answer": "관련 공지를 찾지 못했습니다.",
+      "retrieval": {
+        "top_urls": [],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": true,
+        "fact_matched": true,
+        "constraint_violated": false,
+        "score": 1.0,
+        "reason": "정상 유보"
+      },
+      "latency_sec": 0.01818704605102539
+    }
+  ]
+}

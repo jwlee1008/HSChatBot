@@ -19,12 +19,49 @@ from core.prompts import RAG_PROMPT, format_retrieved_docs
 logger = logging.getLogger(__name__)
 
 
+import re
+import warnings
+from datetime import datetime
+
+RELEVANCE_THRESHOLD = config.RELEVANCE_THRESHOLD  # 서비스와 평가 공통 원시 코사인 유사도 임계값 (0.25)
+MIN_RELEVANCE_THRESHOLD = RELEVANCE_THRESHOLD  # 하위 호환성 별칭
+
+
+def extract_query_entities(query: str) -> dict:
+    """질의에서 연도, 학기, 차수 등의 검색 엔티티를 정규식으로 추출한다 (연도 범위 제한 없음)."""
+    entities = {}
+
+    # 4자리 연도 (1900~2099)
+    y4 = re.search(r"\b(19\d{2}|20\d{2})(?:년|학년도)?", query)
+    # 2자리 연도 ('26, '27 또는 26년, 27년 등)
+    y2 = re.search(r"(?:'(\d{2})|\b(\d{2})\s*(?:년|학년도))", query)
+    if y4:
+        entities["year"] = y4.group(1)
+        entities["short_year"] = f"'{y4.group(1)[-2:]}"
+    elif y2:
+        yy = y2.group(1) or y2.group(2)
+        entities["year"] = f"20{yy}"
+        entities["short_year"] = f"'{yy}"
+
+    # 학기 추출 (1학기, 2학기)
+    sem_match = re.search(r"([12])학기", query)
+    if sem_match:
+        entities["semester"] = f"{sem_match.group(1)}학기"
+
+    # 차수 추출 (1차, 2차)
+    round_match = re.search(r"([12])차", query)
+    if round_match:
+        entities["round"] = f"{round_match.group(1)}차"
+
+    return entities
+
+
 class CampusRAG:
     """
     CampusRAG 핵심 클래스.
 
-    - retrieve(): Chroma DB에서 유사도 검색만 수행 (LLM 불필요)
-    - query(): 유사도 검색 + LLM 생성까지 수행 (RAG 전체 파이프라인)
+    - retrieve(): Chroma DB에서 유사도 검색 및 엔티티/최신성 기반 리랭킹 수행 (답변 근거 청크 반환)
+    - query(): 유사도 검색 + LLM 생성까지 수행 (출처 카드는 URL 단위로 중복 제거하여 반환)
     """
 
     def __init__(self, load_llm: bool = False):
@@ -60,7 +97,7 @@ class CampusRAG:
             raise ValueError(f"지원하지 않는 LLM Provider: {provider}")
 
     def _load_local_llm(self) -> BaseLLM:
-        """HuggingFace 로컬 모델(gemma-2-2b-it)을 로드한다."""
+        """HuggingFace 로컬 모델을 로드한다."""
         from langchain_huggingface import HuggingFacePipeline
         from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
@@ -82,7 +119,7 @@ class CampusRAG:
             max_new_tokens=config.LOCAL_LLM_MAX_NEW_TOKENS,
             return_full_text=False,  # 프롬프트 제외, 생성 텍스트만 반환
             do_sample=False,
-            repetition_penalty=1.2,
+            repetition_penalty=1.05,
         )
 
         def chat_prompt(prompt):
@@ -130,79 +167,257 @@ class CampusRAG:
         """LangChain LCEL 체인을 구성한다."""
         return RAG_PROMPT | self.llm | StrOutputParser()
 
-    def retrieve(self, query: str, top_k: int | None = None) -> list[Document]:
+    def retrieve(
+        self,
+        query: str,
+        top_k: int | None = None,
+        min_threshold: float | None = None,
+        max_chunks_per_notice: int = 2,
+    ) -> list[Document]:
         """
-        유사도 검색만 수행하여 관련 공지사항 Document 리스트를 반환한다.
-        LLM 없이도 동작한다.
-
-        Args:
-            query: 검색 질의 문자열
-            top_k: 반환할 문서 수 (기본값: config.TOP_K)
-
-        Returns:
-            유사도 순으로 정렬된 Document 리스트
+        유사도 검색 및 엔티티/최신성 기반 리랭킹을 수행하여
+        LLM 답변 근거로 활용할 관련 공지사항 청크 Document 리스트를 반환한다.
+        동일 공지의 유효한 복수 청크(신청/동의 등)를 보존한다.
         """
         k = top_k or config.TOP_K
-        logger.info("유사도 검색: query='%s', top_k=%d", query, k)
-        results = self.vectorstore.similarity_search(query, k=k)
-        logger.info("검색 결과: %d건", len(results))
-        return results
+        threshold = min_threshold if min_threshold is not None else RELEVANCE_THRESHOLD
+        entities = extract_query_entities(query)
+        logger.info("유사도 검색 시작: query='%s', entities=%s, top_k=%d, threshold=%.2f", query, entities, k, threshold)
+
+        # 1. 1차 벡터 검색 (relevance_scores 우선, 실패 시 score 기반 변환 폴백)
+        # LangChain Chroma: score = 1.0 - distance / sqrt(2)
+        candidate_k = max(k * 4, 15)
+        raw_results = []
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", category=UserWarning)
+            try:
+                raw_results = self.vectorstore.similarity_search_with_relevance_scores(query, k=candidate_k)
+            except Exception as e:
+                logger.warning("similarity_search_with_relevance_scores 실패, distance 기반 변환 폴백: %s", e)
+                try:
+                    docs_with_dist = self.vectorstore.similarity_search_with_score(query, k=candidate_k)
+                    raw_results = [(doc, 1.0 - float(dist) / 1.41421356) for doc, dist in docs_with_dist]
+                except Exception as e2:
+                    logger.error("유사도 검색 완전 실패: %s", e2)
+                    return []
+
+        if not raw_results:
+            logger.info("검색 결과가 없습니다.")
+            return []
+
+        # 2. 관련성 미달 후보는 최신성·연도 가산점 전에 즉시 제외!
+        # 낮은 관련도의 최신 공지가 가산점으로 통과하는 현상을 원천 방지
+        filtered_raw = [(doc, score) for doc, score in raw_results if score >= threshold]
+        if not filtered_raw:
+            logger.info("원시 관련성 임계값(%.3f) 이상의 유효 후보 문서가 없습니다.", threshold)
+            return []
+
+        # 최신 공지 기준일 탐색 (임계값을 통과한 후보군 대상)
+        max_dt = None
+        for doc, _ in filtered_raw:
+            d_str = doc.metadata.get("date", "")
+            if d_str:
+                try:
+                    dt = datetime.strptime(d_str[:10], "%Y-%m-%d")
+                    if max_dt is None or dt > max_dt:
+                        max_dt = dt
+                except Exception:
+                    pass
+
+        # 3. 휴리스틱 리랭킹 가중치 계산 (원시 관련성 통과 후보군만 적용)
+        scored_candidates = []
+        for doc, score in filtered_raw:
+            meta = doc.metadata
+            title = meta.get("title", "")
+            date_str = meta.get("date", "")
+            content = doc.page_content
+            c_status = meta.get("content_status", "")
+
+            final_score = score
+
+            # 본문 없이 제목만 있는 공지는 세부 질의 대응 불가하므로 감점
+            if c_status == "title_only":
+                final_score -= 0.15
+
+            # 연도 매칭 보정 (동적 연도 지원)
+            target_year = entities.get("year")
+            if target_year:
+                # 쿼리에 명시된 연도가 제목(적용 연도), 본문, 또는 등록일자에 포함된 경우
+                if target_year in title or target_year in date_str or entities.get("short_year", "") in content:
+                    final_score += 0.25
+                else:
+                    # 후보 제목에 명시된 다른 연도(예: 2024, 2025, 2027 등)가 있으면 감점
+                    other_years = re.findall(r"\b(20\d{2})\b", title)
+                    if any(y != target_year for y in other_years):
+                        final_score -= 0.20
+            else:
+                # 쿼리에 연도가 없는 경우: 검색 후보군 중 최신 등록일 기준 상대적 최신성 가중치
+                if max_dt and date_str:
+                    try:
+                        doc_dt = datetime.strptime(date_str[:10], "%Y-%m-%d")
+                        diff_days = (max_dt - doc_dt).days
+                        if diff_days <= 90:
+                            final_score += 0.22  # 최근 3개월 (당해 학기)
+                        elif diff_days <= 180:
+                            final_score += 0.05  # 최근 6개월 (직전 학기)
+                        elif diff_days <= 365:
+                            final_score -= 0.10  # 1년 이내 과거 공지
+                        else:
+                            final_score -= 0.18  # 1년 초과 과거 공지
+                    except Exception:
+                        pass
+
+            # 학기 매칭 보정
+            target_sem = entities.get("semester")
+            if target_sem:
+                if target_sem in title or target_sem in content:
+                    final_score += 0.12
+                other_sem = "1학기" if target_sem == "2학기" else "2학기"
+                if other_sem in title:
+                    final_score -= 0.15
+
+            # 차수 매칭 보정 (1차, 2차)
+            target_round = entities.get("round")
+            if target_round:
+                if target_round in title or target_round in content:
+                    final_score += 0.12
+                other_round = "1차" if target_round == "2차" else "2차"
+                if other_round in title:
+                    final_score -= 0.15
+
+            # 질의의 고유 주제어(예: 편입생, 폐강, TOPCIT 등) 매칭 보정
+            query_subject_words = [
+                w for w in re.findall(r"[가-힣a-zA-Z0-9]{2,}", query)
+                if w not in {
+                    "언제", "누구", "어디", "어디로", "어떻게", "알려줘", "알려",
+                    "기간", "신청", "내용", "기준", "방법", "대상자", "대상",
+                    "안내", "관련", "대한", "학년도", "학기"
+                }
+            ]
+            if query_subject_words:
+                matched_title = [w for w in query_subject_words if w in title or (len(w) >= 3 and w[:2] in title)]
+                if matched_title:
+                    final_score += 0.08 * len(matched_title)
+
+            # 핵심 키워드 일치 보정
+            if "국가장학금" in query:
+                if "국가장학금" in title:
+                    final_score += 0.18
+                elif "국가장학금" in content:
+                    final_score += 0.10
+                else:
+                    final_score -= 0.20
+                if "국가고시" in title:
+                    final_score -= 0.20
+
+            if "가구원" in query:
+                if "가구원" in content or "가구원" in title:
+                    final_score += 0.12
+
+            scored_candidates.append((doc, final_score))
+
+        # 리랭킹 점수 기준 내림차순 정렬
+        scored_candidates.sort(key=lambda x: x[1], reverse=True)
+
+        # 4. 동일 공지의 여러 유효 청크(신청기간, 동의기간 등)는 근거에 함께 보존하되, 특정 공지의 과도한 독점 방지
+        # 및 서로 다른 공지 간의 사실 혼입(context bleeding) 방지
+        context_docs = []
+        url_chunk_counts = {}
+        top_score = scored_candidates[0][1] if scored_candidates else 0.0
+        top_url = (
+            scored_candidates[0][0].metadata.get("url")
+            or scored_candidates[0][0].metadata.get("parent_url")
+            or scored_candidates[0][0].metadata.get("id")
+            if scored_candidates else ""
+        )
+
+        for doc, cand_score in scored_candidates:
+            doc.metadata["_score"] = cand_score
+            url = doc.metadata.get("url") or doc.metadata.get("parent_url") or doc.metadata.get("id")
+
+            # 서로 다른 공지 간 사실 혼입 방지 필터:
+            # 만약 1위 공지의 점수가 명확히 높고(>= 0.70), 이미 최소 1개 이상의 청크가 채택되었을 때,
+            # 현재 후보가 1위 공지와 다른 공지이면서 점수 격차가 유의미하게 크면(top_score - cand_score > 0.12)
+            # 무관한 타 공지 내용이 컨텍스트에 섞여 사실 왜곡을 일으키지 않도록 제외한다.
+            # (단, threshold < 0인 디버깅/테스트 강제 반환 모드에서는 필터를 건너뜀)
+            if threshold >= 0 and url != top_url and len(context_docs) >= 1:
+                if top_score >= 0.70 and (top_score - cand_score > 0.12):
+                    logger.info(
+                        "타 공지 노이즈 청크 제외: top_score=%.3f, cand_score=%.3f, doc=%s",
+                        top_score, cand_score, doc.metadata.get("title", "")[:30]
+                    )
+                    continue
+
+            count = url_chunk_counts.get(url, 0)
+            if count < max_chunks_per_notice:
+                context_docs.append(doc)
+                url_chunk_counts[url] = count + 1
+            if len(context_docs) >= k:
+                break
+
+        return context_docs
 
     def query(self, question: str, top_k: int | None = None) -> dict:
         """
         RAG 전체 파이프라인을 수행한다.
-        유사도 검색 → LLM 생성 → 요약 응답 + 출처 정보 반환.
-
-        Args:
-            question: 학생의 자연어 질문
-
-        Returns:
-            {
-                "answer": "LLM이 생성한 요약 답변",
-                "sources": [검색된 Document 리스트 (출처 카드용)]
-            }
+        유사도 검색(무관 질문 임계값 차단) → 리랭킹 → LLM 생성 → 요약 응답 + 고유 출처 카드 반환.
         """
+        logger.info("RAG 질의 시작: '%s'", question)
+
+        # 유사도 검색 및 리랭킹
+        context_docs = self.retrieve(question, top_k=top_k)
+
+        # 원시 관련성 임계값(0.25)을 통과한 공지가 없으면 LLM 호출 없이 즉시 유보
+        if not context_docs:
+            return {"answer": "관련 공지를 찾지 못했습니다.", "sources": []}
+
         if self.llm is None:
             raise RuntimeError(
                 "LLM이 로드되지 않았습니다. "
                 "CampusRAG(load_llm=True)로 초기화하세요."
             )
 
-        logger.info("RAG 질의: '%s'", question)
-
-        # 출처 정보를 별도로 가져옴
-        sources = self.retrieve(question, top_k=top_k)
-
-        # LLM 체인으로 답변 생성
-        if not sources:
-            return {"answer": "관련 공지를 찾지 못했습니다.", "sources": []}
-        if all(doc.metadata.get("content_status") == "title_only" for doc in sources):
-            # 이미지 공지에 본문이 없으면 LLM이 일정 등을 지어내지 않도록 안내한다.
-            first = sources[0].metadata
+        # 검색된 최우선(Top-1) 공지가 본문 없는 title_only이거나 모든 공지가 title_only인 경우 조기 안내
+        top_doc = context_docs[0]
+        if top_doc.metadata.get("content_status") == "title_only" or all(doc.metadata.get("content_status") == "title_only" for doc in context_docs):
+            first = top_doc.metadata
             answer = (
-                f"검색된 공지 {len(sources)}건이 있습니다: 「{first.get('title', '')}」 "
-                f"({first.get('date', '')}, {first.get('source', '')}).\n"
-                "수집된 정보가 제목뿐이므로 신청 기간 등 세부 내용을 확인할 수 없습니다. "
+                f"검색된 공지 「{first.get('title', '')}」 "
+                f"({first.get('date', '')}, {first.get('source', '')})는 "
+                "수집된 정보가 제목뿐이므로 세부 내용을 확인할 수 없습니다. "
                 "아래 원문 보기에서 이미지·첨부파일을 확인해 주세요."
             )
         else:
             answer = self.chain.invoke({
                 "question": question,
-                "context": format_retrieved_docs(sources),
+                "context": format_retrieved_docs(context_docs),
             })
+
+        # LLM이 관련 공지를 찾지 못했다고 답변한 경우 출처 카드 비우기
+        clean_ans = answer.strip()
+        if any(w in clean_ans for w in ("관련 공지를 찾지 못했습니다", "공지를 찾을 수 없습니다", "해당 공지를 찾을 수 없습니다")):
+            return {"answer": answer, "sources": []}
+
+        # 출처 카드는 URL 기준으로 중복 제거하여 사용자에게 제공
+        seen_urls = set()
+        deduped_sources = []
+        for doc in context_docs:
+            url = doc.metadata.get("url") or doc.metadata.get("parent_url")
+            if url and url not in seen_urls:
+                seen_urls.add(url)
+                deduped_sources.append(
+                    {
+                        "title": doc.metadata.get("title", ""),
+                        "source": doc.metadata.get("source", ""),
+                        "date": doc.metadata.get("date", ""),
+                        "url": url,
+                        "category": doc.metadata.get("category", ""),
+                    }
+                )
 
         return {
             "answer": answer,
-            "sources": [
-                {
-                    "title": doc.metadata.get("title", ""),
-                    "source": doc.metadata.get("source", ""),
-                    "date": doc.metadata.get("date", ""),
-                    "url": doc.metadata.get("url", ""),
-                    "category": doc.metadata.get("category", ""),
-                }
-                for doc in sources
-            ],
+            "sources": deduped_sources,
         }
 
 

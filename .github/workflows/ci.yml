@@ -33,8 +33,8 @@ jobs:
       - name: 데이터 적재
         run: python scripts/ingest.py
 
-      - name: 유닛 및 API 테스트
-        run: python -m pytest tests/test_rag.py tests/test_api.py tests/test_regressions.py tests/test_extractor.py tests/test_extractor_chroma.py -v --tb=short
+      - name: 유닛, 회귀 및 API 테스트
+        run: python -m pytest tests/test_rag.py tests/test_api.py tests/test_regressions.py tests/test_extractor.py tests/test_extractor_chroma.py tests/test_embedder_cleanup.py tests/test_generalization.py tests/test_evaluator.py tests/test_data_status.py tests/test_pipeline_isolation.py tests/test_scholarship_rag.py tests/test_e2e_scholarship.py -v --tb=short -rs
 
       - name: 브라우저 E2E 테스트 및 서버 기동 확인
         run: python -m pytest tests/test_e2e.py -v --tb=short

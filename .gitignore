@@ -16,6 +16,8 @@ env/
 
 # ChromaDB 영속화 데이터
 data/chroma_db/
+data/*_chroma_db/
+data/ops_verify_*/
 
 # 다운로드 및 OCR 파일 캐시
 data/cache/

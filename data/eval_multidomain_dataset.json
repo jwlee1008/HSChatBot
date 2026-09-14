@@ -1,0 +1,283 @@
+{
+  "description": "CampusRAG 4대 주제(학사, 장학, 행사, 취업/봉사) 다도메인 평가 데이터셋",
+  "version": "1.0",
+  "splits": {
+    "dev_count": 10,
+    "test_count": 10,
+    "total_count": 20
+  },
+  "questions": [
+    {
+      "id": "dev-md-01",
+      "split": "dev",
+      "domain": "academic",
+      "situation": "different_schedules",
+      "question": "2026학년도 2학기 폐강 강좌 수강신청 정정 기간이 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 9일(수), 10일(목) 17시까지 정정",
+      "grounding_quotes": ["9월 9일", "10일", "17:00", "수강신청 정정"],
+      "negative_constraints": ["9월 16일", "8월 24일"]
+    },
+    {
+      "id": "dev-md-02",
+      "split": "dev",
+      "domain": "academic",
+      "situation": "apply_method_contact",
+      "question": "폐강 강좌 수강신청 정정은 어디로 연락해서 신청해야 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"
+      ],
+      "expected_facts": "수강을 원하는 과목의 개설 트랙/학과/전공에 전화연락",
+      "grounding_quotes": ["트랙", "연락"],
+      "negative_constraints": ["종합정보시스템에서 직접 신청"]
+    },
+    {
+      "id": "dev-md-03",
+      "split": "dev",
+      "domain": "academic",
+      "situation": "year_semester_round",
+      "question": "2026학년도 2학기 학부 재학생 등록금 분할납부 1차 신청 기간은 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223725/artclView.do"
+      ],
+      "expected_facts": "8월 20일(목)부터 8월 23일(일)까지",
+      "grounding_quotes": ["8. 20", "8. 23", "8월 20일", "8월 23일"],
+      "negative_constraints": ["9월 9일", "9월 16일"]
+    },
+    {
+      "id": "dev-md-04",
+      "split": "dev",
+      "domain": "scholarship",
+      "situation": "target_and_condition",
+      "question": "2026학년도 2학기 인송문화재단 신규장학생 지원 자격이 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do"
+      ],
+      "expected_facts": "정규학기 재학생, 1개 이상 학기 이수, 졸업까지 2개 이상 학기 남은 자 (졸업학기생 지원 불가)",
+      "grounding_quotes": ["정규학기 재학생", "1개 이상의 학기", "2개 이상의 학기", "졸업학기생 지원 불가"],
+      "negative_constraints": ["신입생 지원 가능", "졸업예정자 가능"]
+    },
+    {
+      "id": "dev-md-05",
+      "split": "dev",
+      "domain": "scholarship",
+      "situation": "attachment_extraction",
+      "question": "국가전문자격시험 합격생 장학금 대상에 공인회계사랑 세무사도 포함돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do"
+      ],
+      "expected_facts": "네, 공인회계사(CPA), 세무사, 변리사, 감정평가사, 관세사 등이 포함됩니다.",
+      "grounding_quotes": ["CPA", "공인회계사", "세무사", "포함"],
+      "negative_constraints": ["제외", "포함되지 않음"]
+    },
+    {
+      "id": "dev-md-06",
+      "split": "dev",
+      "domain": "extracurricular",
+      "situation": "extended_deadline",
+      "question": "제26회 TOPCIT 정기평가 한성대 단체접수 마감일이 언제까지로 연장됐어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "expected_facts": "9월 9일(수)까지 연장",
+      "grounding_quotes": ["9월 9일", "연장"],
+      "negative_constraints": ["8월 20일 마감"]
+    },
+    {
+      "id": "dev-md-07",
+      "split": "dev",
+      "domain": "extracurricular",
+      "situation": "missing_info_in_notice",
+      "question": "제26회 TOPCIT 정기평가 시험 당일 고사장 입실 완료 시간이 몇 시야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "expected_facts": "해당 세부 내용(입실 완료 시간)은 본 공지에서 확인할 수 없습니다.",
+      "grounding_quotes": ["확인할 수 없습니다", "명시되어 있지 않습니다"],
+      "negative_constraints": ["오전 9시까지 입실", "오전 10시까지 입실"]
+    },
+    {
+      "id": "dev-md-08",
+      "split": "dev",
+      "domain": "career",
+      "situation": "apply_method_link",
+      "question": "2026 런던 글로벌 창업교육 프로그램 신청은 어떻게 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224552/artclView.do"
+      ],
+      "expected_facts": "구글폼 작성 제출 및 모두의 창업 2기 참가 신청(멘토기관 한성대학교 지정)",
+      "grounding_quotes": ["구글폼", "모두의 창업", "한성대학교"],
+      "negative_constraints": ["방문 제출만 가능"]
+    },
+    {
+      "id": "dev-md-09",
+      "split": "dev",
+      "domain": "campus_no_notice",
+      "situation": "school_related_no_grounding",
+      "question": "한성대학교 상상파크 열람실 좌석 예약 앱 이름이 뭐야?",
+      "should_abstain": true,
+      "expected_urls": [],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "grounding_quotes": ["관련 공지를 찾지 못했습니다"],
+      "negative_constraints": []
+    },
+    {
+      "id": "dev-md-10",
+      "split": "dev",
+      "domain": "irrelevant",
+      "situation": "irrelevant_query",
+      "question": "파이썬으로 이진 탐색 트리 구현하는 방법 알려줘",
+      "should_abstain": true,
+      "expected_urls": [],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "grounding_quotes": ["관련 공지를 찾지 못했습니다"],
+      "negative_constraints": []
+    },
+    {
+      "id": "test-md-01",
+      "split": "test",
+      "domain": "academic",
+      "situation": "no_period_specified",
+      "question": "편입생 전적대학 학점 재인정 신청 대상자가 누구야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "expected_facts": "일반편입생(외국인 유학생 제외) 중 전적대학 학점 추가인정 또는 재인정 신청 대상자",
+      "grounding_quotes": ["일반편입생", "전적대학 학점", "외국인 유학생 제외"],
+      "negative_constraints": ["모든 신입생 대상", "외국인 유학생 전용", "2016학년도", "기존 학부제"]
+    },
+    {
+      "id": "test-md-02",
+      "split": "test",
+      "domain": "academic",
+      "situation": "date_and_time",
+      "question": "2026학년도 2학기 편입생 전적대학 학점 재인정 신청 접수 기간이 언제까지야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "expected_facts": "2026. 9. 10.(목) 10:00 ~ 9. 18.(금) 17:00",
+      "grounding_quotes": ["9. 10", "9. 18", "9월 10일", "9월 18일"],
+      "negative_constraints": ["9월 9일", "9월 16일"]
+    },
+    {
+      "id": "test-md-03",
+      "split": "test",
+      "domain": "scholarship",
+      "situation": "title_only_notice",
+      "question": "2026학년도 장학제도 개편 및 국가장학금 2유형 세부 개편 내용이 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/219720/artclView.do"
+      ],
+      "expected_facts": "관련 공지는 있으나 본문에서 세부 내용을 확인할 수 없어 원문 보기를 확인해야 함",
+      "grounding_quotes": ["세부 내용", "확인할 수 없습니다", "원문"],
+      "negative_constraints": ["전액 장학금 지급 확정", "소득분위 전면 폐지"]
+    },
+    {
+      "id": "test-md-04",
+      "split": "test",
+      "domain": "scholarship",
+      "situation": "deadline_and_submission",
+      "question": "인송문화재단 신규장학생 서류 접수 마감일이 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 14일(월) 마감",
+      "grounding_quotes": ["9/14", "9월 14일", "마감"],
+      "negative_constraints": ["9월 9일", "9월 16일"]
+    },
+    {
+      "id": "test-md-05",
+      "split": "test",
+      "domain": "extracurricular",
+      "situation": "title_only_notice",
+      "question": "2027학년도 1학기 중화권 파견 교환학생 지원 자격과 선발 기준 알려줘",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224592/artclView.do"
+      ],
+      "expected_facts": "수집된 본문에서 세부 내용을 확인할 수 없으므로 원문 보기를 확인해야 함",
+      "grounding_quotes": ["확인할 수 없습니다", "원문"],
+      "negative_constraints": ["HSK 5급 필수", "평점 4.0 이상 필수"]
+    },
+    {
+      "id": "test-md-06",
+      "split": "test",
+      "domain": "career",
+      "situation": "attachment_qualification",
+      "question": "51기 WFK 청년봉사단 단장 지원하려면 어떤 자격이 필요해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224545/artclView.do"
+      ],
+      "expected_facts": "대학생 해외 봉사활동 또는 봉사활동 인솔 경험이 있는 분 등",
+      "grounding_quotes": ["봉사활동", "인솔 경험", "단장"],
+      "negative_constraints": ["토익 900점 이상 필수"]
+    },
+    {
+      "id": "test-md-07",
+      "split": "test",
+      "domain": "career",
+      "situation": "mentoring_deadline",
+      "question": "2026학년도 2학기 전공연계 협업형 진로·취업멘토링 참가자 신청 기간이 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 10일(목)부터 9월 17일(목) 15:00까지 (제목 6.11 오타 보정)",
+      "grounding_quotes": ["9.10", "9.17", "9월 10일", "9월 17일", "15:00"],
+      "negative_constraints": ["6월 11일", "12월 마감"]
+    },
+    {
+      "id": "test-md-08",
+      "split": "test",
+      "domain": "extracurricular",
+      "situation": "fee_and_benefit",
+      "question": "한성대 SW중심대학사업단 통해서 TOPCIT 접수하면 응시료 지원돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "expected_facts": "네, 시험 응시료(10,000원) 전액 지원 및 2만원 상당 기념품 증정",
+      "grounding_quotes": ["응시료", "10,000원", "전액 지원", "기념품"],
+      "negative_constraints": ["지원되지 않음", "응시료 전액 본인 부담"]
+    },
+    {
+      "id": "test-md-09",
+      "split": "test",
+      "domain": "campus_no_notice",
+      "situation": "school_related_no_grounding",
+      "question": "한성대 기숙사 우촌학사 야간 통금 시간이 몇 시야?",
+      "should_abstain": true,
+      "expected_urls": [],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "grounding_quotes": ["관련 공지를 찾지 못했습니다"],
+      "negative_constraints": []
+    },
+    {
+      "id": "test-md-10",
+      "split": "test",
+      "domain": "irrelevant",
+      "situation": "irrelevant_query",
+      "question": "아이폰 16 프로 디스플레이 주사율 알려줘",
+      "should_abstain": true,
+      "expected_urls": [],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "grounding_quotes": ["관련 공지를 찾지 못했습니다"],
+      "negative_constraints": []
+    }
+  ]
+}

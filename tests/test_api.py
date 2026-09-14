@@ -29,6 +29,7 @@ def client(tmp_path_factory):
     )
     with pytest.MonkeyPatch.context() as patch:
         patch.setattr(core.rag, "get_chroma_vectorstore", lambda: store)
+        patch.setattr(core.rag, "RELEVANCE_THRESHOLD", -1.0)
         with TestClient(app) as c:
             yield c
 

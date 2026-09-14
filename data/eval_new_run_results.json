@@ -1,0 +1,887 @@
+{
+  "metadata": {
+    "git_commit": "a154575d43f6f3742681f08d2edc79d03823f00c",
+    "is_dirty": true,
+    "git_dirty_hash": "6922a2006087",
+    "dataset_sha256": "cf3455e29fc2f281c6c2c775738d3a3dc24b88a16ec10da9128c01cbeadc2cc9",
+    "executed_at": "2026-09-13T21:11:18.891181+09:00",
+    "model_config": {
+      "llm_model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "embedding_model": "jhgan/ko-sroberta-multitask",
+      "relevance_threshold": 0.25,
+      "top_k": 3,
+      "device": "mps"
+    }
+  },
+  "metrics": {
+    "sample_count": 25,
+    "split": "all",
+    "pass_count": 16,
+    "pass_rate": 0.64,
+    "fail_count": 4,
+    "fail_rate": 0.16,
+    "needs_review_count": 5,
+    "needs_review_rate": 0.2,
+    "hit_top1_count": 20,
+    "hit_top1_rate": 0.9090909090909091,
+    "hit_top3_count": 21,
+    "hit_top3_rate": 0.9545454545454546,
+    "abstain_count": 3,
+    "abstain_success_count": 3,
+    "abstain_rate": 1.0,
+    "cold_start_sec": 2.243784189224243,
+    "latency_p50_sec": 4.113940000534058,
+    "latency_p95_sec": 10.375312232971186,
+    "latency_mean_sec": 4.347096748352051
+  },
+  "details": [
+    {
+      "id": "dev-01",
+      "split": "dev",
+      "category": "period_apply",
+      "question": "2026년 2학기 국가장학금 2차 신청 기간이 언제까지야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do"
+      ],
+      "expected_facts": "2026년 8월 12일(수) 09시부터 9월 9일(수) 18시까지 신청",
+      "actual_answer": "2026년 2학기 국가장학금 2차 신청 기간은 2026년 8월 12일부터 9월 16일까지입니다. 이 기간 동안 서류제출 및 가구원 동의를 진행해야 합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "FAIL",
+        "fact_matched": false,
+        "score": 0.0,
+        "reason": "신청 마감일로 가구원 동의 마감일(9월 16일)이 잘못 매핑됨(날짜 뒤바뀜)"
+      },
+      "latency_sec": 5.710227966308594
+    },
+    {
+      "id": "dev-02",
+      "split": "dev",
+      "category": "period_distinction",
+      "question": "국가장학금 신청 마감일이랑 가구원 동의 마감일이 같아?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/220694/artclView.do"
+      ],
+      "expected_facts": "신청 마감일은 9월 9일 18시이고, 서류제출 및 가구원 동의 마감일은 9월 16일 18시로 서로 다름",
+      "actual_answer": "네, 국가장학금 신청 마감일과 가구원 동의 마감일이 같습니다. 2026년 2학기 국가장학금 신청은 2026년 8월 12일부터 9월 16일까지 진행되며, 가구원 동의는 2026년 8월 12일부터 9월 16일까지 진행됩니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/220694/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "NEEDS_REVIEW",
+        "fact_matched": false,
+        "score": 0.5,
+        "reason": "자동 판정 모호: 두 마감일 구분 설명 확인 필요"
+      },
+      "latency_sec": 4.113940000534058
+    },
+    {
+      "id": "dev-03",
+      "split": "dev",
+      "category": "target_audience",
+      "question": "2026년 2학기 국가장학금 2차 신청 대상은 누구야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do"
+      ],
+      "expected_facts": "재학생, 신입생(2학기 입학예정자), 편입생, 재입학생, 복학생 등 모든 대학생",
+      "actual_answer": "2026년 2학기 국가장학금 2차 신청 대상은 재학생, 복학생, 재입학생, 그리고 모든 대학생입니다. 신청 기간은 2026년 8월 12일부터 9월 16일까지이며, 서류제출 및 가구원 동의는 이 기간 내에 진행해야 합니다. 마감 이후 국가장학금 신청은 불가능합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "score": 1.0,
+        "reason": "신청 대상자 정확 안내 (재학생, 재입학생, 복학생, 대학생)"
+      },
+      "latency_sec": 4.5190489292144775
+    },
+    {
+      "id": "dev-04",
+      "split": "dev",
+      "category": "apply_method",
+      "question": "국가장학금 신청은 어디서 어떻게 해야 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+      ],
+      "expected_facts": "한국장학재단 누리집 또는 모바일 앱에서 본인 인증(공동/금융/간편인증서) 후 직접 신청",
+      "actual_answer": "국가장학금 신청은 한국장학재단의 웹사이트에서 진행됩니다. 신청 방법은 다음과 같습니다:\n\n1. **웹사이트 접속**: 한국장학재단의 웹사이트를 방문합니다.\n2. **메뉴 선택**: \"장학금\" 메뉴를 선택합니다.\n3. **소득연계형 국가장학금** 메뉴를 선택합니다.\n4. **대학연계지원형** 메뉴를 선택합니다.\n5. **신청인 동의서 제출** 클릭하여 동의서를 제출합니다.\n\n동의서 제출은 PC 사용이 필수이며, 제출 기한은 11월 28일부터 12월 17일까지입니다. 자세한 정보는 첨부파일을 참조해주세요.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "NEEDS_REVIEW",
+        "fact_matched": false,
+        "score": 0.5,
+        "reason": "신청 방법 상세 확인 필요"
+      },
+      "latency_sec": 7.412277936935425
+    },
+    {
+      "id": "dev-05",
+      "split": "dev",
+      "category": "other_year_distinction",
+      "question": "2025년 2학기 국가장학금 2차 신청 기간은 언제였어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/66732/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/66732/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "expected_facts": "2025년 2학기 2차 신청 기간은 2025년 8월 13일부터 9월 10일까지",
+      "actual_answer": "2025년 2학기 국가장학금 2차 신청 기간은 2025년 8월 13일부터 9월 10일까지였습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/66732/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "score": 1.0,
+        "reason": "2025년도 신청 일정 정확 안내"
+      },
+      "latency_sec": 2.1077938079833984
+    },
+    {
+      "id": "dev-06",
+      "split": "dev",
+      "category": "year_agnostic_latest",
+      "question": "국가장학금 2차 신청 언제까지야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do"
+      ],
+      "expected_facts": "2026년 2학기 2차 기준 9월 9일 18시까지 신청",
+      "actual_answer": "국가장학금 2차 신청은 2026년 8월 12일부터 9월 16일까지 진행됩니다. 신청 기간은 오전 9시부터 오후 18시까지이며, 이 기간을 벗어난 후에는 신청이 불가능합니다. 또한, 서류 제출 및 가구원 동의는 신청 기간 내에 반드시 이루어져야 합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 4.214690208435059
+    },
+    {
+      "id": "dev-07",
+      "split": "dev",
+      "category": "missing_amount",
+      "question": "2026년 2학기 국가장학금 2차 신청하면 장학금 얼마 나와?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do"
+      ],
+      "expected_facts": "공지 본문에 구체적인 지급 금액은 명시되어 있지 않으며, 학자금 지원구간 등에 따라 차등 지급됨",
+      "actual_answer": "2026년 2학기 국가장학금 2차 신청에 대한 정보는 제공되지 않았습니다. 해당 공지에서는 2026년 2학기 국가장학금 2차 신청 안내가 제시되었으나, 세부적인 내용이나 금액은 확인되지 않았습니다. 따라서, 이 질문에 대한 정확한 답변을 제공하기 어렵습니다. 관련 공지를 확인하거나 원문을 참조해 주시면 감사하겠습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": false,
+        "fact_matched": true,
+        "score": 1.0,
+        "reason": "공지 미기재 사실 정상 안내"
+      },
+      "latency_sec": 4.226992130279541
+    },
+    {
+      "id": "dev-08",
+      "split": "dev",
+      "category": "missing_gpa_condition",
+      "question": "국가장학금 신청하려면 직전 학기 평점 몇 점 넘어야 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/63889/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/63656/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/64007/artclView.do"
+      ],
+      "expected_facts": "수집된 공지 본문에는 성적/평점 요건이 명시되어 있지 않으므로 한국장학재단 또는 원문 확인 필요",
+      "actual_answer": "국가장학금 신청 시, 직전 학기의 평점을 3.0 이상이어야 합니다. 이는 학교 본부에서 제공한 정보에 따르면, 신입생 및 편입생 모두 국가장학금 2유형(신.편입생 지원)을 필수로 신청해야 하며, 이를 위해 평점을 3.0 이상으로 유지해야 합니다. 따라서, 현재의 평점이 3.0 이상인지 확인하시기 바랍니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/63889/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/63656/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/64007/artclView.do"
+        ],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": true,
+        "score": 0.0
+      },
+      "answer_eval": {
+        "status": "FAIL",
+        "is_abstained": false,
+        "fact_matched": false,
+        "score": 0.0,
+        "reason": "공지 미기재 사실을 명시하지 않고 임의 추측/환각 답변 생성"
+      },
+      "latency_sec": 4.452568054199219
+    },
+    {
+      "id": "dev-09",
+      "split": "dev",
+      "category": "irrelevant_query",
+      "question": "내일 서울 날씨 어때?",
+      "should_abstain": true,
+      "expected_urls": [],
+      "actual_sources": [],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "actual_answer": "관련 공지를 찾지 못했습니다.",
+      "retrieval": {
+        "top_urls": [],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": true,
+        "fact_matched": true,
+        "constraint_violated": false,
+        "score": 1.0,
+        "reason": "정상 유보"
+      },
+      "latency_sec": 0.02456188201904297
+    },
+    {
+      "id": "dev-10",
+      "split": "dev",
+      "category": "title_only_notice",
+      "question": "2025학년도 2학기 재난장학금 지원 내용이 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/66734/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/66734/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/66732/artclView.do"
+      ],
+      "expected_facts": "관련 공지는 찾았지만 본문 세부 내용을 확인할 수 없으므로 원문 보기를 확인해야 함",
+      "actual_answer": "2025학년도 2학기 재난장학금 지원 내용은 다음과 같습니다:\n\n- **국가장학금**: 2025학년도 2학기 재난장학금(국가장학금) 지원 안내\n- **지원 대상**: 선발된 학생들\n- **제출 기간**: 12월 17일까지\n- **제출 경로**: 한국장학재단 홈페이지 > 장학금 메뉴 > 소득연계형 국가장학금 > 국가장학금Ⅱ유형(대학연계지원형) > 신청인 동의서 제출 클릭\n- **유의사항**: 모바일에서는 동의서 제출 불가, PC 사용 필수\n- **장학금 관련 참고사항**: 첨부파일 참조\n\n이 정보는 해당 공지에서 제공된 내용을 바탕으로 요약한 것입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/66734/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/66732/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 7.679854869842529
+    },
+    {
+      "id": "dev-11",
+      "split": "dev",
+      "category": "attachment_pdf",
+      "question": "WFK 청년봉사단 단장 지원하려면 어떤 자격이 필요해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224545/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/63571/download.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224545/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224543/artclView.do"
+      ],
+      "expected_facts": "WFK 청년봉사단 모집안내서 PDF에 명시된 단장 자격 요건",
+      "actual_answer": "WFK 청년봉사단 단장 모집에 대한 자격요건은 다음과 같습니다:\n\n1. **대학사회봉사협의회**에서는 대학생 해외 봉사활동 또는 봉사활동 인솔 경험이 있는 분이 필요합니다.\n2. **파견팀별 활동 내용에 해당 전공자 및 특기를 가진 분**도 필요합니다.\n3. **파견국 언어 또는 영어로 의사소통 가능한 분**이 필요합니다.\n4. **인솔자와 협업이 가능하며, 단원 관리에 적극적이며 책임감이 있는 분**이 필요합니다.\n\n또한, 최근 3년(2024년~2026년) 간 회비납부가 1회도 없을 시, 면접 및 선발 대상에서 제외될 수 있습니다. (대사협 회비 납부내역 문의는 소속 대학 담당자에게 문의)\n\n참가비는 없으며, 선발방법은 소속대학 추천 후 비대면 면접심사로 진행됩니다. 단, 단원으로서 갖추어야 할 기본소양, 직무수행능력 평가를 통해 선발됩니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224545/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224543/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224543/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 0.5,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 10.725325107574463
+    },
+    {
+      "id": "dev-12",
+      "split": "dev",
+      "category": "attachment_hwp",
+      "question": "국가전문자격시험 합격생 장학금 신청할 때 제출 양식이 뭐야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do"
+      ],
+      "expected_facts": "국가전문자격시험 합격자 장학금 신청 양식 첨부파일",
+      "actual_answer": "[공지 2]에서 국가전문자격시험 합격생 장학금 신청안내에 대한 정보를 제공하겠습니다:\n\n1. **양식**: [첨부파일 발췌: 국가전문자격시험 합격생 장학금 신청서.hwp]\n\n2. **합격생 안내**: \n   - **대상 시험**: 국가기관 또는 이에 상당하다고 인정되는 기관에서 시행한 고등고시 및 전문자격시험으로 다음 각 호의 하나에 해당하는 시험.\n     - 사법고시, 행정고등고시, 외무고등고시, 기술고등고시, 입법고등고시, 지방고등고시\n     - 변리사, CPA(공인회계사), AICPA(미국공인회계사), 감정평가사, 관세사, 세무사, 중등교원 임용고사, 국가직‧지방직 7급(경찰공무원 경위, 소방공무원 소방위 상당)\n   - **합격 혜택**: 장학금 지급 관련 규정에 따라, 재학 중 합격자(합격 후 3개월 이내 신청시)에 대해 격려장학금(100만원)만 지급, 최종합격자에게는 격려장학금(150만원) 및 수업료(1학기)를 감면. 단, 해당학기 합격자수가 예산 범위를 초과할 경우 고시반운영위원회의 심의에 의해 지급 금액 조정 가능.\n\n3. **신청 방법**: 위 내용을 참조하시어 많은 신청 바랍니다.\n\n이 정보를 바탕으로, 국가전문자격시험 합격생 장학금 신청할 때 필요한 양식은 [첨부파일 발췌: 국가전문자격시험 합격생 장학금 신청서.hwp]입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224521/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do"
+        ],
+        "hit_top1": false,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 0.7
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 0.5,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 16.466672897338867
+    },
+    {
+      "id": "dev-13",
+      "split": "dev",
+      "category": "consent_deadline_solo",
+      "question": "2026-2학기 국가장학금 가구원 동의 언제까지 완료해야 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222462/artclView.do"
+      ],
+      "expected_facts": "서류제출 및 가구원 동의는 2026년 9월 16일(수) 18시까지 완료해야 함",
+      "actual_answer": "2026-2학기 국가장학금 가구원 동의는 2026년 8월 12일부터 9월 16일까지 완료해야 합니다. 이 기간 내에 동의를 하셔야 국가장학금 신청이 가능합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/222462/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "score": 1.0,
+        "reason": "가구원 동의 마감일(9월 16일) 정확 안내"
+      },
+      "latency_sec": 3.2547719478607178
+    },
+    {
+      "id": "test-01",
+      "split": "test",
+      "category": "period_apply",
+      "question": "이번 학기 국가장학금 2차 신청 마감 시간이 몇 시야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 9일(수) 18시 마감",
+      "actual_answer": "이번 학기 국가장학금 2차 신청 마감 시간은 2026년 8월 16일 오후 6시입니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "FAIL",
+        "fact_matched": false,
+        "score": 0.0,
+        "reason": "신청 마감일 불일치 (검출된 일자: ['8월 16일'])"
+      },
+      "latency_sec": 1.829498291015625
+    },
+    {
+      "id": "test-02",
+      "split": "test",
+      "category": "period_distinction",
+      "question": "국가장학금 서류 제출은 언제까지 내야 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+      ],
+      "expected_facts": "서류제출 및 가구원 동의 마감일은 9월 16일 18시까지",
+      "actual_answer": "국가장학금 2차 신청은 2026년 8월 12일부터 9월 16일까지 진행됩니다. 서류 제출은 이 기간 내에 반드시 이루어져야 하며, 기간 이후에는 국가장학금 신청이 불가능합니다. 서류 제출 및 가구원 동의는 2026년 8월 12일부터 9월 16일까지 진행되며, 이 기간 내에 반드시 이루어져야 합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "NEEDS_REVIEW",
+        "fact_matched": false,
+        "score": 0.5,
+        "reason": "자동 판정 모호: 두 마감일 구분 설명 확인 필요"
+      },
+      "latency_sec": 4.717748165130615
+    },
+    {
+      "id": "test-03",
+      "split": "test",
+      "category": "other_year_distinction",
+      "question": "2026학년도 1학기 국가장학금 2차 신청 마감일 알려줘",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/219630/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/219630/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/67199/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "expected_facts": "2026학년도 1학기 국가장학금 2차 신청 마감일은 3월 17일(18시)",
+      "actual_answer": "2026학년도 1학기 국가장학금 2차 신청은 2026년 3월 17일까지 마감됩니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/219630/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67199/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "NEEDS_REVIEW",
+        "fact_matched": false,
+        "score": 0.5,
+        "reason": "자동 판정 모호: 2025년 일정 원문 대조 필요"
+      },
+      "latency_sec": 1.801137924194336
+    },
+    {
+      "id": "test-04",
+      "split": "test",
+      "category": "other_semester_distinction",
+      "question": "2026년 2학기 국가장학금 1차 신청 기간은 언제였어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222462/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222462/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/64466/artclView.do"
+      ],
+      "expected_facts": "2026년 2학기 국가장학금 1차 신청은 6월 22일 마감",
+      "actual_answer": "2026년 2학기 국가장학금 1차 신청 기간은 2026년 6월 22일까지였습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/222462/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/64466/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 1.8652048110961914
+    },
+    {
+      "id": "test-05",
+      "split": "test",
+      "category": "apply_method_auth",
+      "question": "국가장학금 신청할 때 어떤 전자서명 인증서 쓸 수 있어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224499/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+      ],
+      "expected_facts": "공동인증서, 금융인증서, 간편인증 중 한 가지 준비 필요",
+      "actual_answer": "[언어]: 자연스럽고 정확한 한국어로 답변합니다.\n\n[핵심 요약]: 국가장학금 신청 시, 학생들은 일반적인 개인 인증서를 사용할 수 있습니다. 하지만, 특정한 종류의 인증서를 사용하는 것은 아니므로, 학생들이 해당 인증서를 구매하거나 신청하는 것이 좋습니다. \n\n[기간 및 마감일]: 국가장학금 신청은 2026년 2학기 2차 신청에서 2026-08-12까지 진행됩니다. 신청 기간은 2026-08-12부터 시작되며, 마감일은 2026-08-12까지입니다.\n\n[미기재 조건]: 국가장학금 신청 시, 학생들은 일반적인 개인 인증서를 사용할 수 있습니다. 하지만, 특정한 종류의 인증서를 사용하는 것은 아니므로, 학생들이 해당 인증서를 구매하거나 신청하는 것이 좋습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224499/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "NEEDS_REVIEW",
+        "fact_matched": false,
+        "score": 0.5,
+        "reason": "신청 방법 상세 확인 필요"
+      },
+      "latency_sec": 8.975260734558105
+    },
+    {
+      "id": "test-06",
+      "split": "test",
+      "category": "irrelevant_query",
+      "question": "파이썬 코드로 퀵소트 구현하는 방법 알려줘",
+      "should_abstain": true,
+      "expected_urls": [],
+      "actual_sources": [],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "actual_answer": "관련 공지를 찾지 못했습니다.",
+      "retrieval": {
+        "top_urls": [],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": true,
+        "fact_matched": true,
+        "constraint_violated": false,
+        "score": 1.0,
+        "reason": "정상 유보"
+      },
+      "latency_sec": 0.020397186279296875
+    },
+    {
+      "id": "test-07",
+      "split": "test",
+      "category": "irrelevant_query",
+      "question": "아이폰 16 프로 스펙 알려줘",
+      "should_abstain": true,
+      "expected_urls": [],
+      "actual_sources": [],
+      "expected_facts": "관련 공지를 찾지 못했습니다.",
+      "actual_answer": "관련 공지를 찾지 못했습니다.",
+      "retrieval": {
+        "top_urls": [],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": true,
+        "fact_matched": true,
+        "constraint_violated": false,
+        "score": 1.0,
+        "reason": "정상 유보"
+      },
+      "latency_sec": 0.01814413070678711
+    },
+    {
+      "id": "test-08",
+      "split": "test",
+      "category": "contact_inquiry",
+      "question": "국가장학금 신청 관련 문의 전화번호가 몇 번이야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [],
+      "expected_facts": "한국장학재단 상담센터 1599-2000",
+      "actual_answer": "해당 세부 내용은 본 공지에서 확인할 수 없습니다. 관련 공지를 찾지 못했습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "FAIL",
+        "fact_matched": false,
+        "fact_ratio": 0.0,
+        "score": 0.0,
+        "reason": "핵심 근거 사실 불일치"
+      },
+      "latency_sec": 1.3750228881835938
+    },
+    {
+      "id": "test-09",
+      "split": "test",
+      "category": "scholarship_type2",
+      "question": "2025학년도 2학기 국가장학금 2유형 학업장려금 동의서 제출 기한은 언제였어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/66424/artclView.do"
+      ],
+      "expected_facts": "2025년 12월 17일(수) 17:00까지",
+      "actual_answer": "2025학년도 2학기 국가장학금Ⅱ유형(학업장려금) 동의서 제출 기한은 12월 17일까지입니다. 이 기간 동안 동의서를 제출해야 하며, 모바일에서는 동의서 제출이 불가능합니다. 자세한 정보는 한국장학재단 홈페이지에서 확인하실 수 있습니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/66424/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 3.825517177581787
+    },
+    {
+      "id": "test-10",
+      "split": "test",
+      "category": "year_agnostic_consent",
+      "question": "국가장학금 가구원 동의 언제까지 해야 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/220694/artclView.do"
+      ],
+      "expected_facts": "2026년 2학기 기준 서류제출 및 가구원 동의는 9월 16일 18시까지",
+      "actual_answer": "국가장학금 가구원 동의는 2026년 9월 16일(수) 18시까지입니다. 이 기간 내에 동의를 하셔야 합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/220694/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 2.128344774246216
+    },
+    {
+      "id": "test-11",
+      "split": "test",
+      "category": "missing_residence_condition",
+      "question": "국가장학금 신청하려면 부모님과 주민등록상 거주지가 같아야 해?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+      ],
+      "expected_facts": "공지 본문에는 거주지 일치 요건이 명시되어 있지 않으므로 한국장학재단 또는 원문 확인 필요",
+      "actual_answer": "해당 세부 내용은 본 공지에서 확인할 수 없습니다. 국가장학금 신청은 학생本人의 주민등록상 거주지와 부모님의 주민등록상 거주지가 같아야 합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/67218/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "is_abstained": false,
+        "fact_matched": true,
+        "score": 1.0,
+        "reason": "공지 미기재 사실 정상 안내"
+      },
+      "latency_sec": 2.450788736343384
+    },
+    {
+      "id": "test-12",
+      "split": "test",
+      "category": "freshman_rule",
+      "question": "2026년 2학기 신입생도 국가장학금 2차 신청할 수 있어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do"
+      ],
+      "expected_facts": "신입생(2학기 입학예정자)도 신청 대상에 포함되어 신청 가능함",
+      "actual_answer": "네, 2026년 2학기 신입생도 국가장학금 2차 신청이 가능합니다. 모든 대학생 중 재학생은 1차 신청이 원칙이며, 정자), 편입생, 재입학생, 복학생 등 모든 대학생 모두 신청 가능합니다. 신청 기간은 2026년 8월 12일부터 9월 16일까지이며, 서류제출 및 가구원 동의는 이 기간 내에 진행해야 합니다.",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "score": 1.0,
+        "reason": "신청 대상자 정확 안내 (재학생, 신입생, 편입생, 재입학생, 복학생, 대학생)"
+      },
+      "latency_sec": 4.761628150939941
+    }
+  ]
+}
