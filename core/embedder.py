@@ -108,6 +108,15 @@ def split_notice_into_chunks(
         "extractions_json": extractions_json,
     }
 
+    # Preserve guidance provenance; never use crawl time as the publication date.
+    provenance = notice.metadata if isinstance(notice, Document) else notice
+    for key in ("source_type", "source_updated_at", "last_checked_at", "last_changed_at", "contact", "coverage_status"):
+        if provenance.get(key):
+            base_metadata[key] = str(provenance[key])
+    if provenance.get("menu_path"):
+        value = provenance["menu_path"]
+        base_metadata["menu_path"] = " / ".join(value) if isinstance(value, list) else str(value)
+
     # 본문이 비어있거나 제목과 같으면 단일 청크 반환
     if not content or content == title:
         doc_id = f"{base_id}_c0"

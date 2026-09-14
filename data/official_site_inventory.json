@@ -1,0 +1,2496 @@
+{
+  "checked_at": "2026-09-14T05:17:32.425277+00:00",
+  "scope": [
+    "교육정보",
+    "대학생활",
+    "한성소식"
+  ],
+  "documents": 144,
+  "attempted": 25,
+  "errors": [],
+  "targets": [
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6096/subview.do",
+      "title": "학부학사일정",
+      "menu_path": [
+        "교육정보",
+        "학사일정",
+        "학부학사일정"
+      ],
+      "kind": "guidance",
+      "interval_days": 1,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6097/subview.do",
+      "title": "대학원학사일정",
+      "menu_path": [
+        "교육정보",
+        "학사일정",
+        "대학원학사일정"
+      ],
+      "kind": "guidance",
+      "interval_days": 1,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6212/subview.do",
+      "title": "교육과정",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "교육과정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6217/subview.do",
+      "title": "이수체계",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "이수체계"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6222/subview.do",
+      "title": "개설학기",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "개설학기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6225/subview.do",
+      "title": "수강신청",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "수강신청"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://info.hansung.ac.kr/jsp_21/student/kyomu/siganpyo_aui.jsp?viewMode=oc",
+      "title": "시간표 및 수업계획서 조회",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "시간표 및 수업계획서 조회"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6229/subview.do",
+      "title": "출결",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "출결"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6104/subview.do",
+      "title": "수업평가(수업만족도조사)",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "수업평가(수업만족도조사)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6105/subview.do",
+      "title": "캡스톤디자인",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "캡스톤디자인"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6231/subview.do",
+      "title": "시험 및 성적평가",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "시험 및 성적평가"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6234/subview.do",
+      "title": "졸업",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "졸업"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6108/subview.do",
+      "title": "조기취업 공결인정",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "조기취업 공결인정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6239/subview.do",
+      "title": "학점인정",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "학점인정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/143/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6110/subview.do",
+      "title": "학점포기",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "학점포기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6244/subview.do",
+      "title": "등록 및 환불기준",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "등록 및 환불기준"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6246/subview.do",
+      "title": "전부(과)",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "전부(과)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6113/subview.do",
+      "title": "재입학",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "재입학"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6248/subview.do",
+      "title": "휴ㆍ복학",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "휴ㆍ복학"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6251/subview.do",
+      "title": "자퇴/제적",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "자퇴/제적"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6253/subview.do",
+      "title": "복수/부전공",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "복수/부전공"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6117/subview.do",
+      "title": "학적부기재사항변경",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "학적부기재사항변경"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6255/subview.do",
+      "title": "병무안내",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "병무안내"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6259/subview.do",
+      "title": "서식",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "서식"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2195/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6260/subview.do",
+      "title": "문의처",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "문의처"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6172/subview.do",
+      "title": "공지사항",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "공지사항"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6308/subview.do",
+      "title": "Q&A",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "Q&A"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2150/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6148/subview.do",
+      "title": "FAQ",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "FAQ"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/artclList.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6262/subview.do",
+      "title": "장학제도",
+      "menu_path": [
+        "교육정보",
+        "장학",
+        "장학제도"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://career.hansung.ac.kr/ko/career/eduscholarship",
+      "title": "교육장학금",
+      "menu_path": [
+        "교육정보",
+        "장학",
+        "교육장학금"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6125/subview.do",
+      "title": "HSU 온라인 서재",
+      "menu_path": [
+        "교육정보",
+        "HSU e-Book",
+        "HSU 온라인 서재"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2165/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6023/subview.do",
+      "title": "전공자율선택제 알아보기",
+      "menu_path": [
+        "교육정보",
+        "전공자율선택제 알아보기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6788/subview.do",
+      "title": "AI플랫폼 이용가이드",
+      "menu_path": [
+        "교육정보",
+        "HSU AI HUB",
+        "AI플랫폼 이용가이드"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6789/subview.do",
+      "title": "AI플랫폼 이용하기",
+      "menu_path": [
+        "교육정보",
+        "HSU AI HUB",
+        "AI플랫폼 이용하기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6796/subview.do",
+      "title": "AI학습윤리",
+      "menu_path": [
+        "교육정보",
+        "HSU AI HUB",
+        "AI학습윤리"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6791/subview.do",
+      "title": "공지사항",
+      "menu_path": [
+        "교육정보",
+        "HSU AI HUB",
+        "공지사항"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2203/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6266/subview.do",
+      "title": "증명서 발급",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "증명서 발급"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6270/subview.do",
+      "title": "학생증 발급",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생증 발급"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6128/subview.do",
+      "title": "학과행사일정",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학과행사일정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6129/subview.do",
+      "title": "기숙사",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "기숙사"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6130/subview.do",
+      "title": "cctv/비상벨 현황",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "cctv/비상벨 현황"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6272/subview.do",
+      "title": "동아리",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "동아리"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6132/subview.do",
+      "title": "학생자치기구",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생자치기구"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6279/subview.do",
+      "title": "장애학생지원",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "장애학생지원"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6134/subview.do",
+      "title": "학군단(ROTC)",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학군단(ROTC)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6332/subview.do",
+      "title": "학생복지(식당,문화시설)",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생복지(식당,문화시설)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/sites/esg/index.do",
+      "title": "ESG센터",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "ESG센터"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/cncschool/index.do",
+      "title": "스마트융합교육센터",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "스마트융합교육센터"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/sites/lifecounseling/index.do",
+      "title": "학생생활상담센터",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생생활상담센터"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/sites/k_kitchen_hansang/index.do",
+      "title": "케이키친한상",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "케이키친한상"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6288/subview.do",
+      "title": "학생활동안전",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생활동안전"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6139/subview.do",
+      "title": "학내잔류 신청안내",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학내잔류 신청안내"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6029/subview.do",
+      "title": "낙산의 메아리",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "낙산의 메아리"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2144/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/sites/international/index.do",
+      "title": "해외대학파견",
+      "menu_path": [
+        "대학생활",
+        "국제교류",
+        "해외대학파견"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/international/4481/subview.do",
+      "title": "교류대학현황",
+      "menu_path": [
+        "대학생활",
+        "국제교류",
+        "교류대학현황"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/international/4501/subview.do",
+      "title": "선발정보",
+      "menu_path": [
+        "대학생활",
+        "국제교류",
+        "선발정보"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6689/subview.do",
+      "title": "외국인 유학생",
+      "menu_path": [
+        "대학생활",
+        "외국인 유학생"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "requires_manual_review",
+      "reason": "원문 contentBuilder가 비어 있음. 별도 연결 또는 운영 부서 확인 필요"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/sites/cis/index.do",
+      "title": "대학생(학부유학생)",
+      "menu_path": [
+        "대학생활",
+        "외국인 유학생",
+        "대학생(학부유학생)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/sites/global/index.do",
+      "title": "글로벌인재대학 교학팀",
+      "menu_path": [
+        "대학생활",
+        "외국인 유학생",
+        "글로벌인재대학 교학팀"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6294/subview.do",
+      "title": "언어교육센터(한국어과정)",
+      "menu_path": [
+        "대학생활",
+        "외국인 유학생",
+        "언어교육센터(한국어과정)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6691/subview.do",
+      "title": "외국인 기숙사",
+      "menu_path": [
+        "대학생활",
+        "외국인 유학생",
+        "외국인 기숙사"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6298/subview.do",
+      "title": "온라인 서비스 및 소프트웨어",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "온라인 서비스 및 소프트웨어"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6338/subview.do",
+      "title": "IT 인프라 및 기기",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "IT 인프라 및 기기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6146/subview.do",
+      "title": "Hello, MR.President",
+      "menu_path": [
+        "대학생활",
+        "민원서비스",
+        "Hello, MR.President"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "requires_manual_review",
+      "reason": "학교 알림메시지 페이지가 반환됨. 유효 링크 확인 필요"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6147/subview.do",
+      "title": "소통결과",
+      "menu_path": [
+        "대학생활",
+        "민원서비스",
+        "소통결과"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2167/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6316/subview.do",
+      "title": "유실물 관리",
+      "menu_path": [
+        "대학생활",
+        "민원서비스",
+        "유실물 관리"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2175/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6315/subview.do",
+      "title": "불편신고",
+      "menu_path": [
+        "대학생활",
+        "민원서비스",
+        "불편신고"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2172/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6152/subview.do",
+      "title": "공익신고",
+      "menu_path": [
+        "대학생활",
+        "민원서비스",
+        "공익신고"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://hansung.ac.kr/sites/humanright/index.do",
+      "title": "한성인권센터",
+      "menu_path": [
+        "대학생활",
+        "민원서비스",
+        "한성인권센터"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6154/subview.do",
+      "title": "시스템 시설 이용안내",
+      "menu_path": [
+        "대학생활",
+        "비전임교원안내",
+        "시스템 시설 이용안내"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6155/subview.do",
+      "title": "수업관련업무처리",
+      "menu_path": [
+        "대학생활",
+        "비전임교원안내",
+        "수업관련업무처리"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6156/subview.do",
+      "title": "성적평가안내",
+      "menu_path": [
+        "대학생활",
+        "비전임교원안내",
+        "성적평가안내"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://career.hansung.ac.kr/ko/",
+      "title": "대학일자리플러스센터",
+      "menu_path": [
+        "대학생활",
+        "대학일자리플러스센터"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://career.hansung.ac.kr/ko/counsel/scholarship_apply",
+      "title": "재학생 맞춤형 고용서비스",
+      "menu_path": [
+        "대학생활",
+        "대학일자리플러스센터",
+        "재학생 맞춤형 고용서비스"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://career.hansung.ac.kr/ko/region/graduate_program",
+      "title": "졸업생 특화 프로그램",
+      "menu_path": [
+        "대학생활",
+        "대학일자리플러스센터",
+        "졸업생 특화 프로그램"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6157/subview.do",
+      "title": "현장실습",
+      "menu_path": [
+        "대학생활",
+        "현장실습"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "requires_manual_review",
+      "reason": "원문 contentBuilder가 비어 있음. 별도 연결 또는 운영 부서 확인 필요"
+    },
+    {
+      "url": "https://hansung.ac.kr/IPP/10803/subview.do",
+      "title": "일학습병행(IPP)",
+      "menu_path": [
+        "대학생활",
+        "현장실습",
+        "일학습병행(IPP)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://coop.hansung.ac.kr/",
+      "title": "국내 현장실습",
+      "menu_path": [
+        "대학생활",
+        "현장실습",
+        "국내 현장실습"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6160/subview.do",
+      "title": "해외 현장실습",
+      "menu_path": [
+        "대학생활",
+        "현장실습",
+        "해외 현장실습"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6161/subview.do",
+      "title": "학습공간",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "학습공간"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6318/subview.do",
+      "title": "체육공간",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "체육공간"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6321/subview.do",
+      "title": "강당 및 행사공간",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "강당 및 행사공간"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6164/subview.do",
+      "title": "빈강의실 현황",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "빈강의실 현황"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6165/subview.do",
+      "title": "제휴서비스",
+      "menu_path": [
+        "대학생활",
+        "제휴서비스",
+        "제휴서비스"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://comento.kr/univ/index/%ED%95%9C%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90?univ=wuy3cp62ge1P2I2Qtslash7MNg%3D%3D&std_no=&utm_source=affiliate-university&utm_medium=link&utm_campaign=hansung&utm_term=undefined&utm_content=undefined",
+      "title": "코멘토(온라인 취업 멘토링)",
+      "menu_path": [
+        "대학생활",
+        "제휴서비스",
+        "코멘토(온라인 취업 멘토링)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.jobplanet.co.kr/",
+      "title": "잡플레닛",
+      "menu_path": [
+        "대학생활",
+        "제휴서비스",
+        "잡플레닛"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6173/subview.do",
+      "title": "한성뉴스",
+      "menu_path": [
+        "한성소식",
+        "한성공지",
+        "한성뉴스"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2183/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6174/subview.do",
+      "title": "입찰/견적공고",
+      "menu_path": [
+        "한성소식",
+        "한성공지",
+        "입찰/견적공고"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2124/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6175/subview.do",
+      "title": "산학협력중점교수멘토링",
+      "menu_path": [
+        "한성소식",
+        "한성공지",
+        "산학협력중점교수멘토링"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6176/subview.do",
+      "title": "장애학생지원",
+      "menu_path": [
+        "한성소식",
+        "한성공지",
+        "장애학생지원"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2121/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6177/subview.do",
+      "title": "언론에서 본 한성",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "언론에서 본 한성"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6178/subview.do",
+      "title": "광고",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "광고"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2139/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6190/subview.do",
+      "title": "홍보인쇄물",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "홍보인쇄물"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2133/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6180/subview.do",
+      "title": "사진갤러리",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "사진갤러리"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2158/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6181/subview.do",
+      "title": "홍보대사",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "홍보대사"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6041/subview.do",
+      "title": "설문 POLL",
+      "menu_path": [
+        "한성소식",
+        "설문 POLL"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/sites/hspress/index.do",
+      "title": "한성프레스센터",
+      "menu_path": [
+        "한성소식",
+        "한성프레스센터"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/giving/4642/subview.do",
+      "title": "동문소식",
+      "menu_path": [
+        "한성소식",
+        "동문소식"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6213/subview.do",
+      "title": "전공트랙제도",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "교육과정",
+        "전공트랙제도"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6214/subview.do",
+      "title": "융합교육과정",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "교육과정",
+        "융합교육과정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6215/subview.do",
+      "title": "Micro Degree과정",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "교육과정",
+        "Micro Degree과정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6216/subview.do",
+      "title": "학석사연계과정",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "교육과정",
+        "학석사연계과정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/7436/subview.do",
+      "title": "모듈형 전공교육과정",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "교육과정",
+        "모듈형 전공교육과정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6218/subview.do",
+      "title": "전공교육과정 이수학점",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "이수체계",
+        "전공교육과정 이수학점"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6219/subview.do",
+      "title": "교양교육과정 이수학점",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "이수체계",
+        "교양교육과정 이수학점"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6220/subview.do",
+      "title": "비교과 포인트",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "이수체계",
+        "비교과 포인트"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6221/subview.do",
+      "title": "편입생 이수체계",
+      "menu_path": [
+        "교육정보",
+        "교육과정",
+        "이수체계",
+        "편입생 이수체계"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6223/subview.do",
+      "title": "상상더학기",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "개설학기",
+        "상상더학기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6224/subview.do",
+      "title": "계절학기(여름/겨울)",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "개설학기",
+        "계절학기(여름/겨울)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6226/subview.do",
+      "title": "수강학점(학점이월제)",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "수강신청",
+        "수강학점(학점이월제)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6227/subview.do",
+      "title": "수강포기",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "수강신청",
+        "수강포기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6228/subview.do",
+      "title": "수강신청 장바구니",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "수강신청",
+        "수강신청 장바구니"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6230/subview.do",
+      "title": "장기결석자상담",
+      "menu_path": [
+        "교육정보",
+        "수업",
+        "출결",
+        "장기결석자상담"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6232/subview.do",
+      "title": "성적취득, 학사경고",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "시험 및 성적평가",
+        "성적취득, 학사경고"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6233/subview.do",
+      "title": "학업이수곤란자상담",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "시험 및 성적평가",
+        "학업이수곤란자상담"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6235/subview.do",
+      "title": "졸업사정절차",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "졸업",
+        "졸업사정절차"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6236/subview.do",
+      "title": "조기졸업",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "졸업",
+        "조기졸업"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6237/subview.do",
+      "title": "졸업유예(학사학위취득유예)",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "졸업",
+        "졸업유예(학사학위취득유예)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6238/subview.do",
+      "title": "수료",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "졸업",
+        "수료"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6240/subview.do",
+      "title": "타대학학점교류",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "학점인정",
+        "타대학학점교류"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6241/subview.do",
+      "title": "K-MOOC",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "학점인정",
+        "K-MOOC"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6242/subview.do",
+      "title": "편입생학점인정",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "학점인정",
+        "편입생학점인정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6243/subview.do",
+      "title": "외부사이버/군e-러닝",
+      "menu_path": [
+        "교육정보",
+        "성적/졸업",
+        "학점인정",
+        "외부사이버/군e-러닝"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6245/subview.do",
+      "title": "등록금환불",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "등록 및 환불기준",
+        "등록금환불"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6247/subview.do",
+      "title": "교차전부(과)",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "전부(과)",
+        "교차전부(과)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6249/subview.do",
+      "title": "복학",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "휴ㆍ복학",
+        "복학"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6250/subview.do",
+      "title": "일반휴학신청자상담제도",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "휴ㆍ복학",
+        "일반휴학신청자상담제도"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6252/subview.do",
+      "title": "제적",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "자퇴/제적",
+        "제적"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6254/subview.do",
+      "title": "학과제(16학번 이전)",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "복수/부전공",
+        "학과제(16학번 이전)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6641/subview.do",
+      "title": "재학생입영원입영연기",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "병무안내",
+        "재학생입영원입영연기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6642/subview.do",
+      "title": "재학생입영연기",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "병무안내",
+        "재학생입영연기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6258/subview.do",
+      "title": "예비군업무",
+      "menu_path": [
+        "교육정보",
+        "학적변동",
+        "병무안내",
+        "예비군업무"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6261/subview.do",
+      "title": "(대학원)학과별연락처",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "문의처",
+        "(대학원)학과별연락처"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6309/subview.do",
+      "title": "강의민원",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "Q&A",
+        "강의민원"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2151/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6310/subview.do",
+      "title": "비교과",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "Q&A",
+        "비교과"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2153/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6311/subview.do",
+      "title": "등록/장학",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "Q&A",
+        "등록/장학"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2154/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6312/subview.do",
+      "title": "인터넷/전산",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "Q&A",
+        "인터넷/전산"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2155/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6313/subview.do",
+      "title": "학술정보관",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "Q&A",
+        "학술정보관"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2156/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6314/subview.do",
+      "title": "기타문의",
+      "menu_path": [
+        "교육정보",
+        "서식/문의처",
+        "Q&A",
+        "기타문의"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2157/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6263/subview.do",
+      "title": "교내장학(신입생)",
+      "menu_path": [
+        "교육정보",
+        "장학",
+        "장학제도",
+        "교내장학(신입생)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6264/subview.do",
+      "title": "교내장학(재학생)",
+      "menu_path": [
+        "교육정보",
+        "장학",
+        "장학제도",
+        "교내장학(재학생)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6265/subview.do",
+      "title": "교외장학",
+      "menu_path": [
+        "교육정보",
+        "장학",
+        "장학제도",
+        "교외장학"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6797/subview.do",
+      "title": "학생용",
+      "menu_path": [
+        "교육정보",
+        "HSU AI HUB",
+        "AI학습윤리",
+        "학생용"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6267/subview.do",
+      "title": "인터넷 증명발급",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "증명서 발급",
+        "인터넷 증명발급"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6268/subview.do",
+      "title": "자동발급기(Touch Screen)",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "증명서 발급",
+        "자동발급기(Touch Screen)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6269/subview.do",
+      "title": "행정기관 FAX 민원",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "증명서 발급",
+        "행정기관 FAX 민원"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6271/subview.do",
+      "title": "국제학생증",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생증 발급",
+        "국제학생증"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6273/subview.do",
+      "title": "공연예술분과",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "동아리",
+        "공연예술분과"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6274/subview.do",
+      "title": "종교분과",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "동아리",
+        "종교분과"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6275/subview.do",
+      "title": "학술분과",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "동아리",
+        "학술분과"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6276/subview.do",
+      "title": "체육분과",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "동아리",
+        "체육분과"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6277/subview.do",
+      "title": "평면예술분과",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "동아리",
+        "평면예술분과"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6278/subview.do",
+      "title": "취미봉사분과",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "동아리",
+        "취미봉사분과"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6280/subview.do",
+      "title": "장애학생지원(대학생활)",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "장애학생지원",
+        "장애학생지원(대학생활)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6281/subview.do",
+      "title": "장애학생보조기구",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "장애학생지원",
+        "장애학생보조기구"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6282/subview.do",
+      "title": "협력기관",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "장애학생지원",
+        "협력기관"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6283/subview.do",
+      "title": "장애학생공지사항",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "장애학생지원",
+        "장애학생공지사항"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2128/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6333/subview.do",
+      "title": "교직원식당",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생복지(식당,문화시설)",
+        "교직원식당"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6334/subview.do",
+      "title": "천원의 아침밥",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생복지(식당,문화시설)",
+        "천원의 아침밥"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6285/subview.do",
+      "title": "식당,매점",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생복지(식당,문화시설)",
+        "식당,매점"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6286/subview.do",
+      "title": "건강,문화시설",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생복지(식당,문화시설)",
+        "건강,문화시설"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6287/subview.do",
+      "title": "기타시설",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생복지(식당,문화시설)",
+        "기타시설"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6289/subview.do",
+      "title": "캠퍼스생활안전",
+      "menu_path": [
+        "대학생활",
+        "학생지원",
+        "학생활동안전",
+        "캠퍼스생활안전"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6295/subview.do",
+      "title": "체류정보",
+      "menu_path": [
+        "대학생활",
+        "외국인 유학생",
+        "언어교육센터(한국어과정)",
+        "체류정보"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6335/subview.do",
+      "title": "정규과정",
+      "menu_path": [
+        "대학생활",
+        "외국인 유학생",
+        "언어교육센터(한국어과정)",
+        "정규과정"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6336/subview.do",
+      "title": "지원자격 및 지원절차",
+      "menu_path": [
+        "대학생활",
+        "외국인 유학생",
+        "언어교육센터(한국어과정)",
+        "지원자격 및 지원절차"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6299/subview.do",
+      "title": "한성웹메일",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "온라인 서비스 및 소프트웨어",
+        "한성웹메일"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6300/subview.do",
+      "title": "통합 모바일 앱",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "온라인 서비스 및 소프트웨어",
+        "통합 모바일 앱"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6301/subview.do",
+      "title": "소프트웨어 안내",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "온라인 서비스 및 소프트웨어",
+        "소프트웨어 안내"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6302/subview.do",
+      "title": "Office365",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "온라인 서비스 및 소프트웨어",
+        "Office365"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/7591/subview.do",
+      "title": "정품Windows 업그레이드 안내",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "온라인 서비스 및 소프트웨어",
+        "정품Windows 업그레이드 안내"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6303/subview.do",
+      "title": "원격수업",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "온라인 서비스 및 소프트웨어",
+        "원격수업"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6339/subview.do",
+      "title": "IOS(아이폰)",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "IT 인프라 및 기기",
+        "IOS(아이폰)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6340/subview.do",
+      "title": "Android OS",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "IT 인프라 및 기기",
+        "Android OS"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6341/subview.do",
+      "title": "Windows10 이상",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "IT 인프라 및 기기",
+        "Windows10 이상"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/7590/subview.do",
+      "title": "eduroam 서비스",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "IT 인프라 및 기기",
+        "eduroam 서비스"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6342/subview.do",
+      "title": "졸업생 무선네트워크 신청 방법",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "IT 인프라 및 기기",
+        "졸업생 무선네트워크 신청 방법"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6306/subview.do",
+      "title": "노트북 대여",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "IT 인프라 및 기기",
+        "노트북 대여"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6307/subview.do",
+      "title": "공용컴퓨터 실습실",
+      "menu_path": [
+        "대학생활",
+        "IT서비스지원",
+        "IT 인프라 및 기기",
+        "공용컴퓨터 실습실"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6317/subview.do",
+      "title": "분실물",
+      "menu_path": [
+        "대학생활",
+        "민원서비스",
+        "유실물 관리",
+        "분실물"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "board_requires_notice_crawler",
+      "boards": [
+        "https://www.hansung.ac.kr/bbs/hansung/2176/artclList.do"
+      ]
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6319/subview.do",
+      "title": "체육관(상상관)",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "체육공간",
+        "체육관(상상관)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6320/subview.do",
+      "title": "풋살장",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "체육공간",
+        "풋살장"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6322/subview.do",
+      "title": "소강당(창의관)",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "강당 및 행사공간",
+        "소강당(창의관)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6323/subview.do",
+      "title": "DLC(미래관)",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "강당 및 행사공간",
+        "DLC(미래관)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6324/subview.do",
+      "title": "컨퍼런스홀(상상관)",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "강당 및 행사공간",
+        "컨퍼런스홀(상상관)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6326/subview.do",
+      "title": "상상관홀",
+      "menu_path": [
+        "대학생활",
+        "시설 이용/예약",
+        "강당 및 행사공간",
+        "상상관홀"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6188/subview.do",
+      "title": "한성UI",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "홍보인쇄물",
+        "한성UI"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6189/subview.do",
+      "title": "교가",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "홍보인쇄물",
+        "교가"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6327/subview.do",
+      "title": "홍보동영상",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "홍보인쇄물",
+        "홍보동영상"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6328/subview.do",
+      "title": "국문",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "홍보인쇄물",
+        "국문"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6329/subview.do",
+      "title": "English",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "홍보인쇄물",
+        "English"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6330/subview.do",
+      "title": "中文",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "홍보인쇄물",
+        "中文"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6331/subview.do",
+      "title": "Монгол хэл",
+      "menu_path": [
+        "한성소식",
+        "홍보갤러리",
+        "홍보인쇄물",
+        "Монгол хэл"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "not_due"
+    }
+  ]
+}

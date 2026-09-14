@@ -29,6 +29,7 @@ streamlit>=1.38.0
 python-dotenv>=1.0.0
 
 # ── 크롤러 ─────────────────────────────────
+requests>=2.32.0
 beautifulsoup4>=4.12.0
 lxml>=5.0.0
 playwright>=1.40.0
