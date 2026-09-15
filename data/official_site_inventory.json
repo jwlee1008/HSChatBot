@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-09-15T04:15:30.220690+00:00",
+  "checked_at": "2026-09-15T23:32:52.776673+00:00",
   "scope": [
     "교육정보",
     "대학생활",
     "한성소식"
   ],
   "documents": 144,
-  "attempted": 26,
+  "attempted": 25,
   "errors": [],
   "targets": [
     {
@@ -496,8 +496,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "changed",
-      "boards": []
+      "collection_status": "not_due"
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6129/subview.do",
