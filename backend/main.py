@@ -129,7 +129,7 @@ async def query(request: QueryRequest):
         except Exception as e:
             raise HTTPException(
                 status_code=500,
-                detail=f"LLM 로드 실패: {str(e)}",
+                detail="LLM 서비스를 초기화할 수 없습니다.",
             )
 
     start = time.time()
@@ -137,12 +137,30 @@ async def query(request: QueryRequest):
         result = rag_instance.query(request.question, top_k=request.top_k)
     except Exception as e:
         logger.error("RAG 질의 실패: %s", str(e))
-        raise HTTPException(status_code=500, detail=f"질의 처리 실패: {str(e)}")
+        raise HTTPException(status_code=500, detail="질의 처리 중 서버 내부 오류가 발생했습니다.")
 
     elapsed = time.time() - start
     logger.info("RAG 질의 완료: %.2f초", elapsed)
 
+    raw_status = result.get("status", "success")
+    raw_error = str(result.get("error") or "")
+    safe_error_type = None
+    if raw_status == "api_error":
+        if "429" in raw_error or "RESOURCE_EXHAUSTED" in raw_error:
+            safe_error_type = "rate_limit"
+        elif "503" in raw_error or "UNAVAILABLE" in raw_error:
+            safe_error_type = "service_unavailable"
+        elif any(code in raw_error for code in ("401", "403", "PERMISSION_DENIED")):
+            safe_error_type = "auth_error"
+        else:
+            safe_error_type = "internal_api_error"
+
     return QueryResponse(
         answer=result["answer"],
-        sources=[SourceCard(**src) for src in result["sources"]],
+        sources=[SourceCard(**src) for src in result.get("sources", [])],
+        status=raw_status,
+        api_called=result.get("api_called", False),
+        provider=result.get("provider", ""),
+        model=result.get("model", ""),
+        error_type=safe_error_type,
     )

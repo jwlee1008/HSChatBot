@@ -38,8 +38,19 @@ class SourceCard(BaseModel):
 class QueryResponse(BaseModel):
     """RAG 질의 응답 스키마."""
 
-    answer: str = Field(description="LLM이 생성한 요약 답변")
+    answer: str = Field(description="LLM이 생성한 요약 답변 또는 사용자 안내문")
     sources: list[SourceCard] = Field(description="출처 카드 리스트")
+    status: str = Field(
+        default="success",
+        description="응답 상태: 'success', 'no_context', 'title_only_notice', 'api_error'",
+    )
+    api_called: bool = Field(default=False, description="실제 LLM API 호출 여부")
+    provider: str = Field(default="", description="사용된 LLM 프로바이더")
+    model: str = Field(default="", description="사용된 LLM 모델명")
+    error_type: str | None = Field(
+        default=None,
+        description="오류 유형: 'rate_limit', 'service_unavailable', 'auth_error', None (비밀정보/원시 예외 제외)",
+    )
 
 
 class RetrieveResponse(BaseModel):

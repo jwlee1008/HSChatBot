@@ -1,0 +1,210 @@
+{
+  "description": "CampusRAG 보강 공지·상시 안내·FAQ·서식 Phase 2 신규 검증 데이터셋",
+  "version": "1.0",
+  "splits": {
+    "total_count": 10
+  },
+  "questions": [
+    {
+      "id": "exp-01",
+      "split": "test",
+      "domain": "career",
+      "situation": "title_conflict_schedule",
+      "question": "2026학년도 2학기 전공연계 협업형 진로·취업멘토링 참가자 신청 기간이 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 10일(목) ~ 9월 17일(목) 15:00까지 신청 접수 (공지 제목의 6.11은 오기)",
+      "grounding_quotes": [
+        "9월 10일",
+        "9월 17일",
+        "15:00"
+      ],
+      "negative_constraints": [
+        "6월 11일 마감",
+        "6월 11일까지 신청"
+      ]
+    },
+    {
+      "id": "exp-02",
+      "split": "test",
+      "domain": "academic",
+      "situation": "target_with_exclusion",
+      "question": "편입생 전적대학 학점 재인정 신청 대상자가 누구야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "expected_facts": "일반편입생(외국인 유학생 제외) 중 전적대학 학점 추가인정 또는 재사정 희망자",
+      "grounding_quotes": [
+        "일반편입생",
+        "외국인 유학생 제외"
+      ],
+      "negative_constraints": [
+        "외국인 유학생 포함"
+      ]
+    },
+    {
+      "id": "exp-03",
+      "split": "test",
+      "domain": "scholarship",
+      "situation": "multi_step_deadlines",
+      "question": "2026년 2학기 국가장학금 2차 신청 마감과 가구원 동의 마감은 각각 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "expected_facts": "신청 마감은 9월 9일(수) 18시, 서류제출 및 가구원 동의 마감은 9월 16일(수) 18시",
+      "grounding_quotes": [
+        "9월 9일",
+        "9월 16일",
+        "18시"
+      ],
+      "negative_constraints": [
+        "신청 마감 9월 16일",
+        "동일한 마감일",
+        "마감일이 같다"
+      ]
+    },
+    {
+      "id": "exp-04",
+      "split": "test",
+      "domain": "academic",
+      "situation": "multi_step_deadlines",
+      "question": "제26회 TOPCIT 정기평가 한성대 단체접수 마감일이 언제까지로 연장됐어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do"
+      ],
+      "expected_facts": "구글 설문 단체접수 마감은 9월 9일(수)까지 연장되었으며, 보증금 납부는 9월 11일(금) 13:00 마감",
+      "grounding_quotes": [
+        "9월 9일",
+        "구글 설문",
+        "연장"
+      ],
+      "negative_constraints": [
+        "10월 10일 마감"
+      ]
+    },
+    {
+      "id": "exp-05",
+      "split": "test",
+      "domain": "academic",
+      "situation": "short_query",
+      "question": "TOPCIT 평가",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "expected_facts": "제26회 TOPCIT 소프트웨어 역량검정 시험 정기평가 안내",
+      "grounding_quotes": [
+        "TOPCIT",
+        "정기평가",
+        "접수"
+      ],
+      "negative_constraints": []
+    },
+    {
+      "id": "exp-06",
+      "split": "test",
+      "domain": "academic",
+      "situation": "guidance_faq",
+      "question": "성적 평점평균 반올림 여부가 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9"
+      ],
+      "expected_facts": "평점평균 계산 시 반올림하지 않고 소수점 셋째 자리 이하는 절사(버림) 처리",
+      "grounding_quotes": [
+        "절사",
+        "소숫점",
+        "버림"
+      ],
+      "negative_constraints": [
+        "반올림 처리",
+        "반올림합니다"
+      ]
+    },
+    {
+      "id": "exp-07",
+      "split": "test",
+      "domain": "academic",
+      "situation": "guidance_rule",
+      "question": "조기졸업 신청 자격과 평점평균 기준이 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/hansung/6236/subview.do"
+      ],
+      "expected_facts": "7학기 이수(미래플러스대학 6 또는 7학기), 총 평점평균 4.0 이상, F학점(과락) 없음",
+      "grounding_quotes": [
+        "4.0",
+        "7학기",
+        "과락"
+      ],
+      "negative_constraints": [
+        "3.5 이상"
+      ]
+    },
+    {
+      "id": "exp-08",
+      "split": "test",
+      "domain": "academic",
+      "situation": "guidance_faq",
+      "question": "성적 이의신청 방법 알려줘",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223410/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222869/artclView.do"
+      ],
+      "expected_facts": "종합정보시스템 성적조회 메뉴에서 조회 후 정해진 기간 내 담당 교강사에게 문의 및 정정 요청",
+      "grounding_quotes": [
+        "종합정보시스템",
+        "이의신청",
+        "교수"
+      ],
+      "negative_constraints": []
+    },
+    {
+      "id": "exp-09",
+      "split": "test",
+      "domain": "academic",
+      "situation": "official_form",
+      "question": "자퇴원 서식은 어디서 받아?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=17",
+        "https://www.hansung.ac.kr/hansung/6251/subview.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2128/222485/artclView.do"
+      ],
+      "expected_facts": "학교 홈페이지 학사서식/자퇴 안내 페이지에서 자퇴원 양식 다운로드 또는 학사운영팀 방문",
+      "grounding_quotes": [
+        "자퇴원",
+        "서식",
+        "다운로드"
+      ],
+      "negative_constraints": []
+    },
+    {
+      "id": "exp-10",
+      "split": "test",
+      "domain": "general",
+      "situation": "irrelevant_query",
+      "question": "파이썬으로 이진 탐색 트리 구현하는 코드 짜줘",
+      "should_abstain": true,
+      "expected_urls": [],
+      "expected_facts": "학교 공지/학사 관련 내용이 아니므로 유보",
+      "grounding_quotes": [
+        "관련 공지",
+        "찾을 수 없"
+      ],
+      "negative_constraints": [
+        "class BinarySearchTree",
+        "def insert"
+      ]
+    }
+  ]
+}

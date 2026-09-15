@@ -1,0 +1,106 @@
+{
+  "description": "Five fixed probes: deadline, exclusion, staged deadline, FAQ, abstention. Manual grounding review required.",
+  "questions": [
+    {
+      "id": "exp-01",
+      "split": "test",
+      "domain": "career",
+      "situation": "title_conflict_schedule",
+      "question": "2026학년도 2학기 전공연계 협업형 진로·취업멘토링 참가자 신청 기간이 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 10일(목) ~ 9월 17일(목) 15:00까지 신청 접수 (공지 제목의 6.11은 오기)",
+      "grounding_quotes": [
+        "9월 10일",
+        "9월 17일",
+        "15:00"
+      ],
+      "negative_constraints": [
+        "6월 11일 마감",
+        "6월 11일까지 신청"
+      ]
+    },
+    {
+      "id": "exp-02",
+      "split": "test",
+      "domain": "academic",
+      "situation": "target_with_exclusion",
+      "question": "편입생 전적대학 학점 재인정 신청 대상자가 누구야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "expected_facts": "일반편입생(외국인 유학생 제외) 중 전적대학 학점 추가인정 또는 재사정 희망자",
+      "grounding_quotes": [
+        "일반편입생",
+        "외국인 유학생 제외"
+      ],
+      "negative_constraints": [
+        "외국인 유학생 포함"
+      ]
+    },
+    {
+      "id": "exp-04",
+      "split": "test",
+      "domain": "academic",
+      "situation": "multi_step_deadlines",
+      "question": "제26회 TOPCIT 정기평가 한성대 단체접수 마감일이 언제까지로 연장됐어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do"
+      ],
+      "expected_facts": "구글 설문 단체접수 마감은 9월 9일(수)까지 연장되었으며, 보증금 납부는 9월 11일(금) 13:00 마감",
+      "grounding_quotes": [
+        "9월 9일",
+        "구글 설문",
+        "연장"
+      ],
+      "negative_constraints": [
+        "10월 10일 마감"
+      ]
+    },
+    {
+      "id": "exp-06",
+      "split": "test",
+      "domain": "academic",
+      "situation": "guidance_faq",
+      "question": "성적 평점평균 반올림 여부가 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9"
+      ],
+      "expected_facts": "평점평균 계산 시 반올림하지 않고 소수점 셋째 자리 이하는 절사(버림) 처리",
+      "grounding_quotes": [
+        "절사",
+        "소숫점",
+        "버림"
+      ],
+      "negative_constraints": [
+        "반올림 처리",
+        "반올림합니다"
+      ]
+    },
+    {
+      "id": "exp-10",
+      "split": "test",
+      "domain": "general",
+      "situation": "irrelevant_query",
+      "question": "파이썬으로 이진 탐색 트리 구현하는 코드 짜줘",
+      "should_abstain": true,
+      "expected_urls": [],
+      "expected_facts": "학교 공지/학사 관련 내용이 아니므로 유보",
+      "grounding_quotes": [
+        "관련 공지",
+        "찾을 수 없"
+      ],
+      "negative_constraints": [
+        "class BinarySearchTree",
+        "def insert"
+      ]
+    }
+  ]
+}

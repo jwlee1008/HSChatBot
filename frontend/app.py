@@ -287,10 +287,24 @@ if prompt := st.chat_input("궁금한 것을 물어보세요 (예: 수강신청 
             if result:
                 ans_text = result.get("answer", "")
                 sources = result.get("sources", [])
+                status = result.get("status", "success")
+                error_type = result.get("error_type")
+
+                if status == "api_error":
+                    if error_type == "rate_limit":
+                        st.warning("⚠️ AI 서비스 요청 한도(Rate Limit)에 도달하여 일시 안내가 표시됩니다.")
+                    elif error_type == "service_unavailable":
+                        st.warning("⚠️ AI 서비스 일시적 서버 혼잡(503)으로 재시도 후 장애 안내가 표시됩니다.")
+                    elif error_type == "auth_error":
+                        st.error("🔒 AI 서비스 인증/권한 오류가 발생했습니다.")
+                    else:
+                        st.warning("⚠️ AI 서비스 일시 장애가 발생했습니다.")
+
                 st.markdown(ans_text)
                 if sources:
                     st.markdown("---")
                     st.markdown("**📎 참고 공지사항:**")
+
                     with st.container():
                         for i, src in enumerate(sources):
                             render_source_card(src, i)

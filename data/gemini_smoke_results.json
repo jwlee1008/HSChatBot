@@ -1,0 +1,358 @@
+{
+  "executed_at": "2026-09-15T04:41:02.187147+00:00",
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "source_db": "data/verify_demo_chroma_db",
+  "source_sqlite_sha256": "8376c713499172b800f0c90954a3712fe1935a4bae32b25907fdb5e68b6d2ed9",
+  "scope": "Real RAG invocation on copied demo DB; manual answer review required",
+  "results": [
+    {
+      "id": "dev-md-05",
+      "question": "국가전문자격시험 합격생 장학금 대상에 공인회계사랑 세무사도 포함돼?",
+      "answer": "네, 국가전문자격시험 합격생 장학금 대상 시험에 공인회계사(CPA)와 세무사 모두 포함됩니다. 본 공지에 따르면 변리사, 공인회계사, 미국공인회계사, 세무사, 감정평가사, 관세사 등이 대상 시험으로 명시되어 장학 혜택을 받을 수 있습니다. 자세한 사항은 학교본부 학생복지팀의 **[양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생**(등록일: 2026-05-12) 공지에서 확인하실 수 있습니다.",
+      "sources": [
+        {
+          "title": "[양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생",
+          "source": "학교본부 (학생복지팀)",
+          "date": "2026-05-12",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do",
+          "category": "장학"
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[장학] [양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생 (등록일: 2026-05-12, 출처: 학교본부 (학생복지팀))\n\n국가고시합격자장학금 신청 안내\n\n(국가전문자격시험 합격생 안내)\n\n \n\n1. 대상 시험\n\n- 국가기관 또는 이에 상당하다고 인정 되는 기관에서 시행한 고등고시 및 전문자격시험으로 다음 각 호의 하나에 해당하는 시험\n\n1. 사법고시, 행정고등고시, 외무고등고시, 기술고등고시, 입법고등고시, 지방고등고시\n\n2. 변리사, CPA(공인회계사), AICPA(미국공인회계사), 감정평가사, 관세사, 세무사,중등교원 임용고사, 공인노무사,  국가직‧지방직 7급(경찰공무원 경위, 소방공무원 소방위 상당)\n\n \n\n2. 국가전문자격시험 합격 혜택\n\n1) 장학금 지급 : 장학금 지급 관련 규정에 따름\n\n■ 재학 중 합격자(합격 후 3개월 이내 신청시)\n\n➤ 1차합격자 : 격려장학금(100만원)만 지급\n\n \n\n➤ 최종합격자 : 격려장학금(150만원) 및 수업료(1학기)를 감면. 단, 해당학기 합격자수가 예산 범위를 초과할 경우 고시반운영위원회의 심의에 의해 지급 금액 조정 가능",
+          "metadata": {
+            "content_hash": "1530e680b469fb1a",
+            "parent_id": "2e36ca60f471fe0cd5783f47689502c85f211f7a25fb06932359705c7de965b2",
+            "category": "장학",
+            "total_chunks": 4,
+            "date": "2026-05-12",
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do",
+            "title": "[양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생",
+            "chunk_index": 0,
+            "source": "학교본부 (학생복지팀)",
+            "has_attachment": false,
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do",
+            "chunk_id": "2e36ca60f471fe0cd5783f47689502c85f211f7a25fb06932359705c7de965b2_c0",
+            "extraction_summary": "",
+            "content_status": "text",
+            "id": "2e36ca60f471fe0cd5783f47689502c85f211f7a25fb06932359705c7de965b2",
+            "has_ocr": false,
+            "extractions_json": "",
+            "_score": 0.7666537312020416
+          }
+        },
+        {
+          "text": "[장학] [양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생 (등록일: 2026-05-12, 출처: 학교본부 (학생복지팀))\n\n[최종합격자 발표 후 장학금 신청일자 기준으로 재학 중인 4학년 학생은 해당학기(1학기) 수업료 감면 (등록기간 이후에는 소급감면)]\n\n \n\n■ 졸업 후 합격자\n\n \n\n➤ 고등고시 최종합격자 ① (합격 후 5년 이내 신청 시)\n\n- 사법고시, 행정고등고시, 외무고등고시, 기술고등고시, 입법고등고시, 지방고등고시와 중등교원 임용고사 최종 합격자의 경우 격려 장학금(100만원) 지급\n\n \n\n➤ 국가전문자격시험 최종합격자 ② (합격 후 1년 이내 신청 시)\n\n- 변리사, CPA(공인회계사), AICPA(미국공인회계사), 감정평가사, 관세사, 세무사, 공인노무사,  국가직‧지방직 7급(경찰공무원 경위, 소방공무원 소방위 상당) 최종 합격자의 경우 격려장학금 50만원 지급\n\n \n\n■ 예외 : 동일인이 장학금 수여 해당기간 중 2개 이상의 시험에 합격하는 경우에는 1개의 시험만 적용하며, 중복하여 지급하지 않는다.\n\n2) 현수막 게재(예산 가능시)\n\n3) 한성 이슈 등 홈페이지 게재",
+          "metadata": {
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do",
+            "extraction_summary": "",
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do",
+            "date": "2026-05-12",
+            "has_ocr": false,
+            "id": "2e36ca60f471fe0cd5783f47689502c85f211f7a25fb06932359705c7de965b2",
+            "content_status": "text",
+            "title": "[양식] 국가고시합격자장학금 신청안내 - 국가전문자격시험 합격생",
+            "content_hash": "1530e680b469fb1a",
+            "category": "장학",
+            "total_chunks": 4,
+            "parent_id": "2e36ca60f471fe0cd5783f47689502c85f211f7a25fb06932359705c7de965b2",
+            "source": "학교본부 (학생복지팀)",
+            "chunk_index": 1,
+            "extractions_json": "",
+            "has_attachment": false,
+            "chunk_id": "2e36ca60f471fe0cd5783f47689502c85f211f7a25fb06932359705c7de965b2_c1",
+            "_score": 0.7607760581492579
+          }
+        }
+      ],
+      "status": "executed",
+      "seconds": 3.557
+    },
+    {
+      "id": "test-md-07",
+      "question": "2026학년도 2학기 전공연계 협업형 진로·취업멘토링 참가자 신청 기간이 언제야?",
+      "answer": "2026년 9월 8일에 등록된 「2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00)」 공지 제목에는 '9.10.목~6.11.목 15:00'로 표기되어 있으나, 공지 본문에서 세부 내용을 확인할 수 없습니다. \n\n상세 신청 기간 및 일정에 대해서는 공지에 안내된 대학일자리플러스센터 진로취업지원팀(02-760-5614)으로 문의하시기 바랍니다.",
+      "sources": [
+        {
+          "title": "한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00)",
+          "source": "학교본부 (진로취업지원팀)",
+          "date": "2026-09-08",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do",
+          "category": "공지"
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[공지] 한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00) (등록일: 2026-09-08, 출처: 학교본부 (진로취업지원팀))\n\n문의) 대학일자리플러스센터 진로취업지원팀 02-760-5614",
+          "metadata": {
+            "category": "공지",
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do",
+            "extractions_json": "",
+            "date": "2026-09-08",
+            "has_ocr": false,
+            "parent_id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1",
+            "has_attachment": false,
+            "content_hash": "ae8cd13b7fc8d7ff",
+            "source": "학교본부 (진로취업지원팀)",
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do",
+            "content_status": "text",
+            "chunk_id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1_c2",
+            "title": "한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00)",
+            "chunk_index": 2,
+            "total_chunks": 3,
+            "id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1",
+            "extraction_summary": "",
+            "_score": 1.683878167617722
+          }
+        },
+        {
+          "text": "[공지] 한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00) (등록일: 2026-09-08, 출처: 학교본부 (진로취업지원팀))\n\n4.대상학생: [진로멘토링]진로 탐색이 필요한 재학생 / [취업 멘토링]취업 준비 및 지원이 필요한 재학생\n\n \n\n \n\n5. 수료 조건: 3~4회 진행되는 멘토링 일정 모두 참여, 비교과 만족도 조사 필수 참여\n\n \n\n \n\n6. 수료 혜택: 100% 출석시 비교과 포인트 40p / 향후 우수 자기소개서 선발 시 장학금 지급 (작성 과제 제출자에 한함)\n\n *졸업생, 미졸업수료생, 초과학기생, 졸업유예학생, 휴학생, 전회차 미참여자 에게는 장학금 지급 불가\n\n \n\n자세한 멘토링 프로그램 참여방법은 아래 ppt첨부파일을 확인해주세요.\n\n\n \n\n★취업멘토링 신청하기:  https://hsportal.hansung.ac.kr/ko/program/all/view/14083\n\n \n\n★진로멘토링 신청하기:  https://hsportal.hansung.ac.kr/ko/program/all/view/14084",
+          "metadata": {
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do",
+            "parent_id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1",
+            "total_chunks": 3,
+            "content_status": "text",
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do",
+            "source": "학교본부 (진로취업지원팀)",
+            "category": "공지",
+            "title": "한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00)",
+            "date": "2026-09-08",
+            "chunk_id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1_c1",
+            "has_attachment": false,
+            "extractions_json": "",
+            "has_ocr": false,
+            "extraction_summary": "",
+            "content_hash": "ae8cd13b7fc8d7ff",
+            "chunk_index": 1,
+            "id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1",
+            "_score": 1.6777314080106205
+          }
+        }
+      ],
+      "status": "executed",
+      "seconds": 8.931
+    },
+    {
+      "id": "test-md-09",
+      "question": "한성대 기숙사 우촌학사 야간 통금 시간이 몇 시야?",
+      "answer": "관련 공지를 찾지 못했습니다.",
+      "sources": [],
+      "evidence": [
+        {
+          "text": "[공지] 한성공지\n[채용] 한성대학교 인문과학연구원 HK3.0 사업단 행정전담인력 채용 공고 (등록일: 2026-09-09, 출처: 학교본부 (장석현))\n\n2026.10.01. ~ 2027.09.30. (1년)\n\n*추후 1년 단위로 재계약 가능\n\n\n\n\n근무형태\n\n\t\n\n전일제 근무\n\n주 5일 근무(월~금) 09:00 ~ 17:30\n\n* 교내 방침에 따라 방중 단축근무 가능\n\n\t\n\n반일제 근무\n\n주 5일 근무(월~금) 1일 4시간\n\n* 근무 시간 협의 가능\n\n\n\n\n채용형태\n\n\t\n\n계약직\n\n\t\n\n계약직\n\n\n\n\n급여\n\n\t\n\n연봉 3,000만원  (4대보험 및 퇴직금 포함)\n\n\n\t\n\n연봉 1,500만원 (4대보험 및 퇴직금 포함)\n\n\n\n\n3. 지원자격\n\n학사학위 이상 소지자 대학원 석사과정 재학 또는 졸업예정자\n국가공무원법 제33조 각 호의 결격 사유가 없는 자\n합격 후 즉시 전일 근무 가능한 자\n\n \n\n<우대사항>\n\n인문학 전공 대학원 석사과정 이상인 자\n대학 행정업무 수행 경험 보유자\n(전일근무자) 각종 사업 운영 및 관리 경험 보유자\n(반일근무자) 홈페이지 편집 프로그램(워드프레스) 활용이 가능한 자\n\n \n\n4. 전형방법",
+          "metadata": {
+            "source": "학교본부 (장석현)",
+            "content_status": "text",
+            "chunk_id": "32f427c75c13f2a34a3b50e2c848ffac4a483176d25b27e8b288541a07c5eb6f_c1",
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/224636/artclView.do",
+            "chunk_index": 1,
+            "parent_id": "32f427c75c13f2a34a3b50e2c848ffac4a483176d25b27e8b288541a07c5eb6f",
+            "extraction_summary": "",
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224636/artclView.do",
+            "total_chunks": 4,
+            "category": "공지",
+            "content_hash": "a61ba313ca0fdce8",
+            "title": "한성공지\n[채용] 한성대학교 인문과학연구원 HK3.0 사업단 행정전담인력 채용 공고",
+            "id": "32f427c75c13f2a34a3b50e2c848ffac4a483176d25b27e8b288541a07c5eb6f",
+            "date": "2026-09-09",
+            "has_ocr": false,
+            "extractions_json": "",
+            "has_attachment": false,
+            "_score": 0.6166592366328665
+          }
+        }
+      ],
+      "status": "executed",
+      "seconds": 3.746
+    },
+    {
+      "id": "dev-md-06",
+      "question": "제26회 TOPCIT 정기평가 한성대 단체접수 마감일이 언제까지로 연장됐어?",
+      "status": "error",
+      "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "id": "test-md-01",
+      "question": "편입생 전적대학 학점 재인정 신청 대상자가 누구야?",
+      "answer": "'편입생 전적대학 학점 재(추가)인정 신청 안내'(등록일: 2026-09-08) 공지에 따르면, 입학 시 인정된 학점은 재사정 불가가 원칙이나 트랙변경, 다전공 이수 등 부득이한 사유가 인정되는 편입생에 한해 신청이 가능합니다. 또한, 입학 시 편성된 1년 교육과정으로 전공인정을 받았으나 2학기 교과목 폐지로 인해 '일선'으로 변경되어 유사과목으로 재인정 신청이 필요한 학생도 대상에 포함됩니다.",
+      "sources": [
+        {
+          "title": "한성공지\n편입생 전적대학 학점 재(추가)인정 신청 안내",
+          "source": "학교본부 (학사운영팀)",
+          "date": "2026-09-08",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+          "category": "공지"
+        }
+      ],
+      "evidence": [
+        {
+          "text": "[공지] 한성공지\n편입생 전적대학 학점 재(추가)인정 신청 안내 (등록일: 2026-09-08, 출처: 학교본부 (학사운영팀))\n\n- 입학 시 인정된 학점은 재사정 불가가 원칙이나 부득이한 사유(트랙변경, 다전공 이수 등)가 인정될 경우에 한해 재사정이 가능함\n\n- 입학 시 편성된 1년 교육과정 편성으로 전공인정 받았으나 2학기 교과목 폐지로 인하여 ‘일선’으로 변경된 경우 확인 후 유사과목으로 재인정 신청해야 함\n\n- 학점 재사정 사유를 명확히 작성하고, 신청 양식을 빠짐없이 기입해야 함\n\n- 신청 구비 서류가 누락될 경우 학점인정 검토가 진행되지 않고 불인정 될 수 있음\n\n- 신청 접수 기한이 종료되면 추가 접수는 불가함\n\n \n\n[신규 학점인정 신청자]\n\n- 일반편입생은 입학 시 전적 대학의 학점 중 (트랙1,2 합산하여) 최대 65학점을 인정하고, 인정학점을 포함한 졸업 총이수학점은 130학점 및 비교과 400pt임.\n\n- 인정받은 학점(65학점)을 포함하여 학번별 교육과정별 체계에 맞게 졸업 최소 이수학점을 취득해야 함.",
+          "metadata": {
+            "extractions_json": "",
+            "source": "학교본부 (학사운영팀)",
+            "id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864",
+            "extraction_summary": "",
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+            "parent_id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864",
+            "has_ocr": false,
+            "date": "2026-09-08",
+            "chunk_index": 3,
+            "title": "한성공지\n편입생 전적대학 학점 재(추가)인정 신청 안내",
+            "total_chunks": 7,
+            "content_hash": "18a396cd8f7cb739",
+            "has_attachment": false,
+            "content_status": "text",
+            "category": "공지",
+            "chunk_id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864_c3",
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+            "_score": 1.2005096508854
+          }
+        },
+        {
+          "text": "[공지] 한성공지\n편입생 전적대학 학점 재(추가)인정 신청 안내 (등록일: 2026-09-08, 출처: 학교본부 (학사운영팀))\n\n④ 과거 신청한 교과목 중 인정받은 교과목을 다시 신청한 경우\n\n  ※ 2개 이상의 과목을 합쳐서 신청하는 경우 전에 신청한 과목 중 인정된 과목과 중복이 있으면 안됨. 단 과거 신청한 교과목 중 불인정받은 교과목은 다시 신청할 수 있음\n\n \n\n자주하는 질문(FAQ)\n\n[2개 이상 과목 입력 방법(예시)]\n\n\n(1) AAA의 이해 | 교양 | D+ | 2학점\n\n(2) A'개론 | 전공 | A0 | 2학점\n\n  => 교과목명: AAA의 이해+A'개론\n\n\n  => 이수구분,성적: 둘중 선택 (F학점은 불가함)\n\n\n  => 학점: 4학점\n\n\n\n\n\n[교과목해설서(수업계획서,교과목관련자료) 업로드시]\n\n\n ▶ 파일이 여러개일 경우, 압축파일로 압축해서 업로드\n\n\n ▶ 사정시 구별하기 쉽게 폴더 내 파일명 정확히 기재\n\n\n\n\n\n \n\n2026.9.8.\n\n교육혁신처장",
+          "metadata": {
+            "has_attachment": false,
+            "chunk_id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864_c6",
+            "has_ocr": false,
+            "source": "학교본부 (학사운영팀)",
+            "id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864",
+            "content_status": "text",
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+            "date": "2026-09-08",
+            "content_hash": "18a396cd8f7cb739",
+            "parent_id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864",
+            "chunk_index": 6,
+            "extractions_json": "",
+            "category": "공지",
+            "extraction_summary": "",
+            "total_chunks": 7,
+            "title": "한성공지\n편입생 전적대학 학점 재(추가)인정 신청 안내",
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+            "_score": 1.1385618336224512
+          }
+        }
+      ],
+      "status": "executed",
+      "seconds": 3.854
+    },
+    {
+      "id": "scholarship-dates",
+      "question": "2026년 2학기 국가장학금 2차 신청 마감과 가구원 동의 마감은 각각 언제야?",
+      "answer": "검색된 공지 「국가장학금\n2026년 2학기 국가장학금 2차 신청 안내」 (2026-08-12, 학교본부 (학생복지팀))는 수집된 정보가 제목뿐이므로 세부 내용을 확인할 수 없습니다. 아래 원문 보기에서 이미지·첨부파일을 확인해 주세요.",
+      "sources": [
+        {
+          "title": "국가장학금\n2026년 2학기 국가장학금 2차 신청 안내",
+          "source": "학교본부 (학생복지팀)",
+          "date": "2026-08-12",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "category": "장학"
+        },
+        {
+          "title": "국가장학금\n[한국장학재단] 2026년 2학기 국가장학금 신청자 가구원 동의 독려",
+          "source": "학교본부 (학생복지팀)",
+          "date": "2026-09-02",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+          "category": "장학"
+        },
+        {
+          "title": "국가장학금\n2024년 2학기 국가장학금 2차 신청 안내(~9/11 마감)",
+          "source": "학교본부 (학생장학팀)",
+          "date": "2024-08-08",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do",
+          "category": "장학"
+        }
+      ],
+      "evidence": [
+        {
+          "text": "국가장학금\n2026년 2학기 국가장학금 2차 신청 안내\n국가장학금\n2026년 2학기 국가장학금 2차 신청 안내",
+          "metadata": {
+            "title": "국가장학금\n2026년 2학기 국가장학금 2차 신청 안내",
+            "has_attachment": false,
+            "content_hash": "a0c8561d9e910850",
+            "extraction_summary": "",
+            "chunk_index": 0,
+            "date": "2026-08-12",
+            "has_ocr": false,
+            "category": "장학",
+            "content_status": "title_only",
+            "id": "bdda8c56bb23a38e3266b27b5901e2a043b4db2cb37bc3748666a8fe7271e9d4",
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+            "chunk_id": "bdda8c56bb23a38e3266b27b5901e2a043b4db2cb37bc3748666a8fe7271e9d4_c0",
+            "parent_id": "bdda8c56bb23a38e3266b27b5901e2a043b4db2cb37bc3748666a8fe7271e9d4",
+            "total_chunks": 1,
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+            "extractions_json": "",
+            "source": "학교본부 (학생복지팀)",
+            "_score": 1.6143577638510747
+          }
+        },
+        {
+          "text": "국가장학금\n[한국장학재단] 2026년 2학기 국가장학금 신청자 가구원 동의 독려\n국가장학금\n[한국장학재단] 2026년 2학기 국가장학금 신청자 가구원 동의 독려",
+          "metadata": {
+            "content_hash": "7eccdc412bde1232",
+            "extraction_summary": "",
+            "date": "2026-09-02",
+            "chunk_index": 0,
+            "has_attachment": false,
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+            "chunk_id": "b707456ed35a97229afcc9dcbec1d186a60e9bb3a262bb5899328bc5c409723d_c0",
+            "title": "국가장학금\n[한국장학재단] 2026년 2학기 국가장학금 신청자 가구원 동의 독려",
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/224428/artclView.do",
+            "source": "학교본부 (학생복지팀)",
+            "extractions_json": "",
+            "category": "장학",
+            "id": "b707456ed35a97229afcc9dcbec1d186a60e9bb3a262bb5899328bc5c409723d",
+            "has_ocr": false,
+            "parent_id": "b707456ed35a97229afcc9dcbec1d186a60e9bb3a262bb5899328bc5c409723d",
+            "total_chunks": 1,
+            "content_status": "title_only",
+            "_score": 1.6015616777120627
+          }
+        },
+        {
+          "text": "국가장학금\n2024년 2학기 국가장학금 2차 신청 안내(~9/11 마감)\n국가장학금\n2024년 2학기 국가장학금 2차 신청 안내(~9/11 마감)",
+          "metadata": {
+            "content_status": "title_only",
+            "extractions_json": "",
+            "source": "학교본부 (학생장학팀)",
+            "parent_id": "65abb9da1bae4f9d71f8bfa2805c98b97355587e0afb9d6bd11179aa0562f3ae",
+            "parent_url": "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do",
+            "chunk_index": 0,
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/65036/artclView.do",
+            "id": "65abb9da1bae4f9d71f8bfa2805c98b97355587e0afb9d6bd11179aa0562f3ae",
+            "has_ocr": false,
+            "title": "국가장학금\n2024년 2학기 국가장학금 2차 신청 안내(~9/11 마감)",
+            "content_hash": "b3ff132cecfdd572",
+            "extraction_summary": "",
+            "chunk_id": "65abb9da1bae4f9d71f8bfa2805c98b97355587e0afb9d6bd11179aa0562f3ae_c0",
+            "date": "2024-08-08",
+            "has_attachment": false,
+            "total_chunks": 1,
+            "category": "장학",
+            "_score": 1.5308483153014796
+          }
+        }
+      ],
+      "status": "executed",
+      "seconds": 0.061
+    },
+    {
+      "id": "short-query",
+      "question": "TOPCIT 평가",
+      "status": "error",
+      "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    },
+    {
+      "id": "irrelevant",
+      "question": "파이썬으로 이진 탐색 트리 구현하는 코드 짜줘",
+      "answer": "관련 공지를 찾지 못했습니다.",
+      "sources": [],
+      "evidence": [],
+      "status": "executed",
+      "seconds": 0.047
+    }
+  ],
+  "chunks": 217
+}

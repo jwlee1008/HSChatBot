@@ -1,0 +1,17 @@
+{
+  "executed_at": "2026-09-15T04:40:36.986874+00:00",
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "source_db": "data/verify_demo_chroma_db",
+  "source_sqlite_sha256": "8376c713499172b800f0c90954a3712fe1935a4bae32b25907fdb5e68b6d2ed9",
+  "scope": "Real RAG invocation on copied demo DB; manual answer review required",
+  "results": [
+    {
+      "id": "dev-md-05",
+      "question": "국가전문자격시험 합격생 장학금 대상에 공인회계사랑 세무사도 포함돼?",
+      "status": "error",
+      "error": "503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}"
+    }
+  ],
+  "chunks": 217
+}

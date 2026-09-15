@@ -1,0 +1,441 @@
+{
+  "created_at": "2026-09-15T05:22:02.800904+00:00",
+  "description": "CampusRAG 보강 공지·상시 안내·FAQ·서식 통합 데이터 매니페스트",
+  "input_sources": {
+    "official_pages_enriched": {
+      "file_path": "data/official_pages_enriched.json",
+      "sha256": "c872ed2ed4311a49651e4bb442b32fe5631306408b96da7ecc513da87f831be8",
+      "raw_count": 144,
+      "description": "공식 상시 안내 HTML 및 미디어/첨부(PDF/HWP) 보강본",
+      "default_source_type": "guidance",
+      "priority": 1
+    },
+    "official_faq": {
+      "file_path": "data/official_faq.json",
+      "sha256": "e556025ac9d984aa6e9903fb9ffa82a41735e9cccd8d97eeaa85345bd1630009",
+      "raw_count": 179,
+      "description": "공식 학사 FAQ (18개 목록 페이지의 179개 개별 질의응답)",
+      "default_source_type": "faq",
+      "priority": 2
+    },
+    "official_forms_enriched": {
+      "file_path": "data/official_forms_enriched.json",
+      "sha256": "00f4004215440266a506f5090ac3ef7db85213f10880ef86365a9dffc2a87865",
+      "raw_count": 57,
+      "description": "공식 학사서식 및 서식 첨부파일 텍스트 추출본",
+      "default_source_type": "form",
+      "priority": 3
+    },
+    "missing_notices_refreshed": {
+      "file_path": "data/missing_notices_refreshed.json",
+      "sha256": "32bd0cef75981bb35b59d3169685915c1be5fc6d72eeafdd5bbf74684540721f",
+      "raw_count": 99,
+      "description": "회귀 평가 기준 공지 99건 (OCR 및 포스터 전수 보강 완료)",
+      "default_source_type": "notice",
+      "priority": 4
+    },
+    "notice_archive": {
+      "file_path": "data/notice_archive.json",
+      "sha256": "8ce49a9ed972284d494dc555db3794bae9340d78a713fb54f5a167a2acf22888",
+      "raw_count": 960,
+      "description": "과거 공지사항 아카이브 (우선순위 게시판 960건)",
+      "default_source_type": "notice",
+      "priority": 5
+    }
+  },
+  "deduplication_summary": {
+    "new_added": {
+      "official_pages_enriched": 144,
+      "official_faq": 179,
+      "official_forms_enriched": 57,
+      "missing_notices_refreshed": 99,
+      "notice_archive": 887
+    },
+    "overwritten_higher_quality": {
+      "official_pages_enriched": 0,
+      "official_faq": 0,
+      "official_forms_enriched": 0,
+      "missing_notices_refreshed": 0,
+      "notice_archive": 0
+    },
+    "skipped_duplicate_or_lower_quality": {
+      "official_pages_enriched": 0,
+      "official_faq": 0,
+      "official_forms_enriched": 0,
+      "missing_notices_refreshed": 0,
+      "notice_archive": 73
+    },
+    "total_conflicts_evaluated": 73,
+    "resolution_log_sample": [
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224672/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224545/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224543/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224499/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224338/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "preserve_existing_valid_content_over_empty_crawl"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/223664/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/223662/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/223660/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/222200/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/222079/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "preserve_existing_valid_content_over_empty_crawl"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/220638/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224741/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224740/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "preserve_existing_valid_content_over_empty_crawl"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224733/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224725/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224716/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224705/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224704/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "preserve_existing_valid_content_over_empty_crawl"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224686/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224673/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224671/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224670/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224668/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224667/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224654/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224652/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224651/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224648/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224647/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224643/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224638/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "preserve_existing_valid_content_over_empty_crawl"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224637/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "preserve_existing_valid_content_over_empty_crawl"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224636/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224629/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224625/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224620/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224614/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224613/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224611/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "preserve_existing_valid_content_over_empty_crawl"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224600/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224597/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224592/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "preserve_existing_valid_content_over_empty_crawl"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224587/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224577/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224570/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224563/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      },
+      {
+        "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do')",
+        "decision": "skipped",
+        "old_source": "missing_notices_refreshed",
+        "attempted_source": "notice_archive",
+        "reason": "lower_authority_source (notice_archive < missing_notices_refreshed) [version_conflict_ignored]"
+      }
+    ]
+  },
+  "output_summary": {
+    "output_file": "data/unified_campus_knowledge.json",
+    "output_sha256": "c6969ec41faa332b660186cf5407f07dc9621fcbccd2158e124e9b62c225359e",
+    "total_documents": 1366,
+    "content_status_counts": {
+      "text": 1047,
+      "mixed": 95,
+      "ocr": 22,
+      "title_only": 202
+    },
+    "source_type_counts": {
+      "guidance": 144,
+      "faq": 179,
+      "form": 57,
+      "notice": 986
+    },
+    "title_only_residual": 202,
+    "text_or_enriched_count": 1164
+  }
+}

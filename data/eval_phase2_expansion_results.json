@@ -1,0 +1,473 @@
+{
+  "metadata": {
+    "git_commit": "30df506400056735ab3c7bde7bc51dea9b4d264b",
+    "is_dirty": true,
+    "git_dirty_hash": "8225d58c3625",
+    "dataset_sha256": "a53ab0df6a75cf939809332b8e45f49f732161cc646c13e60a794305ee732e8a",
+    "executed_at": "2026-09-15T14:05:53.429189+09:00",
+    "model_config": {
+      "provider": "gemini",
+      "llm_model": "gemini-3.8-flash",
+      "embedding_model": "jhgan/ko-sroberta-multitask",
+      "relevance_threshold": 0.25,
+      "top_k": 3,
+      "device": "mps"
+    }
+  },
+  "metrics": {
+    "sample_count": 10,
+    "split": "all",
+    "pass_count": 1,
+    "pass_rate": 0.1,
+    "fail_count": 0,
+    "fail_rate": 0.0,
+    "needs_review_count": 0,
+    "needs_review_rate": 0.0,
+    "api_error_count": 9,
+    "api_error_rate": 0.9,
+    "hit_top1_count": 8,
+    "hit_top1_rate": 0.8888888888888888,
+    "hit_top3_count": 8,
+    "hit_top3_rate": 0.8888888888888888,
+    "abstain_count": 1,
+    "abstain_success_count": 0,
+    "abstain_rate": 0.0,
+    "cold_start_sec": 5.898374319076538,
+    "latency_p50_sec": 0.36793458461761475,
+    "latency_p95_sec": 2.2497457981109585,
+    "latency_mean_sec": 0.7137260913848877
+  },
+  "details": [
+    {
+      "id": "exp-01",
+      "split": "test",
+      "category": "career",
+      "domain": "career",
+      "situation": "title_conflict_schedule",
+      "question": "2026학년도 2학기 전공연계 협업형 진로·취업멘토링 참가자 신청 기간이 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do"
+      ],
+      "expected_facts": "2026년 9월 10일(목) ~ 9월 17일(목) 15:00까지 신청 접수 (공지 제목의 6.11은 오기)",
+      "actual_answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "api_status": "api_error",
+      "api_error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "API_ERROR",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": false,
+        "score": 0.0,
+        "reason": "API 오류(503/429 등): Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP"
+      },
+      "latency_sec": 0.5497479438781738
+    },
+    {
+      "id": "exp-02",
+      "split": "test",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "target_with_exclusion",
+      "question": "편입생 전적대학 학점 재인정 신청 대상자가 누구야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ],
+      "expected_facts": "일반편입생(외국인 유학생 제외) 중 전적대학 학점 추가인정 또는 재사정 희망자",
+      "actual_answer": "전적대학 학점 재(추가)인정 신청 대상자는 **일반편입생 중 전적대학 학점 추가인정 또는 재인정 신청 대상자**이며, **외국인 유학생은 대상에서 제외**됩니다. \n\n또한 기존 학점인정 재신청의 경우 입학 시 인정된 학점은 재사정 불가가 원칙이나, 트랙변경 또는 다전공 이수 등 부득이한 사유가 인정되는 경우에 한하여 재사정 신청이 가능합니다.\n\n*(출처: 학교본부 (학사운영팀) 「편입생 전적대학 학점 재(추가)인정 신청 안내」, 등록일: 2026-09-08)*",
+      "api_status": "success",
+      "api_error": null,
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "PASS",
+        "fact_matched": true,
+        "fact_ratio": 1.0,
+        "score": 1.0,
+        "reason": "핵심 근거 사실 일치"
+      },
+      "latency_sec": 3.640653133392334
+    },
+    {
+      "id": "exp-03",
+      "split": "test",
+      "category": "scholarship",
+      "domain": "scholarship",
+      "situation": "multi_step_deadlines",
+      "question": "2026년 2학기 국가장학금 2차 신청 마감과 가구원 동의 마감은 각각 언제야?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+      ],
+      "expected_facts": "신청 마감은 9월 9일(수) 18시, 서류제출 및 가구원 동의 마감은 9월 16일(수) 18시",
+      "actual_answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "api_status": "api_error",
+      "api_error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "API_ERROR",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": false,
+        "score": 0.0,
+        "reason": "API 오류(503/429 등): Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP"
+      },
+      "latency_sec": 0.44216489791870117
+    },
+    {
+      "id": "exp-04",
+      "split": "test",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "multi_step_deadlines",
+      "question": "제26회 TOPCIT 정기평가 한성대 단체접수 마감일이 언제까지로 연장됐어?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "expected_facts": "구글 설문 단체접수 마감은 9월 9일(수)까지 연장되었으며, 보증금 납부는 9월 11일(금) 13:00 마감",
+      "actual_answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "api_status": "api_error",
+      "api_error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "API_ERROR",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": false,
+        "score": 0.0,
+        "reason": "API 오류(503/429 등): Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP"
+      },
+      "latency_sec": 0.387286901473999
+    },
+    {
+      "id": "exp-05",
+      "split": "test",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "short_query",
+      "question": "TOPCIT 평가",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do"
+      ],
+      "expected_facts": "제26회 TOPCIT 소프트웨어 역량검정 시험 정기평가 안내",
+      "actual_answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "api_status": "api_error",
+      "api_error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "API_ERROR",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": false,
+        "score": 0.0,
+        "reason": "API 오류(503/429 등): Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP"
+      },
+      "latency_sec": 0.34858226776123047
+    },
+    {
+      "id": "exp-06",
+      "split": "test",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "guidance_faq",
+      "question": "성적 평점평균 반올림 여부가 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9"
+      ],
+      "expected_facts": "평점평균 계산 시 반올림하지 않고 소수점 셋째 자리 이하는 절사(버림) 처리",
+      "actual_answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "api_status": "api_error",
+      "api_error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+          "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9",
+          "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "API_ERROR",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": false,
+        "score": 0.0,
+        "reason": "API 오류(503/429 등): Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP"
+      },
+      "latency_sec": 0.49122190475463867
+    },
+    {
+      "id": "exp-07",
+      "split": "test",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "guidance_rule",
+      "question": "조기졸업 신청 자격과 평점평균 기준이 어떻게 돼?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/hansung/6236/subview.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/220834/artclView.do"
+      ],
+      "expected_facts": "7학기 이수(미래플러스대학 6 또는 7학기), 총 평점평균 4.0 이상, F학점(과락) 없음",
+      "actual_answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "api_status": "api_error",
+      "api_error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9",
+          "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/220834/artclView.do"
+        ],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": true,
+        "score": 0.0
+      },
+      "answer_eval": {
+        "status": "API_ERROR",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": false,
+        "score": 0.0,
+        "reason": "API 오류(503/429 등): Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP"
+      },
+      "latency_sec": 0.27879881858825684
+    },
+    {
+      "id": "exp-08",
+      "split": "test",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "guidance_faq",
+      "question": "성적 이의신청 방법 알려줘",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223410/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222869/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223410/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222869/artclView.do"
+      ],
+      "expected_facts": "종합정보시스템 성적조회 메뉴에서 조회 후 정해진 기간 내 담당 교강사에게 문의 및 정정 요청",
+      "actual_answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "api_status": "api_error",
+      "api_error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223410/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/223410/artclView.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2127/222869/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "API_ERROR",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": false,
+        "score": 0.0,
+        "reason": "API 오류(503/429 등): Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP"
+      },
+      "latency_sec": 0.33359479904174805
+    },
+    {
+      "id": "exp-09",
+      "split": "test",
+      "category": "academic",
+      "domain": "academic",
+      "situation": "official_form",
+      "question": "자퇴원 서식은 어디서 받아?",
+      "should_abstain": false,
+      "expected_urls": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=17",
+        "https://www.hansung.ac.kr/hansung/6251/subview.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2128/222485/artclView.do"
+      ],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=17",
+        "https://www.hansung.ac.kr/hansung/6251/subview.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2195/222307/artclView.do"
+      ],
+      "expected_facts": "학교 홈페이지 학사서식/자퇴 안내 페이지에서 자퇴원 양식 다운로드 또는 학사운영팀 방문",
+      "actual_answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "api_status": "api_error",
+      "api_error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=17",
+          "https://www.hansung.ac.kr/hansung/6251/subview.do",
+          "https://www.hansung.ac.kr/bbs/hansung/2195/222307/artclView.do"
+        ],
+        "hit_top1": true,
+        "hit_top3": true,
+        "abstain_pass": true,
+        "score": 1.0
+      },
+      "answer_eval": {
+        "status": "API_ERROR",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": false,
+        "score": 0.0,
+        "reason": "API 오류(503/429 등): Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP"
+      },
+      "latency_sec": 0.3346061706542969
+    },
+    {
+      "id": "exp-10",
+      "split": "test",
+      "category": "general",
+      "domain": "general",
+      "situation": "irrelevant_query",
+      "question": "파이썬으로 이진 탐색 트리 구현하는 코드 짜줘",
+      "should_abstain": true,
+      "expected_urls": [],
+      "actual_sources": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/221842/artclView.do",
+        "https://www.hansung.ac.kr/hansung/6788/subview.do",
+        "https://www.hansung.ac.kr/hansung/6796/subview.do"
+      ],
+      "expected_facts": "학교 공지/학사 관련 내용이 아니므로 유보",
+      "actual_answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "api_status": "api_error",
+      "api_error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "api_called": true,
+      "model": "gemini-3.8-flash",
+      "provider": "gemini",
+      "retrieval": {
+        "top_urls": [
+          "https://www.hansung.ac.kr/bbs/hansung/2127/221842/artclView.do",
+          "https://www.hansung.ac.kr/hansung/6788/subview.do",
+          "https://www.hansung.ac.kr/hansung/6796/subview.do"
+        ],
+        "hit_top1": false,
+        "hit_top3": false,
+        "abstain_pass": false,
+        "score": 0.0
+      },
+      "answer_eval": {
+        "status": "API_ERROR",
+        "is_abstained": false,
+        "fact_matched": false,
+        "constraint_violated": false,
+        "score": 0.0,
+        "reason": "API 오류(503/429 등): Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP"
+      },
+      "latency_sec": 0.33060407638549805
+    }
+  ]
+}

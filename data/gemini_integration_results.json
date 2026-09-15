@@ -1,0 +1,437 @@
+{
+  "executed_at": "2026-09-15T05:01:32.613134+00:00",
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "db_dir": "data/integrated_eval_chroma_db",
+  "db_sqlite_sha256": "10a8397b12ad215376f6aa2608ade713d1dd5718b6244cd7e57a766489192257",
+  "results": [
+    {
+      "id": "probe-mentoring",
+      "question": "2026학년도 2학기 전공연계 협업형 진로·취업멘토링 참가자 신청 기간이 언제야?",
+      "expected_check": "본문 상세 마감일(9월 17일 15:00) 포함, 제목 오타(6.11) 확정 안내 배제",
+      "answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "status": "api_error",
+      "api_called": true,
+      "error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "latency_seconds": 21.408,
+      "sources": [
+        {
+          "title": "한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00)",
+          "source": "학교본부 (진로취업지원팀)",
+          "date": "2026-09-08",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224562/artclView.do",
+          "category": "공지"
+        }
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1_c0",
+          "title": "한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00)",
+          "score": 1.9455,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00) (등록일: 2026-09-08, 출처: 학교본부 (진로취업지원팀))  안녕하세요. 대학일자리플러스센터입니다.     한성대학교 재학생들의 희망 직무분야 진로 탐색 및 취업 준비를 지원하기 위하여  2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자를 모집합니다.     학생 여러분의 많은 참여 "
+        },
+        {
+          "chunk_id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1_c2",
+          "title": "한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00)",
+          "score": 1.9339,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00) (등록일: 2026-09-08, 출처: 학교본부 (진로취업지원팀))  문의) 대학일자리플러스센터 진로취업지원팀 02-760-5614"
+        },
+        {
+          "chunk_id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1_c1",
+          "title": "한성공지\n2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00)",
+          "score": 1.9277,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 2026학년도 2학기 전공(트랙)연계 협업형 진로·취업멘토링 참가자 모집 안내 (9.10.목~6.11.목 15:00) (등록일: 2026-09-08, 출처: 학교본부 (진로취업지원팀))  4.대상학생: [진로멘토링]진로 탐색이 필요한 재학생 / [취업 멘토링]취업 준비 및 지원이 필요한 재학생        5. 수료 조건: 3~4회 진행되는 멘토링 일정 모두 참여, 비교과 만족도 조사 필수 참여        6. 수료 혜택: "
+        }
+      ]
+    },
+    {
+      "id": "probe-transfer",
+      "question": "편입생 전적대학 학점 재인정 신청 대상자가 누구야?",
+      "expected_check": "일반편입생 및 '외국인 유학생 제외' 조건 명시",
+      "answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "status": "api_error",
+      "api_called": true,
+      "error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "latency_seconds": 0.432,
+      "sources": [
+        {
+          "title": "한성공지\n편입생 전적대학 학점 재(추가)인정 신청 안내",
+          "source": "학교본부 (학사운영팀)",
+          "date": "2026-09-08",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+          "category": "공지"
+        }
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864_c3",
+          "title": "한성공지\n편입생 전적대학 학점 재(추가)인정 신청 안내",
+          "score": 1.4805,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 편입생 전적대학 학점 재(추가)인정 신청 안내 (등록일: 2026-09-08, 출처: 학교본부 (학사운영팀))  - 입학 시 인정된 학점은 재사정 불가가 원칙이나 부득이한 사유(트랙변경, 다전공 이수 등)가 인정될 경우에 한해 재사정이 가능함  - 입학 시 편성된 1년 교육과정 편성으로 전공인정 받았으나 2학기 교과목 폐지로 인하여 ‘일선’으로 변경된 경우 확인 후 유사과목으로 재인정 신청해야 함  - 학점 재사정 사유를 명확"
+        },
+        {
+          "chunk_id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864_c0",
+          "title": "한성공지\n편입생 전적대학 학점 재(추가)인정 신청 안내",
+          "score": 1.4494,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 편입생 전적대학 학점 재(추가)인정 신청 안내 (등록일: 2026-09-08, 출처: 학교본부 (학사운영팀))  편입생 전적대학 학점 재(추가)인정 신청 안내     일반편입생 전적대학 학점 재(추가)인정에 대한 2026학년도 2학기 신청 접수를 다음과 같이 안내하오니 대상자는 기간 내에 신청하여 주시기 바랍니다.     - 다 음 -        1. 대상자 : 일반편입생(외국인 유학생 제외) 중 전적대학 학점 추가인정 또는"
+        },
+        {
+          "chunk_id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864_c2",
+          "title": "한성공지\n편입생 전적대학 학점 재(추가)인정 신청 안내",
+          "score": 1.3657,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 편입생 전적대학 학점 재(추가)인정 신청 안내 (등록일: 2026-09-08, 출처: 학교본부 (학사운영팀))  11.2.(월)~11.13.(금)  \t  학사운영팀      최종 학점인정 결과 조회  \t  11.16.(월) 이후 <예정>  \t  편입학생  - 학부(과)장 및 단과대학장 승인을 거쳐 교무처에서 승인사항 입력  - 승인 결과 확인은 11.16.(월) 이후 종합정보시스템의 누적성적에서 조회     6. 유의 사항 :"
+        }
+      ]
+    },
+    {
+      "id": "probe-scholarship-dates",
+      "question": "2026년 2학기 국가장학금 2차 신청 마감과 가구원 동의 마감은 각각 언제야?",
+      "expected_check": "신청 마감(9월 9일 18시)과 서류제출/가구원 동의 마감(9월 16일 18시) 각각 구분 안내",
+      "answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "status": "api_error",
+      "api_called": true,
+      "error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "latency_seconds": 0.321,
+      "sources": [
+        {
+          "title": "국가장학금\n2026년 2학기 국가장학금 2차 신청 안내",
+          "source": "학교본부 (학생복지팀)",
+          "date": "2026-08-12",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do",
+          "category": "장학"
+        }
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "bdda8c56bb23a38e3266b27b5901e2a043b4db2cb37bc3748666a8fe7271e9d4_c0",
+          "title": "국가장학금\n2026년 2학기 국가장학금 2차 신청 안내",
+          "score": 2.1379,
+          "source_type": "notice",
+          "content_preview": "[장학] 국가장학금 2026년 2학기 국가장학금 2차 신청 안내 (등록일: 2026-08-12, 출처: 학교본부 (학생복지팀))  [이미지 OCR 추출 #1: (포스터)_2026_2학기_2차_국가장학금_신청.jpg] (26H 2략기 2자 onic 학자금 지원구간 체계 WASH) 들 202714 1학기부터          (개편) Ｌ지급단가에 따라        \"가,나,다,라,마' ) _ (현행)     ©    5구간 체계로 har mene 1"
+        },
+        {
+          "chunk_id": "bdda8c56bb23a38e3266b27b5901e2a043b4db2cb37bc3748666a8fe7271e9d4_c1",
+          "title": "국가장학금\n2026년 2학기 국가장학금 2차 신청 안내",
+          "score": 2.0013,
+          "source_type": "notice",
+          "content_preview": "[장학] 국가장학금 2026년 2학기 국가장학금 2차 신청 안내 (등록일: 2026-08-12, 출처: 학교본부 (학생복지팀))  서류제출 및 가구원 동의 3                  A                             A 26.8.12.(수) 09시~9.16.(수) 184] HFC A| 한새 보이0| AIM 시천 7 REA eel Sich                          © 71721 동의 방법 : @ 한국"
+        },
+        {
+          "chunk_id": "bdda8c56bb23a38e3266b27b5901e2a043b4db2cb37bc3748666a8fe7271e9d4_c2",
+          "title": "국가장학금\n2026년 2학기 국가장학금 2차 신청 안내",
+          "score": 1.8653,
+          "source_type": "notice",
+          "content_preview": "[장학] 국가장학금 2026년 2학기 국가장학금 2차 신청 안내 (등록일: 2026-08-12, 출처: 학교본부 (학생복지팀))  ©) 한국장학재단 누리집 및 모바일 QHOHAY 신청                      NE NEES ※ 반드시 SHY 본인이 직접 신청 www.kosef.go.kr                                 한국장학재단 상담센터 | 국가장학금 신청문의 [eee 1599-2000 | S84! <  "
+        }
+      ]
+    },
+    {
+      "id": "probe-topcit-ext",
+      "question": "제26회 TOPCIT 정기평가 한성대 단체접수 마감일이 언제까지로 연장됐어?",
+      "expected_check": "1단계 구글 설문 온라인 접수 연장(~9.9)과 3단계 보증금 납부(~9.11 13:00) 등 단계별 일정 구분",
+      "answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "status": "api_error",
+      "api_called": true,
+      "error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "latency_seconds": 0.279,
+      "sources": [
+        {
+          "title": "한성공지\n★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내",
+          "source": "학교본부 (SW중심대학사업단)",
+          "date": "2026-09-09",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+          "category": "공지"
+        }
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "7315051911dd61481bf87fa8f2347f5b01e7be395623a44d9e41bdd14fa5d308_c3",
+          "title": "한성공지\n★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내",
+          "score": 1.446,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 ★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내 (등록일: 2026-09-09, 출처: 학교본부 (SW중심대학사업단))  ② 9/11(금): 10:00~13:00     4단계  10. 10.(토)  9:30 ~ 12:00  \t  시험 응시  - 고사실 입실완료 9:10        2. 참여 대상: 한성대학교 재학생        3. 한성대학교 성적우수자 시상 내용 "
+        },
+        {
+          "chunk_id": "7315051911dd61481bf87fa8f2347f5b01e7be395623a44d9e41bdd14fa5d308_c0",
+          "title": "한성공지\n★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내",
+          "score": 1.3733,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 ★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내 (등록일: 2026-09-09, 출처: 학교본부 (SW중심대학사업단))  <제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내>     과학기술정보통신부에서 주최하는 '제26회 TOPCIT(소프트웨어 역량검정 시험)에 접수하는 본교 학생들에게 혜택을 드리기 위해,   한성대학교 SW중심대학사업단에서 별도의"
+        },
+        {
+          "chunk_id": "7315051911dd61481bf87fa8f2347f5b01e7be395623a44d9e41bdd14fa5d308_c2",
+          "title": "한성공지\n★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내",
+          "score": 1.364,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 ★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내 (등록일: 2026-09-09, 출처: 학교본부 (SW중심대학사업단))  - 사업단에서 일괄적으로 단체 접수 예정     [구글 설문을 통한 TOPCIT 시험 신청서 작성]  - 주소 : https://forms.gle/Ts8drdf7fWZWyThG9  - 신청서 작성 시 TOPCIT 가입 ID 작성 필요     2단계 "
+        }
+      ]
+    },
+    {
+      "id": "probe-short-topcit",
+      "question": "TOPCIT 평가",
+      "expected_check": "단축 검색어 정상 검색 및 TOPCIT 정기평가 안내 응답",
+      "answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "status": "api_error",
+      "api_called": true,
+      "error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "latency_seconds": 0.279,
+      "sources": [
+        {
+          "title": "한성공지\n[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내",
+          "source": "학교본부 (SW중심대학사업단)",
+          "date": "2026-09-04",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224504/artclView.do",
+          "category": "공지"
+        },
+        {
+          "title": "한성공지\n★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내",
+          "source": "학교본부 (SW중심대학사업단)",
+          "date": "2026-09-09",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224626/artclView.do",
+          "category": "공지"
+        }
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "e05332030159157aa94fddf8e3387068bc512e195e37e52bf9cd169d430fafb6_c2",
+          "title": "한성공지\n[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내",
+          "score": 0.8586,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 [SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내 (등록일: 2026-09-04, 출처: 학교본부 (SW중심대학사업단))  - 사업단에서 일괄적으로 단체 접수 예정     [구글 설문을 통한 TOPCIT 시험 신청서 작성]  - 주소 : https://forms.gle/Ts8drdf7fWZWyThG9  - 신청서 작성 시 TOPCIT 가입 ID 작성 필요     2단계  9. 9.(수) 14:00"
+        },
+        {
+          "chunk_id": "7315051911dd61481bf87fa8f2347f5b01e7be395623a44d9e41bdd14fa5d308_c2",
+          "title": "한성공지\n★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내",
+          "score": 0.8385,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 ★기간연장:~9.9.(수)★[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내 (등록일: 2026-09-09, 출처: 학교본부 (SW중심대학사업단))  - 사업단에서 일괄적으로 단체 접수 예정     [구글 설문을 통한 TOPCIT 시험 신청서 작성]  - 주소 : https://forms.gle/Ts8drdf7fWZWyThG9  - 신청서 작성 시 TOPCIT 가입 ID 작성 필요     2단계 "
+        },
+        {
+          "chunk_id": "e05332030159157aa94fddf8e3387068bc512e195e37e52bf9cd169d430fafb6_c3",
+          "title": "한성공지\n[SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내",
+          "score": 0.8019,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 [SW중심] 제26회 TOPCIT(소프트웨어 역량검정 시험) 정기평가 시행 안내 (등록일: 2026-09-04, 출처: 학교본부 (SW중심대학사업단))  ② 9/11(금): 10:00~13:00     4단계  10. 10.(토)  9:30 ~ 12:00  \t  시험 응시  - 고사실 입실완료 9:10        2. 참여 대상: 한성대학교 재학생        3. 한성대학교 성적우수자 시상 내용     구분  \t  인원  "
+        }
+      ]
+    },
+    {
+      "id": "probe-faq-grade-round",
+      "question": "성적 평점평균 반올림 여부가 어떻게 돼?",
+      "expected_check": "소수점 셋째 자리 이하 절사(버림) 처리 사실 안내 (반올림 아님)",
+      "answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "status": "api_error",
+      "api_called": true,
+      "error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "latency_seconds": 0.281,
+      "sources": [
+        {
+          "title": "평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다)",
+          "source": "한성대학교 공식 학사 FAQ",
+          "date": "",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+          "category": "학사 FAQ"
+        },
+        {
+          "title": "성적·평가 평점평균 계산을 어떻게 하나요?",
+          "source": "한성대학교 공식 학사 FAQ",
+          "date": "",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9",
+          "category": "성적·평가"
+        }
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "e792fbd3a367c90df763f7e287b0ba6f7249e00f9f63f8b71b813989ec85166a_c0",
+          "title": "평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다)",
+          "score": 0.8666,
+          "source_type": "faq",
+          "content_preview": "평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다) 평점평균 계산시 소숫점 3째자리 이하는 절사 즉, 버림 처리합니다. 예를 들어 3.4975라면 3.49가 평점평균이 됩니다."
+        },
+        {
+          "chunk_id": "2901e05d98ea10fad4079f81cf0091ac2656950b5d30aa2b2a945254860d5ab1_c0",
+          "title": "성적·평가 평점평균 계산을 어떻게 하나요?",
+          "score": 0.7502,
+          "source_type": "faq",
+          "content_preview": "[성적·평가] 성적·평가 평점평균 계산을 어떻게 하나요? (등록일: , 출처: 한성대학교 공식 학사 FAQ)  졸업 및 각 학년 수료시 총 평점평균 계산은 다음과 같이 한다. 1. 과목별(평점 × 학점수)누계 = 평점계 2. 10학번 까지 학생의 경우 총 평점계 / 총 취득학점수 = 총 평점 평균 3. 11학번 이후 학생의 경우 총 평점계 / 총 신청학점수 = 총 평점 평균 < F 과목 성적 평점평균에 반영 > ­ 11 학번 이후 학생은 낙제과"
+        },
+        {
+          "chunk_id": "eaa569fb74eef913b25a113206829e5b615fa4ae8a32592b12e31047c564658c_c0",
+          "title": "학점·졸업 평균평점을 백분위 점수로 어떻게 환산하나요?",
+          "score": 0.6051,
+          "source_type": "faq",
+          "content_preview": "학점·졸업 평균평점을 백분위 점수로 어떻게 환산하나요? 본교의 평균평점을 백분위 점수로 환산(평점환산) 하는 계산식은 아래와 같으며, 소숫점 셋째 자리이하는 절사 입니다. =60+((평균평점-1)*(40/(4.5-1))) 위 계산식에 따라 평균평점을 환산해 보면, 아래와 같습니다 (예시) . 평균평점 | 백분위점수 4.5 | 100 4.0 | 94.28 3.5 | 88.57 3.0 | 82.85 2.5 | 77.14 2.0 | 71.42 1.5"
+        }
+      ]
+    },
+    {
+      "id": "probe-faq-grade-appeal",
+      "question": "성적 이의신청 방법 알려줘",
+      "expected_check": "성적 이의신청 절차 및 담당교수 문의 등 안내",
+      "answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "status": "api_error",
+      "api_called": true,
+      "error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "latency_seconds": 0.279,
+      "sources": [
+        {
+          "title": "학사 2026학년도 여름계절학기 성적조회 및 성적이의신청 안내",
+          "source": "학사운영팀",
+          "date": "2026-07-15",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/223410/artclView.do",
+          "category": "공지"
+        },
+        {
+          "title": "학사 2026학년도 1학기 성적조회 및 성적이의신청",
+          "source": "학사운영팀",
+          "date": "2026-06-10",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/222869/artclView.do",
+          "category": "공지"
+        }
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "f5bc2b0757f4e44e509621d599e8a7d98e477dcfb3108347a37380720e662535_c1",
+          "title": "학사 2026학년도 여름계절학기 성적조회 및 성적이의신청 안내",
+          "score": 0.9943,
+          "source_type": "notice",
+          "content_preview": "[공지] 학사 2026학년도 여름계절학기 성적조회 및 성적이의신청 안내 (등록일: 2026-07-15, 출처: 학사운영팀)  5. 유의 사항 : (1) 부정청탁금지법에 따라 성적 부정청탁은 아래와 같이 엄격히 금지 되어 있으니 유의 바람 . ※ 부정청탁금지법에 따른 성적 부정청탁 관련 안내 - 학생이 채점이나 성적입력 오류 등 합당한 사유에 의거한 성적정정이 아닌 기타 개인적인 사유 ( 장학금 수혜 , 졸업 , 취업 , 재수강 등 ) 로 성적 "
+        },
+        {
+          "chunk_id": "f5bc2b0757f4e44e509621d599e8a7d98e477dcfb3108347a37380720e662535_c0",
+          "title": "학사 2026학년도 여름계절학기 성적조회 및 성적이의신청 안내",
+          "score": 0.918,
+          "source_type": "notice",
+          "content_preview": "[공지] 학사 2026학년도 여름계절학기 성적조회 및 성적이의신청 안내 (등록일: 2026-07-15, 출처: 학사운영팀)  2026 학년도 여름계절학기 성적조회 및 성적이의신청 안내 2026 학년도 여름계절학기 성적조회 및 성적이의신청에 대한 일정과 방법을 다음과 같이 안내합니다 . 1. 성적 조회 일정 : 2026.7.17.( 금 ) 10:00 ~ 2. 성적 조회 / 이의신청 방법 : 종합정보시스템 > 계절학기 > 계절학기성적조회 메뉴 ※ "
+        },
+        {
+          "chunk_id": "2ddb2e628961c598c5d6abe83ee030d13ee5c00e9f332770d3449829c6e03567_c3",
+          "title": "학사 2026학년도 1학기 성적조회 및 성적이의신청",
+          "score": 0.8982,
+          "source_type": "notice",
+          "content_preview": "[공지] 학사 2026학년도 1학기 성적조회 및 성적이의신청 (등록일: 2026-06-10, 출처: 학사운영팀)  . - 부정청탁을 2 회 이상 받은 경우 담당교수는 본교 청탁방지 담당부서 ( 감사팀 , 760-5965) 에 신고 의무가 있으며 , 신고의무 위반 시 징계처분 대상이 됩니다 . - 부정청탁을 받고 성적정정을 한 경우 담당교수는 형사처벌 대상이 됩니다 . - 학생이 아닌 제 3 자 ( 학부모 , 타교수 , 지인 등 ) 가 학생을 위"
+        }
+      ]
+    },
+    {
+      "id": "probe-form-leave",
+      "question": "자퇴원 서식은 어디서 받아?",
+      "expected_check": "자퇴원 양식 및 학사서식/신청 절차 안내",
+      "answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "status": "api_error",
+      "api_called": true,
+      "error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "latency_seconds": 0.274,
+      "sources": [
+        {
+          "title": "휴학·복학·자퇴 자퇴원 제출 방법이 궁금합니다.",
+          "source": "한성대학교 공식 학사 FAQ",
+          "date": "",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=17",
+          "category": "휴학·복학·자퇴"
+        },
+        {
+          "title": "자퇴",
+          "source": "한성대학교 공식 홈페이지",
+          "date": "2026-01-23",
+          "url": "https://www.hansung.ac.kr/hansung/6251/subview.do",
+          "category": "교육정보 / 학적변동 / 자퇴/제적"
+        },
+        {
+          "title": "자퇴원",
+          "source": "학사운영팀",
+          "date": "2026-05-14",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2195/222307/artclView.do",
+          "category": "공지"
+        }
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "06ad6e2c46f96ea342bf476265641e265ea3be1c1bbaf8fe6f8e236411840a4f_c0",
+          "title": "휴학·복학·자퇴 자퇴원 제출 방법이 궁금합니다.",
+          "score": 0.7077,
+          "source_type": "faq",
+          "content_preview": "휴학·복학·자퇴 자퇴원 제출 방법이 궁금합니다. 1. 자퇴절차 가. 자퇴원에 내용을 기입하고 본인 및 보호자 날인합니다. 나. 학과(부)장 면담을 진행(학과 사무실 문의)하고, 학생복지팀(진리관 1층)을 경유하여 제출 및 장학금 확인을 받습니다. (외국인 학생은 국제교류지원팀 추가 확인 필요) 다. 작성된 자퇴원을 학사운영팀(우촌관 3층)에 제출합니다. 2. 필요서류 가. 학생 본인 제출시 - 자퇴원 나. 가족 대리 제출시 - 가족관계증명서 1"
+        },
+        {
+          "chunk_id": "f856dc85483578a11a0a3d2093c551a850dfb3e32a42ae517088794b47233834_c0",
+          "title": "자퇴",
+          "score": 0.6314,
+          "source_type": "guidance",
+          "content_preview": "[교육정보 / 학적변동 / 자퇴/제적] 자퇴 (등록일: 2026-01-23, 출처: 한성대학교 공식 홈페이지)  대상 재학생이 개인적인 사유로 더 이상 우리대학을 다닐 수 없는 경우 자퇴를 할 수 있다. 시기 연중 사유 발생일 방법 자퇴하고자 하는 학생은 자퇴원을 작성하여 본인, 보호자, 학부(과)장 확인을 필한 다음 도서관에서 도서대출 여부를 확인한 후, 자퇴원을 학사운영팀에 제출 신청서 양식 : 홈페이지 > 교육정보 > 서식 > '자퇴원' "
+        },
+        {
+          "chunk_id": "c21f6e28a96f45a03115b6a5af19348d8ab69c95754eb6e86da83aec1a243f7e_c1",
+          "title": "자퇴원",
+          "score": 0.6196,
+          "source_type": "form",
+          "content_preview": "[공지] 자퇴원 (등록일: 2026-05-14, 출처: 학사운영팀)  [자료: 자퇴원.hwp] 자  퇴  원 담 당 자 학부제: 학부(과)명) 학 번 학 년 트랙제: 학부/제1트랙명 성    명 연 락 처(본인) 생년월일 (보호자) 주    소 위 본인은 타 대학 □편입/□신입학 (       대학교       학과)  □재수  □유학 □경제적 사정  □취업  □질병  □기타 (                                    )"
+        }
+      ]
+    },
+    {
+      "id": "probe-irrelevant",
+      "question": "파이썬으로 이진 탐색 트리 구현하는 코드 짜줘",
+      "expected_check": "관련 공지를 찾지 못했습니다 정상 유보",
+      "answer": "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). 잠시 후 다시 시도해 주세요.",
+      "status": "api_error",
+      "api_called": true,
+      "error": "Error calling model 'gemini-3.8-flash' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-3.8-flash\\nP",
+      "latency_seconds": 0.277,
+      "sources": [
+        {
+          "title": "한성공지 2026학년도 상상더학기 진로탐색학점제 설명회",
+          "source": "진로취업지원팀",
+          "date": "2026-04-28",
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2127/221842/artclView.do",
+          "category": "공지"
+        },
+        {
+          "title": "AI플랫폼 이용가이드",
+          "source": "한성대학교 공식 홈페이지",
+          "date": "",
+          "url": "https://www.hansung.ac.kr/hansung/6788/subview.do",
+          "category": "교육정보 / HSU AI HUB / AI플랫폼 이용가이드"
+        },
+        {
+          "title": "교수용",
+          "source": "한성대학교 공식 홈페이지",
+          "date": "",
+          "url": "https://www.hansung.ac.kr/hansung/6796/subview.do",
+          "category": "교육정보 / HSU AI HUB / AI학습윤리"
+        }
+      ],
+      "evidence_chunks": [
+        {
+          "chunk_id": "7930cb5086ba1120496aca654eab3ecb6809cf66f61e5d051e74be71bf31c9ff_c8",
+          "title": "한성공지 2026학년도 상상더학기 진로탐색학점제 설명회",
+          "score": 0.5505,
+          "source_type": "notice",
+          "content_preview": "[공지] 한성공지 2026학년도 상상더학기 진로탐색학점제 설명회 (등록일: 2026-04-28, 출처: 진로취업지원팀)  12 의료   데이터 기반 딥러닝 연구 의료   이미지 데이터에 대한 전반적인 이해와 함께 딥러닝 알고리즘을 활용한 프로그램 제작 N개   팀 (1-4명) 기초교양학부 최승호 교수님 연구실 전화번호 : 010-3168-9024 이메일 주소 : jcn99250@naver.com 13 대학원진학   데이터 기반 딥러닝 연구 대학"
+        },
+        {
+          "chunk_id": "deadb53a91d7992c38a8d0d671bdbf67ad86388ab5cf5372b44d4fef4bb660db_c1",
+          "title": "AI플랫폼 이용가이드",
+          "score": 0.3043,
+          "source_type": "guidance",
+          "content_preview": "[교육정보 / HSU AI HUB / AI플랫폼 이용가이드] AI플랫폼 이용가이드 (등록일: , 출처: 한성대학교 공식 홈페이지)  [PDF 페이지 5] 새 대화   GPT 와  Gemini 를  함께  제공하여 ,  하나의  창에서  필요한  생성형  AI 모델을  선택하여  사용  가능    추가  로그인이나  설정  없이  바로  활용하여  문서  작성 ,  요약 ,  번역 ,  코딩  등  다양한  업무처리  가능   이미지 , PPT "
+        },
+        {
+          "chunk_id": "ee2c02196200739b0ec334d920b03c9a9eb276965d4bb89602a01c6083c532c8_c1",
+          "title": "교수용",
+          "score": 0.2686,
+          "source_type": "guidance",
+          "content_preview": "[교육정보 / HSU AI HUB / AI학습윤리] 교수용 (등록일: , 출처: 한성대학교 공식 홈페이지)  [PDF 페이지 3] 교수자는AI 도구의효과적 활용 및 고품질 결과를도출하기 위한 활용 방법(프롬프트전략 등)을 적용해야합니다.  [PDF 페이지 4] RTF(Role, Task, Format) 프롬프트 전략 예시 Role(역할) AI에게 특정 역할 부여 “너는 지역사회기관의축제 담당자야” 예  [PDF 페이지 5] Task(작업) AI"
+        }
+      ]
+    }
+  ],
+  "total_chunks_in_db": 3447
+}

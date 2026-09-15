@@ -1,0 +1,19 @@
+{
+  "started_at": "2026-09-15T05:59:35.241171+00:00",
+  "provider": "gemini",
+  "model": "gemini-3.8-flash",
+  "db": "data/gemini_core5_20260915T055935Z_chroma_db",
+  "collection": "campus_knowledge",
+  "db_sha256_before": "f54d5c2a0a251683c0c0f694d3559934a28ec5f982616c68d95b38e5fab9cae4",
+  "dataset_sha256": "8fc2100c33f8036451eb1a7b7276280f2d2c11e189182fdcdf59a5481ef606ea",
+  "git_head": "30df506400056735ab3c7bde7bc51dea9b4d264b",
+  "source_sha256": {
+    "core/rag.py": "a65e10e78a13e5896f52b14e64be1d2de42ded194a7355904edce2e606e9ff7d",
+    "core/prompts.py": "5682084865cbb0384be7c92a0600a47c39c37cd8b31a2dcd49d85253dcc76c8a",
+    "core/embedder.py": "8e6311117b9d04642397e09784f78976a0c889aaa8bab70626a3cd25b51f47e4",
+    "scripts/run_eval.py": "71b1f291d2e9a09447d650140a065a11e7ffaff6715a6e7f289f3e71b9bd62b2"
+  },
+  "chunks": 3447,
+  "finished_at": "2026-09-15T05:59:47.826691+00:00",
+  "source_db_unchanged": true
+}

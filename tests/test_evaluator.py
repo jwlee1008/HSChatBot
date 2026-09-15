@@ -14,6 +14,21 @@ import pytest
 from scripts.run_eval import evaluate_answer, extract_clause_bindings
 
 
+def test_evaluator_import_preserves_selected_provider():
+    import os
+    import subprocess
+    import sys
+    from pathlib import Path
+    result = subprocess.run(
+        [sys.executable, '-c',
+         'import scripts.run_eval as evaluation; assert evaluation.config.LLM_PROVIDER == "gemini"'],
+        cwd=Path(__file__).resolve().parents[1],
+        env={**os.environ, 'LLM_PROVIDER': 'gemini', 'GEMINI_API_KEY': 'unused-test-key'},
+        capture_output=True, text=True, timeout=30,
+    )
+    assert result.returncode == 0, result.stderr
+
+
 class TestEvaluator:
     """평가기의 판정 로직 정밀도 및 회귀 검증."""
 
@@ -168,3 +183,20 @@ class TestEvaluator:
         )
         assert fail_res["status"] == "FAIL"
         assert fail_res["score"] == 0.0
+
+    def test_api_error_handling(self):
+        """Gemini API 장애 발생 시 유보나 임의 실패로 숨기지 않고 API_ERROR로 판정한다."""
+        res = evaluate_answer(
+            answer="AI 서비스 요청 한도(Rate Limit)에 도달했습니다.",
+            expected_facts="신청 마감 9월 9일",
+            grounding_quotes=["9월 9일"],
+            negative_constraints=[],
+            should_abstain=False,
+            category="period_apply",
+            api_status="api_error",
+            api_error="429 RESOURCE_EXHAUSTED",
+        )
+        assert res["status"] == "API_ERROR"
+        assert res["score"] == 0.0
+        assert res["fact_matched"] is False
+        assert "API 오류" in res["reason"]
