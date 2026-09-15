@@ -100,7 +100,7 @@ def extract_page(html, item):
     boards = sorted({re.sub(r'/\d+/artclView\.do.*$', '/artclList.do', u).split('?')[0] for u in board_links})
     attachments = [{"url": urljoin(item['url'], a['href']), "name": clean(a.get_text())}
                    for a in content.select('a[href]')
-                   if 'download.do' in a['href'] or re.search(r'\.(pdf|hwp|hwpx)(?:\?|$)', a['href'], re.I)]
+                   if 'download.do' in a['href'] or 'fileDown.do' in a['href'] or re.search(r'\.(pdf|hwp|hwpx)(?:\?|$)', a['href'], re.I)]
     related = [{"url": urljoin(item['url'], a['href']), "title": clean(a.get_text())}
                for a in content.select('a[href]') if a['href'].startswith(('http', '/'))]
     images = [{"url": urljoin(item['url'], i['src']), "alt": i.get('alt', '')}
@@ -109,7 +109,9 @@ def extract_page(html, item):
     match = re.search(r'최종 수정일\s*:\s*(\d{4})[.\-/](\d{2})[.\-/](\d{2})', contact.get_text(' ',strip=True) if contact else '')
     updated = '-'.join(match.groups()) if match else ''
     contact_text = clean(contact.get_text(' ', strip=True)) if contact else ''
-    for node in content.select('script, style, nav, form, .hidden'):
+    has_diet = bool(content.select_one('#dietInfoArea table'))
+    has_calendar = bool(content.select_one('#schdulWrap .sche-comt, #schdulWrap .box-sch'))
+    for node in content.select('script, style, nav, input, button, select, .hidden, .sch-guide-layer, .alb-foot'):
         node.decompose()
     for table in list(content.select('table')):
         if table.parent:
@@ -124,8 +126,12 @@ def extract_page(html, item):
     coverage = "html_text_only"
     if attachments or images:
         coverage = "html_text_with_unextracted_media"
-    if any(word in title for word in ("학사일정", "식단", "식당", "아침밥")) or content.select('iframe'):
+    if content.select('iframe') and not attachments:
         coverage = "dynamic_content_requires_review"
+    if has_diet:
+        coverage = "current_week_diet_html"
+    elif has_calendar:
+        coverage = "calendar_html"
     return {"coverage_status": coverage, "id": hashlib.sha256(item['url'].encode()).hexdigest(), "title": title,
             "url": item['url'], "content": text, "content_status": "text" if text else "empty",
             "source": "한성대학교 공식 홈페이지", "category": ' / '.join(item['menu_path']),
@@ -150,16 +156,21 @@ class Fetcher:
         self.robots = RobotFileParser()
         self.robots.parse(r.text.splitlines())
 
-    def get(self, url):
+    def get(self, url, *, calendar_data=None):
         parsed = urlsplit(url)
         board = (parsed.scheme == "https" and parsed.netloc == "www.hansung.ac.kr"
                  and re.fullmatch(r"/bbs/hansung/\d+/(?:artclList|\d+/artclView)\.do", parsed.path))
-        if not (canonical(url) or board) or not self.robots.can_fetch(AGENT, url):
+        calendar = (parsed.scheme == "https" and parsed.netloc == "www.hansung.ac.kr"
+                    and re.fullmatch(r"/schdulMng/hansung/\d+/yearSchdul\.do", parsed.path))
+        if calendar_data is not None and not calendar:
+            raise ValueError('POST permitted only for public year calendar reads')
+        if not (canonical(url) or board or calendar) or not self.robots.can_fetch(AGENT, url):
             raise ValueError('URL not permitted')
         time.sleep(max(0, self.delay - (time.monotonic()-self.last)))
         self.last = time.monotonic()
         # Redirects are recorded as failures instead of following to login or other hosts.
-        with self.session.get(url, timeout=(5, 25), allow_redirects=False, stream=True) as r:
+        with self.session.request('POST' if calendar_data is not None else 'GET', url,
+                                  data=calendar_data, timeout=(5, 25), allow_redirects=False, stream=True) as r:
             if r.status_code != 200:
                 raise RuntimeError(f'HTTP {r.status_code}')
             chunks, size = [], 0
@@ -182,7 +193,7 @@ def atomic_json(path, value):
     tmp.replace(path)
 
 
-def collect(output, inventory_path, max_pages=150, force=False, delay=1.0):
+def collect(output, inventory_path, max_pages=150, force=False, delay=1.0, force_urls=None):
     now = datetime.now(timezone.utc)
     stamp = now.isoformat()
     old = json.loads(Path(output).read_text()) if Path(output).exists() else []
@@ -218,7 +229,7 @@ def collect(output, inventory_path, max_pages=150, force=False, delay=1.0):
             continue
         prev = documents.get(url)
         checked = datetime.fromisoformat(prev['last_checked_at']) if prev and prev.get('last_checked_at') else None
-        due = not checked or now-checked >= timedelta(days=item['interval_days'])
+        due = url in (force_urls or []) or not checked or now-checked >= timedelta(days=item['interval_days'])
         if not force and not due:
             item['collection_status'] = 'not_due'
             # Keep previously discovered tabs in scope even when parent is not fetched.
@@ -230,7 +241,34 @@ def collect(output, inventory_path, max_pages=150, force=False, delay=1.0):
             attempted += 1
             try:
                 page = html if url == SEED else fetch.get(url)
+                calendar_scope = None
+                page_soup = BeautifulSoup(page, 'html.parser')
+                widget = page_soup.select_one('#_JW_schdulmanage_basic')
+                if widget:
+                    number = widget.select_one('input[name="fnctNo"]')
+                    year = widget.select_one('input[name="year"]')
+                    if not number or not year or not number.get('value','').isdigit() or not year.get('value','').isdigit():
+                        raise ValueError('calendar identifiers missing')
+                    endpoint = f"{BASE}/schdulMng/hansung/{number['value']}/yearSchdul.do"
+                    year_html = fetch.get(endpoint, calendar_data={'kind':'', 'year':year['value']})
+                    year_soup = BeautifulSoup(year_html, 'html.parser')
+                    empty_year = (len(year_soup.select('.box-sch')) == 12
+                                  and year_soup.get_text().count('등록된 일정이 없습니다.') == 12)
+                    if not year_soup.select('.box-sch dl') and not empty_year:
+                        raise ValueError('calendar year events missing')
+                    target = widget.select_one('#schdulWrap')
+                    if target is None:
+                        raise ValueError('calendar target missing')
+                    target.clear()
+                    target.append(year_soup)
+                    page = str(page_soup)
+                    calendar_scope = {'year':year['value'], 'endpoint':endpoint, 'empty_year':empty_year}
                 record = extract_page(page,item)
+                if calendar_scope:
+                    record['calendar_scope'] = calendar_scope
+                    record['coverage_status'] = 'calendar_year_html'
+                # Retain un-enriched HTML separately so future media runs never duplicate old OCR text.
+                record['html_content'] = record['content']
                 tabs = record['tabs']
                 item['boards'] = record['boards']
                 if record['boards']:
@@ -274,9 +312,10 @@ def main():
     p.add_argument('--max-pages',type=int,default=150)
     p.add_argument('--force',action='store_true')
     p.add_argument('--delay',type=float,default=1.0)
+    p.add_argument('--force-url',action='append',default=[],help='Refresh one inventoried URL without forcing all pages')
     a=p.parse_args()
     logging.basicConfig(level=logging.INFO,format='%(levelname)s %(message)s')
-    report=collect(a.output,a.inventory,a.max_pages,a.force,a.delay)
+    report=collect(a.output,a.inventory,a.max_pages,a.force,a.delay,a.force_url)
     print(json.dumps({k:v for k,v in report.items() if k!='targets'},ensure_ascii=False))
     if report['errors']:
         raise SystemExit(1)

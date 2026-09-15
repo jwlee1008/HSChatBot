@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-09-14T05:17:32.425277+00:00",
+  "checked_at": "2026-09-15T04:15:30.220690+00:00",
   "scope": [
     "교육정보",
     "대학생활",
     "한성소식"
   ],
   "documents": 144,
-  "attempted": 25,
+  "attempted": 26,
   "errors": [],
   "targets": [
     {
@@ -495,8 +495,9 @@
         "학과행사일정"
       ],
       "kind": "guidance",
-      "interval_days": 14,
-      "collection_status": "not_due"
+      "interval_days": 1,
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6129/subview.do",
@@ -579,7 +580,7 @@
         "학생복지(식당,문화시설)"
       ],
       "kind": "guidance",
-      "interval_days": 14,
+      "interval_days": 1,
       "collection_status": "not_due"
     },
     {
@@ -2031,7 +2032,7 @@
         "교직원식당"
       ],
       "kind": "guidance",
-      "interval_days": 14,
+      "interval_days": 1,
       "collection_status": "not_due"
     },
     {
@@ -2044,7 +2045,7 @@
         "천원의 아침밥"
       ],
       "kind": "guidance",
-      "interval_days": 14,
+      "interval_days": 1,
       "collection_status": "not_due"
     },
     {

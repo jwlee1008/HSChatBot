@@ -17,6 +17,8 @@ from crawler.official_site import BASE, Fetcher, atomic_json, clean
 
 def parse_listing(html, board, since):
     soup=BeautifulSoup(html,'html.parser')
+    if soup.select_one('.faq-list'):
+        raise ValueError('FAQ accordion requires crawler.faq; not a dated notice list')
     rows=soup.select('table tbody tr')
     if not rows:
         raise ValueError('listing_rows_missing')
@@ -43,7 +45,9 @@ def parse_listing(html, board, since):
     return notices, bool(regular_dates) and max(regular_dates) < since
 
 
-def collect(board_ids, output, since, max_pages=30, max_notices=300, refresh=False, enrich=False):
+def collect(board_ids, output, since, max_pages=30, max_notices=300, refresh=False, enrich=False, start_page=1, report_path=None):
+    if start_page < 1 or (start_page != 1 and len(board_ids) != 1):
+        raise ValueError('A non-default start page requires exactly one board')
     from core.extractor.pipeline import NoticeEnricher
     fetch=Fetcher()
     enricher=NoticeEnricher() if enrich else None
@@ -53,10 +57,10 @@ def collect(board_ids, output, since, max_pages=30, max_notices=300, refresh=Fal
             'attempted_details':0,'enrich_attachments':enrich,'limit_reached':False}
     seen=set()
     for board in board_ids:
-        info={'pages':0,'reached_since':False,'list_complete':False}
+        info={'pages':0,'start_page':start_page,'reached_since':False,'list_complete':False}
         status['boards'][str(board)]=info
         last_urls=None
-        for page in range(1,max_pages+1):
+        for page in range(start_page,max_pages+1):
             listing=f'{BASE}/bbs/hansung/{int(board)}/artclList.do?page={page}'
             try:
                 found,reached=parse_listing(fetch.get(listing),board,since)
@@ -106,7 +110,7 @@ def collect(board_ids, output, since, max_pages=30, max_notices=300, refresh=Fal
             break
     status['stored_notices']=len(documents)
     status['finished_at']=datetime.now(timezone.utc).isoformat()
-    atomic_json(str(output)+'.report.json',status)
+    atomic_json(report_path or str(output)+'.report.json',status)
     atomic_json(output,list(documents.values()))
     return status
 
@@ -120,10 +124,12 @@ def main():
     p.add_argument('--max-notices',type=int,default=300)
     p.add_argument('--refresh',action='store_true')
     p.add_argument('--enrich-attachments',action='store_true')
+    p.add_argument('--start-page',type=int,default=1,help='Resume a single board at an observed page; earlier pages are not revalidated')
+    p.add_argument('--report-path',help='Preserve each bounded backfill report separately')
     a=p.parse_args()
     datetime.strptime(a.since,'%Y-%m-%d')
     logging.basicConfig(level=logging.INFO,format='%(levelname)s %(message)s')
-    report=collect(a.boards,a.output,a.since,a.max_pages,a.max_notices,a.refresh,a.enrich_attachments)
+    report=collect(a.boards,a.output,a.since,a.max_pages,a.max_notices,a.refresh,a.enrich_attachments,a.start_page,a.report_path)
     print(json.dumps(report,ensure_ascii=False))
     if report['errors']:raise SystemExit(1)
 

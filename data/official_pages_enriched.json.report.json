@@ -1,0 +1,1160 @@
+{
+  "started_at": "2026-09-15T04:16:42.830409+00:00",
+  "input": "data/official_pages.json",
+  "documents": [
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6096/subview.do",
+      "title": "학부학사일정",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6097/subview.do",
+      "title": "대학원학사일정",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6212/subview.do",
+      "title": "인재상 및 교육과정별 교육목표",
+      "status": "complete",
+      "images": 3,
+      "attachments": 0,
+      "added_chars": 81
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6217/subview.do",
+      "title": "교과 및 비교과 교육과정 이수체계",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 630
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6222/subview.do",
+      "title": "정규학기",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6225/subview.do",
+      "title": "수강신청",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6229/subview.do",
+      "title": "전자출결시스템",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6104/subview.do",
+      "title": "수업평가(수업만족도조사)",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6105/subview.do",
+      "title": "캡스톤디자인",
+      "status": "complete",
+      "images": 1,
+      "attachments": 1,
+      "added_chars": 2398
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6231/subview.do",
+      "title": "시험 및 성적평가",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6234/subview.do",
+      "title": "졸업 및 학위",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 82
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6108/subview.do",
+      "title": "조기취업 공결인정",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6110/subview.do",
+      "title": "학점포기",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6244/subview.do",
+      "title": "등록금납부",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6246/subview.do",
+      "title": "일반전부(과)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 86
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6113/subview.do",
+      "title": "재입학",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6248/subview.do",
+      "title": "휴학",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6251/subview.do",
+      "title": "자퇴",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6253/subview.do",
+      "title": "트랙제(17학번 이후)",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6117/subview.do",
+      "title": "학적부기재사항변경",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6255/subview.do",
+      "title": "징병검사",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6260/subview.do",
+      "title": "(학부)트랙별연락처",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6262/subview.do",
+      "title": "장학제도",
+      "status": "complete",
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 816
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6023/subview.do",
+      "title": "전공자율선택제 알아보기",
+      "status": "complete",
+      "images": 2,
+      "attachments": 0,
+      "added_chars": 4006
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6788/subview.do",
+      "title": "AI플랫폼 이용가이드",
+      "status": "partial",
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 1390
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6789/subview.do",
+      "title": "AI플랫폼 이용하기",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6796/subview.do",
+      "title": "교수용",
+      "status": "partial",
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 1140
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6266/subview.do",
+      "title": "증명서 발급",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6270/subview.do",
+      "title": "학생증",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6128/subview.do",
+      "title": "학과행사일정",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6129/subview.do",
+      "title": "기숙사",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6130/subview.do",
+      "title": "cctv/비상벨 현황",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6272/subview.do",
+      "title": "동아리가입",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6132/subview.do",
+      "title": "학생자치기구",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6279/subview.do",
+      "title": "장애학습지원(교수학습)",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6134/subview.do",
+      "title": "학군단(ROTC)",
+      "status": "complete",
+      "images": 4,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6332/subview.do",
+      "title": "식단",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6288/subview.do",
+      "title": "학생활동안전",
+      "status": "partial",
+      "images": 0,
+      "attachments": 5,
+      "added_chars": 20351
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6139/subview.do",
+      "title": "학내잔류 신청안내",
+      "status": "complete",
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 768
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6294/subview.do",
+      "title": "업무 및 담당자",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6691/subview.do",
+      "title": "외국인 기숙사",
+      "status": "complete",
+      "images": 8,
+      "attachments": 0,
+      "added_chars": 100
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6298/subview.do",
+      "title": "종합정보시스템 안내",
+      "status": "complete",
+      "images": 5,
+      "attachments": 0,
+      "added_chars": 536
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6338/subview.do",
+      "title": "WI-FI 안내",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6152/subview.do",
+      "title": "공익신고",
+      "status": "complete",
+      "images": 4,
+      "attachments": 1,
+      "added_chars": 843
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6154/subview.do",
+      "title": "시스템 시설 이용안내",
+      "status": "complete",
+      "images": 0,
+      "attachments": 2,
+      "added_chars": 770
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6155/subview.do",
+      "title": "수업관련업무처리",
+      "status": "partial",
+      "images": 3,
+      "attachments": 2,
+      "added_chars": 5342
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6156/subview.do",
+      "title": "성적평가안내",
+      "status": "complete",
+      "images": 0,
+      "attachments": 2,
+      "added_chars": 772
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6160/subview.do",
+      "title": "해외 현장실습",
+      "status": "complete",
+      "images": 4,
+      "attachments": 0,
+      "added_chars": 78
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6161/subview.do",
+      "title": "학습공간",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6318/subview.do",
+      "title": "체육관(낙산관)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 1,
+      "added_chars": 1641
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6321/subview.do",
+      "title": "대강당(낙산관)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6164/subview.do",
+      "title": "빈강의실 현황",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6165/subview.do",
+      "title": "제휴서비스",
+      "status": "complete",
+      "images": 2,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6175/subview.do",
+      "title": "산학협력중점교수멘토링",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6177/subview.do",
+      "title": "언론에서 본 한성",
+      "status": "complete",
+      "images": 10,
+      "attachments": 0,
+      "added_chars": 25
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6181/subview.do",
+      "title": "홍보대사",
+      "status": "complete",
+      "images": 7,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6041/subview.do",
+      "title": "설문 POLL",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6213/subview.do",
+      "title": "전공트랙제도",
+      "status": "failed_or_unsupported",
+      "images": 28,
+      "attachments": 1,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6214/subview.do",
+      "title": "융합교육과정",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6215/subview.do",
+      "title": "Micro Degree과정",
+      "status": "complete",
+      "images": 2,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6216/subview.do",
+      "title": "학석사연계과정",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/7436/subview.do",
+      "title": "모듈형 전공교육과정",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 1515
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6218/subview.do",
+      "title": "전공교육과정 이수학점",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6219/subview.do",
+      "title": "교양교육과정 이수학점",
+      "status": "complete",
+      "images": 2,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6220/subview.do",
+      "title": "비교과 포인트",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6221/subview.do",
+      "title": "편입생 이수체계",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6223/subview.do",
+      "title": "상상더학기",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6224/subview.do",
+      "title": "계절학기(여름/겨울)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 87
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6226/subview.do",
+      "title": "수강학점(학점이월제)",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6227/subview.do",
+      "title": "수강포기",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6228/subview.do",
+      "title": "수강신청 장바구니",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6230/subview.do",
+      "title": "장기결석자상담",
+      "status": "complete",
+      "images": 2,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6232/subview.do",
+      "title": "성적취득, 학사경고",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6233/subview.do",
+      "title": "학업이수곤란자상담",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6235/subview.do",
+      "title": "졸업사정절차",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6236/subview.do",
+      "title": "조기졸업",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6237/subview.do",
+      "title": "졸업유예(학사학위취득유예)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6238/subview.do",
+      "title": "수료",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6240/subview.do",
+      "title": "타대학학점교류",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6241/subview.do",
+      "title": "K-MOOC",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6242/subview.do",
+      "title": "편입생학점인정",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6243/subview.do",
+      "title": "외부사이버/군e-러닝",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6245/subview.do",
+      "title": "등록금환불",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6247/subview.do",
+      "title": "교차전부(과)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 86
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6249/subview.do",
+      "title": "복학",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6250/subview.do",
+      "title": "일반휴학신청자상담제도",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6252/subview.do",
+      "title": "제적",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6254/subview.do",
+      "title": "학과제(16학번 이전)",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6641/subview.do",
+      "title": "재학생입영원입영연기",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6642/subview.do",
+      "title": "재학생입영연기",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6258/subview.do",
+      "title": "예비군업무",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6261/subview.do",
+      "title": "(대학원)학과별연락처",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6263/subview.do",
+      "title": "교내장학(신입생)",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6264/subview.do",
+      "title": "교내장학(재학생)",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6265/subview.do",
+      "title": "교외장학",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6797/subview.do",
+      "title": "학생용",
+      "status": "partial",
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 2261
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6267/subview.do",
+      "title": "인터넷 증명발급",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6268/subview.do",
+      "title": "자동발급기(Touch Screen)",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6269/subview.do",
+      "title": "행정기관 FAX 민원",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6271/subview.do",
+      "title": "국제학생증",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6273/subview.do",
+      "title": "공연예술분과",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6274/subview.do",
+      "title": "종교분과",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6275/subview.do",
+      "title": "학술분과",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6276/subview.do",
+      "title": "체육분과",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6277/subview.do",
+      "title": "평면예술분과",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6278/subview.do",
+      "title": "취미봉사분과",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6280/subview.do",
+      "title": "장애학생지원(대학생활)",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6281/subview.do",
+      "title": "장애학생보조기구",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6282/subview.do",
+      "title": "협력기관",
+      "status": "complete",
+      "images": 2,
+      "attachments": 0,
+      "added_chars": 181
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6333/subview.do",
+      "title": "교직원식당",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6334/subview.do",
+      "title": "천원의 아침밥",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6285/subview.do",
+      "title": "식당,매점",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6286/subview.do",
+      "title": "건강,문화시설",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6287/subview.do",
+      "title": "기타시설",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6289/subview.do",
+      "title": "캠퍼스생활안전",
+      "status": "complete",
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 3509
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6295/subview.do",
+      "title": "체류정보",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6335/subview.do",
+      "title": "정규과정",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6336/subview.do",
+      "title": "지원자격 및 지원절차",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6299/subview.do",
+      "title": "한성웹메일",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6300/subview.do",
+      "title": "통합 모바일 앱",
+      "status": "complete",
+      "images": 7,
+      "attachments": 0,
+      "added_chars": 257
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6301/subview.do",
+      "title": "소프트웨어 안내",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6302/subview.do",
+      "title": "Office365",
+      "status": "complete",
+      "images": 1,
+      "attachments": 1,
+      "added_chars": 364
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/7591/subview.do",
+      "title": "정품Windows 업그레이드 안내",
+      "status": "complete",
+      "images": 4,
+      "attachments": 1,
+      "added_chars": 2116
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6303/subview.do",
+      "title": "원격수업",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6339/subview.do",
+      "title": "IOS(아이폰)",
+      "status": "complete",
+      "images": 5,
+      "attachments": 0,
+      "added_chars": 993
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6340/subview.do",
+      "title": "Android OS",
+      "status": "complete",
+      "images": 5,
+      "attachments": 0,
+      "added_chars": 952
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6341/subview.do",
+      "title": "Windows10 이상",
+      "status": "complete",
+      "images": 6,
+      "attachments": 0,
+      "added_chars": 882
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/7590/subview.do",
+      "title": "eduroam 서비스",
+      "status": "complete",
+      "images": 2,
+      "attachments": 1,
+      "added_chars": 1367
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6342/subview.do",
+      "title": "졸업생 무선네트워크 신청 방법",
+      "status": "complete",
+      "images": 4,
+      "attachments": 0,
+      "added_chars": 690
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6306/subview.do",
+      "title": "노트북 대여",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6307/subview.do",
+      "title": "공용컴퓨터 실습실",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6319/subview.do",
+      "title": "체육관(상상관)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 1,
+      "added_chars": 1641
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6320/subview.do",
+      "title": "풋살장",
+      "status": "complete",
+      "images": 1,
+      "attachments": 1,
+      "added_chars": 1641
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6322/subview.do",
+      "title": "소강당(창의관)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 1,
+      "added_chars": 2024
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6323/subview.do",
+      "title": "DLC(미래관)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6324/subview.do",
+      "title": "컨퍼런스홀(상상관)",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6326/subview.do",
+      "title": "상상관홀",
+      "status": "complete",
+      "images": 1,
+      "attachments": 1,
+      "added_chars": 1062
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6188/subview.do",
+      "title": "한성UI",
+      "status": "complete",
+      "images": 18,
+      "attachments": 0,
+      "added_chars": 393
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6189/subview.do",
+      "title": "교가",
+      "status": "complete",
+      "images": 1,
+      "attachments": 0,
+      "added_chars": 812
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6327/subview.do",
+      "title": "홍보동영상",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6328/subview.do",
+      "title": "국문",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6329/subview.do",
+      "title": "English",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6330/subview.do",
+      "title": "中文",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/hansung/6331/subview.do",
+      "title": "Монгол хэл",
+      "status": "not_applicable",
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    }
+  ],
+  "max_pdf_pages": 10,
+  "finished_at": "2026-09-15T04:16:43.403570+00:00"
+}

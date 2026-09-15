@@ -1,17 +1,55 @@
 {
-  "started_at": "2026-09-14T05:10:00.938016+00:00",
+  "started_at": "2026-09-15T04:07:16.801780+00:00",
   "since": "2023-09-14",
   "boards": {
+    "143": {
+      "pages": 0,
+      "reached_since": false,
+      "list_complete": false
+    },
+    "2195": {
+      "pages": 2,
+      "reached_since": true,
+      "list_complete": false
+    },
+    "2148": {
+      "pages": 2,
+      "reached_since": false,
+      "list_complete": true
+    },
+    "2203": {
+      "pages": 3,
+      "reached_since": false,
+      "list_complete": true
+    },
+    "2128": {
+      "pages": 9,
+      "reached_since": false,
+      "list_complete": true
+    },
     "2127": {
-      "pages": 8,
+      "pages": 34,
       "reached_since": false,
       "list_complete": false
     }
   },
-  "errors": [],
-  "attempted_details": 150,
+  "errors": [
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/143/artclList.do?page=1",
+      "error": "HTTP 404"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2127/221884/artclView.do",
+      "error": "HTTPSConnectionPool(host='www.hansung.ac.kr', port=443): Read timed out. (read timeout=25)"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2127/artclList.do?page=35",
+      "error": "HTTPSConnectionPool(host='www.hansung.ac.kr', port=443): Read timed out. (read timeout=25)"
+    }
+  ],
+  "attempted_details": 611,
   "enrich_attachments": false,
-  "limit_reached": true,
-  "stored_notices": 150,
-  "finished_at": "2026-09-14T05:12:38.611802+00:00"
+  "limit_reached": false,
+  "stored_notices": 760,
+  "finished_at": "2026-09-15T04:19:10.598566+00:00"
 }

@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-09-15T04:15:31.468370+00:00",
+  "since": "1900-01-01",
+  "boards": {
+    "2195": {
+      "pages": 8,
+      "reached_since": false,
+      "list_complete": true
+    }
+  },
+  "errors": [],
+  "attempted_details": 57,
+  "enrich_attachments": false,
+  "limit_reached": false,
+  "stored_notices": 57,
+  "finished_at": "2026-09-15T04:16:35.823515+00:00"
+}

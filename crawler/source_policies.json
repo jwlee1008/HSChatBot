@@ -1,6 +1,13 @@
 {
   "default_guidance_interval_days": 14,
-  "interval_overrides": {},
+  "interval_overrides": {
+    "https://www.hansung.ac.kr/hansung/6096/subview.do": 1,
+    "https://www.hansung.ac.kr/hansung/6097/subview.do": 1,
+    "https://www.hansung.ac.kr/hansung/6128/subview.do": 1,
+    "https://www.hansung.ac.kr/hansung/6332/subview.do": 1,
+    "https://www.hansung.ac.kr/hansung/6333/subview.do": 1,
+    "https://www.hansung.ac.kr/hansung/6334/subview.do": 1
+  },
   "note": "URL별 interval_overrides에 1, 14, 30일을 지정할 수 있습니다. 학사일정은 기본 매일 확인합니다.",
   "manual_review_urls": {
     "https://www.hansung.ac.kr/hansung/6689/subview.do": "원문 contentBuilder가 비어 있음. 별도 연결 또는 운영 부서 확인 필요",

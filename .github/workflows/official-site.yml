@@ -26,6 +26,10 @@ jobs:
         id: crawl
         continue-on-error: true
         run: python -m crawler.official_site --max-pages 200
+      - name: 공식 학사 FAQ 갱신 (14일 간격)
+        id: faq
+        continue-on-error: true
+        run: python -m crawler.faq
       - name: 수집 결과와 누락 목록 보존
         if: always()
         uses: actions/upload-artifact@v4
@@ -34,15 +38,16 @@ jobs:
           path: |
             data/official_pages.json
             data/official_site_inventory.json
+            data/official_faq*.json
       - name: 데이터 갱신 기록 (서비스 DB 반영은 별도)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/official_pages.json data/official_site_inventory.json
+          git add data/official_pages.json data/official_site_inventory.json data/official_faq*.json
           if ! git diff --cached --quiet; then
             git commit -m "chore: refresh official guidance and collection inventory"
             git push
           fi
       - name: 일부 수집 실패 표시
-        if: steps.crawl.outcome == 'failure'
+        if: steps.crawl.outcome == 'failure' || steps.faq.outcome == 'failure'
         run: exit 1

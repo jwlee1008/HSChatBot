@@ -1,0 +1,137 @@
+{
+  "executed_at": "2026-09-15T04:20:05.702124+00:00",
+  "retrieval_only": true,
+  "operational_db_modified": false,
+  "inputs": [
+    {
+      "path": "data/official_pages_enriched.json",
+      "sha256": "c872ed2ed4311a49651e4bb442b32fe5631306408b96da7ecc513da87f831be8",
+      "records": 144
+    },
+    {
+      "path": "data/official_faq.json",
+      "sha256": "e556025ac9d984aa6e9903fb9ffa82a41735e9cccd8d97eeaa85345bd1630009",
+      "records": 179
+    },
+    {
+      "path": "data/official_forms_enriched.json",
+      "sha256": "00f4004215440266a506f5090ac3ef7db85213f10880ef86365a9dffc2a87865",
+      "records": 57
+    }
+  ],
+  "documents": 380,
+  "chunks": 1015,
+  "queries": [
+    {
+      "question": "평점평균은 소수점 몇 자리까지 계산하고 반올림하나요?",
+      "expected_url_contains": "/6231/",
+      "hit_at_3": false,
+      "sources": [
+        {
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+          "title": "평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다)",
+          "source_type": "faq"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+          "title": "학점·졸업 평균평점을 백분위 점수로 어떻게 환산하나요?",
+          "source_type": "faq"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9",
+          "title": "성적·평가 평점평균 계산을 어떻게 하나요?",
+          "source_type": "faq"
+        }
+      ]
+    },
+    {
+      "question": "2026년 초과학기자 등록 기간",
+      "expected_url_contains": "/6096/",
+      "hit_at_3": true,
+      "sources": [
+        {
+          "url": "https://www.hansung.ac.kr/hansung/6096/subview.do",
+          "title": "학부학사일정",
+          "source_type": "guidance"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/hansung/6096/subview.do",
+          "title": "학부학사일정",
+          "source_type": "guidance"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/hansung/6097/subview.do",
+          "title": "대학원학사일정",
+          "source_type": "guidance"
+        }
+      ]
+    },
+    {
+      "question": "한성대 장학제도 종류",
+      "expected_url_contains": "/6262/",
+      "hit_at_3": false,
+      "sources": [
+        {
+          "url": "https://www.hansung.ac.kr/hansung/6264/subview.do",
+          "title": "교내장학(재학생)",
+          "source_type": "guidance"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/hansung/6264/subview.do",
+          "title": "교내장학(재학생)",
+          "source_type": "guidance"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/hansung/6264/subview.do",
+          "title": "교내장학(재학생)",
+          "source_type": "guidance"
+        }
+      ]
+    },
+    {
+      "question": "외국인 유학생 수강신청 가능 학점",
+      "expected_url_contains": "/2148/",
+      "hit_at_3": true,
+      "sources": [
+        {
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=1",
+          "title": "외국인 유학생 수강신청 가능 학점은 어떻게 되나요?",
+          "source_type": "faq"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=1",
+          "title": "외국인 유학생 신입생의 수강신청 방법은 어떻게 되나요?",
+          "source_type": "faq"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=3",
+          "title": "유학·연수 전공에 따라 파견 가능 대학이 정해져있나요?",
+          "source_type": "faq"
+        }
+      ]
+    },
+    {
+      "question": "자퇴원 양식",
+      "expected_url_contains": "/2195/",
+      "hit_at_3": true,
+      "sources": [
+        {
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2195/222307/artclView.do",
+          "title": "자퇴원",
+          "source_type": "notice"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/hansung/6251/subview.do",
+          "title": "자퇴",
+          "source_type": "guidance"
+        },
+        {
+          "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=17",
+          "title": "휴학·복학·자퇴 자퇴원 제출 방법이 궁금합니다.",
+          "source_type": "faq"
+        }
+      ]
+    }
+  ],
+  "elapsed_sec": 18.17497412499506
+}

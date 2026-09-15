@@ -1,0 +1,521 @@
+{
+  "started_at": "2026-09-15T04:17:28.407872+00:00",
+  "input": "data/official_forms.json",
+  "documents": [
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/222307/artclView.do",
+      "title": "자퇴원",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 903
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217070/artclView.do",
+      "title": "학적부기재사항변경신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 327
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217069/artclView.do",
+      "title": "군입영휴학원",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 1389
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217068/artclView.do",
+      "title": "복학신청 취소사유서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 212
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217066/artclView.do",
+      "title": "일반휴학원",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 999
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217065/artclView.do",
+      "title": "위임장",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 188
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217064/artclView.do",
+      "title": "복학원",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 404
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217063/artclView.do",
+      "title": "휴학신청_취소사유서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 212
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217061/artclView.do",
+      "title": "특별휴학원",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 765
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217060/artclView.do",
+      "title": "학부 등록금환불신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 1334
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217059/artclView.do",
+      "title": "학술·문화예술장학금 신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 561
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217058/artclView.do",
+      "title": "학자금특별추천신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 616
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217057/artclView.do",
+      "title": "학사상담신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 117
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217055/artclView.do",
+      "title": "증명 발급 신청 위임장 <신규>",
+      "status": "failed_or_unsupported",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217054/artclView.do",
+      "title": "국가고시합격자 장학금 신청서 양식(변경)",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 3074
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217052/artclView.do",
+      "title": "강의실 대여 신청서(양식)",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 609
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217051/artclView.do",
+      "title": "국가교육근로 출근부미입력사유서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 430
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217049/artclView.do",
+      "title": "[학점교류]전공학점 인정요청서 및 개인정보수집 및 이용 동의서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 2,
+      "added_chars": 1863
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217048/artclView.do",
+      "title": "학교시설물사용신청서(NEW)",
+      "status": "failed_or_unsupported",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217047/artclView.do",
+      "title": "교원자격무시험검정원서<개정 2016. 04. 20>",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 538
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217046/artclView.do",
+      "title": "근로(면학)장학생 신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 712
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217045/artclView.do",
+      "title": "국가고시합격자장학금_신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 479
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217044/artclView.do",
+      "title": "학술문화예술장학금 신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 364
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217043/artclView.do",
+      "title": "학생 야간잔류신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 772
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217042/artclView.do",
+      "title": "학교시설물사용신청서",
+      "status": "failed_or_unsupported",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217041/artclView.do",
+      "title": "수강신청 및 등록금 면제 확인서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 465
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217039/artclView.do",
+      "title": "수강신청포기원",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 647
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217038/artclView.do",
+      "title": "공결허가원",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 849
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217037/artclView.do",
+      "title": "수강신청원 및 수강신청정정원",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 1484
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217025/artclView.do",
+      "title": "교육훈련지원금 양식(해외연수허가서/비공인기관 응시료)",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 2,
+      "added_chars": 404
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217024/artclView.do",
+      "title": "보강계획서/보강결과보고서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 2,
+      "added_chars": 469
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217022/artclView.do",
+      "title": "지도교수 상담확인증 양식",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 183
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217021/artclView.do",
+      "title": "다전공 변경 신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 384
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217020/artclView.do",
+      "title": "교직복수전공신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 316
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217019/artclView.do",
+      "title": "교원자격무시험검정원서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 821
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217017/artclView.do",
+      "title": "동아리 활동 관련 각종 양식(New)",
+      "status": "partial",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 2,
+      "added_chars": 1002
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217014/artclView.do",
+      "title": "교원자격 무시험검정원서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 820
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217011/artclView.do",
+      "title": "대체과목 신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 465
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217010/artclView.do",
+      "title": "교직이수신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 488
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217009/artclView.do",
+      "title": "교원자격증 재발급 신청서",
+      "status": "failed_or_unsupported",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217008/artclView.do",
+      "title": "교원자격증기재사항정정신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 294
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217006/artclView.do",
+      "title": "시설물 사용 신청서",
+      "status": "not_applicable",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217004/artclView.do",
+      "title": "학생야간잔류 신청서",
+      "status": "not_applicable",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/217000/artclView.do",
+      "title": "동아리 관련 각종 양식",
+      "status": "not_applicable",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216992/artclView.do",
+      "title": "교육실습신청서",
+      "status": "failed_or_unsupported",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216989/artclView.do",
+      "title": "교직복수전공 및 부전공 신청서",
+      "status": "not_applicable",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 0,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216988/artclView.do",
+      "title": "예비군관련서류양식",
+      "status": "failed_or_unsupported",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 3,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216985/artclView.do",
+      "title": "전공 이수신청서",
+      "status": "failed_or_unsupported",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216984/artclView.do",
+      "title": "전공변경 신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 433
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216982/artclView.do",
+      "title": "강의결과보고서",
+      "status": "failed_or_unsupported",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 0
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216981/artclView.do",
+      "title": "부전공 취소 신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 340
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216980/artclView.do",
+      "title": "복수전공 취소 신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 351
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216979/artclView.do",
+      "title": "부전공 이수확인신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 397
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216978/artclView.do",
+      "title": "부전공 이수신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 335
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216977/artclView.do",
+      "title": "복수전공이수확인신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 423
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216976/artclView.do",
+      "title": "복수전공이수신청서",
+      "status": "complete",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 340
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2195/216975/artclView.do",
+      "title": "학점포기 신청서",
+      "status": "failed_or_unsupported",
+      "previous_result_retained": false,
+      "images": 0,
+      "attachments": 1,
+      "added_chars": 0
+    }
+  ],
+  "max_pdf_pages": 10,
+  "finished_at": "2026-09-15T04:17:37.228924+00:00"
+}
