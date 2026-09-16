@@ -3,11 +3,8 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # 파이썬 의존성 설치
-# 1) PyTorch CPU 전용 버전을 우선 설치하여 4.5GB 이상의 불필요한 CUDA/NVIDIA 패키지 차단
-# 2) requirements.txt 의존성 설치
 COPY requirements.txt .
-RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu && \
-    pip install --no-cache-dir --extra-index-url https://download.pytorch.org/whl/cpu -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # 소스 코드 및 데이터 복사
 COPY . .
