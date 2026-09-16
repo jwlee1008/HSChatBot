@@ -1,0 +1,16 @@
+{
+  "dataset_path": "data/unified_campus_knowledge.json",
+  "persist_dir": "data/integrated_eval_chroma_db",
+  "collection_name": "campus_knowledge",
+  "total_documents": 1366,
+  "total_chunks": 3447,
+  "stored_chunks_count": 3447,
+  "sqlite_sha256": "f3ac2b0220d763384367c83ac5e1b17f8d98527c9d7460332166ddacdf0c3ee2",
+  "chunk_counts_by_type": {
+    "guidance": 680,
+    "faq": 215,
+    "form": 120,
+    "notice": 2432
+  },
+  "elapsed_seconds": 65.93
+}

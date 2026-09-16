@@ -13,9 +13,11 @@ RESTful API 엔드포인트:
 import logging
 import time
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 import config
 from backend.schemas import (
@@ -164,3 +166,10 @@ async def query(request: QueryRequest):
         model=result.get("model", ""),
         error_type=safe_error_type,
     )
+
+
+# ── 프론트엔드 정적 파일 서빙 ───────────────────
+# frontend-web/dist 빌드 결과물이 존재할 경우 루트(/) 및 에셋 서빙
+_frontend_dist = Path(__file__).resolve().parent.parent / "frontend-web" / "dist"
+if _frontend_dist.is_dir() and (_frontend_dist / "index.html").is_file():
+    app.mount("/", StaticFiles(directory=str(_frontend_dist), html=True), name="frontend")
