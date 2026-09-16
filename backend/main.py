@@ -10,6 +10,7 @@ RESTful API 엔드포인트:
   uvicorn backend.main:app --reload --port 8000
 """
 
+import asyncio
 import logging
 import time
 from contextlib import asynccontextmanager
@@ -31,20 +32,51 @@ from core.rag import CampusRAG
 
 logger = logging.getLogger(__name__)
 
-# ── 전역 RAG 인스턴스 ──────────────────────────
+# ── 전역 RAG 인스턴스 및 비동기 락 ──────────────
 rag_instance: CampusRAG | None = None
+_rag_lock = asyncio.Lock()
+
+
+async def get_or_init_rag(load_llm: bool = False) -> CampusRAG:
+    """RAG 인스턴스를 안전하게 비차단/지연 초기화한다."""
+    global rag_instance
+    if rag_instance is not None:
+        if load_llm and rag_instance.llm is None:
+            async with _rag_lock:
+                if rag_instance.llm is None:
+                    loop = asyncio.get_running_loop()
+                    rag_instance = await loop.run_in_executor(
+                        None, lambda: CampusRAG(load_llm=True)
+                    )
+        return rag_instance
+
+    async with _rag_lock:
+        if rag_instance is None:
+            logger.info("CampusRAG 인스턴스 초기화 시작 (load_llm=%s)...", load_llm)
+            loop = asyncio.get_running_loop()
+            rag_instance = await loop.run_in_executor(
+                None, lambda: CampusRAG(load_llm=load_llm)
+            )
+            logger.info("CampusRAG 인스턴스 초기화 완료")
+        elif load_llm and rag_instance.llm is None:
+            loop = asyncio.get_running_loop()
+            rag_instance = await loop.run_in_executor(
+                None, lambda: CampusRAG(load_llm=True)
+            )
+        return rag_instance
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    """서버 시작/종료 시 RAG 인스턴스를 관리한다."""
-    global rag_instance
-    logger.info("CampusRAG 서버 시작 — RAG 인스턴스 초기화")
-    # 검색 전용으로 빠르게 시작, LLM은 첫 query 요청 시 지연 로드
-    rag_instance = CampusRAG(load_llm=False)
-    logger.info("RAG 인스턴스 초기화 완료 (검색 전용 모드)")
+    """
+    서버 시작 시 8000번 포트를 즉시 개방하여 쿠버네티스 Startup Probe(헬스체크)를
+    0.1초 만에 통과시키고, 무거운 모델 다운로드 및 로딩은 백그라운드 태스크로 비차단 수행한다.
+    """
+    logger.info("CampusRAG 서버 기동 — 8000번 포트 즉시 개방")
+    asyncio.create_task(get_or_init_rag(load_llm=False))
     yield
     logger.info("CampusRAG 서버 종료")
+
 
 
 app = FastAPI(
@@ -88,11 +120,10 @@ async def retrieve(request: QueryRequest):
 
     공지사항 벡터 DB에서 질문과 가장 유사한 문서를 반환한다.
     """
-    if not rag_instance:
-        raise HTTPException(status_code=503, detail="RAG 시스템이 초기화되지 않았습니다.")
+    rag = await get_or_init_rag(load_llm=False)
 
     start = time.time()
-    docs = rag_instance.retrieve(request.question, top_k=request.top_k)
+    docs = rag.retrieve(request.question, top_k=request.top_k)
     elapsed = time.time() - start
     logger.info("검색 완료: %.2f초, %d건", elapsed, len(docs))
 
@@ -118,25 +149,18 @@ async def query(request: QueryRequest):
 
     유사도 검색 후 LLM이 검색 결과를 바탕으로 2~3줄 요약 답변을 생성한다.
     """
-    global rag_instance
-
-    if not rag_instance:
-        raise HTTPException(status_code=503, detail="RAG 시스템이 초기화되지 않았습니다.")
-
-    # LLM이 로드되지 않았으면 지연 로드
-    if rag_instance.llm is None:
-        logger.info("LLM 지연 로드 시작 (provider: %s)", config.LLM_PROVIDER)
-        try:
-            rag_instance = CampusRAG(load_llm=True)
-        except Exception as e:
-            raise HTTPException(
-                status_code=500,
-                detail="LLM 서비스를 초기화할 수 없습니다.",
-            )
+    try:
+        rag = await get_or_init_rag(load_llm=True)
+    except Exception as e:
+        logger.error("LLM 서비스 초기화 실패: %s", str(e))
+        raise HTTPException(
+            status_code=500,
+            detail="LLM 서비스를 초기화할 수 없습니다.",
+        )
 
     start = time.time()
     try:
-        result = rag_instance.query(request.question, top_k=request.top_k)
+        result = rag.query(request.question, top_k=request.top_k)
     except Exception as e:
         logger.error("RAG 질의 실패: %s", str(e))
         raise HTTPException(status_code=500, detail="질의 처리 중 서버 내부 오류가 발생했습니다.")
