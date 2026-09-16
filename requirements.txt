@@ -1,7 +1,7 @@
 # ── PyTorch CPU 전용 인덱스 (리눅스 빌드 시 CUDA 4.5GB 초과 방지) ─────────────
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch>=2.4.0; sys_platform == 'darwin'
-torch==2.4.1+cpu; sys_platform != 'darwin'
+torch>=2.5.0; sys_platform == 'darwin'
+torch==2.6.0+cpu; sys_platform != 'darwin'
 
 # ── RAG 프레임워크 ──────────────────────────────
 langchain>=0.3.0
