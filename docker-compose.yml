@@ -6,7 +6,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - chroma_data:/app/data/chroma_db
+      - chroma_data:/app/data/integrated_eval_chroma_db
     env_file:
       - .env
     environment:
