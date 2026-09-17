@@ -221,8 +221,29 @@ with st.sidebar:
     top_k = st.slider("검색 결과 수", 1, 10, 3)
 
     st.divider()
-    st.caption("CampusRAG v1.0")
-    st.caption("한성대학교 캡스톤디자인")
+    with st.expander("⚖️ 오픈소스 및 저작권 고지"):
+        st.markdown(
+            """
+            **🎓 프로젝트 라이선스**
+            - CampusRAG: MIT License
+            - Copyright (c) 2026 CampusRAG Team
+            
+            **🤖 AI 모델**
+            - `ko-sroberta-multitask`: CC BY-SA 4.0 (정훈 간)
+            - `Qwen2.5-1.5B-Instruct`: Apache-2.0 (Alibaba Cloud)
+            
+            **🛠 주요 오픈소스 SW**
+            - Tesseract OCR (Apache-2.0)
+            - LangChain (MIT), ChromaDB (Apache-2.0)
+            - FastAPI (MIT), Streamlit (Apache-2.0)
+            
+            **⚠️ 데이터 출처 및 면책 안내**
+            - 한성대학교 비공식 캡스톤디자인 연구 프로젝트
+            - 공지 원저작권: 한성대학교 (Hansung University)
+            - 중요 일정은 공식 공지 원문 링크를 확인하세요.
+            """
+        )
+    st.caption("CampusRAG v1.0 | 한성대학교 캡스톤디자인")
 
 # ── 메인 영역 ────────────────────────────────
 st.title("🎓 CampusRAG")

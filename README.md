@@ -86,9 +86,10 @@ CampusRAG/
 └── tests/                 # 테스트
 ```
 
-## 📄 라이선스
+## 📄 라이선스 및 저작권 고지
 
-MIT License
+- CampusRAG 소스 코드는 [MIT License](LICENSE)에 따라 배포됩니다.
+- 사전학습 AI 모델(임베딩, LLM), Tesseract OCR, Pretendard 웹 폰트, 서드파티 라이브러리 및 한성대 공지 데이터 저작권 표기는 [OPEN_SOURCE_LICENSES.md](OPEN_SOURCE_LICENSES.md)를 참고하세요.
 
 ## 👥 팀
 

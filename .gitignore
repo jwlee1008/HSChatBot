@@ -32,7 +32,8 @@ models/
 .idea/
 *.swp
 *.swo
-.DS_Store
+*.DS_Store
+~$*
 
 # 테스트
 .pytest_cache/
