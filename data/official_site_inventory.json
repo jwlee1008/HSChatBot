@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-09-19T23:13:12.365418+00:00",
+  "checked_at": "2026-09-20T23:17:46.633477+00:00",
   "scope": [
     "교육정보",
     "대학생활",
     "한성소식"
   ],
   "documents": 144,
-  "attempted": 26,
+  "attempted": 32,
   "errors": [],
   "targets": [
     {
@@ -19,7 +19,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6097/subview.do",
@@ -31,7 +32,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6212/subview.do",
@@ -496,7 +498,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6129/subview.do",
@@ -580,7 +583,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/sites/esg/index.do",
@@ -2047,7 +2051,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6334/subview.do",
@@ -2060,7 +2065,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6285/subview.do",
