@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-09-20T23:17:46.633477+00:00",
+  "checked_at": "2026-09-22T00:10:42.950123+00:00",
   "scope": [
     "교육정보",
     "대학생활",
@@ -583,7 +583,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "changed",
+      "collection_status": "unchanged",
       "boards": []
     },
     {
@@ -2051,7 +2051,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "changed",
+      "collection_status": "unchanged",
       "boards": []
     },
     {
@@ -2065,7 +2065,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "changed",
+      "collection_status": "unchanged",
       "boards": []
     },
     {
