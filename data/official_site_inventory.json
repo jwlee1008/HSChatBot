@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-09-22T23:37:28.955046+00:00",
+  "checked_at": "2026-09-23T23:46:39.465540+00:00",
   "scope": [
     "교육정보",
     "대학생활",
     "한성소식"
   ],
   "documents": 144,
-  "attempted": 26,
+  "attempted": 32,
   "errors": [],
   "targets": [
     {
@@ -19,7 +19,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6097/subview.do",
@@ -31,7 +32,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6212/subview.do",
@@ -496,7 +498,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6129/subview.do",
@@ -580,7 +583,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/sites/esg/index.do",
@@ -1214,6 +1218,18 @@
       "boards": [
         "https://www.hansung.ac.kr/bbs/hansung/2115/artclList.do"
       ]
+    },
+    {
+      "url": "https://hansung-health.vercel.app/",
+      "title": "병원안내 링크 바로가기",
+      "menu_path": [
+        "한성소식",
+        "E 소식",
+        "병원안내 링크 바로가기"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6041/subview.do",
@@ -2047,7 +2063,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6334/subview.do",
@@ -2060,7 +2077,8 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6285/subview.do",
