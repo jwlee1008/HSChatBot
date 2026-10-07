@@ -28,7 +28,7 @@ from backend.schemas import (
     RetrieveResponse,
     SourceCard,
 )
-from core.rag import CampusRAG
+from core.rag import CampusRAG, get_exception_status
 
 logger = logging.getLogger(__name__)
 
@@ -146,7 +146,7 @@ async def query(request: QueryRequest):
     try:
         rag = await get_or_init_rag(load_llm=True)
     except Exception as e:
-        logger.error("LLM 서비스 초기화 실패: %s", str(e))
+        logger.error("LLM 서비스 초기화 실패 (exception=%s, status=%s)", type(e).__name__, get_exception_status(e))
         raise HTTPException(
             status_code=500,
             detail="LLM 서비스를 초기화할 수 없습니다.",
@@ -158,7 +158,7 @@ async def query(request: QueryRequest):
             None, lambda: rag.query(request.question, top_k=request.top_k)
         )
     except Exception as e:
-        logger.error("RAG 질의 실패: %s", str(e))
+        logger.error("RAG 질의 실패 (exception=%s, status=%s)", type(e).__name__, get_exception_status(e))
         raise HTTPException(status_code=500, detail="질의 처리 중 서버 내부 오류가 발생했습니다.")
 
     elapsed = time.time() - start
@@ -168,7 +168,12 @@ async def query(request: QueryRequest):
     raw_error = str(result.get("error") or "")
     safe_error_type = None
     if raw_status == "api_error":
-        if "429" in raw_error or "RESOURCE_EXHAUSTED" in raw_error:
+        declared_error_type = result.get("error_type")
+        if declared_error_type in {"timeout", "rate_limit", "service_unavailable", "auth_error", "internal_api_error"}:
+            safe_error_type = declared_error_type
+        elif "504" in raw_error or "DEADLINE_EXCEEDED" in raw_error.upper() or "TIMEOUT" in raw_error.upper():
+            safe_error_type = "timeout"
+        elif "429" in raw_error or "RESOURCE_EXHAUSTED" in raw_error:
             safe_error_type = "rate_limit"
         elif "503" in raw_error or "UNAVAILABLE" in raw_error:
             safe_error_type = "service_unavailable"

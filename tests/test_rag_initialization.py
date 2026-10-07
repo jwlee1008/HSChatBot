@@ -187,6 +187,6 @@ def test_gemini_generation_config_is_serialized_without_api_call(monkeypatch, mo
         assert params["temperature"] == 0.3
         assert "thinking_config" not in params
     assert chat.max_retries == 0
-    assert chat.timeout == 30.0
+    assert chat.timeout == core_rag.config.GEMINI_TIMEOUT_SECONDS
     constructor.assert_called_once()
     sdk_client.models.generate_content.assert_not_called()

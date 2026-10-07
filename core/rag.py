@@ -28,6 +28,17 @@ RELEVANCE_THRESHOLD = config.RELEVANCE_THRESHOLD  # 서비스와 평가 공통 �
 MIN_RELEVANCE_THRESHOLD = RELEVANCE_THRESHOLD  # 하위 호환성 별칭
 
 
+def get_exception_status(error: Exception) -> int | None:
+    """원시 메시지나 응답을 노출하지 않고 검증된 HTTP 상태 코드만 반환한다."""
+    for attr in ("status_code", "code"):
+        status = getattr(error, attr, None)
+        if isinstance(status, int) and 100 <= status <= 599:
+            return status
+        if isinstance(status, str) and re.fullmatch(r"[1-5]\d{2}", status):
+            return int(status)
+    return None
+
+
 def extract_query_entities(query: str) -> dict:
     """질의에서 연도, 학기, 차수 등의 검색 엔티티를 정규식으로 추출한다 (연도 범위 제한 없음)."""
     entities = {}
@@ -170,7 +181,7 @@ class CampusRAG:
         llm = ChatGoogleGenerativeAI(
             model=config.GEMINI_MODEL,
             google_api_key=config.GEMINI_API_KEY,
-            timeout=30.0,
+            timeout=config.GEMINI_TIMEOUT_SECONDS,
             max_retries=0,  # 503/429 등 오류는 서비스 레벨에서 명시적으로 제어
             **generation_options,
         )
@@ -201,7 +212,8 @@ class CampusRAG:
 
     def _invoke_llm_with_error_handling(self, chain_input: dict) -> tuple[str, dict]:
         """
-        LLM을 호출하고 오류(503, 429, 인증 등)를 구분하여 안전하게 처리한다.
+        LLM을 호출하고 오류(시간 초과, 503, 429, 인증 등)를 구분하여 안전하게 처리한다.
+        - 504/DEADLINE_EXCEEDED/클라이언트 timeout: 재시도 없이 시간 초과 안내
         - 503: 1회 제한된 backoff 재시도 후 일시 장애 안내
         - 429: 재시도 없이 한도 초과 안내
         - 401/403: 재시도 없이 인증/설정 오류 안내
@@ -224,6 +236,7 @@ class CampusRAG:
             "api_called": True,
             "status": "success",
             "error": None,
+            "error_type": None,
             "latency_seconds": 0.0,
         }
 
@@ -241,56 +254,86 @@ class CampusRAG:
                 if config.GEMINI_API_KEY:
                     err_str = err_str.replace(config.GEMINI_API_KEY, "[REDACTED]")
 
+                status_code = get_exception_status(e)
+                upper_error = err_str.upper()
+                timeout_types = {"TimeoutException", "ReadTimeout", "ConnectTimeout", "WriteTimeout", "PoolTimeout"}
+                is_timeout = (
+                    status_code == 504
+                    or isinstance(e, TimeoutError)
+                    or any(cls.__name__ in timeout_types for cls in type(e).__mro__)
+                    or "504" in upper_error
+                    or "DEADLINE_EXCEEDED" in upper_error
+                    or "DEADLINE EXCEEDED" in upper_error
+                    or "TIMED OUT" in upper_error
+                )
                 is_503 = (
-                    "503" in err_str
+                    status_code == 503
+                    or "503" in err_str
                     or "Service Unavailable" in err_str
                     or "temporarily unavailable" in err_str
                     or "overloaded" in err_str
                 )
                 is_429 = (
-                    "429" in err_str
+                    status_code == 429
+                    or "429" in err_str
                     or "ResourceExhausted" in err_str
                     or "quota" in err_str.lower()
                     or "rate limit" in err_str.lower()
                 )
-                is_auth = any(
+                is_auth = status_code in (401, 403) or any(
                     code in err_str
                     for code in ("401", "403", "PermissionDenied", "API_KEY_INVALID", "Unauthenticated")
                 )
 
-                if is_503 and attempt < max_503_retries:
+                if is_503 and not is_timeout and attempt < max_503_retries:
                     logger.warning(
-                        "Gemini 503 서버 혼잡 발생 (재시도 %d/%d, %.1f초 대기): %s",
+                        "AI 503 서버 혼잡 (재시도 %d/%d, %.1f초 대기, exception=%s, status=%s)",
                         attempt + 1,
                         max_503_retries,
                         backoff_delay,
-                        err_str[:150],
+                        type(e).__name__,
+                        status_code,
                     )
                     time.sleep(backoff_delay)
                     continue
 
                 meta["latency_seconds"] = round(time.monotonic() - started, 3)
                 meta["status"] = "api_error"
-                meta["error"] = err_str[:500]
 
-                if is_503:
+                if is_timeout:
+                    meta["error_type"] = "timeout"
+                    meta["error"] = "504 DEADLINE_EXCEEDED" if status_code == 504 or "504" in upper_error else "TIMEOUT"
+                    user_msg = "AI 답변을 기다리는 시간이 초과되었습니다. 잠시 후 다시 질문해 주세요."
+                elif is_503:
+                    meta["error_type"] = "service_unavailable"
+                    meta["error"] = "503 UNAVAILABLE"
                     user_msg = (
                         "현재 AI 서비스(Gemini)가 일시적인 서버 혼잡(503 Service Unavailable)으로 지연되고 있습니다. "
                         "잠시 후 다시 질문해 주세요."
                     )
                 elif is_429:
+                    meta["error_type"] = "rate_limit"
+                    meta["error"] = "429 RESOURCE_EXHAUSTED"
                     user_msg = (
                         "AI 서비스 요청 한도(Rate Limit)에 도달했습니다(429 Resource Exhausted). "
                         "잠시 후 다시 시도해 주세요."
                     )
                 elif is_auth:
+                    meta["error_type"] = "auth_error"
+                    meta["error"] = "PERMISSION_DENIED"
                     user_msg = "AI 서비스 인증 오류가 발생했습니다. API 키 및 접근 설정을 확인해 주세요."
                 else:
+                    meta["error_type"] = "internal_api_error"
+                    meta["error"] = "INTERNAL_API_ERROR"
                     user_msg = (
                         "AI 답변 생성 서비스에 일시적인 오류가 발생했습니다. "
                         "잠시 후 다시 시도해 주시거나 학사 공지 원문을 확인해 주세요."
                     )
 
+                logger.warning(
+                    "AI 답변 생성 실패 (exception=%s, status=%s, error_type=%s)",
+                    type(e).__name__, status_code, meta["error_type"],
+                )
                 return user_msg, meta
 
     def retrieve(
@@ -320,12 +363,15 @@ class CampusRAG:
             try:
                 raw_results = self.vectorstore.similarity_search_with_relevance_scores(query, k=candidate_k)
             except Exception as e:
-                logger.warning("similarity_search_with_relevance_scores 실패, distance 기반 변환 폴백: %s", e)
+                logger.warning(
+                    "similarity_search_with_relevance_scores 실패, distance 기반 변환 폴백 (exception=%s, status=%s)",
+                    type(e).__name__, get_exception_status(e),
+                )
                 try:
                     docs_with_dist = self.vectorstore.similarity_search_with_score(query, k=candidate_k)
                     raw_results = [(doc, 1.0 - float(dist) / 1.41421356) for doc, dist in docs_with_dist]
                 except Exception as e2:
-                    logger.error("유사도 검색 완전 실패: %s", e2)
+                    logger.error("유사도 검색 완전 실패 (exception=%s, status=%s)", type(e2).__name__, get_exception_status(e2))
                     return []
 
         if not raw_results:

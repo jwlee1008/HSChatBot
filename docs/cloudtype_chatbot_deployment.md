@@ -16,6 +16,7 @@
 - 첫 질의에서 검색 모델을 새로 만들지 않고 이미 준비한 임베딩·DB를 재사용해 LLM만 초기화한다. 초기화 실패는 같은 인스턴스에서 재시도한다.
 - 검색·답변 생성은 별도 worker에서 실행해 대기 중에도 health 요청에 응답한다.
 - Gemini 기본 모델은 `gemini-3.8-flash`이며, 3.8 요청에서 `temperature`, `top_p`, `top_k`, `candidate_count`를 제외하고 `thinking_level=low`를 지정한다.
+- Gemini 응답 제한은 기본 60초이며 `GEMINI_TIMEOUT_SECONDS`로 조정한다. 504·`DEADLINE_EXCEEDED`·클라이언트 시간 초과는 `error_type=timeout`과 안전한 안내로 반환한다. 503은 기존대로 1회만 재시도하고, 예외 로그에는 클래스·상태 코드만 남긴다.
 - 프런트엔드는 HTTP 서버 오류·시간 초과·연결 실패를 구분하며 빌드 산출물을 Git에 포함한다.
 
 선별 오프라인 회귀 검사 75개와 프런트엔드 빌드가 통과했다. CPU accelerator가 예외를 내는 상황을 재현해 잠금 버전의 sentence-transformers import와 임베딩 생성도 확인했다. 운영 동작은 아래 절차로 별도로 확인한다.
@@ -35,6 +36,7 @@ Cloudtype의 서비스 **설정 → 배포 설정**에서 위 저장소와 브�
 ```text
 LLM_PROVIDER=gemini
 GEMINI_MODEL=gemini-3.8-flash
+GEMINI_TIMEOUT_SECONDS=60
 GEMINI_API_KEY=<Cloudtype에 설정한 키>
 CHROMA_PERSIST_DIR=data/integrated_eval_chroma_db
 CHROMA_COLLECTION_NAME=campus_knowledge
