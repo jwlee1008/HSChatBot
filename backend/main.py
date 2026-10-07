@@ -87,6 +87,16 @@ app.add_middleware(
 )
 
 
+@app.middleware("http")
+async def no_cache_html(request, call_next):
+    """index.html은 매번 재검증하게 해 재배포 후 이전 화면이 캐시로 남지 않게 한다."""
+    response = await call_next(request)
+    if response.headers.get("content-type", "").startswith("text/html"):
+        response.headers["Cache-Control"] = "no-cache"
+    return response
+
+
+
 @app.get("/health", response_model=HealthResponse, tags=["시스템"])
 async def health_check():
     """서버 상태 및 적재된 문서 수를 반환한다."""
