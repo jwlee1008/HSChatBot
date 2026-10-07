@@ -1,7 +1,8 @@
 # ── PyTorch CPU 전용 인덱스 (리눅스 빌드 시 CUDA 4.5GB 초과 방지) ─────────────
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch>=2.5.0; sys_platform == 'darwin'
-torch==2.6.0+cpu; sys_platform != 'darwin'
+torch==2.6.0+cpu; sys_platform != 'darwin' and platform_machine == 'x86_64'
+torch==2.6.0; sys_platform != 'darwin' and platform_machine != 'x86_64'
 
 # ── RAG 프레임워크 ──────────────────────────────
 langchain>=0.3.0
@@ -19,7 +20,7 @@ transformers>=4.44.0
 # ── 상용 API 옵션 ──────────────────────────────
 langchain-google-genai>=2.0.0
 
-# ── 백엔드 API ─────────────────────────────────
+# ── 백엔드 API & 인증 보안 ─────────────────────────
 fastapi>=0.115.0
 uvicorn>=0.30.0
 
@@ -36,4 +37,3 @@ pypdf>=5.0.0
 pypdfium2>=4.30.0
 olefile>=0.47
 pillow>=10.0.0
-

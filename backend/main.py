@@ -73,7 +73,8 @@ async def lifespan(app: FastAPI):
     0.1초 만에 통과시키고, 무거운 모델 다운로드 및 로딩은 백그라운드 태스크로 비차단 수행한다.
     """
     logger.info("CampusRAG 서버 기동 — 8000번 포트 즉시 개방")
-    asyncio.create_task(get_or_init_rag(load_llm=False))
+    if config.PREWARM_RAG_ON_STARTUP:
+        asyncio.create_task(get_or_init_rag(load_llm=False))
     yield
     logger.info("CampusRAG 서버 종료")
 
@@ -135,6 +136,7 @@ async def retrieve(request: QueryRequest):
                 category=doc.metadata.get("category", ""),
                 date=doc.metadata.get("date", ""),
                 url=doc.metadata.get("url", ""),
+                content=doc.page_content[:2000] if doc.page_content else None,
             )
             for doc in docs
         ],

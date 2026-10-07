@@ -1,0 +1,32 @@
+{
+  "extract_status": 200,
+  "prefix2000_candidate_count": 7,
+  "full_text_candidate_count": 8,
+  "target_candidate_selected": "신청 기간 (학생)",
+  "target_candidate_start_date": "2026-09-10",
+  "target_candidate_end_date": "2026-09-18",
+  "target_candidate_end_datetime": "2026-09-18T08:00:00Z",
+  "zero_auto_save_verified": {
+    "before_extract_count": 0,
+    "modal_open_count": 0,
+    "on_cancel_count": 0,
+    "after_confirm_count": 1
+  },
+  "unselected_candidates_ignored": true,
+  "calendar_refetch_verified": true,
+  "no_date_control": {
+    "extract_status": 200,
+    "candidate_count": 0,
+    "alert_message": "선택하신 텍스트/공지에서 추출 가능한 일정 정보를 찾지 못했습니다.",
+    "db_count_preserved": 1
+  },
+  "manual_fallback": {
+    "create_status": 201,
+    "title": "편입 서류 수동 등록",
+    "final_db_total": 2,
+    "calendar_visible": true
+  },
+  "data_files": 940,
+  "data_unchanged": true,
+  "scope": "Mock query/source delivery; real local stored notice prefix, real extraction/create APIs and Chromium; temporary DB."
+}

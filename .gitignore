@@ -21,6 +21,24 @@ data/*_chroma_db/
 !data/integrated_eval_chroma_db/
 data/ops_verify_*/
 
+# 관계형/계정 데이터베이스 (SQLite 및 WAL/SHM/Journal sidecar)
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite-journal
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3-journal
+data/*.db*
+data/*.sqlite*
+!data/integrated_eval_chroma_db/
+
+
 # 다운로드 및 OCR 파일 캐시
 data/cache/
 
@@ -39,3 +57,9 @@ models/
 .pytest_cache/
 htmlcov/
 .coverage
+/backups/
+
+# 문서 제작·검증용 임시 파일
+/.prd_work/
+/.flow_work/
+*.backup.pptx

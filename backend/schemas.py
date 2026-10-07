@@ -33,6 +33,7 @@ class SourceCard(BaseModel):
     category: str = Field(description="분류 (학사, 장학, 행사 등)")
     date: str = Field(description="등록일 (YYYY-MM-DD)")
     url: str = Field(description="원문 링크")
+    content: str | None = Field(default=None, description="공지 본문 내용 발췌")
 
 
 class QueryResponse(BaseModel):

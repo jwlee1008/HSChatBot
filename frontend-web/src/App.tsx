@@ -23,7 +23,7 @@ const INITIAL_MESSAGES: Message[] = [
   {
     id: 0,
     role: "bot",
-    text: "안녕하세요! 한성대학교 공지 챗봇 CampusRAG입니다. 🎓\n학사, 장학, 학교 생활에 대해 궁금한 점을 물어보세요.",
+    text: "안녕하세요! 한성대학교 공지 챗봇 CampusMate입니다. 🎓\n학사, 장학, 학교 생활에 대해 궁금한 점을 물어보세요.",
     chips: [
       "2026학년도 수강신청 일정 알려줘",
       "국가장학금 신청 기간과 가구원 동의 기간",
@@ -205,7 +205,7 @@ function InfoLicenseModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
         <div className="px-4 py-3 border-b border-slate-100 flex items-center justify-between bg-white">
           <div className="flex items-center gap-2">
             <span className="text-base">🎓</span>
-            <h2 className="font-bold text-slate-900 text-[14px]">CampusRAG 안내 및 오픈소스 라이선스</h2>
+            <h2 className="font-bold text-slate-900 text-[14px]">CampusMate 안내 및 오픈소스 라이선스</h2>
           </div>
           <button
             onClick={onClose}
@@ -260,7 +260,7 @@ function InfoLicenseModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
                   <span>한성대학교 학내 공지 통합 RAG 챗봇</span>
                 </div>
                 <p className="text-[12px] leading-relaxed text-blue-900">
-                  CampusRAG는 여러 게시판에 분산된 학내 공지사항과 첨부파일(PDF, HWP, HWPX, 이미지) 속 텍스트를 로컬 인공지능으로 분석하여, 핵심 요약과 공식 원문 링크 카드를 제공하는 캡스톤디자인 연구 프로젝트입니다.
+                  CampusMate는 여러 게시판에 분산된 학내 공지사항과 첨부파일(PDF, HWP, HWPX, 이미지) 속 텍스트를 로컬 인공지능으로 분석하여, 핵심 요약과 공식 원문 링크 카드를 제공하는 캡스톤디자인 연구 프로젝트입니다.
                 </p>
               </div>
 
@@ -325,9 +325,9 @@ function InfoLicenseModal({ isOpen, onClose }: { isOpen: boolean; onClose: () =>
           {activeTab === "oss" && (
             <div className="space-y-2.5">
               <div className="border border-slate-200 rounded-xl p-3 bg-white">
-                <div className="font-bold text-slate-900 mb-1 text-[12.5px]">CampusRAG 자체 라이선스</div>
+                <div className="font-bold text-slate-900 mb-1 text-[12.5px]">CampusMate 자체 라이선스</div>
                 <p className="text-[11.5px] text-slate-600">
-                  MIT License | Copyright (c) 2026 CampusRAG Team (Hansung University Capstone Project)
+                  MIT License | Copyright (c) 2026 CampusMate Team (Hansung University Capstone Project)
                 </p>
               </div>
 
@@ -458,7 +458,7 @@ export default function App() {
         }}
       >
         <div className="flex items-center gap-2">
-          <span className="text-base font-bold tracking-tight text-slate-900">CampusRAG</span>
+          <span className="text-base font-bold tracking-tight text-slate-900">CampusMate</span>
           <span className="text-base">🎓</span>
           <span className="text-[10px] font-semibold bg-blue-50 text-blue-600 px-1.5 py-0.5 rounded border border-blue-200">
             한성대 공지봇

@@ -4,11 +4,10 @@
 .venv
 venv
 frontend-web/node_modules
-frontend-web/src
-frontend-web/public
-frontend-web/index.html
-frontend-web/vite.config.ts
-frontend-web/tsconfig*.json
+frontend-web/dist
+.env.*
+data/campusmate.db*
+data/*.sqlite*
 data/cache
 data/chroma_db
 data/eval_chroma_db
@@ -18,3 +17,9 @@ __pycache__
 *.pyc
 tests
 docs
+
+archived_features
+.prd_work
+*.docx
+*.pptx
+*.xlsx

@@ -31,6 +31,9 @@ NOTICES_PATH = os.getenv(
 )
 SAMPLE_NOTICES_PATH = str(DATA_DIR / "sample_notices.json")
 
+# RAG 사전 로드 설정. 오프라인 검증에서는 false로 설정한다.
+PREWARM_RAG_ON_STARTUP = os.getenv("PREWARM_RAG_ON_STARTUP", "true").lower() in ("true", "1", "yes")
+
 # ──────────────────────────────────────────────
 # 임베딩 모델 설정
 # ──────────────────────────────────────────────

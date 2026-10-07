@@ -1,0 +1,53 @@
+{
+  "dataset_sha256": "c6969ec41faa332b660186cf5407f07dc9621fcbccd2158e124e9b62c225359e",
+  "reference_time": "2026-09-25T12:00:00+09:00",
+  "scope": "로컬 저장 원문 기반 사전 수용 검사. 실제 검색 청크나 실사용자 UT 아님. 과거 일정도 파서 평가 대상으로 포함.",
+  "cases": [
+    {
+      "id": "uat-transfer",
+      "doc_id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864",
+      "anchor": "신청 접수 기간 : 2026. 9. 10.(목) 10:00 ∼ 9. 18.(금) 17:00",
+      "expected_end": "2026-09-18T17:00:00+09:00",
+      "title_keywords": [
+        "학점",
+        "신청"
+      ]
+    },
+    {
+      "id": "uat-topcit",
+      "doc_id": "7315051911dd61481bf87fa8f2347f5b01e7be395623a44d9e41bdd14fa5d308",
+      "anchor": "09. 10.(목) 10:00\n\n~\n\n09. 11.(금) 13:00",
+      "expected_end": "2026-09-11T13:00:00+09:00",
+      "title_keywords": [
+        "보증금"
+      ]
+    },
+    {
+      "id": "uat-mentoring",
+      "doc_id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1",
+      "anchor": "2026. 09. 17.(목) 15:00",
+      "expected_end": "2026-09-17T15:00:00+09:00",
+      "title_keywords": [
+        "멘토링",
+        "신청"
+      ]
+    },
+    {
+      "id": "uat-calendar",
+      "doc_id": "ca2993de94f2662e7e964c00fd38fbc89f80eab879d7db103b37c4632ddb8318",
+      "anchor": "2026.10.19(월)\n~\n2026.10.24(토)\n중간고사",
+      "expected_start": "2026-10-19",
+      "expected_end": "2026-10-24",
+      "title_keywords": [
+        "중간고사"
+      ]
+    },
+    {
+      "id": "uat-no-date",
+      "doc_id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864",
+      "anchor": "신청 서류 : 온라인 신청",
+      "input_excerpt": "신청 서류 : 온라인 신청",
+      "expected_count": 0
+    }
+  ]
+}

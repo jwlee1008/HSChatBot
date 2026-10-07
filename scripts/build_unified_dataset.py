@@ -10,8 +10,9 @@ import argparse
 import hashlib
 import json
 import logging
+import re
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -45,33 +46,84 @@ def normalize_url(url: str | None) -> str:
     return url.split("#")[0].strip()
 
 
+# 정규식 패턴: 하이픈 구분, 점 구분, 구분자 없는 기본 ISO(YYYYMMDD)를 독립 분리하여
+# '2026-09.23' 같은 혼합 구분자 입력을 원천 거부한다.
+_PATTERN_HYPHEN = re.compile(
+    r"^(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{2}):(\d{2})(?::(\d{2}))?(?:\.(\d+))?(?:(Z|[+-]\d{2}:?\d{2}))?)?$"
+)
+_PATTERN_DOT = re.compile(
+    r"^(\d{4})\.(\d{2})\.(\d{2})(?:[ T](\d{2}):(\d{2})(?::(\d{2}))?(?:\.(\d+))?(?:(Z|[+-]\d{2}:?\d{2}))?)?$"
+)
+_PATTERN_BASIC = re.compile(r"^(\d{4})(\d{2})(\d{2})$")
+
+
 def parse_iso_datetime(val: str | None) -> datetime | None:
-    """날짜/시각 문자열을 타임존 인식 UTC datetime 객체로 정규화 변환한다."""
+    """날짜/시각 문자열을 타임존 인식 UTC datetime 객체로 정규화 변환한다.
+
+    지원 형식:
+    - ISO 8601 확장 형식 (예: '2026-09-23', '2026-09-23T15:00:00+09:00', '2026-09-23T15:00:00+0900', '2026-09-23T15:00:00Z', '2026-09-23 15:00:00')
+    - ISO 8601 기본 형식 (예: '20260923')
+    - 점 구분 날짜 및 선택적 시각 형식 (예: '2026.09.23', '2026.09.23 14:30', '2026.09.23 14:30:45', '2026.09.23T14:30:45', 선택적 시간대 포함)
+
+    거부(None 반환) 대상:
+    - None, 빈 문자열, 비문자열 입력
+    - 혼합 구분자 날짜 (예: '2026-09.23', '2026.09-23')
+    - 잘못된 시간대 오프셋 분/시 (예: '+09:99', '-00:60', '+24:00' 등, 분 00~59, 시 00~23 범위 초과)
+    - 달력상 존재하지 않는 날짜 (예: '2026-02-30', 평년 2월 29일 '2026.02.29', '2026-04-31')
+    - 정규식 부분 일치 쓰레기 값 (예: '2026.09.23garbage', '2026-09-23garbage')
+
+    처리 정책:
+    - 시간대가 명시되지 않은 날짜/시각(기본 ISO 및 점 구분 포함)은 기존 정책에 따라 UTC(timezone.utc)로 간주한다.
+    - 시간대가 명시된 경우 UTC로 변환(astimezone)한다.
+    """
     if not val or not isinstance(val, str):
         return None
     s = val.strip()
     if not s:
         return None
-    try:
-        dt = datetime.fromisoformat(s)
-        if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=timezone.utc)
-        else:
-            dt = dt.astimezone(timezone.utc)
-        return dt
-    except Exception:
-        pass
 
-    m = re.match(r"^(\d{4})[-.](\d{2})[-.](\d{2})(?:[ T](\d{2}):(\d{2})(?::(\d{2}))?)?", s)
+    # 1. 하이픈 또는 점 구분 날짜 검사
+    m = _PATTERN_HYPHEN.match(s) or _PATTERN_DOT.match(s)
     if m:
         try:
             year, month, day = int(m.group(1)), int(m.group(2)), int(m.group(3))
             hour = int(m.group(4) or 0)
             minute = int(m.group(5) or 0)
             sec = int(m.group(6) or 0)
-            return datetime(year, month, day, hour, minute, sec, tzinfo=timezone.utc)
+            microsec = int(m.group(7)[:6].ljust(6, "0")) if m.group(7) else 0
+            tz_str = m.group(8)
+
+            if tz_str:
+                if tz_str == "Z":
+                    tz = timezone.utc
+                else:
+                    sign = 1 if tz_str[0] == "+" else -1
+                    raw_tz = tz_str[1:].replace(":", "")
+                    if len(raw_tz) != 4:
+                        return None
+                    th = int(raw_tz[:2])
+                    tm = int(raw_tz[2:])
+                    # 오프셋 시(00~23) 및 분(00~59) 엄격 사전 검증 (+09:99, -00:60 거부)
+                    if not (0 <= th <= 23 and 0 <= tm <= 59):
+                        return None
+                    tz = timezone(sign * timedelta(hours=th, minutes=tm))
+                dt = datetime(year, month, day, hour, minute, sec, microsec, tzinfo=tz)
+                return dt.astimezone(timezone.utc)
+            else:
+                # 시간대 미지정 입력: 기존 정책에 따라 UTC로 간주
+                return datetime(year, month, day, hour, minute, sec, microsec, tzinfo=timezone.utc)
         except Exception:
-            pass
+            return None
+
+    # 2. 기본 ISO 8601 형식 (YYYYMMDD) 호환성 유지
+    m_basic = _PATTERN_BASIC.match(s)
+    if m_basic:
+        try:
+            year, month, day = int(m_basic.group(1)), int(m_basic.group(2)), int(m_basic.group(3))
+            return datetime(year, month, day, 0, 0, 0, tzinfo=timezone.utc)
+        except Exception:
+            return None
+
     return None
 
 

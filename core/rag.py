@@ -619,6 +619,7 @@ class CampusRAG:
                         "date": doc.metadata.get("date", ""),
                         "url": url,
                         "category": doc.metadata.get("category", ""),
+                        "content": doc.page_content[:2000] if doc.page_content else "",
                     }
                 )
 

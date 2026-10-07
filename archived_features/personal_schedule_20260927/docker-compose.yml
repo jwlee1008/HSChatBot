@@ -1,0 +1,28 @@
+services:
+  # FastAPI 백엔드
+  backend:
+    build: .
+    ports:
+      - "127.0.0.1:${CAMPUSMATE_PORT:-8000}:8000"
+    volumes:
+      - chroma_data:/app/data/integrated_eval_chroma_db
+      - auth_data:/var/lib/campusmate
+      - model_cache:/root/.cache/huggingface
+    environment:
+      - LLM_PROVIDER=${LLM_PROVIDER:-local}
+      - AUTH_DB_PATH=/var/lib/campusmate/campusmate.db
+      - PREWARM_RAG_ON_STARTUP=${PREWARM_RAG_ON_STARTUP:-false}
+      - GEMINI_API_KEY=${GEMINI_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5)"]
+      interval: 5s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: unless-stopped
+
+volumes:
+  chroma_data:
+  auth_data:
+  model_cache:

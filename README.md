@@ -1,6 +1,19 @@
-# 🎓 CampusRAG: 한성대학교 학내 공지사항 통합 RAG 챗봇
+# 🎓 CampusMate: 한성대학교 학내 공지사항 통합 RAG 챗봇
 
 > 분산된 학내 공지사항을 통합하여, 자연어 질문으로 필요한 정보를 빠르게 찾을 수 있는 AI 챗봇 시스템
+
+## 현재 제품 범위 2026년 10월 7일
+
+로그인 없이 학내 정보를 질문하고 답변·공식 원문 출처를 확인하는 챗봇이다. 개인 일정·인증·캘린더·알림 기능은 `archived_features/personal_schedule_20260927/`에 보관하며 기본 실행·배포에 포함하지 않는다. 과거 일정 관련 보고서는 역사 기록이고 현재 계획이 아니다.
+
+- 현재 제출·발표 기준: [챗봇 PRD·PPT·계획서·WBS·대본 묶음](docs/chatbot_release_20261007/README.md)
+- 현재 모델·자료 범위·추가 수집·무료 배포 판단: [데이터 확장과 Cloudtype 계획](docs/campusmate_data_and_cloudtype_plan_20261007.md)
+- 현재 로컬 설정은 Gemini API 생성이며, 검색 임베딩은 서버에서 ko-sroberta를 실행한다. 배포 환경에서는 제공자·모델명을 명시하고 실제 동작을 확인한다.
+- 실행·배포 안내: [챗봇 컨테이너 가이드](docs/campusmate_local_container_guide.md)
+- 현재 범위: [챗봇 범위](docs/campusmate_chatbot_scope_20260927.md)
+- 서버 실행: `uvicorn backend.main:app --port 8000`
+- UI 빌드: `npm ci --prefix frontend-web && npm run build --prefix frontend-web`
+- 핵심 API: `/health`, `/api/query`, `/api/retrieve`
 
 ## 📌 프로젝트 개요
 
@@ -15,11 +28,11 @@
 | 데이터 수집 | Python, BeautifulSoup4, Requests |
 | 임베딩 | `jhgan/ko-sroberta-multitask` (한국어 특화) |
 | 벡터 DB | ChromaDB |
-| 생성 LLM | `google/gemma-2-2b-it` (오픈소스 경량 모델) |
+| 생성 LLM | 설정으로 Gemini/OpenAI API 또는 로컬 모델 선택 |
 | RAG 프레임워크 | LangChain |
 | 백엔드 | FastAPI |
-| 프론트엔드 | Streamlit |
-| 배포 | Docker, Hugging Face Spaces |
+| 프론트엔드 | React + TypeScript (frontend-web) |
+| 배포 | FastAPI 정적 서빙 / Docker; 최신판 외부 배포는 별도 검증 |
 
 ## 🚀 빠른 시작
 

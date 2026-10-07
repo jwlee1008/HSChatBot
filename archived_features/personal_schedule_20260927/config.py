@@ -1,0 +1,98 @@
+"""
+CampusRAG 전역 설정 모듈
+
+환경 변수 또는 기본값으로 동작하며,
+오픈소스 로컬 모델과 상용 API를 스위칭할 수 있는 하이브리드 구조.
+"""
+
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+# ──────────────────────────────────────────────
+# 프로젝트 경로
+# ──────────────────────────────────────────────
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+# 기본값: 3,447개 청크(상시안내+FAQ+서식+공지)가 포함된 통합 지식 DB 우선 적용
+_INTEGRATED_DB_DIR = DATA_DIR / "integrated_eval_chroma_db"
+_INTEGRATED_KNOWLEDGE_JSON = DATA_DIR / "unified_campus_knowledge.json"
+
+CHROMA_PERSIST_DIR = os.getenv(
+    "CHROMA_PERSIST_DIR",
+    str(_INTEGRATED_DB_DIR if _INTEGRATED_DB_DIR.exists() else DATA_DIR / "chroma_db"),
+)
+NOTICES_PATH = os.getenv(
+    "NOTICES_PATH",
+    str(_INTEGRATED_KNOWLEDGE_JSON if _INTEGRATED_KNOWLEDGE_JSON.exists() else DATA_DIR / "crawled_notices.json"),
+)
+SAMPLE_NOTICES_PATH = str(DATA_DIR / "sample_notices.json")
+
+# ──────────────────────────────────────────────
+# 계정, 인증 및 영속 저장소 설정 (R1-A)
+# ──────────────────────────────────────────────
+# SQLite 영속 DB 파일 경로 (Chroma와 분리)
+AUTH_DB_PATH = os.getenv("AUTH_DB_PATH", str(DATA_DIR / "campusmate.db"))
+
+# Opaque Bearer 세션 토큰 유효 기간 (기본 24시간 = 86,400초)
+SESSION_EXPIRE_SECONDS = int(os.getenv("SESSION_EXPIRE_SECONDS", "86400"))
+
+# FastAPI 기동 시 RAG 백그라운드 사전 로드 여부 (테스트 시 False 설정으로 격리)
+PREWARM_RAG_ON_STARTUP = os.getenv("PREWARM_RAG_ON_STARTUP", "true").lower() in ("true", "1", "yes")
+
+# 계정 입력 정책 제약
+USERNAME_MIN_LENGTH = 3
+USERNAME_MAX_LENGTH = 50
+PASSWORD_MIN_LENGTH = 8
+PASSWORD_MAX_LENGTH = 128
+
+# ──────────────────────────────────────────────
+# 임베딩 모델 설정
+# ──────────────────────────────────────────────
+EMBEDDING_MODEL_NAME = os.getenv(
+    "EMBEDDING_MODEL", "jhgan/ko-sroberta-multitask"
+)
+
+# ──────────────────────────────────────────────
+# LLM 설정 (하이브리드 스위칭)
+# ──────────────────────────────────────────────
+# "local"  : HuggingFace 오픈소스 모델 (gemma-2-2b-it) — 기본값
+# "gemini" : Google Gemini API
+# "openai" : OpenAI API
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "local")
+
+# 로컬 LLM 설정
+LOCAL_LLM_MODEL = os.getenv("LOCAL_LLM_MODEL", "Qwen/Qwen2.5-1.5B-Instruct")
+LOCAL_LLM_MAX_NEW_TOKENS = int(os.getenv("LOCAL_LLM_MAX_NEW_TOKENS", "512"))
+
+# Gemini API 설정
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+
+# OpenAI API 설정
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+
+# ──────────────────────────────────────────────
+# RAG 파이프라인 설정
+# ──────────────────────────────────────────────
+TOP_K = int(os.getenv("TOP_K", "3"))  # 유사도 검색 반환 개수
+_DEFAULT_COLLECTION = "campus_knowledge" if _INTEGRATED_DB_DIR.exists() else "campus_notices"
+CHROMA_COLLECTION_NAME = os.getenv("CHROMA_COLLECTION_NAME", _DEFAULT_COLLECTION)
+RELEVANCE_THRESHOLD = float(os.getenv("RELEVANCE_THRESHOLD", "0.25"))  # 원시 코사인 유사도 최소 임계값 (0.25)
+
+# ──────────────────────────────────────────────
+# 디바이스 설정 (Apple Silicon MPS 자동 감지)
+# ──────────────────────────────────────────────
+def get_device() -> str:
+    """사용 가능한 최적의 디바이스를 반환한다."""
+    import torch
+
+    if torch.cuda.is_available():
+        return "cuda"
+    elif torch.backends.mps.is_available():
+        return "mps"
+    return "cpu"
