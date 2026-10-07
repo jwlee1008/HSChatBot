@@ -20,6 +20,14 @@
 
 선별 오프라인 회귀 검사 75개와 프런트엔드 빌드가 통과했다. CPU accelerator가 예외를 내는 상황을 재현해 잠금 버전의 sentence-transformers import와 임베딩 생성도 확인했다. 운영 동작은 아래 절차로 별도로 확인한다.
 
+## Python 템플릿의 화면 파일과 상태 검사
+
+Python 템플릿은 앱 복사 단계에서 Git에 포함된 `frontend-web/dist/index.html`과 `frontend-web/dist/assets/`를 함께 복사해야 한다. 프런트엔드 변경 시 로컬에서 `npm run build --prefix frontend-web`를 실행하고 생성된 `dist`를 소스와 함께 Git에 반영한다. Cloudtype Python 배포에는 별도 Node 빌드 단계를 추가하지 않는다.
+
+`.dockerignore`에서 `frontend-web/dist`를 제외하면 Python 템플릿의 앱 복사 단계에서 화면 파일이 빠진다. 실제 빌드 `51efe28`에서도 내부 `/health`는 200이었지만 공개 첫 화면은 404였다. 이 제외 규칙을 제거했다. 저장소의 Dockerfile은 별도 `web-build` 단계에서 화면을 복사하므로 두 배포 방식의 파일 복사 경로가 다르다.
+
+Cloudtype의 HTTP 상태 검사와 준비 검사 경로는 `/health`, 포트는 8000으로 설정한다. 모델 다운로드와 초기화는 백그라운드에서 진행되므로 `/health` 응답과 검색·답변 준비 상태는 별도로 확인한다. 화면 파일 누락으로 `/`가 404이면 상태 검사 경로 설정과 함께 `dist` 복사 여부도 확인한다.
+
 ## 기존 서비스 업데이트
 
 Cloudtype의 서비스 **설정 → 배포 설정**에서 위 저장소와 브랜치를 확인한다. 다음 환경변수와 실행 명령을 사용한다. 키 값은 기존 설정을 유지하며 소스에 넣지 않는다.

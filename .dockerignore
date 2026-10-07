@@ -4,7 +4,6 @@
 .venv
 venv
 frontend-web/node_modules
-frontend-web/dist
 .env.*
 data/campusmate.db*
 data/*.sqlite*
