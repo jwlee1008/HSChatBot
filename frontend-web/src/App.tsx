@@ -388,6 +388,7 @@ export default function App() {
     setMessages((prev) => [...prev, userMsg]);
     setInput("");
     setTyping(true);
+    let responseStatus: number | null = null;
 
     try {
       // 실제 FastAPI 백엔드 (/api/query) 호출
@@ -396,9 +397,10 @@ export default function App() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: trimmed, top_k: 3 }),
       });
+      responseStatus = resp.status;
 
       if (!resp.ok) {
-        throw new Error(`서버 응답 오류 (${resp.status})`);
+        throw new Error("질의 요청 실패");
       }
 
       const data = await resp.json();
@@ -425,12 +427,25 @@ export default function App() {
       };
 
       setMessages((prev) => [...prev, botMsg]);
-    } catch (err: any) {
-      console.error("질의 요청 실패:", err);
+    } catch {
+      let failureText: string;
+      if (responseStatus === 503) {
+        failureText = "답변 서비스를 준비 중이거나 일시적으로 사용할 수 없습니다. 잠시 후 다시 질문해 주세요.";
+      } else if (responseStatus === 504) {
+        failureText = "답변을 기다리는 시간이 초과되었습니다. 잠시 후 다시 질문해 주세요.";
+      } else if (responseStatus !== null && responseStatus >= 500) {
+        failureText = "답변 처리 중 서버 오류가 발생했습니다. 잠시 후 다시 질문해 주세요.";
+      } else if (responseStatus !== null && responseStatus >= 400) {
+        failureText = "질문을 처리할 수 없습니다. 내용을 확인한 뒤 다시 질문해 주세요.";
+      } else if (responseStatus === null) {
+        failureText = "서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 잠시 후 다시 시도해 주세요.";
+      } else {
+        failureText = "답변을 표시하지 못했습니다. 잠시 후 다시 질문해 주세요.";
+      }
       const fallbackMsg: Message = {
         id: Date.now() + 1,
         role: "bot",
-        text: "⚠️ 백엔드 서버(FastAPI)와 통신할 수 없습니다. 서버가 8000번 포트에서 켜져 있는지 확인해 주세요.",
+        text: failureText,
         isError: true,
       };
       setMessages((prev) => [...prev, fallbackMsg]);

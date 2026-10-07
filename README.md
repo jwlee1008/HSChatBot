@@ -10,6 +10,7 @@
 - 현재 모델·자료 범위·추가 수집·무료 배포 판단: [데이터 확장과 Cloudtype 계획](docs/campusmate_data_and_cloudtype_plan_20261007.md)
 - 현재 로컬 설정은 Gemini API 생성이며, 검색 임베딩은 서버에서 ko-sroberta를 실행한다. 배포 환경에서는 제공자·모델명을 명시하고 실제 동작을 확인한다.
 - 실행·배포 안내: [챗봇 컨테이너 가이드](docs/campusmate_local_container_guide.md)
+- Cloudtype 운영 저장소·설정·장애 수정: [Cloudtype 배포 가이드](docs/cloudtype_chatbot_deployment.md)
 - 현재 범위: [챗봇 범위](docs/campusmate_chatbot_scope_20260927.md)
 - 서버 실행: `uvicorn backend.main:app --port 8000`
 - UI 빌드: `npm ci --prefix frontend-web && npm run build --prefix frontend-web`

@@ -40,29 +40,19 @@ _rag_lock = asyncio.Lock()
 async def get_or_init_rag(load_llm: bool = False) -> CampusRAG:
     """RAG 인스턴스를 안전하게 비차단/지연 초기화한다."""
     global rag_instance
-    if rag_instance is not None:
-        if load_llm and rag_instance.llm is None:
-            async with _rag_lock:
-                if rag_instance.llm is None:
-                    loop = asyncio.get_running_loop()
-                    rag_instance = await loop.run_in_executor(
-                        None, lambda: CampusRAG(load_llm=True)
-                    )
+    if rag_instance is not None and (not load_llm or rag_instance.llm is not None):
         return rag_instance
 
     async with _rag_lock:
+        loop = asyncio.get_running_loop()
         if rag_instance is None:
             logger.info("CampusRAG 인스턴스 초기화 시작 (load_llm=%s)...", load_llm)
-            loop = asyncio.get_running_loop()
             rag_instance = await loop.run_in_executor(
-                None, lambda: CampusRAG(load_llm=load_llm)
+                None, lambda: CampusRAG(load_llm=False)
             )
             logger.info("CampusRAG 인스턴스 초기화 완료")
-        elif load_llm and rag_instance.llm is None:
-            loop = asyncio.get_running_loop()
-            rag_instance = await loop.run_in_executor(
-                None, lambda: CampusRAG(load_llm=True)
-            )
+        if load_llm and rag_instance.llm is None:
+            await loop.run_in_executor(None, rag_instance.ensure_llm)
         return rag_instance
 
 
@@ -124,7 +114,9 @@ async def retrieve(request: QueryRequest):
     rag = await get_or_init_rag(load_llm=False)
 
     start = time.time()
-    docs = rag.retrieve(request.question, top_k=request.top_k)
+    docs = await asyncio.get_running_loop().run_in_executor(
+        None, lambda: rag.retrieve(request.question, top_k=request.top_k)
+    )
     elapsed = time.time() - start
     logger.info("검색 완료: %.2f초, %d건", elapsed, len(docs))
 
@@ -162,7 +154,9 @@ async def query(request: QueryRequest):
 
     start = time.time()
     try:
-        result = rag.query(request.question, top_k=request.top_k)
+        result = await asyncio.get_running_loop().run_in_executor(
+            None, lambda: rag.query(request.question, top_k=request.top_k)
+        )
     except Exception as e:
         logger.error("RAG 질의 실패: %s", str(e))
         raise HTTPException(status_code=500, detail="질의 처리 중 서버 내부 오류가 발생했습니다.")

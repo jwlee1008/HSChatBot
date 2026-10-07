@@ -6,6 +6,7 @@ LLM Provider(local/gemini/openai)에 따라 생성 모델을 스위칭한다.
 """
 
 import logging
+import threading
 
 from langchain_core.documents import Document
 from langchain_core.language_models import BaseLLM
@@ -77,10 +78,24 @@ class CampusRAG:
             search_kwargs={"k": config.TOP_K},
         )
         self.llm = None
+        self.chain = None
+        self._llm_lock = threading.Lock()
         if load_llm:
-            self.llm = self._load_llm()
-            self.chain = self._build_chain()
+            self.ensure_llm()
         logger.info("CampusRAG 초기화 완료 (LLM 로드: %s)", load_llm)
+
+    def ensure_llm(self) -> None:
+        """기존 검색 모델을 재사용하며 LLM과 체인만 초기화한다. 실패 시 재시도 가능하다."""
+        if self.llm is not None:
+            return
+        with self._llm_lock:
+            if self.llm is not None:
+                return
+            llm = self._load_llm()
+            chain = self._build_chain(llm)
+            # llm은 준비 상태의 기준이다. 체인 구성까지 성공한 뒤 마지막에 게시한다.
+            self.chain = chain
+            self.llm = llm
 
     def _load_llm(self) -> BaseLLM:
         """설정된 LLM Provider에 따라 적절한 LLM을 로드한다."""
@@ -141,13 +156,26 @@ class CampusRAG:
                 ".env 파일에 GEMINI_API_KEY를 설정하세요."
             )
 
-        return ChatGoogleGenerativeAI(
+        is_gemini_38 = config.GEMINI_MODEL.removeprefix("models/").startswith("gemini-3.8-")
+        generation_options = {"temperature": 0.3}
+        if is_gemini_38:
+            # Gemini 3.8은 sampling 설정 대신 thinking level을 사용한다.
+            generation_options = {
+                "temperature": None,
+                "top_p": None,
+                "top_k": None,
+                "thinking_config": {"thinking_level": "low"},
+            }
+
+        llm = ChatGoogleGenerativeAI(
             model=config.GEMINI_MODEL,
             google_api_key=config.GEMINI_API_KEY,
-            temperature=0.3,
             timeout=30.0,
             max_retries=0,  # 503/429 등 오류는 서비스 레벨에서 명시적으로 제어
+            **generation_options,
         )
+        # LangChain의 기본 candidate_count=1도 3.8 요청에서 제외한다.
+        return llm.bind(candidate_count=None) if is_gemini_38 else llm
 
     def _load_openai_llm(self) -> BaseLLM:
         """OpenAI API를 LLM으로 로드한다."""
@@ -167,9 +195,9 @@ class CampusRAG:
             max_retries=0,
         )
 
-    def _build_chain(self):
+    def _build_chain(self, llm=None):
         """LangChain LCEL 체인을 구성한다."""
-        return RAG_PROMPT | self.llm | StrOutputParser()
+        return RAG_PROMPT | (self.llm if llm is None else llm) | StrOutputParser()
 
     def _invoke_llm_with_error_handling(self, chain_input: dict) -> tuple[str, dict]:
         """

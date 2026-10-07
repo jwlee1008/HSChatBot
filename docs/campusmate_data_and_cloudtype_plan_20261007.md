@@ -8,7 +8,7 @@
 
 gemini-3.8-flash는 [Google 공식 모델 문서](https://ai.google.dev/gemini-api/docs/models/gemini-3.8-flash)에 있는 stable 모델이다. 실제 프로젝트의 API 성공·권한·남은 호출 한도는 이번에 확인하지 않았다.
 
-현재 Compose에는 `GEMINI_MODEL` 전달이 없고 이미지에는 `.env`가 포함되지 않는다. 따라서 컨테이너가 코드 기본값인 gemini-2.0-flash를 선택할 수 있다. 이 모델은 [Google 종료 안내](https://ai.google.dev/gemini-api/docs/deprecations)에 2026년 6월 1일 종료로 기록돼 있다. 배포 시 제공자·모델·키 환경변수를 명시하고 실제 적용 값을 비밀 없이 확인해야 한다. 기존 Cloudtype 서비스는 Python 템플릿이므로 Compose 적용 여부와 별도로 플랫폼 환경변수도 확인한다.
+배포 장애 수정에서 Compose의 `GEMINI_MODEL` 전달을 추가하고 코드 기본값을 `gemini-3.8-flash`로 변경했다. 이 모델은 sampling 설정 없이 낮은 thinking level을 사용하도록 요청 옵션도 맞췄다. 이미지에는 `.env`가 포함되지 않으므로 키는 배포 환경변수로 제공한다. 기존 Cloudtype 서비스는 Python 템플릿이며 실제 배포 대상은 `jwlee1008/HSChatBot`의 `main`이다. 운영 설정과 확인 절차는 [Cloudtype 배포 가이드](cloudtype_chatbot_deployment.md)를 따른다.
 
 ## 현재 기본 지식 데이터
 
