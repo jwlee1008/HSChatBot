@@ -12,7 +12,7 @@
 
 기존 빌드 `48fc1d7`은 `/health`에 200을 반환했지만 검색·질의는 500으로 실패했다. 실행 로그의 실제 원인은 GPU가 없는 CPU 서버에서 Transformers 5.19가 Torch 2.6의 `current_accelerator()`를 호출하면서 발생한 `Cannot access accelerator device when none is available` 오류였다. 화면은 모든 서버 오류를 연결 실패와 8000번 포트 문제로 표시했다.
 
-- Python 템플릿의 기본 `pip install -r requirements.txt`도 `requirements-lock.txt`를 사용한다. 검증된 Transformers 5.17과 CPU Torch 2.6 조합을 유지한다.
+- Python 템플릿의 기본 `pip install -r requirements.txt`는 고정된 패키지 목록을 직접 설치한다. 템플릿은 설치 전에 `requirements.txt*`만 복사하므로 별도 파일을 `-r`로 참조하면 실패한다. Docker의 `requirements-lock.txt`와 동일한 버전 목록을 유지한다. 검증된 Transformers 5.17과 CPU Torch 2.6 조합이다.
 - 첫 질의에서 검색 모델을 새로 만들지 않고 이미 준비한 임베딩·DB를 재사용해 LLM만 초기화한다. 초기화 실패는 같은 인스턴스에서 재시도한다.
 - 검색·답변 생성은 별도 worker에서 실행해 대기 중에도 health 요청에 응답한다.
 - Gemini 기본 모델은 `gemini-3.8-flash`이며, 3.8 요청에서 `temperature`, `top_p`, `top_k`, `candidate_count`를 제외하고 `thinking_level=low`를 지정한다.
