@@ -1,0 +1,46 @@
+{
+  "started_at": "2026-10-09T05:36:20.323898+00:00",
+  "input": "data/notice_archive.json",
+  "selected": 6,
+  "attempted": 6,
+  "deferred": 0,
+  "documents": [
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224933/artclView.do",
+      "title": "한성공지 2026학년도 2학기 고시반 입반생 모집 안내",
+      "status": "failed_or_unsupported",
+      "content_status": "text"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2127/221094/artclView.do",
+      "title": "한성공지 [시립마포청소년센터] 2026년 장애·비장애 청소년 통합활동 '라온:Round On' 참가자 모집",
+      "status": "failed_or_unsupported",
+      "content_status": "title_only"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2128/96864/artclView.do",
+      "title": "[교육부] 이공계 장애대학생 진로개발 지원 사업 \"모두(MODU)\" 참여",
+      "status": "complete",
+      "content_status": "attachment"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2128/96861/artclView.do",
+      "title": "2023년「대학생 창업 인턴캠프」교육생 모집공고",
+      "status": "complete",
+      "content_status": "attachment"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2128/96859/artclView.do",
+      "title": "[국가과학기술인력개발원] 2023년 장애 대학(원)생 멘토링 안내",
+      "status": "complete",
+      "content_status": "attachment"
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2128/96858/artclView.do",
+      "title": "[SK(주) C&C] 채용연계형 청년장애인 경영지원과정 맞춤 훈련생 모집",
+      "status": "complete",
+      "content_status": "attachment"
+    }
+  ],
+  "finished_at": "2026-10-09T05:36:26.021832+00:00"
+}

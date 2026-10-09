@@ -1,0 +1,35 @@
+{
+  "as_of": "rolling",
+  "retrieval_only": true,
+  "expectation_scope": "매일 자동 갱신용 상시 검증. 날짜·주차에 따라 바뀌는 본문(식단 메뉴, 접수 마감일 등)은 기대값에 넣지 않고 출처 URL 적중과 변하지 않는 핵심어만 확인한다. 날짜 고정 검증은 knowledge_refresh_smoke_cases_YYYYMMDD.json 을 별도로 사용한다.",
+  "cases": [
+    {
+      "id": "faq_grade_truncation",
+      "question": "평점평균 계산시 소수점 셋째 자리부터 반올림하나요, 버림 처리하나요?",
+      "expected_urls": ["https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8"],
+      "required_terms": ["절사"],
+      "required": true
+    },
+    {
+      "id": "form_withdrawal_submission",
+      "question": "자퇴원 제출 절차와 제출처를 알려줘. 보호자 확인도 필요한가요?",
+      "expected_urls": ["https://www.hansung.ac.kr/bbs/hansung/2195/222307/artclView.do"],
+      "required_terms": ["자퇴"],
+      "required": true
+    },
+    {
+      "id": "breakfast_diet_page",
+      "question": "이번 주 천원의 아침밥 메뉴와 운영시간을 알려줘.",
+      "expected_urls": ["https://www.hansung.ac.kr/hansung/6334/subview.do"],
+      "required_terms": ["아침밥"],
+      "required": true
+    },
+    {
+      "id": "academic_calendar_page",
+      "question": "학부 학사일정에서 중간고사 기간은 언제인가요?",
+      "expected_urls": ["https://www.hansung.ac.kr/hansung/6096/subview.do"],
+      "required_terms": ["중간고사"],
+      "required": false
+    }
+  ]
+}

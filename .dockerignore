@@ -8,6 +8,9 @@ frontend-web/node_modules
 data/campusmate.db*
 data/*.sqlite*
 data/cache
+data/knowledge_snapshots
+data/knowledge_runtime
+backups
 data/chroma_db
 data/eval_chroma_db
 data/gemini_core5_*

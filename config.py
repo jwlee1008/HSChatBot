@@ -17,7 +17,7 @@ load_dotenv()
 # ──────────────────────────────────────────────
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
-# 기본값: 3,447개 청크(상시안내+FAQ+서식+공지)가 포함된 통합 지식 DB 우선 적용
+# 기본값: 상시안내·FAQ·서식·공지를 포함하는 통합 지식 DB 우선 적용
 _INTEGRATED_DB_DIR = DATA_DIR / "integrated_eval_chroma_db"
 _INTEGRATED_KNOWLEDGE_JSON = DATA_DIR / "unified_campus_knowledge.json"
 

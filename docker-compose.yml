@@ -1,18 +1,23 @@
 services:
   # FastAPI 백엔드
   backend:
+    container_name: server01-hs-chatbot
     build: .
+    env_file:
+      - .env
     ports:
       - "127.0.0.1:${CAMPUSMATE_PORT:-8000}:8000"
     volumes:
       - chroma_data:/app/data/integrated_eval_chroma_db
       - model_cache:/root/.cache/huggingface
     environment:
-      - LLM_PROVIDER=${LLM_PROVIDER:-local}
-      - PREWARM_RAG_ON_STARTUP=${PREWARM_RAG_ON_STARTUP:-false}
+      - LLM_PROVIDER=${LLM_PROVIDER:-gemini}
+      - PREWARM_RAG_ON_STARTUP=${PREWARM_RAG_ON_STARTUP:-true}
       - GEMINI_API_KEY=${GEMINI_API_KEY:-}
       - GEMINI_MODEL=${GEMINI_MODEL:-gemini-3.8-flash}
+      - GEMINI_TIMEOUT_SECONDS=${GEMINI_TIMEOUT_SECONDS:-60}
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - OPENAI_MODEL=${OPENAI_MODEL:-gpt-4o-mini}
     healthcheck:
       test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=5)"]
       interval: 5s

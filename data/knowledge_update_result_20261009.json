@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-10-09T05:43:20.870537+00:00",
+  "git_base": "29037bf",
+  "deployment_url": "https://hschatbot.jwlee.dev",
+  "observed_deployed_model": "gemini-3.5-flash-lite",
+  "snapshot": "data/knowledge_snapshots/20261009T053728Z-15405409",
+  "local_activation": "activated",
+  "activation_backup": "backups/knowledge-20261009T054044Z-9fb8e9fa",
+  "documents": 1485,
+  "chunks": 6886,
+  "title_only_remaining": 3,
+  "strict_sync": true,
+  "retrieval_passed": 6,
+  "retrieval_total": 6,
+  "tests_passed": 163,
+  "local_http_health_chunks": 6886,
+  "local_http_latest_image_notice": "passed",
+  "remote_activation": "not_performed_missing_ssh_details",
+  "scheduled_job_installed": false,
+  "latest_notice_date": "2026-10-08"
+}

@@ -7,6 +7,8 @@
 로그인 없이 학내 정보를 질문하고 답변·공식 원문 출처를 확인하는 챗봇이다. 개인 일정·인증·캘린더·알림 기능은 `archived_features/personal_schedule_20260927/`에 보관하며 기본 실행·배포에 포함하지 않는다. 과거 일정 관련 보고서는 역사 기록이고 현재 계획이 아니다.
 
 - 현재 제출·발표 기준: [챗봇 PRD·PPT·계획서·WBS·대본 묶음](docs/chatbot_release_20261007/README.md)
+- 현재 홈서버 운영 주소: [hschatbot.jwlee.dev](https://hschatbot.jwlee.dev). 2026-10-08 실제 답변 API에서 `gemini-3.5-flash-lite` 확인.
+- 현재 DB 갱신·홈서버 반영 전략: [홈서버 데이터 운영](docs/home_server_knowledge_operations_20261008.md). 새 후보 생성: `python scripts/refresh_knowledge.py --enrich`.
 - 현재 모델·자료 범위·추가 수집·무료 배포 판단: [데이터 확장과 Cloudtype 계획](docs/campusmate_data_and_cloudtype_plan_20261007.md)
 - 현재 로컬 설정은 Gemini API 생성이며, 검색 임베딩은 서버에서 ko-sroberta를 실행한다. 배포 환경에서는 제공자·모델명을 명시하고 실제 동작을 확인한다.
 - 실행·배포 안내: [챗봇 컨테이너 가이드](docs/campusmate_local_container_guide.md)
@@ -156,3 +158,5 @@ python scripts/enrich_notices.py --filter-keyword "국가장학" --limit 10
 
 GitHub Actions에서 생성한 DB는 실행 중인 서버에 자동 전달되지 않습니다.
 갱신된 JSON을 서비스에 반영한 후 적재하고 서버를 재시작해야 합니다.
+통합 자료를 이미 수집했다면 `python scripts/refresh_knowledge.py --skip-collect`로 새 DB와
+본문 해시 동기화 보고서를 생성할 수 있습니다. 기존 DB는 보존하며, 검증된 후보를 별도로 운영에 적용합니다.

@@ -1,10 +1,10 @@
 {
-  "created_at": "2026-09-15T05:22:02.800904+00:00",
+  "created_at": "2026-10-09T05:37:28.526146+00:00",
   "description": "CampusRAG 보강 공지·상시 안내·FAQ·서식 통합 데이터 매니페스트",
   "input_sources": {
     "official_pages_enriched": {
       "file_path": "data/official_pages_enriched.json",
-      "sha256": "c872ed2ed4311a49651e4bb442b32fe5631306408b96da7ecc513da87f831be8",
+      "sha256": "0b42822f735149f3af5d7e5bbca21a73c96b7b1b1997dcb2f91f37cc068f3108",
       "raw_count": 144,
       "description": "공식 상시 안내 HTML 및 미디어/첨부(PDF/HWP) 보강본",
       "default_source_type": "guidance",
@@ -12,7 +12,7 @@
     },
     "official_faq": {
       "file_path": "data/official_faq.json",
-      "sha256": "e556025ac9d984aa6e9903fb9ffa82a41735e9cccd8d97eeaa85345bd1630009",
+      "sha256": "0e0cab89cf1969a037b274940d56d50ac076098f002e8076bdf404ceaccffb87",
       "raw_count": 179,
       "description": "공식 학사 FAQ (18개 목록 페이지의 179개 개별 질의응답)",
       "default_source_type": "faq",
@@ -20,7 +20,7 @@
     },
     "official_forms_enriched": {
       "file_path": "data/official_forms_enriched.json",
-      "sha256": "00f4004215440266a506f5090ac3ef7db85213f10880ef86365a9dffc2a87865",
+      "sha256": "5c5320731a776f81015df6d3402108f8227e75bc3debae83c644931e18549d12",
       "raw_count": 57,
       "description": "공식 학사서식 및 서식 첨부파일 텍스트 추출본",
       "default_source_type": "form",
@@ -36,9 +36,41 @@
     },
     "notice_archive": {
       "file_path": "data/notice_archive.json",
-      "sha256": "8ce49a9ed972284d494dc555db3794bae9340d78a713fb54f5a167a2acf22888",
-      "raw_count": 960,
+      "sha256": "f45fa148462bb6c7e217dbe4fcfc57815e59961fedab2f3913e3fdea34bebc72",
+      "raw_count": 1079,
       "description": "과거 공지사항 아카이브 (우선순위 게시판 960건)",
+      "default_source_type": "notice",
+      "priority": 5
+    },
+    "official_pages": {
+      "file_path": "data/official_pages.json",
+      "sha256": "34080243ce4ec4394b08169f1bdf7d81315bda0b2e2cc60bbe5a54602ae0c88f",
+      "raw_count": 144,
+      "description": "정기 수집 원문 또는 최신 공지 보강본",
+      "default_source_type": "guidance",
+      "priority": 1
+    },
+    "official_forms": {
+      "file_path": "data/official_forms.json",
+      "sha256": "2cfa84f82ed94b203d296305a9dd9b0a8d8a6b8a9205c63cfde1a1ff9e7f3bdd",
+      "raw_count": 57,
+      "description": "정기 수집 원문 또는 최신 공지 보강본",
+      "default_source_type": "form",
+      "priority": 3
+    },
+    "notice_archive_enriched": {
+      "file_path": "data/notice_archive_enriched.json",
+      "sha256": "df689699db1beeef0995b556612b48cd29a9af8f93e4e6e1f28f2c788f246555",
+      "raw_count": 1079,
+      "description": "정기 수집 원문 또는 최신 공지 보강본",
+      "default_source_type": "notice",
+      "priority": 4
+    },
+    "crawled_notices": {
+      "file_path": "data/crawled_notices.json",
+      "sha256": "d5c60591aef9a07063a4d280ad6a73c430beb990fe09490898747c3ae1c1c22f",
+      "raw_count": 99,
+      "description": "정기 수집 원문 또는 최신 공지 보강본",
       "default_source_type": "notice",
       "priority": 5
     }
@@ -49,23 +81,35 @@
       "official_faq": 179,
       "official_forms_enriched": 57,
       "missing_notices_refreshed": 99,
-      "notice_archive": 887
+      "notice_archive": 1006,
+      "official_pages": 0,
+      "official_forms": 0,
+      "notice_archive_enriched": 0,
+      "crawled_notices": 0
     },
     "overwritten_higher_quality": {
       "official_pages_enriched": 0,
       "official_faq": 0,
       "official_forms_enriched": 0,
       "missing_notices_refreshed": 0,
-      "notice_archive": 0
+      "notice_archive": 0,
+      "official_pages": 1,
+      "official_forms": 0,
+      "notice_archive_enriched": 1025,
+      "crawled_notices": 0
     },
     "skipped_duplicate_or_lower_quality": {
       "official_pages_enriched": 0,
       "official_faq": 0,
       "official_forms_enriched": 0,
       "missing_notices_refreshed": 0,
-      "notice_archive": 73
+      "notice_archive": 73,
+      "official_pages": 143,
+      "official_forms": 57,
+      "notice_archive_enriched": 54,
+      "crawled_notices": 99
     },
-    "total_conflicts_evaluated": 73,
+    "total_conflicts_evaluated": 1452,
     "resolution_log_sample": [
       {
         "id": "('url', 'https://www.hansung.ac.kr/bbs/hansung/2127/224672/artclView.do')",
@@ -420,22 +464,23 @@
     ]
   },
   "output_summary": {
-    "output_file": "data/unified_campus_knowledge.json",
-    "output_sha256": "c6969ec41faa332b660186cf5407f07dc9621fcbccd2158e124e9b62c225359e",
-    "total_documents": 1366,
+    "output_file": "data/knowledge_snapshots/20261009T053728Z-15405409/unified_campus_knowledge.json",
+    "output_sha256": "656bbb710c24b00b815bfdec5e5434584ed0ace960d1c022cbcf7de1979fe03f",
+    "total_documents": 1485,
     "content_status_counts": {
-      "text": 1047,
-      "mixed": 95,
-      "ocr": 22,
-      "title_only": 202
+      "text": 1057,
+      "mixed": 177,
+      "title_only": 3,
+      "attachment": 236,
+      "ocr": 12
     },
     "source_type_counts": {
       "guidance": 144,
       "faq": 179,
       "form": 57,
-      "notice": 986
+      "notice": 1105
     },
-    "title_only_residual": 202,
-    "text_or_enriched_count": 1164
+    "title_only_residual": 3,
+    "text_or_enriched_count": 1482
   }
 }

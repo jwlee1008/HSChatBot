@@ -65,7 +65,91 @@ def extract_query_entities(query: str) -> dict:
     if round_match:
         entities["round"] = f"{round_match.group(1)}차"
 
+    month_match = re.search(r"(?<!\d)(1[0-2]|0?[1-9])\s*월", query)
+    day_match = re.search(r"(?<!\d)(3[01]|[12]\d|0?[1-9])\s*일", query)
+    if month_match:
+        entities["month"] = int(month_match.group(1))
+    if day_match:
+        entities["day"] = int(day_match.group(1))
+
     return entities
+
+
+def _official_subject(query: str, candidates: list) -> tuple[str, str] | None:
+    """Use the named official guide/form for a current policy question.
+
+    Publication dates on unrelated notices must not outrank the page that owns
+    an academic calendar, dining menu, or explicitly named submission form.
+    Historical notice requests retain the usual notice ranking.
+    """
+    compact = re.sub(r"\s+", "", query)
+    notice_request = any(word in compact for word in ("공지", "중단", "시행", "변경"))
+    def guidance(title):
+        if any(doc.metadata.get("source_type") == "guidance"
+               and re.sub(r"\s+", "", doc.metadata.get("title", "")) == title
+               for doc, _ in candidates):
+            return ("guidance", title)
+        return None
+    if not notice_request and re.search(r"학사일정|학사달력", compact):
+        return guidance("대학원학사일정" if "대학원" in compact else "학부학사일정")
+    if not notice_request:
+        if re.search(r"천원(?:의)?아침밥", compact):
+            return guidance("천원의아침밥")
+        if re.search(r"교직원(?:식당|식단)", compact):
+            return guidance("교직원식당")
+        if any(word in compact for word in ("식단", "학식", "학생식당")):
+            return guidance("식단")
+    forms = {re.sub(r"\s+", "", doc.metadata.get("title", ""))
+             for doc, _ in candidates if doc.metadata.get("source_type") == "form"}
+    named = [title for title in forms if len(title) >= 2 and title in compact]
+    if named:
+        return ("form", max(named, key=len))
+    return None
+
+
+def _query_subject_terms(query: str) -> list[str]:
+    """Extract Korean subject words without generic application/date language."""
+    generic = {"안내", "신청", "신청서", "장학", "장학생", "장학금", "모집", "서류", "기간",
+               "마감", "대상", "일정", "언제", "어디", "제출", "방법", "절차", "학년도", "학기",
+               "필요", "확인", "처리", "알려줘", "운영시간", "메뉴", "목요일", "월요일", "화요일",
+               "수요일", "금요일", "토요일", "일요일"}
+    terms = []
+    for word in re.findall(r"[가-힣]{2,}", query):
+        for suffix in ("인가요", "하나요", "할까요", "하세요", "하고", "에서", "에게", "으로",
+                       "까지", "부터", "은", "는", "을", "를", "과", "와", "도", "에"):
+            if word.endswith(suffix) and len(word) - len(suffix) >= 2:
+                word = word[:-len(suffix)]
+                break
+        if word not in generic and word not in terms:
+            terms.append(word)
+    return terms
+
+
+def _chunk_body(doc: Document) -> str:
+    """Exclude the repeated notice header when testing actual chunk facts."""
+    content = doc.page_content
+    if content.startswith("[") and "\n\n" in content:
+        return content.split("\n\n", 1)[1]
+    title = doc.metadata.get("title", "")
+    if title and content.startswith(title + "\n"):
+        return content[len(title) + 1:]
+    return content
+
+
+def _requested_date_bonus(body: str, entities: dict) -> float:
+    """Favor the requested calendar period, rather than every same-year chunk."""
+    month = entities.get("month")
+    if not month:
+        return 0.0
+    dates = [(year, int(m), int(day)) for year, m, day in
+             re.findall(r"((?:19|20)\d{2})\s*[.\-/]\s*(\d{1,2})\s*[.\-/]\s*(\d{1,2})", body)]
+    matching = [(year, m, day) for year, m, day in dates
+                if m == month and (not entities.get("year") or year == entities["year"])]
+    if not matching:
+        return -0.10 if dates else 0.0
+    if entities.get("day") and any(day == entities["day"] for _, _, day in matching):
+        return 0.26
+    return 0.18
 
 
 class CampusRAG:
@@ -440,6 +524,19 @@ class CampusRAG:
             logger.info("원시 관련성 임계값(%.3f) 이상의 유효 후보 문서가 없습니다.", threshold)
             return []
 
+        # A current annual calendar cannot establish a different year's dates.
+        # Check the actual chunk body, excluding its repeated publication header.
+        if entities.get("year") and re.search(r"학사일정|학사달력", query):
+            requested_date = re.compile(rf"(?<!\d){entities['year']}\s*[.\-/]\s*\d{{1,2}}\s*[.\-/]\s*\d{{1,2}}")
+            filtered_raw = [(doc, score) for doc, score in filtered_raw
+                            if not (doc.metadata.get("source_type") == "guidance"
+                                    and "학사일정" in re.sub(r"\s+", "", doc.metadata.get("title", "")))
+                            or requested_date.search(_chunk_body(doc))]
+            if not filtered_raw:
+                return []
+
+        official_subject = None if is_off_topic else _official_subject(query, filtered_raw)
+        subject_terms = [] if is_off_topic else _query_subject_terms(query)
 
         # 최신 공지 기준일 탐색 (임계값을 통과한 후보군 대상)
         max_dt = None
@@ -464,18 +561,32 @@ class CampusRAG:
             title = meta.get("title", "")
             date_str = meta.get("date", "")
             content = doc.page_content
+            body = _chunk_body(doc)
             c_status = meta.get("content_status", "")
             source_type = meta.get("source_type", "notice")
             is_guidance = source_type in ("guidance", "faq", "form")
 
             final_score = score
 
+            if subject_terms:
+                title_matches = sum(term in title for term in subject_terms)
+                final_score += min(0.24, 0.12 * title_matches)
+                # A repeated title is not evidence that the requested fact is in
+                # this chunk; assess the extracted body independently.
+                body_matches = sum(term in body for term in subject_terms)
+                final_score += min(0.10, 0.05 * body_matches)
+            matches_official = bool(official_subject and source_type == official_subject[0]
+                                    and re.sub(r"\s+", "", title) == official_subject[1])
+            if matches_official:
+                final_score += 0.40
+                final_score += _requested_date_bonus(body, entities)
+
             # 본문 없이 제목만 있는 공지는 세부 질의 대응 불가하므로 감점
             if c_status == "title_only":
                 final_score -= 0.15
 
             # [공지 전용 정책]: 연도 및 최신성 보정 (상시 안내/FAQ는 연도 불일치/경과일수 감점 배제)
-            if not is_guidance:
+            if not is_guidance and not official_subject:
                 target_year = entities.get("year")
                 if target_year:
                     if target_year in title or date_str.startswith(target_year) or entities.get("short_year", "") in content:
@@ -533,7 +644,8 @@ class CampusRAG:
             # [질의 의도 기반 청크 선별]: 일정 또는 대상/제외 조건이 담긴 핵심 청크 우대
             if is_schedule_query:
                 schedule_keywords = ("신청 기간", "신청기간", "접수 기간", "마감", "접수", "15:00", "18:00", "17:00", "까지", "부터")
-                if any(kw in content for kw in schedule_keywords):
+                has_event_date = bool(re.search(r"(?:19|20)\d{2}\s*[.\-/]\s*\d{1,2}\s*[.\-/]\s*\d{1,2}", body))
+                if any(kw in body for kw in schedule_keywords) or has_event_date:
                     final_score += 0.12
             if is_target_query:
                 target_keywords = ("대상자", "지원자격", "신청대상", "제외", "외국인", "자격", "신청자")

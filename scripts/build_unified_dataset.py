@@ -2,7 +2,7 @@
 """
 CampusRAG 통합 데이터셋 빌더 및 매니페스트 생성 스크립트
 
-5대 공식 정보원(상시안내, FAQ, 서식, 보강공지, 공지아카이브)을 체계적으로 통합하여
+공식 정보원(상시안내, FAQ, 서식, 보강공지, 공지아카이브)의 원문·보강본을 통합하여
 중복을 제거하고 출처 메타데이터를 보존한 통합 지식 데이터셋과 매니페스트를 생성한다.
 """
 
@@ -37,6 +37,14 @@ def compute_file_sha256(filepath: Path) -> str:
 def compute_text_sha256(text: str) -> str:
     """텍스트의 SHA-256 해시를 계산한다."""
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def manifest_path_label(path: Path) -> str:
+    """Keep repository paths portable and support snapshots outside the repo."""
+    try:
+        return str(path.resolve().relative_to(ROOT.resolve()))
+    except ValueError:
+        return str(path.resolve())
 
 
 def normalize_url(url: str | None) -> str:
@@ -136,6 +144,57 @@ def extract_doc_timestamp(doc: dict) -> str:
     return ""
 
 
+ENRICHED_STATUSES = {"mixed", "ocr", "ocr_enhanced", "attachment"}
+VALID_STATUSES = {"text", *ENRICHED_STATUSES}
+
+
+def media_link_signature(doc: dict) -> tuple:
+    return tuple(
+        (field, tuple(sorted(normalize_url(asset.get("url")) for asset in doc.get(field, []))))
+        for field in ("images", "attachments")
+    )
+
+
+def raw_revision_signature(doc: dict) -> tuple | None:
+    """Compare HTML revisions without mistaking appended OCR for a source edit.
+
+    Legacy notice enrichment has no separate HTML, so its revision cannot be
+    inferred safely. Media URLs are included to catch replaced/removed links.
+    """
+    if "html_content" in doc:
+        html = str(doc["html_content"] or "").strip()
+    elif doc.get("content_status", "text") in ENRICHED_STATUSES:
+        return None
+    else:
+        html = str(doc.get("content") or "").strip()
+    return (str(doc.get("title") or "").strip(), html, media_link_signature(doc))
+
+
+def confirmed_empty_source_revision(existing: dict, new_doc: dict) -> bool:
+    """An observed removal/replaced poster must not keep superseded OCR alive.
+
+    Only the successful notice collector's marker and check time establish this
+    exception. A missing body, fetch failure, or bare title is insufficient.
+    """
+    if new_doc.get("content_status") != "title_only" or new_doc.get("_crawl_failed"):
+        return False
+    if new_doc.get("attachment_extraction_status") not in {"pending", "attempted", "not_applicable"}:
+        return False
+    old_check = parse_iso_datetime(existing.get("last_checked_at") or existing.get("collected_at"))
+    new_check = parse_iso_datetime(new_doc.get("last_checked_at") or new_doc.get("collected_at"))
+    if not new_check or (old_check and new_check <= old_check):
+        return False
+    old_date = parse_iso_datetime(existing.get("date"))
+    new_date = parse_iso_datetime(new_doc.get("date"))
+    if old_date and new_date and new_date < old_date:
+        return False
+    old_revision = raw_revision_signature(existing)
+    new_revision = raw_revision_signature(new_doc)
+    html_changed = old_revision is not None and new_revision is not None and old_revision != new_revision
+    media_changed = media_link_signature(existing) != media_link_signature(new_doc)
+    return html_changed or media_changed
+
+
 def resolve_document_conflict(existing: dict, new_doc: dict, existing_source: str, new_source: str) -> tuple[dict, str, str]:
     """
     중복 발생 시 결정적이고 투명한 규칙에 따라 문서를 채택/기각한다.
@@ -144,18 +203,22 @@ def resolve_document_conflict(existing: dict, new_doc: dict, existing_source: st
     """
     ex_status = existing.get("content_status", "text")
     new_status = new_doc.get("content_status", "text")
-    ex_content = str(existing.get("content", "")).strip()
-    new_content = str(new_doc.get("content", "")).strip()
+    ex_content = str(existing.get("content") or "").strip()
+    new_content = str(new_doc.get("content") or "").strip()
     ex_len = len(ex_content)
     new_len = len(new_content)
 
     # 1) 실패 보존 및 극복
     # 기존이 유효 본문인데 신규가 빈 본문/수집 실패(title_only)인 경우 기존 보존
-    if ex_status in ("text", "mixed", "ocr", "ocr_enhanced", "attachment") and new_status == "title_only":
+    ex_valid = ex_status in VALID_STATUSES and bool(ex_content and ex_content != str(existing.get("title", "")).strip())
+    new_valid = new_status in VALID_STATUSES and bool(new_content and new_content != str(new_doc.get("title", "")).strip())
+    if ex_valid and not new_valid:
+        if confirmed_empty_source_revision(existing, new_doc):
+            return new_doc, new_source, "confirmed_source_removal_or_media_replacement_adopted"
         return existing, existing_source, "preserve_existing_valid_content_over_empty_crawl"
 
     # 기존이 title_only인데 신규가 유효 본문을 확보한 경우 신규 채택
-    if ex_status == "title_only" and new_status in ("text", "mixed", "ocr", "ocr_enhanced", "attachment"):
+    if not ex_valid and new_valid:
         return new_doc, new_source, "recover_from_title_only_with_valid_content"
 
     # 2) 원문 수정일 (source_updated_at / last_changed_at) 비교
@@ -194,7 +257,12 @@ def resolve_document_conflict(existing: dict, new_doc: dict, existing_source: st
 
     ex_hash = existing.get("content_hash") or compute_text_sha256(ex_content)[:16]
     new_hash = new_doc.get("content_hash") or compute_text_sha256(new_content)[:16]
-    is_content_changed = bool(ex_hash != new_hash)
+    ex_revision = raw_revision_signature(existing)
+    new_revision = raw_revision_signature(new_doc)
+    if ex_revision is not None and new_revision is not None:
+        is_content_changed = ex_revision != new_revision
+    else:
+        is_content_changed = bool(ex_hash != new_hash)
 
     if is_content_changed and ex_check and new_check:
         if new_check > ex_check:
@@ -204,18 +272,23 @@ def resolve_document_conflict(existing: dict, new_doc: dict, existing_source: st
             return existing, existing_source, f"stale_crawl_rejected ({new_check.isoformat()} < {ex_check.isoformat()})"
 
     # 5) 첨부/OCR 보강본 우선: 기존이 OCR 보강본인데 신규가 단순 HTML 텍스트이면 보존
-    if ex_status in ("mixed", "ocr", "ocr_enhanced") and new_status == "text":
+    if ex_status in ENRICHED_STATUSES and new_status == "text":
         return existing, existing_source, "preserve_ocr_enriched_over_plain_text"
-    if ex_status == "text" and new_status in ("mixed", "ocr", "ocr_enhanced"):
+    if ex_status == "text" and new_status in ENRICHED_STATUSES:
         return new_doc, new_source, "adopt_ocr_enriched_over_plain_text"
 
     # 6) 소스 우선순위 비교
     source_rank = {
         "official_pages_enriched": 1,
+        "official_pages": 1,
         "official_faq": 2,
         "official_forms_enriched": 3,
+        "official_forms": 3,
         "missing_notices_refreshed": 4,
+        "crawled_notices_enriched": 4,
+        "notice_archive_enriched": 4,
         "notice_archive": 5,
+        "crawled_notices": 5,
     }
     ex_rank = source_rank.get(existing_source, 99)
     new_rank = source_rank.get(new_source, 99)
@@ -245,7 +318,7 @@ def build_unified_dataset(
     manifest_path: Path = ROOT / "data/unified_manifest.json",
 ) -> dict:
     """
-    5개 데이터 소스를 로드하여 단일 정규화 지식 데이터셋 및 매니페스트를 구축한다.
+    기본 보강본과 존재하는 정기 수집 원문을 통합한다.
     """
     data_dir = ROOT / "data"
 
@@ -286,6 +359,21 @@ def build_unified_dataset(
             "priority": 5,
         },
     ]
+    # Older checkouts may lack these files; current raw collection must never
+    # require a full OCR run before reaching the searchable dataset.
+    for name, source_type, priority in (
+        ("official_pages", "guidance", 1),
+        ("official_forms", "form", 3),
+        ("crawled_notices_enriched", "notice", 4),
+        ("notice_archive_enriched", "notice", 4),
+        ("crawled_notices", "notice", 5),
+    ):
+        path = data_dir / f"{name}.json"
+        if path.exists():
+            sources_spec.append({
+                "name": name, "file": path, "default_source_type": source_type,
+                "description": "정기 수집 원문 또는 최신 공지 보강본", "priority": priority,
+            })
 
     manifest = {
         "created_at": datetime.now(timezone.utc).isoformat(),
@@ -307,7 +395,7 @@ def build_unified_dataset(
             items = json.load(f)
 
         manifest["input_sources"][spec["name"]] = {
-            "file_path": str(fpath.relative_to(ROOT)),
+            "file_path": manifest_path_label(fpath),
             "sha256": sha256,
             "raw_count": len(items),
             "description": spec["description"],
@@ -357,7 +445,7 @@ def build_unified_dataset(
 
             # source_type 확정 (기존 값이 유효하면 보존, 없으면 default)
             doc_stype = doc.get("source_type") or default_stype
-            if sname == "official_forms_enriched":
+            if default_stype == "form":
                 doc_stype = "form"  # 서식 구분 명시
             doc["source_type"] = doc_stype
 
@@ -368,17 +456,17 @@ def build_unified_dataset(
             doc["date"] = str(doc["date"]).strip()
 
             # 본문 해시 보존 또는 생성
-            content = str(doc.get("content", "")).strip()
-            title = str(doc.get("title", "")).strip()
+            content = str(doc.get("content") or "").strip()
+            title = str(doc.get("title") or "").strip()
             doc["content_hash"] = doc.get("content_hash") or compute_text_sha256(f"{title}\n{content}")[:16]
 
             # content_status 정규화
             content_status = doc.get("content_status")
-            if not content_status:
-                if not content or content == title:
-                    content_status = "title_only"
-                else:
-                    content_status = "text"
+            doc["_crawl_failed"] = content_status in ("empty", "fetch_failed", "failed")
+            if not content or content == title or content_status in ("empty", "fetch_failed", "failed"):
+                content_status = "title_only"
+            elif not content_status:
+                content_status = "text"
             doc["content_status"] = content_status
 
             if key not in unified_docs:
@@ -403,6 +491,16 @@ def build_unified_dataset(
                         "reason": reason,
                     })
                 else:
+                    # An unchanged HTML check advances HTML freshness only;
+                    # retain OCR text and its original media validation dates.
+                    ex_revision = raw_revision_signature(existing)
+                    new_revision = raw_revision_signature(doc)
+                    ex_check = parse_iso_datetime(existing.get("last_checked_at") or existing.get("collected_at"))
+                    new_check = parse_iso_datetime(doc.get("last_checked_at") or doc.get("collected_at"))
+                    if (ex_revision is not None and ex_revision == new_revision
+                            and new_check and (not ex_check or new_check > ex_check)):
+                        existing["last_checked_at"] = new_check.isoformat()
+                        reason += " [html_check_advanced_media_preserved]"
                     skipped_cnt += 1
                     resolution_log.append({
                         "id": str(key),
@@ -425,6 +523,7 @@ def build_unified_dataset(
     for doc in unified_docs.values():
         doc_clean = dict(doc)
         doc_clean.pop("_source_name", None)
+        doc_clean.pop("_crawl_failed", None)
 
         cs = doc_clean.get("content_status", "unknown")
         st = doc_clean.get("source_type", "unknown")
@@ -445,7 +544,7 @@ def build_unified_dataset(
     dedup_audit["resolution_log_sample"] = resolution_log[:50]
     manifest["deduplication_summary"] = dedup_audit
     manifest["output_summary"] = {
-        "output_file": str(output_path.relative_to(ROOT)),
+        "output_file": manifest_path_label(output_path),
         "output_sha256": output_sha256,
         "total_documents": len(final_docs),
         "content_status_counts": status_counts,
