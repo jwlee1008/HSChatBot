@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-11T00:16:10.528958+00:00",
+  "checked_at": "2026-10-12T00:37:18.912427+00:00",
   "scope": [
     "교육정보",
     "대학생활",
@@ -583,7 +583,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "changed",
+      "collection_status": "unchanged",
       "boards": []
     },
     {
@@ -2063,7 +2063,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "changed",
+      "collection_status": "unchanged",
       "boards": []
     },
     {
@@ -2077,7 +2077,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "changed",
+      "collection_status": "unchanged",
       "boards": []
     },
     {
@@ -2429,97 +2429,6 @@
         "시설 이용/예약",
         "강당 및 행사공간",
         "상상관홀"
-      ],
-      "kind": "guidance",
-      "interval_days": 14,
-      "collection_status": "not_due"
-    },
-    {
-      "url": "https://www.hansung.ac.kr/hansung/6188/subview.do",
-      "title": "한성UI",
-      "menu_path": [
-        "한성소식",
-        "홍보갤러리",
-        "홍보인쇄물",
-        "한성UI"
-      ],
-      "kind": "guidance",
-      "interval_days": 14,
-      "collection_status": "not_due"
-    },
-    {
-      "url": "https://www.hansung.ac.kr/hansung/6189/subview.do",
-      "title": "교가",
-      "menu_path": [
-        "한성소식",
-        "홍보갤러리",
-        "홍보인쇄물",
-        "교가"
-      ],
-      "kind": "guidance",
-      "interval_days": 14,
-      "collection_status": "not_due"
-    },
-    {
-      "url": "https://www.hansung.ac.kr/hansung/6327/subview.do",
-      "title": "홍보동영상",
-      "menu_path": [
-        "한성소식",
-        "홍보갤러리",
-        "홍보인쇄물",
-        "홍보동영상"
-      ],
-      "kind": "guidance",
-      "interval_days": 14,
-      "collection_status": "not_due"
-    },
-    {
-      "url": "https://www.hansung.ac.kr/hansung/6328/subview.do",
-      "title": "국문",
-      "menu_path": [
-        "한성소식",
-        "홍보갤러리",
-        "홍보인쇄물",
-        "국문"
-      ],
-      "kind": "guidance",
-      "interval_days": 14,
-      "collection_status": "not_due"
-    },
-    {
-      "url": "https://www.hansung.ac.kr/hansung/6329/subview.do",
-      "title": "English",
-      "menu_path": [
-        "한성소식",
-        "홍보갤러리",
-        "홍보인쇄물",
-        "English"
-      ],
-      "kind": "guidance",
-      "interval_days": 14,
-      "collection_status": "not_due"
-    },
-    {
-      "url": "https://www.hansung.ac.kr/hansung/6330/subview.do",
-      "title": "中文",
-      "menu_path": [
-        "한성소식",
-        "홍보갤러리",
-        "홍보인쇄물",
-        "中文"
-      ],
-      "kind": "guidance",
-      "interval_days": 14,
-      "collection_status": "not_due"
-    },
-    {
-      "url": "https://www.hansung.ac.kr/hansung/6331/subview.do",
-      "title": "Монгол хэл",
-      "menu_path": [
-        "한성소식",
-        "홍보갤러리",
-        "홍보인쇄물",
-        "Монгол хэл"
       ],
       "kind": "guidance",
       "interval_days": 14,
