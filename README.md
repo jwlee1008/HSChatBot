@@ -1,158 +1,213 @@
-# 🎓 CampusMate: 한성대학교 학내 공지사항 통합 RAG 챗봇
+# CampusMate 한성대학교 공식 정보 질의응답 챗봇
 
-> 분산된 학내 공지사항을 통합하여, 자연어 질문으로 필요한 정보를 빠르게 찾을 수 있는 AI 챗봇 시스템
+**저학년의 반란 · 문서 기준일 2026년 10월 18일**
 
-## 현재 제품 범위 2026년 10월 7일
+CampusMate는 한성대학교의 공개 공지, 학사 안내, FAQ와 서식을 검색해 질문에 필요한 답변과 공식 원문 출처를 제공하는 웹 챗봇입니다. 학교의 공식 서비스가 아닌 학생 프로젝트이며, 신청 기간과 자격 등 중요한 조건은 연결된 공식 원문에서 확인합니다.
 
-로그인 없이 학내 정보를 질문하고 답변·공식 원문 출처를 확인하는 챗봇이다. 개인 일정·인증·캘린더·알림 기능은 `archived_features/personal_schedule_20260927/`에 보관하며 기본 실행·배포에 포함하지 않는다. 과거 일정 관련 보고서는 역사 기록이고 현재 계획이 아니다.
+- 기준 저장소: [jwlee1008/HSChatBot](https://github.com/jwlee1008/HSChatBot), 브랜치 `main`
+- [문서 목록](docs/README.md) · [저장소 구성과 형상관리](docs/repository_structure.md)
+- [최신 설계 산출물 4종](outputs/campusmate_design_20261018/README.md) · [제품 요구사항과 수행 계획](docs/chatbot_release_20261007/README.md)
 
-- 현재 제출·발표 기준: [챗봇 PRD·PPT·계획서·WBS·대본 묶음](docs/chatbot_release_20261007/README.md)
-- 현재 모델·자료 범위·추가 수집·무료 배포 판단: [데이터 확장과 Cloudtype 계획](docs/campusmate_data_and_cloudtype_plan_20261007.md)
-- 현재 로컬 설정은 Gemini API 생성이며, 검색 임베딩은 서버에서 ko-sroberta를 실행한다. 배포 환경에서는 제공자·모델명을 명시하고 실제 동작을 확인한다.
-- 실행·배포 안내: [챗봇 컨테이너 가이드](docs/campusmate_local_container_guide.md)
-- Cloudtype 운영 저장소·설정·장애 수정: [Cloudtype 배포 가이드](docs/cloudtype_chatbot_deployment.md)
-- 현재 범위: [챗봇 범위](docs/campusmate_chatbot_scope_20260927.md)
-- 서버 실행: `uvicorn backend.main:app --port 8000`
-- UI 빌드: `npm ci --prefix frontend-web && npm run build --prefix frontend-web`
-- 핵심 API: `/health`, `/api/query`, `/api/retrieve`
+## 현재 제품 범위
 
-## 📌 프로젝트 개요
+로그인 없이 학내 정보 질문을 입력하고, 관련 근거를 바탕으로 작성한 답변과 출처 카드를 확인합니다. 화면의 예시 질문, 대화 초기화, 안내 및 오픈소스 모달도 제공합니다.
 
-대학교 본부 공지, 단과대 공지, 학과별 공지사항이 흩어져 있어 학생들이 원하는 학사 정보를 찾기 어려운 문제를 해결합니다.
+각 질문은 독립적으로 처리합니다. 이전 대화가 화면에 남아 있어도 API에는 현재 질문만 전달합니다. 관련 근거가 없거나 제목만 수집된 자료는 상세 답변을 유보하고, 생성 API나 통신에 문제가 있으면 오류를 안내합니다.
 
-**핵심 기능**: 자연어 질문 → **2~3줄 핵심 요약 + 공식 공지사항 원문 링크/등록일 카드** 반환
+회원가입, 로그인, 개인 일정 등록·추출, 캘린더와 마감 알림은 현재 제품 범위에서 제외합니다. 관련 코드는 [archived_features/personal_schedule_20260927](archived_features/personal_schedule_20260927/README.md)에 보관하며 기본 실행·배포 경로에 포함하지 않습니다. 공지에 있는 학사 일정의 질의응답은 현재 범위에 포함합니다.
 
-## 🛠 기술 스택
+## 실행 흐름과 기술 구성
 
-| 계층 | 기술 |
-|------|------|
-| 데이터 수집 | Python, BeautifulSoup4, Requests |
-| 임베딩 | `jhgan/ko-sroberta-multitask` (한국어 특화) |
-| 벡터 DB | ChromaDB |
-| 생성 LLM | 설정으로 Gemini/OpenAI API 또는 로컬 모델 선택 |
-| RAG 프레임워크 | LangChain |
-| 백엔드 | FastAPI |
-| 프론트엔드 | React + TypeScript (frontend-web) |
-| 배포 | FastAPI 정적 서빙 / Docker; 최신판 외부 배포는 별도 검증 |
+```text
+React 웹 질문 입력
+  → FastAPI 요청 검증
+  → 한국어 임베딩과 Chroma 근거 검색
+  → 선택한 근거로 LLM 답변 생성
+  → 답변과 공식 원문 출처 표시
 
-## 🚀 빠른 시작
+공개 자료 수집 → 이미지·첨부 텍스트 추출 → 통합 JSON → 새 검색 색인 → 검증과 운영 반영
+```
 
-### 사전 요구사항
-- Python 3.10+
-- pip
-- **Tesseract OCR (한국어 언어팩 포함)**:
-  - **macOS**: `brew install tesseract tesseract-lang`
-  - **Ubuntu/Debian**: `sudo apt-get install -y tesseract-ocr tesseract-ocr-kor`
+| 영역 | 기술과 역할 |
+|---|---|
+| 사용자 화면 | React, TypeScript, Vite, Tailwind CSS. `frontend-web/`의 모바일 중심 웹 UI |
+| API | FastAPI, Pydantic. 질문 검증, 검색·답변 API, 웹 빌드 결과 정적 서빙 |
+| 검색 | LangChain, `jhgan/ko-sroberta-multitask` 임베딩, ChromaDB |
+| 답변 생성 | 환경변수로 `local`, `gemini`, `openai` 중 선택 |
+| 자료 수집 | Python, Requests, BeautifulSoup 및 선택적인 Playwright 수집 경로 |
+| 이미지·첨부 | Tesseract OCR, PDF·HWP·HWPX 텍스트 추출기 |
+| 실행 환경 | Python 3.12와 Node.js 22를 사용하는 Docker 빌드, Docker Compose |
 
-### 설치 및 실행
+생성 모델과 검색 임베딩은 별개입니다. API 제공자를 사용해도 검색 임베딩은 서버에서 실행합니다. 실제 제공자·모델과 사용 가능한 API 한도는 배포 환경에 따라 확인합니다.
+
+## 로컬에서 시작하기
+
+Python 3.12, Node.js 22와 npm을 기준으로 안내합니다. Python 의존성은 플랫폼별 조건을 포함하므로 설치 환경의 OS와 CPU를 확인합니다.
 
 ```bash
-# 1. 저장소 클론
-git clone https://github.com/your-team/CampusRAG.git
-cd CampusRAG
+git clone https://github.com/jwlee1008/HSChatBot.git
+cd HSChatBot
 
-# 2. 가상환경 생성 및 활성화
 python3 -m venv .venv
 source .venv/bin/activate
+python -m pip install -r requirements.txt
 
-# 3. 의존성 설치
-pip install -r requirements.txt
-
-# 4. 환경 변수 설정
 cp .env.example .env
-# .env 파일에서 필요한 값을 수정
-
-# 5. 실제 공지 수집 및 적재
-playwright install chromium
-python -m crawler.hansung_pw --pages 5 --with-content
-python scripts/ingest.py
-
-# 6. 검색 테스트
-python -c "
-from core.rag import CampusRAG, print_retrieve_results
-rag = CampusRAG()
-results = rag.retrieve('수강신청 일정')
-print_retrieve_results(results)
-"
+npm ci --prefix frontend-web
+npm run build --prefix frontend-web
 ```
 
-### 테스트 실행
+`.env`에서 생성 제공자와 필요한 키·모델을 설정한 다음 실행합니다. 기본 `LLM_PROVIDER=local`은 로컬 생성 모델까지 다운로드하고 로드할 수 있습니다. Gemini 또는 OpenAI를 쓰려면 해당 제공자의 키와 계정에서 사용할 수 있는 모델명을 지정합니다. 키는 서버 환경변수에만 보관합니다.
 
 ```bash
-pytest tests/ -v
+PREWARM_RAG_ON_STARTUP=false python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000
 ```
 
-## 📁 프로젝트 구조
+브라우저에서 <http://127.0.0.1:8000>을 엽니다. 화면은 `frontend-web/dist/`에 `index.html`이 있을 때 FastAPI가 제공합니다. 개발용 웹 서버는 `npm run dev --prefix frontend-web`으로 실행하며, API 프록시는 [Vite 설정](frontend-web/vite.config.ts)을 따릅니다.
 
-```
-CampusRAG/
-├── config.py              # 전역 설정 (모델 스위칭)
-├── requirements.txt       # 의존성
-├── core/                  # AI & RAG 코어
-│   ├── embedder.py        # 임베딩 + 벡터 DB 적재
-│   ├── rag.py             # RAG 파이프라인
-│   └── prompts.py         # 프롬프트 템플릿
-├── crawler/               # 웹 크롤러
-├── backend/               # FastAPI 서버
-├── frontend/              # Streamlit UI
-├── data/                  # 데이터
-├── scripts/               # 유틸리티 스크립트
-└── tests/                 # 테스트
-```
+`PREWARM_RAG_ON_STARTUP=false`는 기동 시 사전 로드만 생략합니다. 첫 검색이나 질문에는 임베딩과 필요한 모델의 초기화가 발생할 수 있습니다.
 
-## 📄 라이선스 및 저작권 고지
+## 설정
 
-- CampusRAG 소스 코드는 [MIT License](LICENSE)에 따라 배포됩니다.
-- 사전학습 AI 모델(임베딩, LLM), Tesseract OCR, Pretendard 웹 폰트, 서드파티 라이브러리 및 한성대 공지 데이터 저작권 표기는 [OPEN_SOURCE_LICENSES.md](OPEN_SOURCE_LICENSES.md)를 참고하세요.
+값의 정의는 [.env.example](.env.example)과 [config.py](config.py)를 기준으로 합니다. 현재 `.env`의 비밀값은 문서나 저장소에 포함하지 않습니다.
 
-## 👥 팀
+| 환경변수 | 용도 |
+|---|---|
+| `LLM_PROVIDER` | `local`, `gemini`, `openai`. 코드 기본값은 `local` |
+| `LOCAL_LLM_MODEL` | 로컬 생성 모델. 코드 기본값은 `Qwen/Qwen2.5-1.5B-Instruct` |
+| `GEMINI_API_KEY`, `GEMINI_MODEL`, `GEMINI_TIMEOUT_SECONDS` | Gemini 생성 설정과 대기 제한 |
+| `OPENAI_API_KEY`, `OPENAI_MODEL` | OpenAI 생성 설정 |
+| `EMBEDDING_MODEL` | 검색 임베딩 모델 |
+| `CHROMA_PERSIST_DIR` | 사용할 Chroma 디렉터리 |
+| `CHROMA_COLLECTION_NAME` | 검색 컬렉션. 통합 자료는 `campus_knowledge` |
+| `NOTICES_PATH` | 검색 원본 JSON 경로 |
+| `TOP_K`, `RELEVANCE_THRESHOLD` | 검색 개수와 관련성 기준 |
+| `PREWARM_RAG_ON_STARTUP` | 시작 시 검색 모델 사전 로드 여부 |
 
-한성대학교 캡스톤디자인 프로젝트
+## API
 
-## 공지 링크 / 답변 데이터 복구
-
-`data/sample_notices.json`은 테스트용 가상 공지이며 원문 URL은 실제 공지가 아닙니다.
-운영 DB에 샘플을 섞지 마세요. 기본 적재 파일은 `data/crawled_notices.json`입니다.
-기존 샘플과 중복 문서를 정리하려면 서버를 종료하고 `data/chroma_db`를 백업한 뒤 실행하세요.
+| Method | 경로 | 동작 |
+|---|---|---|
+| `GET` | `/health` | 서버 생존 상태, 제공자와 초기화된 컬렉션의 문서 수 반환 |
+| `POST` | `/api/retrieve` | 생성 LLM 없이 관련 근거 검색 |
+| `POST` | `/api/query` | 근거 검색과 답변 생성, 공식 출처 반환 |
 
 ```bash
-python -m crawler.hansung_pw --pages 5 --with-content
-python scripts/ingest.py --json-path data/crawled_notices.json --replace
-# FastAPI 서버 재시작
-uvicorn backend.main:app --port 8000
+curl http://127.0.0.1:8000/health
+
+curl -X POST http://127.0.0.1:8000/api/query \
+  -H 'Content-Type: application/json' \
+  -d '{"question":"국가장학금 신청 기간은 언제인가요?","top_k":3}'
 ```
 
-`--replace`는 입력 JSON에 없는 기존 문서도 제거하므로, 유지할 공지를 포함한 파일을 사용하세요.
-일반 적재는 URL 기준 upsert로 동일 공지의 본문/메타데이터를 갱신합니다.
-국가장학금은 최신 전체 목록에 없을 수 있어 제목 검색 목록도 수집합니다.
-추출 텍스트가 없거나 실패하여 제목만 있는 공지(`content_status: title_only`)는 세부 내용을 추측하지 않고 원문 확인을 안내합니다.
+`question`은 1~500자, `top_k`는 1~10이며 기본값은 3입니다. 답변의 `status`는 `success`, `no_context`, `title_only_notice`, `api_error`를 구분합니다. 실제 호출의 제공자와 모델은 `provider`, `model`로 확인합니다.
 
-## 📄 OCR 및 첨부파일 텍스트 수집/추출 (1단계)
+`/health`의 `status=ok`는 모델·검색·생성 준비 완료를 보장하지 않습니다. 지연 초기화 전 `doc_count=0`이 가능하며, 검색 준비와 실제 답변은 해당 API로 따로 확인합니다.
 
-학내 공지사항의 본문 이미지 및 첨부파일(PDF, HWP, HWPX)에서 텍스트를 로컬 오픈소스 방식으로 안전하게 추출하여 RAG 파이프라인에 결합합니다.
+## 데이터 버전과 갱신
 
-### 1. 지원 형식 및 방식
-- **본문 이미지 (JPG, PNG 등)**: Tesseract 한국어/영어 OCR (`kor+eng`)로 로컬 추출
-- **PDF 문서**:
-  - 텍스트 PDF: `pypdf`를 통한 초고속 텍스트 레이어 추출
-  - 스캔 PDF: `pypdfium2`로 페이지 고해상도 렌더링 후 Tesseract OCR 적용 (최대 10페이지 제한)
-- **HWPX (한글 개방형 문서)**: 표준 KS X 6101 XML 파싱으로 무손실 텍스트 추출
-- **HWP (한글 5.0)**: `olefile` 기반 zlib 스트림 압축 해제 및 태그 레코드(HWPTAG_PARA_TEXT) 파싱
+| 구분 | 확인된 기준 | 해석 |
+|---|---|---|
+| Git 기본 지식 seed | 1,366문서 / 3,447청크. 2026-09-15 통합본 | [적재 보고서](data/integrated_eval_chroma_db/ingest_report.json)와 [manifest](data/unified_manifest.json)의 기록 |
+| 10월 9일 로컬 확장본 | 1,485문서 / 6,886청크, 제목만 있는 문서 3개 | 10월 18일 TRD가 참조한 로컬 작업 결과. 이번 문서 반영에 확장 DB와 관련 런타임 변경을 포함하지 않음 |
+| Git 원본 수집 자료 | 안내·FAQ 등의 원본이 별도로 갱신됨 | 원본 파일이 갱신돼도 통합 JSON·Chroma 및 운영 서버 반영은 별도 단계 |
 
-### 2. 한계 및 예외 상태 코드
-- **암호화/배포용 문서**: 비밀번호가 걸려있거나 DRM이 적용된 HWP 문서는 파싱이 불가능하며, `unsupported_encrypted` 상태로 명시 기록합니다.
-- **손상/비표준 문서**: 파싱 예외 발생 시 전체 파이프라인이 중단되지 않고 `failed` 또는 `unsupported_format` 상태를 기록합니다.
-- **다운로드 보안 (SSRF 방어)**: 사설 IP(`127.0.0.1`, `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`, `169.254.0.0/16` 등) 및 루프백 접근을 리다이렉트를 포함하여 엄격히 차단합니다.
-- **리소스 보호**: 파일당 20MB 상한, 타임아웃, SHA-256 파일 캐시를 적용하여 중복 다운로드/OCR을 방지합니다.
+`data/sample_notices.json`은 테스트용 가상 자료입니다. 운영 색인에 섞지 않습니다. 등록일과 마지막 수집 확인일을 구분하고, 본문이 없는 자료는 원문 확인을 안내합니다.
 
-### 3. 일괄 보강 실행
+현재 `main`에서 사용할 수 있는 통합·색인 명령은 다음과 같습니다. 후보 색인은 **아직 존재하지 않는 새 경로**에 생성합니다. 아래 예시 경로가 이미 있으면 다른 후보 이름을 사용합니다.
+
 ```bash
-# 기존 공지사항 JSON에 이미지/첨부파일 텍스트 보강
-python scripts/enrich_notices.py --input data/crawled_notices.json --output data/crawled_notices_enriched.json
-
-# 국가장학금 공지만 우선 보강
-python scripts/enrich_notices.py --filter-keyword "국가장학" --limit 10
+python scripts/build_unified_dataset.py
+python scripts/ingest_unified_db.py \
+  --dataset data/unified_campus_knowledge.json \
+  --persist-dir data/readme_candidate_chroma_db \
+  --collection campus_knowledge
+python scripts/check_data_status.py \
+  --json-path data/unified_campus_knowledge.json \
+  --db-path data/readme_candidate_chroma_db \
+  --collection-name campus_knowledge --strict
 ```
 
-GitHub Actions에서 생성한 DB는 실행 중인 서버에 자동 전달되지 않습니다.
-갱신된 JSON을 서비스에 반영한 후 적재하고 서버를 재시작해야 합니다.
+통합 명령은 기본 JSON·manifest를 다시 만들기 때문에 운영 중인 경로를 직접 갱신하지 않고 검증용 checkout에서 실행합니다. 검증된 JSON·색인·manifest를 같은 버전으로 적용하고 서버 재시작 후 대표 질문과 원문 링크를 확인합니다. 실행 중인 Chroma 파일을 덮어쓰지 않습니다.
+
+GitHub 수집 workflow는 원본 자료를 기록하며 운영 DB를 자동 교체하지 않습니다. 로컬 확장 작업에 있는 `refresh_knowledge.py`, `activate_knowledge_snapshot.py` 등의 추가 CLI는 이번 문서 커밋과 별도이며, 현재 `main`에 있다고 가정하지 않습니다.
+
+## 이미지와 첨부 수집
+
+채팅 화면에서 파일을 업로드하는 기능과 구분되는 운영자용 수집 기능입니다. 공개 공지의 본문 이미지, PDF, HWP와 HWPX에서 텍스트를 추출합니다. 암호화·손상·미지원 파일은 상태를 남기며, 파일 크기·다운로드 시간·페이지 수 제한을 적용합니다.
+
+OCR 수집을 실행할 환경에는 Tesseract와 한국어 언어 데이터가 필요합니다. 브라우저 기반 수집 경로를 사용할 때만 Playwright를 추가 준비합니다.
+
+```bash
+# macOS OCR 도구 예시
+brew install tesseract tesseract-lang
+
+# 브라우저 수집 경로를 사용하는 경우
+python -m pip install playwright
+python -m playwright install chromium
+
+# 기존 공지 JSON의 이미지·첨부 본문 보강
+python scripts/enrich_notices.py \
+  --input data/crawled_notices.json \
+  --output data/crawled_notices_enriched.json
+```
+
+## Docker 실행과 운영 확인
+
+```bash
+docker compose up -d --build backend
+docker compose ps
+```
+
+Docker 빌드는 웹과 API를 한 이미지에 포함하며 기본 서비스 포트는 `127.0.0.1:8000`입니다. Compose의 `chroma_data`와 `model_cache`는 데이터를 영속 보관합니다. **기존 `chroma_data` 볼륨은 이미지 재빌드만으로 새 DB로 교체되지 않습니다.**
+
+실행·배포 세부 사항은 [컨테이너 가이드](docs/campusmate_local_container_guide.md)를 참고합니다. [Cloudtype 문서](docs/cloudtype_chatbot_deployment.md)는 당시 배포 설정과 장애 수정 기록입니다. 이전 홈서버 운영 기록의 주소는 <https://hschatbot.jwlee.dev>이며, 이번 문서 갱신에서 운영 배포 상태와 사용 모델을 새로 확인한 것은 아닙니다.
+
+## 검증
+
+개발 환경에는 테스트 도구를 별도로 설치합니다. 다음은 저장소에 포함된 챗봇 범위의 선별 오프라인 회귀 명령입니다.
+
+```bash
+python -m pip install pytest httpx
+PREWARM_RAG_ON_STARTUP=false python -m pytest \
+  tests/test_chatbot_only.py \
+  tests/test_codex_round2_fixes.py \
+  tests/test_codex_fixes.py \
+  tests/test_retrieval_grounding.py \
+  tests/test_date_parsing.py -q
+```
+
+단위·mock 회귀 결과는 실제 생성 답변의 정확도, 사용자 만족도 또는 운영 성능 결과와 구분합니다. 대표 질문의 원문 대조 평가, 최신 데이터 적용과 실제 단말 테스트는 각각 증거를 남겨 확인합니다.
+
+## 저장소 구성
+
+```text
+HSChatBot/
+├── README.md                    # 프로젝트 소개와 실행 안내
+├── backend/                     # FastAPI와 요청·응답 스키마
+├── core/                        # 검색·생성·임베딩과 첨부 추출
+├── crawler/                     # 공식 안내·FAQ·공지 수집
+├── frontend-web/                # 현재 React 웹과 정적 빌드
+├── frontend/                    # 이전 Streamlit UI 참고 코드
+├── scripts/                     # 통합·색인·평가·진단 명령
+├── tests/                       # 단위·API·검색·추출 회귀
+├── data/                        # 수집 JSON·통합 manifest·기본 지식 seed
+├── docs/                        # 문서 목록, PRD, 운영 기록과 검토 이력
+├── outputs/campusmate_design_20261018/  # 최신 설계 산출물 4종
+├── archived_features/           # 개인 일정·인증 기능 보관
+├── archived_artifacts/          # 이전 기획·발표 자료 보관
+├── .github/workflows/           # CI와 수집 스케줄
+├── .env.example                 # 비밀값 없는 환경변수 예시
+├── requirements*.txt            # Python 의존성
+├── config.py                    # 경로·모델·검색 설정
+├── Dockerfile                   # 웹·API 다단계 빌드
+└── docker-compose.yml           # 포트·볼륨·헬스체크
+```
+
+폴더 역할, 브랜치와 자료 버전 관리 원칙은 [저장소 구성 문서](docs/repository_structure.md)에 정리했습니다. 루트의 이전 계획서와 발표자료는 역사 기록이며 최신 제출본은 문서 목록의 기준일을 확인합니다.
+
+## 팀과 라이선스
+
+팀명은 **저학년의 반란**입니다. 실명별 역할과 제출 기한은 팀에서 확정하며 문서에 임의로 추가하지 않습니다.
+
+소스 코드는 [MIT License](LICENSE)에 따라 배포합니다. 모델·폰트·라이브러리와 학내 자료의 고지는 [OPEN_SOURCE_LICENSES.md](OPEN_SOURCE_LICENSES.md)를 참고합니다.
