@@ -1,4 +1,4 @@
-# CampusMate R1-A 수정 라운드 완료 보고서 (Gemini)
+# CampusRAG R1-A 수정 라운드 완료 보고서 (Gemini)
 
 - **작성 일자:** 2026-09-23
 - **작성자:** 구현 담당 (Gemini)
@@ -24,7 +24,7 @@ Codex의 R1-A 검수 결과(`docs/codex_round1a_review.md`)에서 지적된 5가
   - 기존 RAG 엔드포인트(`/api/query`, `/api/retrieve`)에 대한 요청은 FastAPI 기본 핸들러(`request_validation_exception_handler`)로 위임하여 기존 응답 계약을 완벽히 보존하였습니다.
 
 ### 2.2 [P1] 테스트의 lifespan 및 요청 DB 경로 완전 임시 디렉터리 격리
-- **문제점:** 기존 테스트 fixture가 `get_db`만 임시 DB로 오버라이드하고 `TestClient`의 lifespan은 `config.AUTH_DB_PATH`(기본 `data/campusmate.db`)로 `init_db`를 호출하여 기본 DB에 접근할 수 있었음.
+- **문제점:** 기존 테스트 fixture가 `get_db`만 임시 DB로 오버라이드하고 `TestClient`의 lifespan은 `config.AUTH_DB_PATH`(기본 `data/campusrag.db`)로 `init_db`를 호출하여 기본 DB에 접근할 수 있었음.
 - **수정 조치:**
   - `tests/test_auth_persistence.py` 모듈 상단의 전역 환경변수 영구 변경(`os.environ[...] = ...`)을 완전히 제거하였습니다.
   - `isolated_auth_env` fixture를 신설하여, TestClient lifespan 진입 전에 `config.AUTH_DB_PATH = str(test_db)`, `os.environ["AUTH_DB_PATH"] = str(test_db)`, `config.PREWARM_RAG_ON_STARTUP = False`를 주입하여 lifespan의 `init_db`와 요청의 `get_db`가 동일한 임시 DB만 사용하도록 격리하였습니다.
@@ -48,11 +48,11 @@ Codex의 R1-A 검수 결과(`docs/codex_round1a_review.md`)에서 지적된 5가
 - **문제점:** `.gitignore`에 `*.db`만 등록되어 있어, WAL 모드 동작 시 생성되는 `*.db-wal`, `*.db-shm` 파일이 git 추적 대상에 노출되었음.
 - **수정 조치:**
   - `.gitignore`에 `*.db-wal`, `*.db-shm`, `*.db-journal`, `*.sqlite-wal`, `*.sqlite-shm`, `data/*.db*`, `data/*.sqlite*`를 명시적으로 추가하였습니다.
-  - `git check-ignore` 명령으로 `data/campusmate.db-wal`, `data/campusmate.db-shm` 등 모든 sidecar가 완전히 제외됨을 확인하였습니다.
+  - `git check-ignore` 명령으로 `data/campusrag.db-wal`, `data/campusrag.db-shm` 등 모든 sidecar가 완전히 제외됨을 확인하였습니다.
   - 기존 git 추적 파일 목록(`git ls-files`)을 확인하여 사용자의 기존 DB 파일이 추적되지 않음을 검증하였으며, 사용자 DB 파일은 일절 삭제하거나 수정하지 않았습니다.
 
 ### 2.6 설정 예시, 로컬 가이드 및 실제 프로세스 재시작 영속성 검증
-- **가이드 문서 작성:** [`docs/campusmate_auth_api_guide.md`](file:///Users/jwlee/study1/aisw/docs/campusmate_auth_api_guide.md)를 작성하여 `AUTH_DB_PATH`, `SESSION_EXPIRE_SECONDS`, `PREWARM_RAG_ON_STARTUP` 설정 예시와 uvicorn 로컬 기동법, curl 예시를 상세히 문서화하였습니다.
+- **가이드 문서 작성:** [`docs/campusrag_auth_api_guide.md`](file:///Users/jwlee/study1/aisw/docs/campusrag_auth_api_guide.md)를 작성하여 `AUTH_DB_PATH`, `SESSION_EXPIRE_SECONDS`, `PREWARM_RAG_ON_STARTUP` 설정 예시와 uvicorn 로컬 기동법, curl 예시를 상세히 문서화하였습니다.
 - **독립 OS 프로세스 재시작 검증 (`test_real_subprocess_restart_persistence`):**
   - 단순 동일 app TestClient 재생성이 아닌, `subprocess.run`을 통해 완전히 별개의 독립 Python 인터프리터 프로세스 2개를 순차 실행하여, 프로세스 1에서 발급된 Opaque 토큰과 계정이 프로세스 2에서 정상적으로 인증(200 OK)됨을 증명하였습니다.
   - 기존 동일 app 재개방 테스트는 `test_connection_reopening_and_repeat_migrations`로 명칭을 정정하여 "연결 재개방 및 반복 마이그레이션 보존 증거"임을 정확히 규정하였습니다.
@@ -68,7 +68,7 @@ Codex의 R1-A 검수 결과(`docs/codex_round1a_review.md`)에서 지적된 5가
 | `backend/auth/dependencies.py` | [MODIFY] | `extract_bearer_token`에 ASCII 검증, 길이(16~256자) 및 RFC 6750 문자 형식 정규식 검증 추가 |
 | `backend/auth/security.py` | [MODIFY] | `hash_session_token` 내 `UnicodeEncodeError` 방어 인코딩 적용 |
 | `tests/test_auth_persistence.py` | [MODIFY] | 15개 테스트로 확대: 완전 임시 DB lifespan 격리, 기본 DB 비접근 검증, 422 비밀번호 미노출(과대/과소/자료형/extra/객체) 검증, 비ASCII 토큰 401 검증, startup 실패 검증, subprocess 실제 프로세스 재시작 검증 |
-| `docs/campusmate_auth_api_guide.md` | [NEW] | 설정 예시, 로컬 uvicorn 기동, curl 사용법 및 영속성 구조 안내 문서 |
+| `docs/campusrag_auth_api_guide.md` | [NEW] | 설정 예시, 로컬 uvicorn 기동, curl 사용법 및 영속성 구조 안내 문서 |
 | `docs/gemini_round1a_revision_report.md` | [NEW] | Codex 검수 지적 1~5번 및 문서 보완 조치 완료 보고서 (본 문서) |
 
 ---
@@ -132,7 +132,7 @@ Codex의 R1-A 검수 결과(`docs/codex_round1a_review.md`)에서 지적된 5가
 
 - **실행 명령:**
   ```bash
-  git check-ignore data/campusmate.db data/campusmate.db-wal data/campusmate.db-shm test.db test.db-wal test.db-shm
+  git check-ignore data/campusrag.db data/campusrag.db-wal data/campusrag.db-shm test.db test.db-wal test.db-shm
   ```
 - **결과:** 6개 경로 모두 정상 제외됨 (종료 코드 0).
 

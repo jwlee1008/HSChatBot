@@ -1,4 +1,4 @@
-# CampusMate 배포 전 재현성 및 운영 준비 보강 보고서 — 2026-09-25
+# CampusRAG 배포 전 재현성 및 운영 준비 보강 보고서 — 2026-09-25
 
 > 2026-09-26 Codex 후속 검수에서 검사 대상 설명과 환경 범위를 정정했다. 최신 독립 실행 결과는 [후속 검수 보고서](codex_deployment_readiness_review_20260926.md)를 우선한다.
 
@@ -22,7 +22,7 @@
 | `requirements-lock.txt` | 신규 생성 | Linux ARM64에서 검증된 패키지 버전을 고정(macOS torch 범위는 미고정)하고, PyTorch에 대해 macOS(`sys_platform == 'darwin'`), Linux x86_64(`platform_machine == 'x86_64'`), Linux ARM64(`platform_machine != 'x86_64'`) 조건 분기 유지 |
 | `Dockerfile` | 변경 | `COPY requirements-lock.txt requirements.txt ./` 및 `pip install --no-cache-dir -r requirements-lock.txt`로 연결하여 빌드 재현성 확보 |
 | `scripts/verify_container_api_regression.py` | 신규 생성 | 프로덕션 컨테이너 내부 Python 환경에서 외부 pytest/playwright 없이 TestClient 및 표준 라이브러리로 핵심 API(인증, 일정 CRUD, BOLA, 정밀도, 추출, 날짜 파싱, 스냅샷)를 검증하는 독립 러너 |
-| `docs/campusmate_local_container_guide.md` | 변경 | 의존성 잠금 반영 및 컨테이너 내부 핵심 API 회귀 명령(`verify_container_api_regression.py`) 추가 |
+| `docs/campusrag_local_container_guide.md` | 변경 | 의존성 잠금 반영 및 컨테이너 내부 핵심 API 회귀 명령(`verify_container_api_regression.py`) 추가 |
 | `docs/gemini_deployment_readiness_report.md` | 신규 생성 | 배포 전 재현성 및 운영 준비 보강 최종 보고서 (본 문서) |
 
 ---
@@ -55,26 +55,26 @@
 
 ---
 
-### B. 컨테이너 내부 환경 결과 (이미지: Linux aarch64 `campusmate-locked-backend`)
+### B. 컨테이너 내부 환경 결과 (이미지: Linux aarch64 `campusrag-locked-backend`)
 
 #### 1) 잠금된 의존성 기반 이미지 빌드
 - **실행 명령**:
   ```bash
-  docker compose --env-file /dev/null -p campusmate-locked build backend
+  docker compose --env-file /dev/null -p campusrag-locked build backend
   ```
 - **실행 결과**: **빌드 성공 (127.5s)**
   - `requirements-lock.txt`를 기반으로 CPU 전용 PyTorch 및 고정 버전 패키지 설치 완료
-  - 이미지 태그: `campusmate-locked-backend:latest`
+  - 이미지 태그: `campusrag-locked-backend:latest`
 
 #### 2) 컨테이너 수명주기, 영속성 및 백업/새 볼륨 복원 재검증
 - **실행 명령**:
   ```bash
-  .venv/bin/python scripts/verify_container_persistence.py --image campusmate-locked-backend
+  .venv/bin/python scripts/verify_container_persistence.py --image campusrag-locked-backend
   ```
 - **실행 결과**: **전원 통과 (exit code 0)**
   ```json
   {
-    "project": "campusmate-check-62ad832cf6",
+    "project": "campusrag-check-62ad832cf6",
     "checks": [
       "docker_health_and_built_react_assets",
       "restart_preserves_account_session_schedule_precision",
@@ -95,7 +95,7 @@
 #### 3) 이미지 내부 Python 환경 핵심 API 회귀
 - **실행 명령**:
   ```bash
-  docker run --rm -v $(pwd)/scripts:/app/scripts:ro campusmate-locked-backend python scripts/verify_container_api_regression.py
+  docker run --rm -v $(pwd)/scripts:/app/scripts:ro campusrag-locked-backend python scripts/verify_container_api_regression.py
   ```
 - **실행 결과**: **11 passed, 0 failed in Linux aarch64 (exit code 0)**
   ```text
@@ -147,7 +147,7 @@
 
 ## 5. HTTPS 배포 전 사용자가 결정해야 할 핵심 운영 항목
 
-운영 서버에 CampusMate를 HTTPS로 배포하기 전, 팀과 인프라 담당자가 반드시 합의하고 결정해야 할 7가지 항목을 정리했다.
+운영 서버에 CampusRAG를 HTTPS로 배포하기 전, 팀과 인프라 담당자가 반드시 합의하고 결정해야 할 7가지 항목을 정리했다.
 
 ### 1) 배포 대상 및 인프라 형태
 - **선택지**:
@@ -163,7 +163,7 @@
 
 ### 3) 도메인 및 TLS/HTTPS 구성
 - **결정 필요 사항**:
-  - 사용할 도메인 이름 (예: `campusmate.hansung.ac.kr` 또는 서드파티 독립 도메인 `campusmate.kr`).
+  - 사용할 도메인 이름 (예: `campusrag.hansung.ac.kr` 또는 서드파티 독립 도메인 `campusrag.kr`).
   - TLS 종단 방식: Reverse Proxy (Caddy / Nginx + Let's Encrypt 자동 갱신) vs 클라우드 ALB/Cloudflare SSL 종단.
 
 ### 4) 비용 한도 및 쿼터 관리
@@ -192,6 +192,6 @@
 
 ## 6. 결론
 
-CampusMate는 의존성 재현성 잠금(`requirements-lock.txt`), Linux ARM64 컨테이너 빌드 및 영속성/새 볼륨 복구 검증, 로컬 .venv 및 컨테이너 내부 핵심 API 회귀 검증(159/159, 11/11, 5/5)을 모두 완료했다.
+CampusRAG는 의존성 재현성 잠금(`requirements-lock.txt`), Linux ARM64 컨테이너 빌드 및 영속성/새 볼륨 복구 검증, 로컬 .venv 및 컨테이너 내부 핵심 API 회귀 검증(159/159, 11/11, 5/5)을 모두 완료했다.
 데이터 무결성(940개 파일)도 완벽하게 보존되었다.
 사용자가 위의 **7가지 운영 결정 사항**을 확정하면, 소규모 스테이징 인스턴스에 HTTPS를 연결하여 실 RAG 연동 및 운영 배포 단계로 진행할 수 있다.

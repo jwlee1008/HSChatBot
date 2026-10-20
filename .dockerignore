@@ -5,9 +5,12 @@
 venv
 frontend-web/node_modules
 .env.*
-data/campusmate.db*
+data/*.db*
 data/*.sqlite*
 data/cache
+data/knowledge_snapshots
+data/knowledge_runtime
+backups
 data/chroma_db
 data/eval_chroma_db
 data/gemini_core5_*

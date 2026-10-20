@@ -3,7 +3,7 @@ services:
   backend:
     build: .
     ports:
-      - "127.0.0.1:${CAMPUSMATE_PORT:-8000}:8000"
+      - "127.0.0.1:${CAMPUSRAG_PORT:-8000}:8000"
     volumes:
       - chroma_data:/app/data/integrated_eval_chroma_db
       - model_cache:/root/.cache/huggingface

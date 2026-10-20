@@ -43,8 +43,8 @@
 
 - `tests/fixtures/real_notice_acceptance_cases.json`: 문서 ID, 원문 근거, 목표값 고정.
 - `scripts/verify_real_notice_acceptance.py`: 읽기 전용 추출 평가. DB나 외부 API 사용 없음.
-- `docs/campusmate_real_notice_acceptance_results_20260925.json`: 문서별 실제 결과.
-- `docs/campusmate_real_notice_browser_results_20260925.json`: 추가 브라우저 검증 결과.
+- `docs/campusrag_real_notice_acceptance_results_20260925.json`: 문서별 실제 결과.
+- `docs/campusrag_real_notice_browser_results_20260925.json`: 추가 브라우저 검증 결과.
 
 ```bash
 PYTHONPATH=. .venv/bin/python scripts/verify_real_notice_acceptance.py
@@ -56,7 +56,7 @@ PYTHONPATH=. .venv/bin/python scripts/verify_real_notice_acceptance.py
 
 현재 설정 파일만 읽었으며 Docker 빌드나 외부 배포는 실행하지 않았다.
 
-1. **DB 영속성**: docker-compose.yml의 영속 볼륨은 Chroma 경로뿐이다. 기본 `AUTH_DB_PATH=/app/data/campusmate.db`는 해당 볼륨 밖이다. AUTH_DB_PATH를 영속 볼륨으로 명시하고 컨테이너 교체 후 계정·일정 보존, 백업·복원까지 검증해야 한다. 운영 환경의 별도 override가 있는지는 이번에 확인하지 않았다.
+1. **DB 영속성**: docker-compose.yml의 영속 볼륨은 Chroma 경로뿐이다. 기본 `AUTH_DB_PATH=/app/data/campusrag.db`는 해당 볼륨 밖이다. AUTH_DB_PATH를 영속 볼륨으로 명시하고 컨테이너 교체 후 계정·일정 보존, 백업·복원까지 검증해야 한다. 운영 환경의 별도 override가 있는지는 이번에 확인하지 않았다.
 2. **헬스체크**: compose는 curl을 호출하지만 Dockerfile은 curl 설치를 선언하지 않는다. 이미지 내 실행 가능 여부를 확인하거나 Python 표준 라이브러리로 교체하는 것이 필요하다.
 3. **프론트엔드 배포 경로**: compose에 기존 Streamlit 서비스가 남아 있고 Dockerfile은 React를 새로 빌드하지 않고 로컬 dist를 복사한다. React 정적 서빙을 기준으로 배포 절차/빌드 산출물 검증을 정리해야 한다.
 4. **HTTPS/환경 선택**: 배포 대상, 도메인, 비밀값 주입, 백업 위치를 결정한 뒤 설정한다. 현재는 외부 서비스를 생성하지 않았다.

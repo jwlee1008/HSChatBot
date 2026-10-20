@@ -23,7 +23,7 @@ COPY data/integrated_eval_chroma_db/ data/integrated_eval_chroma_db/
 COPY --from=web-build /web/dist frontend-web/dist/
 
 # Model downloads happen only when RAG is explicitly initialized at runtime.
-ENV AUTH_DB_PATH=/var/lib/campusmate/campusmate.db \
+ENV AUTH_DB_PATH=/var/lib/campusrag/campusrag.db \
     PREWARM_RAG_ON_STARTUP=false \
     PYTHONUNBUFFERED=1
 

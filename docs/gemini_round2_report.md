@@ -1,4 +1,4 @@
-# CampusMate R2 구현 완료 보고서 — 자연어/공지 일정 후보 추출 및 Zero-Auto-Save 데이터 계약
+# CampusRAG R2 구현 완료 보고서 — 자연어/공지 일정 후보 추출 및 Zero-Auto-Save 데이터 계약
 
 - **보고일**: 2026-09-24
 - **구현 담당**: Gemini (Backend Worker)
@@ -8,7 +8,7 @@
 
 ## 1. 개요 및 요약
 
-CampusMate R2 마일스톤에 따라, 교내 공지사항 본문 및 자연어 텍스트로부터 일정 후보를 추출하고 사용자 확인을 강제하는 **비영속(Stateless) 일정 추출 엔진 및 API 엔드포인트 (`POST /api/v1/schedules/extract`)** 구현 및 전수 검증을 완료하였습니다.
+CampusRAG R2 마일스톤에 따라, 교내 공지사항 본문 및 자연어 텍스트로부터 일정 후보를 추출하고 사용자 확인을 강제하는 **비영속(Stateless) 일정 추출 엔진 및 API 엔드포인트 (`POST /api/v1/schedules/extract`)** 구현 및 전수 검증을 완료하였습니다.
 
 ### 핵심 달성 성과
 1. **사용자 확인 강제(Zero-Auto-Save) 계약 완성**:

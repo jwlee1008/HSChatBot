@@ -1,11 +1,11 @@
 # Gemini 전달용 — R0 기존 결함 수정 및 평가 기준 확정
 
-너는 CampusMate 구현 담당이고 Codex가 설계·검수 총괄이다. 이번에는 아래 R0만 수행하고 다음 기능으로 넘어가지 마라.
+너는 CampusRAG 구현 담당이고 Codex가 설계·검수 총괄이다. 이번에는 아래 R0만 수행하고 다음 기능으로 넘어가지 마라.
 
 ## 저장소와 현재 상태
 
 - 저장소: `/Users/jwlee/study1/aisw` (다른 환경이면 실제 체크아웃 경로 사용).
-- 먼저 적용되는 AGENTS.md, `docs/campusmate_improvement_plan_20260923.md`, 관련 소스/테스트를 읽어라.
+- 먼저 적용되는 AGENTS.md, `docs/campusrag_improvement_plan_20260923.md`, 관련 소스/테스트를 읽어라.
 - 시작 시 git status를 확인하고 사용자의 기존 미추적 문서 및 변경을 보존하라.
 - Python은 프로젝트 `.venv/bin/python`을 사용한다. 시스템 python3는 이 환경에서 `str | None` 문법을 실행하지 못했다.
 - 현재 통합 JSON은 1,366건, 아카이브 960건이다. 새로 수집하거나 재색인할 필요 없다.
@@ -25,7 +25,7 @@
 
 ## 작업 B: 작은 평가 기준 파일
 
-`docs/campusmate_evaluation_baseline.md`를 작성하라. 아래를 포함하되 실제 측정하지 않은 수치를 결과처럼 쓰지 마라.
+`docs/campusrag_evaluation_baseline.md`를 작성하라. 아래를 포함하되 실제 측정하지 않은 수치를 결과처럼 쓰지 마라.
 
 1. 핵심 RAG 평가 30~50문항으로 확대할 분류표와 초기 대표 사례 10개: 질문, 기대 근거/판정 기준, 로컬 근거 확인 여부. 근거가 없으면 평가 준비 미완료로 표시하라. 가짜 학교 사실이나 URL을 만들지 마라.
 2. 향후 일정 추출용 synthetic fixture 최소 20개를 `tests/fixtures/schedule_extraction_cases.json`에 작성하라. 기준 시각과 Asia/Seoul 시간대를 고정하고 입력, 기대 후보 일정 수, 확정 가능한 날짜/시각, 미확정 필드, 사용자 확인 필요를 포함하라. 정답을 하나로 고를 수 없는 상대 날짜 표현은 모호함으로 남겨라. API/구현은 추가하지 않는다.

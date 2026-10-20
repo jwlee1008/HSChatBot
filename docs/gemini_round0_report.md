@@ -1,4 +1,4 @@
-# CampusMate R0 구현 완료 보고서 (Gemini)
+# CampusRAG R0 구현 완료 보고서 (Gemini)
 
 - **작성 일자:** 2026-09-23
 - **담당:** 구현 담당 (Gemini)
@@ -17,7 +17,7 @@
    - 문서 충돌 해결(`resolve_document_conflict`) 시 비정상 날짜나 점 구분 날짜가 포함되어도 데이터셋 통합 프로세스가 중단되지 않음을 검증.
 
 2. **작업 B (평가 기준선 및 합성 픽스처 구축):**
-   - `docs/campusmate_evaluation_baseline.md` 작성:
+   - `docs/campusrag_evaluation_baseline.md` 작성:
      - 30~50문항 확장을 위한 10대 분류표(CAT-01 ~ CAT-10) 수립.
      - 로컬 지식 베이스(`data/unified_campus_knowledge.json`, 1,366건) 전수 대조를 통한 초기 대표 사례 10개 정의 (허위 사실/URL 일절 배제, 로컬 미수집 항목은 '평가 준비 미완료'로 명시).
      - 과거 검토에서 발생한 지연 시간 왜곡을 방지하기 위한 4대 상태(`PASS`, `MOCK_SUCCESS`, `API_ERROR`, `NOT_RUN`) 독립 보고 체계 및 지연 시간 집계 원칙 정의.
@@ -35,7 +35,7 @@
 | `scripts/build_unified_dataset.py` | [MODIFY] | `re`, `timedelta` import 추가, `parse_iso_datetime` 완전 일치 정규식 및 docstring 보강 |
 | `tests/test_date_parsing.py` | [NEW] | 날짜 파서 결함 재현, 경계값 검증, 부분 일치 차단, 충돌 해결 중단 방지, 픽스처 정합성 검증 (24개 테스트) |
 | `tests/fixtures/schedule_extraction_cases.json` | [NEW] | 향후 R2 일정 추출 검증용 합성 픽스처 22건 (Asia/Seoul 고정) |
-| `docs/campusmate_evaluation_baseline.md` | [NEW] | 30~50문항 분류표, 초기 대표 10사례, 상태 보고 기준, R1 데이터 계약 초안 |
+| `docs/campusrag_evaluation_baseline.md` | [NEW] | 30~50문항 분류표, 초기 대표 10사례, 상태 보고 기준, R1 데이터 계약 초안 |
 | `docs/gemini_round0_report.md` | [NEW] | R0 작업 수행 결과 및 Codex 검수 요청 보고서 (본 문서) |
 
 ---

@@ -1,7 +1,7 @@
 """
 tests/test_schedules.py
 
-CampusMate R1-B 개인 일정 CRUD 및 사용자 격리 검증 테스트 슈트.
+CampusRAG R1-B 개인 일정 CRUD 및 사용자 격리 검증 테스트 슈트.
 5개 일정 유형 계약, 서울 달력 날짜 일치, BOLA 격리, PATCH 원자성,
 캘린더/목록 겹침 필터링, v1->v2 마이그레이션 데이터 보존 및 서브프로세스 영속성을 검증한다.
 """

@@ -1,4 +1,4 @@
-# CampusMate R1-A 완료 보고서 — 계정·인증·영속 저장 기반 (Gemini)
+# CampusRAG R1-A 완료 보고서 — 계정·인증·영속 저장 기반 (Gemini)
 
 - **작성 일자:** 2026-09-23
 - **작성자:** 구현 담당 (Gemini)
@@ -17,7 +17,7 @@ R0 검수 완료 상태와 기존 서비스 계약(`/health`, `/api/query`, `/ap
 ## 2. 주요 설계 선택 및 아키텍처
 
 ### 2.1 파일 기반 SQLite 영속 저장소 (`backend/db/`)
-- **DB 경로 주입 및 격리:** Chroma 벡터 DB와 완전 분리된 `config.AUTH_DB_PATH`(기본: `data/campusmate.db`)를 사용하며, 테스트 시에는 임시 디렉터리 경로를 주입합니다.
+- **DB 경로 주입 및 격리:** Chroma 벡터 DB와 완전 분리된 `config.AUTH_DB_PATH`(기본: `data/campusrag.db`)를 사용하며, 테스트 시에는 임시 디렉터리 경로를 주입합니다.
 - **연결 제약 및 무결성:** 모든 SQLite 커넥션에 `PRAGMA foreign_keys = ON;` 및 `PRAGMA journal_mode = WAL;`을 강제 적용하고 `sqlite3.Row` 팩토리를 설정하였습니다. 모든 쿼리는 `?` 파라미터 바인딩을 사용합니다.
 - **버전 관리형 마이그레이션 (`backend/db/migrations.py`):**
   - `schema_migrations` 테이블로 버전을 추적하며, 임의의 drop/reset 없이 기존 데이터를 보존합니다.

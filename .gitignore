@@ -58,8 +58,11 @@ models/
 htmlcov/
 .coverage
 /backups/
+data/knowledge_snapshots/
+data/knowledge_runtime/
 
 # 문서 제작·검증용 임시 파일
 /.prd_work/
 /.flow_work/
+/.codex-build/
 *.backup.pptx

@@ -7,7 +7,7 @@
 ## 변경 내용
 
 - Dockerfile: Node 빌드 단계를 추가해 React를 이미지 안에서 빌드. 기존 dist 복사 의존 및 모델 사전 다운로드 제거. 공개 지식 seed와 필요한 소스만 명시적으로 복사.
-- Compose: React+FastAPI 단일 backend 서비스로 정리, 기본 주소 127.0.0.1. 고정 container_name 제거. 인증·일정 DB 영속 볼륨과 모델 캐시 추가. AUTH_DB_PATH를 `/var/lib/campusmate/campusmate.db`로 명시.
+- Compose: React+FastAPI 단일 backend 서비스로 정리, 기본 주소 127.0.0.1. 고정 container_name 제거. 인증·일정 DB 영속 볼륨과 모델 캐시 추가. AUTH_DB_PATH를 `/var/lib/campusrag/campusrag.db`로 명시.
 - 헬스체크: 설치되지 않은 curl 대신 Python 표준 라이브러리 사용.
 - requirements: Linux ARM64에서 설치 가능한 torch 조건 분리. x86_64 CPU wheel 지정과 macOS 조건은 유지.
 - `scripts/sqlite_snapshot.py`: WAL 포함 일관된 SQLite 백업, 무결성 검사, 기존 대상 덮어쓰기 거부.
@@ -20,16 +20,16 @@
 빌드 명령:
 
 ```bash
-docker compose --env-file /dev/null -p campusmate-review-20260925 build backend
+docker compose --env-file /dev/null -p campusrag-review-20260925 build backend
 ```
 
-이미지: `campusmate-review-20260925-backend:latest`. 빌드 성공. Node/npm 및 Python 패키지 다운로드는 수행했으며 외부 LLM 호출·학교 크롤링·모델 가중치 다운로드는 실행하지 않았다.
+이미지: `campusrag-review-20260925-backend:latest`. 빌드 성공. Node/npm 및 Python 패키지 다운로드는 수행했으며 외부 LLM 호출·학교 크롤링·모델 가중치 다운로드는 실행하지 않았다.
 
 ```bash
-.venv/bin/python scripts/verify_container_persistence.py --image campusmate-review-20260925-backend
+.venv/bin/python scripts/verify_container_persistence.py --image campusrag-review-20260925-backend
 ```
 
-테스트 프로젝트: `campusmate-check-3f2aab6de4`.
+테스트 프로젝트: `campusrag-check-3f2aab6de4`.
 
 | 검사 | 결과 |
 | --- | --- |
@@ -51,4 +51,4 @@ docker compose --env-file /dev/null -p campusmate-review-20260925 build backend
 
 다음 단계는 배포 대상·도메인·예산·접근 범위를 정한 후, 검증 버전 고정과 HTTPS 소규모 배포를 준비하는 것이다. 실제 RAG 요청 비용/모델 다운로드 및 예약 알림 구현은 별도 범위로 남긴다. 운영 백업 보관/접근 권한/세션 복구 정책도 배포 전에 결정해야 한다.
 
-실행 및 복구 절차: `docs/campusmate_local_container_guide.md`.
+실행 및 복구 절차: `docs/campusrag_local_container_guide.md`.

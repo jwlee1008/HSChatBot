@@ -20,7 +20,7 @@ Gemini 중단 작업을 Codex가 이어받아 검수했다. 범위는 로컬 Lin
 - RAG 원문 로컬 대조: **10/10**. 실제 모델 추론/외부 LLM 호출 검증은 아니다.
 - 핵심 테스트 전후 `data/` **940개 파일 SHA-256 일치**.
 
-재현 명령은 `campusmate_local_container_guide.md`를 참조한다. 최종 이미지 재빌드·영속성 결과는 아래에 기록한다.
+재현 명령은 `campusrag_local_container_guide.md`를 참조한다. 최종 이미지 재빌드·영속성 결과는 아래에 기록한다.
 
 ## 남은 운영 결정
 
@@ -37,13 +37,13 @@ Gemini 중단 작업을 Codex가 이어받아 검수했다. 범위는 로컬 Lin
 
 ## 최종 이미지 재검증
 
-- `docker build --progress=plain -t campusmate-locked-backend .`: **성공, 118.85초**. 의존성 설치를 실제로 다시 실행했다. React 빌드 단계는 기존 빌드 캐시를 재사용했다.
+- `docker build --progress=plain -t campusrag-locked-backend .`: **성공, 118.85초**. 의존성 설치를 실제로 다시 실행했다. React 빌드 단계는 기존 빌드 캐시를 재사용했다.
 - 이미지 manifest list: `sha256:bca6b4d657b9af6eb39bcea701f66010be0da277e3039eba0ee50436397610d1`.
 - 설치된 141개 활성 의존성이 잠금 조건과 일치한다. 추가 설치 항목은 베이스 이미지의 pip뿐이다. `pip check` 통과.
 - 새 이미지에서도 네트워크를 차단한 핵심 API 검사 **11/11 통과**.
 - Docker 빌드 경고: `AUTH_DB_PATH`를 secret처럼 분류하는 이름 기반 경고 1건. 값은 DB 경로이며 비밀값이 아니다.
 - 변경 범위 `git diff --check` 통과. 저장소 전체 검사에는 기존 `backend/schemas.py:501` 끝 빈 줄 경고가 있으며 이번 변경과 무관하여 보존했다.
-- `scripts/verify_container_persistence.py --image campusmate-locked-backend`: **5/5 통과** (`campusmate-check-cf4f8e29e9`). HTTP/React 자산, restart 시 계정·세션·정밀도 유지, 컨테이너 재생성 시 볼륨 유지, 온라인 snapshot 반출, 새 볼륨에서 삭제된 레코드 복원을 확인했다.
+- `scripts/verify_container_persistence.py --image campusrag-locked-backend`: **5/5 통과** (`campusrag-check-cf4f8e29e9`). HTTP/React 자산, restart 시 계정·세션·정밀도 유지, 컨테이너 재생성 시 볼륨 유지, 온라인 snapshot 반출, 새 볼륨에서 삭제된 레코드 복원을 확인했다.
 - 최종 영속성 검사 전후에도 `data/` 940개 파일 해시 일치. 임시 테스트 컨테이너 및 볼륨이 정리된 것을 확인했다. 검증 이미지와 빌드 캐시는 남겼다.
 
 **판정: Linux ARM64 로컬 컨테이너 배포 준비 단계 통과.** 다음 단계는 배포 대상·접근 범위·도메인·예산을 확정한 뒤 제한된 스테이징 환경에서 실제 RAG와 HTTPS를 검증하는 것이다.

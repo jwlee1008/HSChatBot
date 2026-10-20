@@ -5,7 +5,7 @@ R1-A 계정·인증·영속 저장 기반은 Codex 최종 재검수를 통과했
 ## 1. 시작과 범위
 
 - 저장소: `/Users/jwlee/study1/aisw`. 적용 AGENTS.md가 있으면 읽고 시작 git status를 기록한다. 기존 수정·미추적 파일을 보존한다.
-- 먼저 읽을 문서: `docs/codex_round1a_final_review.md`, `docs/campusmate_auth_api_guide.md`, `docs/campusmate_evaluation_baseline.md`의 4.2절, `docs/campusmate_improvement_plan_20260923.md`.
+- 먼저 읽을 문서: `docs/codex_round1a_final_review.md`, `docs/campusrag_auth_api_guide.md`, `docs/campusrag_evaluation_baseline.md`의 4.2절, `docs/campusrag_improvement_plan_20260923.md`.
 - 실제 코드: backend/auth/, backend/db/, backend/routers/auth.py, backend/schemas.py, backend/main.py, tests/test_auth_persistence.py.
 - 기존 opaque bearer 인증 및 `get_current_user`를 재사용한다. JWT나 새 인증 체계를 도입하지 않는다.
 - 이번 범위: 일정 모델, SQLite v2 migration, 인증된 CRUD API, 시간/입력 검증, 사용자 격리, 영속성 테스트, 사용 문서.
@@ -129,7 +129,7 @@ R1-A 계정·인증·영속 저장 기반은 Codex 최종 재검수를 통과했
 ## 7. 산출물과 금지 사항
 
 - 구현 및 `tests/test_schedules.py`(필요한 테스트 분리 허용).
-- `docs/campusmate_schedule_api_guide.md`: 5개 유형의 요청 예시, PATCH null 의미, 사용자 확인·접근 제어, 날짜 필터·페이지네이션, 마이그레이션 안내. 수동 생성 예시에는 confirmed=true를 포함한다.
+- `docs/campusrag_schedule_api_guide.md`: 5개 유형의 요청 예시, PATCH null 의미, 사용자 확인·접근 제어, 날짜 필터·페이지네이션, 마이그레이션 안내. 수동 생성 예시에는 confirmed=true를 포함한다.
 - `docs/gemini_round1b_report.md`: 변경 파일, 설계 결정, 실제 실행 명령/결과, v1→v2 계정·세션 보존 증거, 계정 격리 증거, 미검증 사항.
 - R0 문서/픽스처 및 원본 완료 보고서는 덮어쓰지 않는다. 이번 확정 계약과 R0 초안의 차이는 새 가이드에 기록한다.
 - 운영 계정 DB·Chroma·원시 JSON·사용자 문서를 보존한다. migration 검증을 위해 사용자 DB를 열거나 변경하지 않는다.

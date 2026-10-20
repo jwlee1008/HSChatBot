@@ -1,12 +1,14 @@
-# CampusMate 한성대학교 공식 정보 질의응답 챗봇
+# CampusRAG 한성대학교 공식 정보 질의응답 챗봇
 
-**저학년의 반란 · 문서 기준일 2026년 10월 18일**
+**저학년의 반란 · 문서 기준일 2026년 10월 21일**
 
-CampusMate는 한성대학교의 공개 공지, 학사 안내, FAQ와 서식을 검색해 질문에 필요한 답변과 공식 원문 출처를 제공하는 웹 챗봇입니다. 학교의 공식 서비스가 아닌 학생 프로젝트이며, 신청 기간과 자격 등 중요한 조건은 연결된 공식 원문에서 확인합니다.
+CampusRAG는 한성대학교의 공개 공지, 학사 안내, FAQ와 서식을 검색해 질문에 필요한 답변과 공식 원문 출처를 제공하는 웹 챗봇입니다. 학교의 공식 서비스가 아닌 학생 프로젝트이며, 신청 기간과 자격 등 중요한 조건은 연결된 공식 원문에서 확인합니다.
 
 - 기준 저장소: [jwlee1008/HSChatBot](https://github.com/jwlee1008/HSChatBot), 브랜치 `main`
 - [문서 목록](docs/README.md) · [저장소 구성과 형상관리](docs/repository_structure.md)
-- [최신 설계 산출물 4종](outputs/campusmate_design_20261018/README.md) · [제품 요구사항과 수행 계획](docs/chatbot_release_20261007/README.md)
+- [중간발표 PPT와 10분 대본](outputs/campusrag_midterm_20261019/README.md)
+- [홈서버 최신 코드·명칭 적용 및 발표 인계 프롬프트](docs/campusrag_home_server_presentation_handoff_20261021.md)
+- [최신 설계 산출물 4종](outputs/campusrag_design_20261018/README.md) · [제품 요구사항과 수행 계획](docs/chatbot_release_20261007/README.md)
 
 ## 현재 제품 범위
 
@@ -161,7 +163,7 @@ docker compose ps
 
 Docker 빌드는 웹과 API를 한 이미지에 포함하며 기본 서비스 포트는 `127.0.0.1:8000`입니다. Compose의 `chroma_data`와 `model_cache`는 데이터를 영속 보관합니다. **기존 `chroma_data` 볼륨은 이미지 재빌드만으로 새 DB로 교체되지 않습니다.**
 
-실행·배포 세부 사항은 [컨테이너 가이드](docs/campusmate_local_container_guide.md)를 참고합니다. [Cloudtype 문서](docs/cloudtype_chatbot_deployment.md)는 당시 배포 설정과 장애 수정 기록입니다. 이전 홈서버 운영 기록의 주소는 <https://hschatbot.jwlee.dev>이며, 이번 문서 갱신에서 운영 배포 상태와 사용 모델을 새로 확인한 것은 아닙니다.
+실행·배포 세부 사항은 [컨테이너 가이드](docs/campusrag_local_container_guide.md)를 참고합니다. [Cloudtype 문서](docs/cloudtype_chatbot_deployment.md)는 당시 배포 설정과 장애 수정 기록입니다. 이전 홈서버 운영 기록의 주소는 <https://hschatbot.jwlee.dev>이며, 이번 문서 갱신에서 운영 배포 상태와 사용 모델을 새로 확인한 것은 아닙니다.
 
 ## 검증
 
@@ -193,7 +195,7 @@ HSChatBot/
 ├── tests/                       # 단위·API·검색·추출 회귀
 ├── data/                        # 수집 JSON·통합 manifest·기본 지식 seed
 ├── docs/                        # 문서 목록, PRD, 운영 기록과 검토 이력
-├── outputs/campusmate_design_20261018/  # 최신 설계 산출물 4종
+├── outputs/campusrag_design_20261018/  # 최신 설계 산출물 4종
 ├── archived_features/           # 개인 일정·인증 기능 보관
 ├── archived_artifacts/          # 이전 기획·발표 자료 보관
 ├── .github/workflows/           # CI와 수집 스케줄

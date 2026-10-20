@@ -6,7 +6,7 @@
 
 R1-A 계정·인증·파일 기반 영속 저장을 승인한다. 이전 필수 수정 5건의 수정 코드와 동작을 확인했다. R1-B 개인 일정 CRUD로 진행할 수 있다. 이번 승인은 로컬 MVP 인증 기반에 한정하며 공개 서비스 배포, 브라우저 인증 UI, 일정 소유권 격리, 일정 추출·알림의 완료를 의미하지 않는다.
 
-검토 자료: docs/gemini_round1a_revision_report.md, docs/campusmate_auth_api_guide.md, 실제 backend/auth·db·라우터·스키마·lifespan 및 tests/test_auth_persistence.py.
+검토 자료: docs/gemini_round1a_revision_report.md, docs/campusrag_auth_api_guide.md, 실제 backend/auth·db·라우터·스키마·lifespan 및 tests/test_auth_persistence.py.
 
 ## 재실행 결과
 

@@ -1,4 +1,4 @@
-# CampusMate R1-B 수정 완료 보고서
+# CampusRAG R1-B 수정 완료 보고서
 
 보고일: 2026-09-23  
 구현 담당: Gemini  
@@ -116,7 +116,7 @@ tests/test_schedules.py::test_source_url_strict_validation PASSED        [100%]
 실행 결과:
 ```text
 ========================================================================
- CampusMate RAG 대표 10사례 근거 전수 대조 검증 (Read-Only)
+ CampusRAG RAG 대표 10사례 근거 전수 대조 검증 (Read-Only)
 ========================================================================
 Data file: data/unified_campus_knowledge.json (4,782,727 bytes)
 Expected SHA-256: c6969ec41faa332b660186cf5407f07dc9621fcbccd2158e124e9b62c225359e
@@ -145,7 +145,7 @@ Actual   SHA-256: c6969ec41faa332b660186cf5407f07dc9621fcbccd2158e124e9b62c22535
 | `backend/schedules/service.py` | 마이크로초 정밀도 보존 및 오버플로우 422 처리, `patch_schedule` 및 `delete_schedule`을 `BEGIN IMMEDIATE` 기반 직렬화 트랜잭션으로 보호 |
 | `backend/db/database.py` | `timeout=30.0` 및 `PRAGMA busy_timeout = 30000;` 설정으로 동시 트랜잭션 대기 지원 |
 | `tests/test_schedules.py` | 동시 PATCH 유실 방지, PATCH/DELETE 경합, 마이크로초 보존/오버플로우, 엄격 URL 검증, 실제 비밀번호 재로그인, 합성 실패 롤백 등 5개 테스트 추가 및 보강 |
-| `docs/campusmate_schedule_api_guide.md` | 일시 소수점 정밀도 보존 정책 및 `source_url` 검증 규칙 보강 |
+| `docs/campusrag_schedule_api_guide.md` | 일시 소수점 정밀도 보존 정책 및 `source_url` 검증 규칙 보강 |
 | `docs/gemini_round1b_revision_report.md` | 본 수정 완료 보고서 작성 |
 
 ---

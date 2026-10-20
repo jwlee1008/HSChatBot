@@ -1,7 +1,7 @@
 """
 backend/routers/schedules.py
 
-CampusMate 개인 일정 CRUD RESTful API 라우터.
+CampusRAG 개인 일정 CRUD RESTful API 라우터.
 모든 엔드포인트는 유효한 Opaque Bearer 세션 토큰을 필요로 하며,
 소유자 격리(BOLA/IDOR 방어)를 엄격히 적용한다.
 """

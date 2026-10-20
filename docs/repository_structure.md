@@ -1,4 +1,4 @@
-# CampusMate 저장소 구성과 형상관리
+# CampusRAG 저장소 구성과 형상관리
 
 기준일은 2026년 10월 18일입니다. 이 문서는 현재 `main`의 파일 역할과 변경 관리 원칙을 설명합니다. 코드 재배치나 운영 데이터 교체를 수행한 기록은 아닙니다.
 
@@ -10,7 +10,7 @@
 | 기준 브랜치 | `main` |
 | 원본 협업 저장소 | [pregeon/HSChatBot](https://github.com/pregeon/HSChatBot) |
 | 이번 정리의 코드 기준 | `8349320` |
-| 프로젝트와 팀 | CampusMate / 저학년의 반란 |
+| 프로젝트와 팀 | CampusRAG / 저학년의 반란 |
 
 현재 로컬 checkout은 `myrepo`가 `jwlee1008/HSChatBot`, `origin`이 `pregeon/HSChatBot`을 가리키며 `codex/official-information` 브랜치가 `origin/codex/official-information`을 추적합니다. 새 clone의 remote 이름은 이와 다를 수 있습니다. 따라서 원격 이름만으로 대상 저장소를 판단하지 않고 URL과 브랜치를 함께 확인합니다.
 
@@ -46,7 +46,7 @@ git fetch myrepo main
 
 소스와 실행 설정은 코드 리뷰와 회귀 검증의 대상입니다. 공개 자료 JSON과 manifest는 수집 범위·시각·입력 해시를 확인하고, 생성한 색인은 원본과 일치하는지 따로 검증합니다. 제출 문서는 해당 자료·코드 기준을 적어 코드 완료나 운영 적용과 혼동하지 않게 합니다.
 
-현재 설계 묶음은 [outputs/campusmate_design_20261018](../outputs/campusmate_design_20261018/README.md)에 둡니다. TRD·프로그램 목록·StoryBoard의 요구사항과 화면 ID를 유지하고, 형상관리표에는 기준 저장소와 README·구성 문서의 상태를 기록합니다. 최신 파일은 묶음 README에서 안내합니다.
+현재 설계 묶음은 [outputs/campusrag_design_20261018](../outputs/campusrag_design_20261018/README.md)에 둡니다. TRD·프로그램 목록·StoryBoard의 요구사항과 화면 ID를 유지하고, 형상관리표에는 기준 저장소와 README·구성 문서의 상태를 기록합니다. 최신 파일은 묶음 README에서 안내합니다.
 
 구형 루트 문서와 과거 기능은 이번 작업에서 이동하거나 삭제하지 않습니다. [문서 목록](README.md)에서 현재 제출 자료와 역사 기록을 구분합니다.
 

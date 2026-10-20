@@ -1,4 +1,4 @@
-# CampusMate 추가 수정 — 남은 세 결함만 처리
+# CampusRAG 추가 수정 — 남은 세 결함만 처리
 
 `docs/codex_milestone_repair2_review_20260925.md`를 읽고 A/B/C를 수정해줘. 기존 정상 동작은 유지하고 새 기능을 확장하지 마.
 

@@ -1,4 +1,4 @@
-# CampusMate 추가 수정 요청
+# CampusRAG 추가 수정 요청
 
 `docs/codex_milestone_repair_review_20260924.md`를 읽고 R1~R4를 수정해줘. 이전 수정 중 정상 동작하는 기능은 유지하고 전체 완수로 보고하지 마.
 
