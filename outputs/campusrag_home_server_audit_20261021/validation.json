@@ -1,0 +1,268 @@
+{
+  "date_kst": "2026-10-21",
+  "scope": "brand deployment, operational validation, improvement analysis",
+  "upstream_commit": "b8aed9e9b7b06f265690d88dc6bb9f66b251a0a7",
+  "runtime_source_commit": "db095aec4d021bdaf3072dc06d88abe3e3cfe1fe",
+  "deployment": {
+    "started": "2026-10-21T01:24:37.7371459+09:00",
+    "finished": "2026-10-21T01:24:54.2779571+09:00",
+    "status": "success",
+    "revision": "db095aec4d021bdaf3072dc06d88abe3e3cfe1fe",
+    "previous_image": "sha256:7aa067e3e6471d0f02c4affa7e9fb8558a236980194d01ce885bbc5db5365557",
+    "image": "sha256:789b3d7ab647279e001edd946e1d6f277ba6c6b9d71e159ff5f953189faf4deb",
+    "health": {
+      "status": "ok",
+      "version": "1.0.0",
+      "llm_provider": "local",
+      "doc_count": 7202
+    },
+    "error": null
+  },
+  "health": {
+    "status": "ok",
+    "version": "1.0.0",
+    "llm_provider": "local",
+    "doc_count": 7202
+  },
+  "data": {
+    "remote_seed_documents": 1366,
+    "local_seed_documents": 1485,
+    "active_documents": 1529,
+    "active_chunks": 7202,
+    "types": {
+      "guidance": 145,
+      "faq": 179,
+      "form": 57,
+      "notice": 1148
+    },
+    "statuses": {
+      "text": 1074,
+      "mixed": 199,
+      "title_only": 3,
+      "attachment": 241,
+      "ocr": 12
+    },
+    "latest_notice_date": "2026-10-19"
+  },
+  "protected_files": [
+    {
+      "Path": "data\\knowledge_runtime\\active\\unified_campus_knowledge.json",
+      "SHA256": "A7133E106754043402FF4E1B2381B74A06FD84F995C1AE50E9F97894AA25764B",
+      "after_sha256": "A7133E106754043402FF4E1B2381B74A06FD84F995C1AE50E9F97894AA25764B",
+      "unchanged": true
+    },
+    {
+      "Path": "data\\knowledge_runtime\\active\\unified_manifest.json",
+      "SHA256": "548554123E9BB611967D1A83654CEAA1CF23C961126E66200A18CA0D9CC70035",
+      "after_sha256": "548554123E9BB611967D1A83654CEAA1CF23C961126E66200A18CA0D9CC70035",
+      "unchanged": true
+    },
+    {
+      "Path": "config.py",
+      "SHA256": "6014871BA478E8C62BBEA20B440EB5F6E9341CC195524037596B27437EEF493F",
+      "after_sha256": "6014871BA478E8C62BBEA20B440EB5F6E9341CC195524037596B27437EEF493F",
+      "unchanged": true
+    },
+    {
+      "Path": "core\\rag.py",
+      "SHA256": "606CF044F9F1C465AF07FA7309A3315442A7F3B30BAD7D39B51D6E960976F31A",
+      "after_sha256": "606CF044F9F1C465AF07FA7309A3315442A7F3B30BAD7D39B51D6E960976F31A",
+      "unchanged": true
+    },
+    {
+      "Path": "core\\prompts.py",
+      "SHA256": "C08DB6718307A5B7B1BE3E5A4A26E5F48754943EF41F1E9FEAEE87DF79E1841F",
+      "after_sha256": "C08DB6718307A5B7B1BE3E5A4A26E5F48754943EF41F1E9FEAEE87DF79E1841F",
+      "unchanged": true
+    },
+    {
+      "Path": "docker-compose.override.yml",
+      "SHA256": "151568CBEED6F4DCD20A870FAB85304222CEA688AAFC5CC70D6060490BE58502",
+      "after_sha256": "151568CBEED6F4DCD20A870FAB85304222CEA688AAFC5CC70D6060490BE58502",
+      "unchanged": true
+    },
+    {
+      "Path": "requirements-lock.txt",
+      "SHA256": "F515B0499EAD361BC0EF8388648EF1A7ADCDF0C70286E8D236C644FA5D6C5A76",
+      "after_sha256": "F515B0499EAD361BC0EF8388648EF1A7ADCDF0C70286E8D236C644FA5D6C5A76",
+      "unchanged": true
+    }
+  ],
+  "packages_identical": true,
+  "timing_scope": "HTTPS client total elapsed, model already loaded by prior UI query; cold latency unmeasured",
+  "query_results": [
+    {
+      "id": "faq_measured_first",
+      "question": "평점평균 계산시 소수점 셋째 자리부터 반올림하나요, 버림 처리하나요?",
+      "started_at": "2026-10-21T01:26:10.796666+09:00",
+      "seconds": 2.711,
+      "http_status": 200,
+      "body": {
+        "answer": "평점평균 계산 시 소수점 셋째 자리 이하는 절사(버림) 처리됩니다. 예를 들어 3.4975는 3.49가 평점평균이 됩니다.",
+        "sources": [
+          {
+            "title": "평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다)",
+            "source": "한성대학교 공식 학사 FAQ",
+            "category": "학사 FAQ",
+            "date": "",
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+            "content": "평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다)\n평점평균 계산시 소숫점 3째자리 이하는 절사 즉, 버림 처리합니다.\n예를 들어 3.4975라면 3.49가 평점평균이 됩니다."
+          }
+        ],
+        "status": "success",
+        "api_called": true,
+        "provider": "local",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "error_type": null
+      },
+      "audit_verdict": "pass: original FAQ agrees"
+    },
+    {
+      "id": "faq_repeat",
+      "question": "평점평균 계산시 소수점 셋째 자리부터 반올림하나요, 버림 처리하나요?",
+      "started_at": "2026-10-21T01:26:13.508270+09:00",
+      "seconds": 2.691,
+      "http_status": 200,
+      "body": {
+        "answer": "평점평균 계산 시 소수점 셋째 자리 이하는 절사(버림) 처리됩니다. 예를 들어 3.4975는 3.49가 평점평균이 됩니다.",
+        "sources": [
+          {
+            "title": "평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다)",
+            "source": "한성대학교 공식 학사 FAQ",
+            "category": "학사 FAQ",
+            "date": "",
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+            "content": "평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다)\n평점평균 계산시 소숫점 3째자리 이하는 절사 즉, 버림 처리합니다.\n예를 들어 3.4975라면 3.49가 평점평균이 됩니다."
+          }
+        ],
+        "status": "success",
+        "api_called": true,
+        "provider": "local",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "error_type": null
+      },
+      "audit_verdict": "pass: original FAQ agrees"
+    },
+    {
+      "id": "notice",
+      "question": "2026년 2학기 거창군 지역출신 대학생 등록금 지원사업 신청 방법",
+      "started_at": "2026-10-21T01:26:16.203007+09:00",
+      "seconds": 13.806,
+      "http_status": 200,
+      "body": {
+        "answer": "2026년 2학기 거창군 지역출신 대학생 등록금 지원사업의 신청 방법은 다음과 같습니다:\n\n1. **등록금 납부액**: 지원자는 등록금 납부액을 입력해야 합니다. 이는 지원자가 직접 등록금을 납부한 금액을 의미합니다.\n\n2. **지원요건**: 지원자는 다음과 같은 지원요건을 모두 충족해야 합니다:\n   - 30세 미만의 대학생(1996년 10월 15일 이후 출생자)\n   - 직전 학기 12학점 이상 이수, 평균 2.5학점(4.5만점) 이상 취득\n   - 다음의 어느 하나 충족:\n     1) 3년 이상 계속하여 거창군에 주민등록이 되어 있는 대학생\n     2) 관내 중학교 또는 고등학교 3년을 재학하고 졸업한 대학생\n   - 가족 중 1명 이상이 3년 이상 계속하여 거창군에 주민등록이 되어 있는 대학생\n\n3. **신청서 작성**: 지원자는 거창군장학회 홈페이지에서 공고문을 참고하여 거창군 지역출신 대학생 등록금 지원 신청서를 작성해야 합니다.\n\n4. **서류 제출**: 신청서를 제출한 후, 지원자는 거창군 행정복지센터에 서류를 제출해야 합니다.\n\n5. **접수**: 신청서와 서류를 제출한 후, 거창군장학회는 신청서를审核하고, 필요한 경우 서류를 추가로 제출할 수 있습니다.\n\n6. **마감일**: 신청 마감일은 2026년 10월 16일입니다.\n\n이러한 절차를 따르면, 2026년 2학기 거창군 지역출신 대학생 등록금 지원사업에 신청할 수 있습니다.",
+        "sources": [
+          {
+            "title": "교외장학금 2026년 2학기 거창군 지역출신 대학생 등록금 지원사업 안내 새글",
+            "source": "학생복지팀",
+            "category": "공지",
+            "date": "2026-10-19",
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225520/artclView.do",
+            "content": "[공지] 교외장학금 2026년 2학기 거창군 지역출신 대학생 등록금 지원사업 안내 새글 (등록일: 2026-10-19, 출처: 학생복지팀)\n\n[자료: https://www.hansung.ac.kr/CrossEditor/binary/images/000419/2026년_2학기_거창군_지역출신_대학생_등록금_지원사업.jpg]\n2026년 10월 16일 ~\nGBD) 지원요건을 충족하는\nme\n(4.5018) 이상 취득\n(0) 학생: 와 @ 중 하나 충족\n양 공고일 기준 3년 이상 계속하여 거창군에 주민등록\n( 거창군 소재 중학교 또는 고                     I       고\n@ 가족 : 1명 이상의 가족(부모, 조부모, 외조부모,배우자)이 공고일\n기준 3년 이상 계속하여 거창군에 주민등록\n주소지 읍면 행정복지센터                    또\nclr\n4o\n떤\n스\n편접수\n(weet)\nGiza) 거창군장학회 홈페이지(                   ) 공지사항 참조\nG&D\n행정복지센터, 거창군장학회 22055-940-8813"
+          }
+        ],
+        "status": "success",
+        "api_called": true,
+        "provider": "local",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "error_type": null
+      },
+      "audit_verdict": "fail: original poster period Oct16-Nov16, model deadline Oct16; other missing conditions"
+    },
+    {
+      "id": "library_greeting",
+      "question": "안녕, 도서관 운영시간 알려줄래?",
+      "started_at": "2026-10-21T01:26:30.011483+09:00",
+      "seconds": 0.691,
+      "http_status": 200,
+      "body": {
+        "answer": "관련 공지를 찾지 못했습니다.",
+        "sources": [],
+        "status": "no_context",
+        "api_called": false,
+        "provider": "local",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "error_type": null
+      },
+      "audit_verdict": "known gap: no_context despite relevant knowledge"
+    },
+    {
+      "id": "notice_text_demo",
+      "question": "행복米밥차 행사는 언제 어디서 열리고, 누가 참여할 수 있어?",
+      "started_at": "2026-10-21T01:29:30.600851+09:00",
+      "seconds": 3.555,
+      "http_status": 200,
+      "body": {
+        "answer": "행복米밥차 행사는 2026년 10월 22일(목) 11:00 ~ 13:00에 한성대학교 미래관 앞에서 열립니다. 이 행사는 한성대학교 재학생 중 모바일 학생증을 확인할 수 있는 학생들에게 참여할 수 있습니다.",
+        "sources": [
+          {
+            "title": "[농협경제지주] 한성대학교 아침밥 챌린지 및 행복米밥차 행사 안내",
+            "source": "학생복지팀",
+            "category": "공지",
+            "date": "2026-09-28",
+            "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225059/artclView.do",
+            "content": "[공지] [농협경제지주] 한성대학교 아침밥 챌린지 및 행복米밥차 행사 안내 (등록일: 2026-09-28, 출처: 학생복지팀)\n\n농협경제지주는 건강한 아침밥 문화를 확산하고 우리 쌀 소비를 활성화하기 위해\n농협 쌀 소비촉진 홍보대사 아일릿\n(ILLIT)\n과 함께\n「\nLike me Like\n米\n」\n아침밥 챌린지 및\n중간고사 시험준비를 하고 있는 한성대 학생들을 위한 행복米밥차 행사를\n진행하고자 합니다.\n많은 참여 바랍니다.\n■\n아침밥 챌린지 행사 안내\n-\n이벤트명\n:\n아일릿과 함께하는\n「\nLike me Like\n米\n」\n아침밥 챌린지\n-\n기간\n:\n2026. 10. 23.(\n금\n)\n까지\n-\n대상\n:\n한성대학교 학생을 포함한 이벤트 참여자 누구나\n-\n내용\n:\n아일릿\n(ILLIT)\n아침밥 템플릿 활용 나만의 아침밥 소개하기\n-\n참여방법\n:\n아래 이벤트 페이지 링크 또는 포스터 내\nQR\n코드를 통해 참여\n-\n혜택\n:\n추첨을 통해 한정판 아일릿 엽서 및 저당 쌀 시리얼\n·\n쌀 수프\n2\n종 증정\n(200\n명\n)\n▶\n이벤트 참여하기"
+          }
+        ],
+        "status": "success",
+        "api_called": true,
+        "provider": "local",
+        "model": "Qwen/Qwen2.5-1.5B-Instruct",
+        "error_type": null
+      },
+      "audit_verdict": "pass for asked date/place/participants; early exhaustion condition omitted"
+    }
+  ],
+  "official_source_checks": [
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=8",
+      "http_status": 200,
+      "sha256": "474a1c6296488f6c81bcd28e37f45dc1bec3fa0e7681c2b5baaf4e81a3f0aa07",
+      "snippets": [
+        " 잘 안될 경우는 총학생회측으로 문의해 보시기 바람). 평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다) 평점평균 계산시 소숫점 3째자리 이하는 절사 즉, 버림 처리합니다. 예를 들어 3.4975라면 3.49가 평점평균이 됩니다. 처음 이전페이지 8 18 1 2 3 4 5 6 7 8 9 10 다음 페이지 다음 끝",
+        "산( 평점환산 ) 하는 계산식은 아래와 같으며, 소숫점 셋째 자리이하는 절사 입니다. =60+((평균평점-1)*(40/(4.5-1))) 위 계산식에 따라 평균평점을 환산해 보면, 아래와 같습니다 (예시) . 평균평점 백분위점수 4.5 100 4.0 94.28 3.5 88.57 3.0 82.85 2.5 77.14 2.0 71.42 1.5 65.71 1.0 60 학과의 졸업요건(논문,작품,시험 등)에 대해 궁금합니다. 학과의 졸업요건(논문,작품,시험 등)에 관한 사항은 아래와 같습니다. - 관련 규정 : 졸업논문에 관한 세칙(3-3-08) * 목적/졸업논문의 대체 : 제 1 조 (목적) 본 세칙은 재학중 이수한 전공과목에 대한 지식을 종합 정리하며 자주적 학문연수의 능력과 태도를 함양하기 위하여 졸업예정자에 졸업논문을 제출하게 함을 목적으로 한다. 제 2 조 (졸업논문의 대체) 졸업논문은 논문으로 제출하는 것을 원칙으로 하되 실험실습 보고서, 졸업종합시험, 실기발표, 기타 학부(과)가 정하는 방법 등으로 대체할 수 있다. (전문은 해당규정 참조 바람) - ",
+        " 보시기 바람). 평점평균 계산시 반올림 인가요? (소숫점 3째자리부터 절사입니다) 평점평균 계산시 소숫점 3째자리 이하는 절사 즉, 버림 처리합니다. 예를 들어 3.4975라면 3.49가 평점평균이 됩니다. 처음 이전페이지 8 18 1 2 3 4 5 6 7 8 9 10 다음 페이지 다음 끝",
+        " 계산시 소숫점 3째자리 이하는 절사 즉, 버림 처리합니다. 예를 들어 3.4975라면 3.49가 평점평균이 됩니다. 처음 이전페이지 8 18 1 2 3 4 5 6 7 8 9 10 다음 페이지 다음 끝"
+      ],
+      "image_notice": false
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225520/artclView.do",
+      "http_status": 200,
+      "sha256": "96dd7d6533569f996d83916b0066c4b91690f113de3ac1a459e4f05dc831ae71",
+      "snippets": [
+        "K2Web Wizard 단축 url 교외장학금 2026년 2학기 거창군 지역출신 대학생 등록금 지원사업 안내 작성일 : 2026.10.19 작성자 : 학생복지팀 조회수 : 8 공고문_2026년 2학기 거창군 지역출신 대학생 등록금 지원사업.pdf 바로보기 신청서 서식.hwp 바로보기",
+        "10.19 작성자 : 학생복지팀 조회수 : 8 공고문_2026년 2학기 거창군 지역출신 대학생 등록금 지원사업.pdf 바로보기 신청서 서식.hwp 바로보기",
+        "026년 2학기 거창군 지역출신 대학생 등록금 지원사업 안내 작성일 : 2026.10.19 작성자 : 학생복지팀 조회수 : 8 공고문_2026년 2학기 거창군 지역출신 대학생 등록금 지원사업.pdf 바로보기 신청서 서식.hwp 바로보기"
+      ],
+      "image_notice": true,
+      "visual_check": {
+        "actual_period_start": "2026-10-16",
+        "actual_period_end": "2026-11-16",
+        "model_deadline": "2026-10-16",
+        "screenshot": "notice-source-period.png"
+      }
+    },
+    {
+      "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225059/artclView.do",
+      "http_status": 200,
+      "checked_fields": {
+        "event_date": "2026-10-22",
+        "start_time": "11:00",
+        "end_time": "13:00",
+        "place": "한성대학교 미래관 앞",
+        "participants": "한성대학교 재학생",
+        "required": "모바일 학생증 확인",
+        "caveat": "재료 소진 시 조기 종료"
+      },
+      "raw_text_backup": "C:/server01/archive/handoffs/campusrag-audit-20261021-0122/official-source-3.txt"
+    }
+  ],
+  "pwa": "no manifest/service worker found in active repo, remote main, or runtime dist; device installation unverified",
+  "screenshots": [
+    "campusrag-web-faq.png",
+    "notice-source-period.png"
+  ],
+  "browser_ui": "CampusRAG header/greeting/info modal, FAQ response and source card observed",
+  "http_client_note": "default Python urllib User-Agent blocked by Cloudflare 403/1010; named audit User-Agent and browser succeed"
+}

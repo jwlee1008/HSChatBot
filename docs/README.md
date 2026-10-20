@@ -8,6 +8,7 @@
 |---|---|---|
 | [중간발표 PPT와 10분 대본](../outputs/campusrag_midterm_20261019/README.md) | 2026-10-19 | 현재 진행 상황, 시스템·데이터 개선, 검증 결과와 후속 계획 |
 | [홈서버 코드·명칭 적용과 발표 인계](campusrag_home_server_presentation_handoff_20261021.md) | 2026-10-21 | 최신 코드·기존 PPT 수신, 운영 명칭 적용, 환경 확인 후 발표 개편 |
+| [홈서버 명칭 적용·운영 실측·개선 분석](campusrag_home_server_presentation_audit_20261021.md) | 2026-10-21 | 실제 배포 결과, 두 프롬프트 대조, 질의 성공·오답, 8장 구성안 |
 | [설계 산출물 4종](../outputs/campusrag_design_20261018/README.md) | 2026-10-18 | TRD, 프로그램 목록, StoryBoard, GitHub 형상관리표 |
 | [제품 요구사항과 수행 계획](chatbot_release_20261007/README.md) | 2026-10-07 | 챗봇 PRD v1.2, 수행 계획서, 발표·마일스톤, WBS·대본 |
 | [현재 챗봇 범위](campusrag_chatbot_scope_20260927.md) | 2026-09-27 | 익명 질문과 공식 출처, 보관된 개인 일정 기능의 경계 |
