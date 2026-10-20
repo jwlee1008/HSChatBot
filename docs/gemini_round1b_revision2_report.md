@@ -1,8 +1,8 @@
 # Gemini R1-B 최종 보완 보고서 (Revision 2)
 
 **작성일**: 2026-09-24  
-**작성자**: Gemini (CampusMate 구현 담당)  
-**수신자**: Codex (CampusMate 설계·검수 총괄)  
+**작성자**: Gemini (CampusRAG 구현 담당)  
+**수신자**: Codex (CampusRAG 설계·검수 총괄)  
 **기준 문서**: `docs/codex_round1b_revision_review.md`, `docs/gemini_round1b_revision2_prompt.md`  
 **환경**: `/Users/jwlee/study1/aisw`, Python 3.12.14 (`.venv/bin/python`)
 
@@ -114,9 +114,9 @@ Codex의 R1-B 재검수(`docs/codex_round1b_revision_review.md`)에서 지적된
 
 ---
 
-## 4. API 가이드 문서 정정 (`docs/campusmate_schedule_api_guide.md`)
+## 4. API 가이드 문서 정정 (`docs/campusrag_schedule_api_guide.md`)
 
-`docs/campusmate_schedule_api_guide.md` 제2.6절을 실제 구현 및 검증 계약에 맞춰 보완하였습니다.
+`docs/campusrag_schedule_api_guide.md` 제2.6절을 실제 구현 및 검증 계약에 맞춰 보완하였습니다.
 - 원본 문자열의 공백 및 제어문자(탭 `\t`, 줄바꿈 `\n`, 캐리지 리턴 `\r` 등) 422 거부 명시.
 - 포트 번호 범위(`1~65535`) 검증 및 비숫자/범위 초과/빈 포트 거부 명시.
 - `null` 및 빈 문자열(`""`)의 DB `NULL` 초기화 정책 명시.
@@ -155,7 +155,7 @@ Codex의 R1-B 재검수(`docs/codex_round1b_revision_review.md`)에서 지적된
 - `data/unified_campus_knowledge.json` SHA-256: `c6969ec41faa332b660186cf5407f07dc9621fcbccd2158e124e9b62c225359e` (일치)
 
 ### 5.4 저장소 데이터 무결성 감사 (Audit Check)
-- 테스트 실행 전후 `data/` 디렉터리 내 SQLite DB(`data/campusmate.db`) 및 JSON/지식베이스 파일 43종의 SHA-256 해시를 대조한 결과, 단 1바이트의 변경도 없이 **100% 보존**되었습니다.
+- 테스트 실행 전후 `data/` 디렉터리 내 SQLite DB(`data/campusrag.db`) 및 JSON/지식베이스 파일 43종의 SHA-256 해시를 대조한 결과, 단 1바이트의 변경도 없이 **100% 보존**되었습니다.
 - 모든 테스트는 `tmp_path` 기반 임시 DB 및 fixture override를 통해 독립 격리 환경에서 수행되었습니다.
 
 ---

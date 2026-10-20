@@ -35,7 +35,7 @@ SAMPLE_NOTICES_PATH = str(DATA_DIR / "sample_notices.json")
 # 계정, 인증 및 영속 저장소 설정 (R1-A)
 # ──────────────────────────────────────────────
 # SQLite 영속 DB 파일 경로 (Chroma와 분리)
-AUTH_DB_PATH = os.getenv("AUTH_DB_PATH", str(DATA_DIR / "campusmate.db"))
+AUTH_DB_PATH = os.getenv("AUTH_DB_PATH", str(DATA_DIR / "campusrag.db"))
 
 # Opaque Bearer 세션 토큰 유효 기간 (기본 24시간 = 86,400초)
 SESSION_EXPIRE_SECONDS = int(os.getenv("SESSION_EXPIRE_SECONDS", "86400"))

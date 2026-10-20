@@ -1,4 +1,4 @@
-# CampusMate repair2 독립 재검수 — 2026-09-25
+# CampusRAG repair2 독립 재검수 — 2026-09-25
 
 ## 판정
 

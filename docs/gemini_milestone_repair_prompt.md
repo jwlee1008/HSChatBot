@@ -1,4 +1,4 @@
-# Gemini 수정 요청 — CampusMate 완료 판정 보류 사항
+# Gemini 수정 요청 — CampusRAG 완료 판정 보류 사항
 
 `docs/codex_full_milestone_review_20260924.md`를 먼저 읽고 실제 재현 결과에 근거해 수정해줘. 이번 작업의 목표는 R2/R3 사용자 흐름 복구이며 전체 마일스톤 완료를 선포하지 마.
 

@@ -15,7 +15,7 @@
 
 ### 1. [P1] 상상파크 평가의 문서 ID가 다른 FAQ를 가리킴
 
-`docs/campusmate_evaluation_baseline.md` 사례 5의 ID:
+`docs/campusrag_evaluation_baseline.md` 사례 5의 ID:
 
 `53bdf78a6292d2880758ccd74376238bc29f21af55baf576b264a7e1c24c9153`
 

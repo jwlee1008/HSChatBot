@@ -1,4 +1,4 @@
-# CampusMate 실제 공지 형식 지원 및 사전 수용 검증 보고서
+# CampusRAG 실제 공지 형식 지원 및 사전 수용 검증 보고서
 
 > [!IMPORTANT]
 > **검증 성격 고지**: 본 보고서의 검증 결과는 에이전트가 로컬 테스트 환경 및 Chromium 브라우저를 통해 수행한 **오프라인 사전 수용 검사(Pre-acceptance Inspection)** 결과입니다. 실제 재학생이 참여한 사용자 사용성 테스트(UT)나 운영 배포 환경의 검증이 아님을 명시합니다.
@@ -7,7 +7,7 @@
 
 ## 1. 개요 및 최종 결과 요약
 
-`docs/gemini_real_notice_acceptance_prompt.md` 및 `docs/campusmate_acceptance_phase1_20260925.md`의 요구사항에 따라, 점/슬래시 표기 날짜, 요일 괄호, 전각 물결표(`∼`), 표/줄바꿈 서식, 다단계 단계별 마감 분리 등 실제 학내 공지사항 형식에서 일정 후보를 결정론적/오프라인으로 추출할 수 있도록 파서를 개선하고 전수 검증을 완료하였습니다.
+`docs/gemini_real_notice_acceptance_prompt.md` 및 `docs/campusrag_acceptance_phase1_20260925.md`의 요구사항에 따라, 점/슬래시 표기 날짜, 요일 괄호, 전각 물결표(`∼`), 표/줄바꿈 서식, 다단계 단계별 마감 분리 등 실제 학내 공지사항 형식에서 일정 후보를 결정론적/오프라인으로 추출할 수 있도록 파서를 개선하고 전수 검증을 완료하였습니다.
 
 - **실제 공지 수용 기준 통과율**: **5 / 5 (100% 통과)** (`scripts/verify_real_notice_acceptance.py` 실행 결과 종료 코드 0)
 - **전체 핵심 회귀 테스트 통과율**: **152 / 152 (100% 통과)** (기존 150개 + 신규 테스트 2개, 9개 테스트 파일 전수 통과)
@@ -56,7 +56,7 @@
 | `uat-no-date` | 무일정 대조군 (`e8ef6be4` 발췌) | `신청 서류 : 온라인 신청` | 기대 후보 수: 0건 | 0건 / 0건 | **PASS** | True (0건 정상) |
 
 > **전체 결과**: 5 / 5 통과 (Exit Code: 0)  
-> 세부 결과 파일: `docs/campusmate_real_notice_acceptance_results_20260925.json`
+> 세부 결과 파일: `docs/campusrag_real_notice_acceptance_results_20260925.json`
 
 ### 청크 길이(2,000자 진단) 평가와 전체 본문 평가의 구분
 - `uat-calendar`의 경우 목표 일정(중간고사)이 2,000자 이후에 위치하므로 앞 2,000자 슬라이스에서는 55건이 추출되었으며 중간고사는 2,000자 청크 밖으로 정상 진단되었습니다. 전체 본문 평가에서는 78건이 추출되어 중간고사가 정확히 회수되었습니다.
@@ -125,7 +125,7 @@
    - 제목: `편입 서류 수동 등록`, 유형: `TIME_CONFIRMED_DEADLINE`, 마감: `2026-09-18 17:00` 직접 입력 후 저장.
    - DB 총 레코드 수 **2건**으로 증가 및 캘린더 화면에 수동 등록 일정 노출 확인.
 
-> 세부 결과 파일: `docs/campusmate_real_notice_browser_results_20260925.json`
+> 세부 결과 파일: `docs/campusrag_real_notice_browser_results_20260925.json`
 
 ---
 
@@ -169,7 +169,7 @@ git status -- data/: nothing to commit, working tree clean
 본 작업 범위는 "실제 공지 형식 지원 및 로컬 검증"이며, 다음 항목들은 이번 범위 밖의 독립 과제로서 분리 관리됩니다.
 
 1. **재학생 대상 사용성 테스트(UT)**: 본 결과는 오프라인 자동화 검증이므로 실제 재학생 참여 정성 평가(UX 만족도, 일정 추출 의도 적합성 등)는 별도로 수행되어야 함.
-2. **Docker 영속 볼륨 매핑**: `docker-compose.yml`의 `AUTH_DB_PATH=/app/data/campusmate.db`가 볼륨 마운트 외부에 위치하므로 영속 볼륨 선언 및 복원 테스트 필요.
+2. **Docker 영속 볼륨 매핑**: `docker-compose.yml`의 `AUTH_DB_PATH=/app/data/campusrag.db`가 볼륨 마운트 외부에 위치하므로 영속 볼륨 선언 및 복원 테스트 필요.
 3. **Dockerfile 헬스체크 및 의존성**: `curl` 설치 누락 또는 Python 표준 라이브러리 헬스체크로의 전환 필요.
 4. **React 프론트엔드 프로덕션 빌드 파이프라인**: Docker 빌드 시 `frontend-web` 정적 에셋 빌드 자동화 필요.
 5. **운영 백그라운드 푸시 알림**: D-2/당일 마감 예약 알림 큐, 서버 재기동 시 스케줄러 복구, 중복 발송 방지 데몬 구축 필요.

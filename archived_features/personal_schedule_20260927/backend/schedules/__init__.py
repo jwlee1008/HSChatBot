@@ -1,7 +1,7 @@
 """
 backend/schedules
 
-CampusMate 개인 일정 도메인 및 서비스 패키지.
+CampusRAG 개인 일정 도메인 및 서비스 패키지.
 """
 
 from backend.schedules.extraction import extract_schedule_candidates

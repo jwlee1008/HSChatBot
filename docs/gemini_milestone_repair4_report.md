@@ -1,4 +1,4 @@
-# CampusMate 마일스톤 repair4 수정 및 최종 검증 보고서
+# CampusRAG 마일스톤 repair4 수정 및 최종 검증 보고서
 
 **작성 일시**: 2026-09-25  
 **검증자**: Gemini (Antigravity Agent)  

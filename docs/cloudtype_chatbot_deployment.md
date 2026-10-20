@@ -1,4 +1,4 @@
-# CampusMate Cloudtype 배포
+# CampusRAG Cloudtype 배포
 
 ## 운영 대상
 
@@ -49,7 +49,7 @@ Start command=uvicorn backend.main:app --host 0.0.0.0 --port 8000
 ## 배포 후 확인
 
 1. 배포 내역의 적용 커밋이 운영 `main`의 최신 커밋인지 확인한다.
-2. 첫 화면의 제목이 CampusMate인지 확인한다. 이전 화면이 남으면 페이지를 새로고침한다.
+2. 첫 화면의 제목이 CampusRAG인지 확인한다. 이전 화면이 남으면 페이지를 새로고침한다.
 3. `/health`의 `llm_provider`가 `gemini`, 모델 사전 로드 후 `doc_count`가 3,447인지 확인한다. health 200만으로 검색·생성 성공을 판단하지 않는다.
 4. `/api/retrieve`에서 `도서관 운영시간`을 검색해 공식 출처를 확인한다.
 5. `/api/query`로 같은 질문의 답변·출처·생성 상태를 확인하고 Cloudtype 워크로드의 메모리 및 재시작 여부를 확인한다.

@@ -96,7 +96,7 @@ def temp_db_path(isolated_auth_env: tuple[TestClient, Path]) -> Path:
 def test_default_account_db_isolation(isolated_auth_env: tuple[TestClient, Path]):
     """테스트 실행 중 기본 계정 DB 경로가 아닌 임시 DB만 사용됨을 검증."""
     client, test_db = isolated_auth_env
-    default_path = Path("data/campusmate.db").resolve()
+    default_path = Path("data/campusrag.db").resolve()
 
     # config.AUTH_DB_PATH가 기본 계정 DB 경로가 아닌 임시 DB 경로임을 확인
     assert Path(config.AUTH_DB_PATH).resolve() == test_db.resolve()
@@ -270,7 +270,7 @@ def test_invalid_username_and_password_validation(client: TestClient):
 
 def test_long_unicode_password_support(client: TestClient):
     """긴 유니코드 비밀번호(bcrypt 72바이트 초과)의 안전한 처리 검증."""
-    long_korean_pw = "한성대학교스마트캠퍼스메이트비밀번호테스트12345!"
+    long_korean_pw = "한성대학교스마트캠퍼스RAG비밀번호테스트12345!"
     reg = client.post("/api/v1/auth/register", json={"username": "korean_user", "password": long_korean_pw})
     assert reg.status_code == 201
 

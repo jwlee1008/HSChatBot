@@ -1,4 +1,4 @@
-"""In-container core API regression suite for CampusMate.
+"""In-container core API regression suite for CampusRAG.
 
 Runs inside the Docker container using only the image's installed Python packages
 (FastAPI, TestClient, pydantic, sqlite3, etc.) without requiring external pytest or Playwright.
@@ -19,7 +19,7 @@ sys.path.insert(0, str(ROOT))
 
 def run_tests() -> int:
     print("=" * 60)
-    print("CampusMate In-Container Core API Regression Suite")
+    print("CampusRAG In-Container Core API Regression Suite")
     print(f"Python: {sys.version}")
     print(f"Platform: {sys.platform} / {os.uname().machine}")
     print("=" * 60)

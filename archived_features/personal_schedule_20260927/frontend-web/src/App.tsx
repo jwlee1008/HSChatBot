@@ -80,7 +80,7 @@ const INITIAL_MESSAGES: Message[] = [
   {
     id: 0,
     role: "bot",
-    text: "안녕하세요! 한성대학교 공지 챗봇 CampusMate입니다. 🎓\n학사, 장학, 학교 생활에 대해 궁금한 점을 물어보세요. 공지 속 일정은 [📅 일정 추출] 버튼을 눌러 확인 후 캘린더에 바로 저장할 수 있습니다.",
+    text: "안녕하세요! 한성대학교 공지 챗봇 CampusRAG입니다. 🎓\n학사, 장학, 학교 생활에 대해 궁금한 점을 물어보세요. 공지 속 일정은 [📅 일정 추출] 버튼을 눌러 확인 후 캘린더에 바로 저장할 수 있습니다.",
     chips: [
       "2026학년도 수강신청 일정 알려줘",
       "국가장학금 신청 기간과 가구원 동의 기간",
@@ -1791,8 +1791,8 @@ export default function App() {
   const [showAuthModal, setShowAuthModal] = useState(false);
 
   // 계정 세션 상태
-  const [token, setToken] = useState<string | null>(() => localStorage.getItem("campusmate_token"));
-  const [username, setUsername] = useState<string | null>(() => localStorage.getItem("campusmate_username"));
+  const [token, setToken] = useState<string | null>(() => localStorage.getItem("campusrag_token"));
+  const [username, setUsername] = useState<string | null>(() => localStorage.getItem("campusrag_username"));
 
   // 일정 목록 상태
   const [schedules, setSchedules] = useState<ScheduleItem[]>([]);
@@ -1865,8 +1865,8 @@ export default function App() {
   function handleLoginSuccess(newToken: string, newUsername: string) {
     setToken(newToken);
     setUsername(newUsername);
-    localStorage.setItem("campusmate_token", newToken);
-    localStorage.setItem("campusmate_username", newUsername);
+    localStorage.setItem("campusrag_token", newToken);
+    localStorage.setItem("campusrag_username", newUsername);
     loadSchedules(newToken);
   }
 
@@ -1883,8 +1883,8 @@ export default function App() {
     }
     setToken(null);
     setUsername(null);
-    localStorage.removeItem("campusmate_token");
-    localStorage.removeItem("campusmate_username");
+    localStorage.removeItem("campusrag_token");
+    localStorage.removeItem("campusrag_username");
     setSchedules([]);
   }
 
@@ -1901,7 +1901,7 @@ export default function App() {
     if ("Notification" in window) {
       const perm = await Notification.requestPermission();
       if (perm === "granted" && urgentCount > 0) {
-        new Notification("CampusMate 마감 알림", {
+        new Notification("CampusRAG 마감 알림", {
           body: `오늘 또는 3일 이내 마감되는 일정이 ${urgentCount}건 있습니다.`,
           icon: "/favicon.ico",
         });
@@ -2028,7 +2028,7 @@ export default function App() {
         style={{ paddingTop: "max(10px, env(safe-area-inset-top))" }}
       >
         <div className="flex items-center gap-2">
-          <span className="text-base font-bold tracking-tight text-slate-900">CampusMate</span>
+          <span className="text-base font-bold tracking-tight text-slate-900">CampusRAG</span>
           <span className="text-base">🎓</span>
 
           {/* 뷰 전환 탭 */}
@@ -2249,7 +2249,7 @@ export default function App() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-              <h3 className="font-bold text-sm text-slate-900">CampusMate 안내</h3>
+              <h3 className="font-bold text-sm text-slate-900">CampusRAG 안내</h3>
               <button
                 onClick={() => setShowInfoModal(false)}
                 className="text-slate-400 font-bold"
@@ -2258,7 +2258,7 @@ export default function App() {
               </button>
             </div>
             <p className="text-slate-600 leading-relaxed">
-              CampusMate는 한성대학교 학내 공지사항 RAG 검색 및 Zero-Auto-Save 개인 일정 캘린더 통합 서비스입니다.
+              CampusRAG는 한성대학교 학내 공지사항 RAG 검색 및 Zero-Auto-Save 개인 일정 캘린더 통합 서비스입니다.
             </p>
             <p className="text-slate-500 leading-relaxed">
               추출된 일정은 사용자가 직접 확인하고 승인한 경우에만 안전하게 개인 캘린더에 보관됩니다.

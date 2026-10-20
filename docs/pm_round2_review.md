@@ -1,8 +1,8 @@
-# CampusMate R2 PM 검수 보고서 — 승인 (Approved)
+# CampusRAG R2 PM 검수 보고서 — 승인 (Approved)
 
 - **검수일**: 2026-09-24
 - **검수자**: PM (Antigravity Orchestrator)
-- **대상 마일스톤**: CampusMate R2 — 자연어/공지 일정 후보 추출 및 Zero-Auto-Save 데이터 계약
+- **대상 마일스톤**: CampusRAG R2 — 자연어/공지 일정 후보 추출 및 Zero-Auto-Save 데이터 계약
 
 ---
 
@@ -57,8 +57,8 @@ R2 마일스톤 구현을 공식 **승인**한다.
 
 ## 4. 후속 마일스톤 안내
 
-- **승인 마일스톤**: CampusMate R2 (일정 추출 및 사용자 확인 계약)
-- **차기 마일스톤**: **CampusMate R3 — 최소 캘린더 통합 UI 및 사용자 확인 흐름 (React Frontend)**
+- **승인 마일스톤**: CampusRAG R2 (일정 추출 및 사용자 확인 계약)
+- **차기 마일스톤**: **CampusRAG R3 — 최소 캘린더 통합 UI 및 사용자 확인 흐름 (React Frontend)**
   - 챗봇 답변 카드 내 [캘린더에 추가] 버튼 연동
   - 추출된 일정 후보 팝업 확인 모달 (날짜/시각/제목 수정 및 중복 클릭 방지)
   - 월간/오늘 개인 캘린더 뷰 및 일정 완료 토글/삭제 UI

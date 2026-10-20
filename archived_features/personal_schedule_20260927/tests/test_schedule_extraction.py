@@ -1,7 +1,7 @@
 """
 tests/test_schedule_extraction.py
 
-CampusMate R2 자연어/공지 -> 일정 후보 추출 및 Zero-Auto-Save 계약 검증 테스트 슈트.
+CampusRAG R2 자연어/공지 -> 일정 후보 추출 및 Zero-Auto-Save 계약 검증 테스트 슈트.
 1. 23개 픽스처 케이스(tests/fixtures/schedule_extraction_cases.json) 전수 검증
 2. Zero-Auto-Save 및 사용자 확인 강제(requires_user_confirmation: True) 계약 검증
 3. API 레벨 검증:

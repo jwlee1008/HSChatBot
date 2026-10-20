@@ -1,20 +1,20 @@
-> 역사 기록: 2026-09-27 제품 범위가 챗봇으로 변경되었습니다. 개인 일정·인증·캘린더·알림 계획은 비활성 보관 상태입니다. 현재 범위는 `docs/campusmate_chatbot_scope_20260927.md`를 따릅니다.
+> 역사 기록: 2026-09-27 제품 범위가 챗봇으로 변경되었습니다. 개인 일정·인증·캘린더·알림 계획은 비활성 보관 상태입니다. 현재 범위는 `docs/campusrag_chatbot_scope_20260927.md`를 따릅니다.
 
-# CampusMate 인증 API 및 로컬 실행 가이드 (R1-A)
+# CampusRAG 인증 API 및 로컬 실행 가이드 (R1-A)
 
-본 문서는 CampusMate R1-A 계정·인증·영속 저장 기반의 설정 예시, 로컬 서버 기동 및 REST API 사용법을 안내합니다.
+본 문서는 CampusRAG R1-A 계정·인증·영속 저장 기반의 설정 예시, 로컬 서버 기동 및 REST API 사용법을 안내합니다.
 
 ---
 
 ## 1. 환경 설정 및 구성 (`config.py`)
 
-CampusMate는 `.env` 파일 또는 환경 변수를 통해 계정 DB 및 세션 수명 주기를 제어합니다.
+CampusRAG는 `.env` 파일 또는 환경 변수를 통해 계정 DB 및 세션 수명 주기를 제어합니다.
 
 ### 1.1 주요 환경 변수
 
 | 환경 변수명 | 기본값 | 설명 |
 |---|---|---|
-| `AUTH_DB_PATH` | `data/campusmate.db` | 계정(`users`) 및 세션(`sessions`)을 저장하는 SQLite 파일 경로 |
+| `AUTH_DB_PATH` | `data/campusrag.db` | 계정(`users`) 및 세션(`sessions`)을 저장하는 SQLite 파일 경로 |
 | `SESSION_EXPIRE_SECONDS` | `86400` (24시간) | 서버 저장형 Opaque Bearer 세션 토큰의 유효 기간(초) |
 | `PREWARM_RAG_ON_STARTUP` | `true` | 서버 시작 시 RAG 모델(Chroma/SentenceTransformer) 백그라운드 사전 로드 여부 (`false` 시 경량 기동) |
 
@@ -22,7 +22,7 @@ CampusMate는 `.env` 파일 또는 환경 변수를 통해 계정 DB 및 세션 
 
 ```bash
 # 계정 및 인증 설정
-AUTH_DB_PATH=data/campusmate.db
+AUTH_DB_PATH=data/campusrag.db
 SESSION_EXPIRE_SECONDS=86400
 PREWARM_RAG_ON_STARTUP=true
 
@@ -138,7 +138,7 @@ PREWARM_RAG_ON_STARTUP=false .venv/bin/uvicorn backend.main:app --port 8000
 ## 4. 데이터 영속성 및 프로세스 재시작 보증 구조
 
 1. **파일 기반 SQLite 및 WAL 모드:**
-   - 서버가 비정상 종료되거나 uvicorn 프로세스가 재시작되어도 `data/campusmate.db` 파일에 저장된 계정과 세션은 온전히 보존됩니다.
+   - 서버가 비정상 종료되거나 uvicorn 프로세스가 재시작되어도 `data/campusrag.db` 파일에 저장된 계정과 세션은 온전히 보존됩니다.
    - WAL 및 SHM sidecar 파일(`*.db-wal`, `*.db-shm`)은 `.gitignore`에 등록되어 git 추적에서 제외됩니다.
 2. **검증된 영속성 테스트:**
    - **연결 재개방 및 반복 마이그레이션 (`test_connection_reopening_and_repeat_migrations`):** 동일한 SQLite 파일에 대해 DB 커넥션을 닫고 `init_db`를 여러 번 반복 호출해도 데이터가 삭제되지 않고 온전히 유지됨을 검증.

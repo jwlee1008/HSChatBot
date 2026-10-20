@@ -1,4 +1,4 @@
-# CampusMate R0 평가 근거 보완 완료 보고서 (Gemini)
+# CampusRAG R0 평가 근거 보완 완료 보고서 (Gemini)
 
 - **작성 일자:** 2026-09-23
 - **작성자:** 구현 담당 (Gemini)
@@ -9,7 +9,7 @@
 
 ## 1. 개요 및 수정 범위
 
-Codex의 R0 재검수 피드백(`docs/codex_round0_revision_review.md`)에 따라, **날짜 파서/일정 fixture/신규 API/DB에는 일절 손대지 않고** `docs/campusmate_evaluation_baseline.md`의 대표 10사례 평가 근거 및 판정 기준표 보완(남은 필수 수정 1~3번)만을 정확히 수행하였습니다.
+Codex의 R0 재검수 피드백(`docs/codex_round0_revision_review.md`)에 따라, **날짜 파서/일정 fixture/신규 API/DB에는 일절 손대지 않고** `docs/campusrag_evaluation_baseline.md`의 대표 10사례 평가 근거 및 판정 기준표 보완(남은 필수 수정 1~3번)만을 정확히 수행하였습니다.
 또한 손으로 추정하지 않고 로컬 데이터셋(`data/unified_campus_knowledge.json`)을 직접 읽어 전수 대조하는 읽기 전용 검증 스크립트(`scripts/verify_rag_eval_evidence.py`)를 작성하여 검증을 완료하였습니다.
 
 ---
@@ -70,7 +70,7 @@ Codex의 R0 재검수 피드백(`docs/codex_round0_revision_review.md`)에 따�
 - **실제 실행 결과 (stdout):**
   ```text
   ========================================================================
-   CampusMate RAG 대표 10사례 근거 전수 대조 검증 (Read-Only)
+   CampusRAG RAG 대표 10사례 근거 전수 대조 검증 (Read-Only)
   ========================================================================
   Data file: data/unified_campus_knowledge.json (4,782,727 bytes)
   Expected SHA-256: c6969ec41faa332b660186cf5407f07dc9621fcbccd2158e124e9b62c225359e

@@ -1,4 +1,4 @@
-# CampusMate 마일스톤 추가 결함(R1 ~ R4) 복구 및 2차 검증 보고서
+# CampusRAG 마일스톤 추가 결함(R1 ~ R4) 복구 및 2차 검증 보고서
 
 - **작성일자**: 2026-09-24
 - **작성자**: Gemini Worker Subagent (Full-Stack Engineering)

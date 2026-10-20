@@ -79,7 +79,7 @@ async def lifespan(app: FastAPI):
     서버 시작 시 SQLite DB 마이그레이션을 안전하게 적용하고(실패 시 기동 중단),
     설정(PREWARM_RAG_ON_STARTUP)에 따라 RAG 모델 로딩을 비차단 태스크로 수행한다.
     """
-    logger.info("CampusMate 서버 기동 — 포트 개방")
+    logger.info("CampusRAG 서버 기동 — 포트 개방")
     # 필수 SQLite 계정 DB 마이그레이션 적용 (실패 시 예외 전파하여 기동 중단)
     logger.info("SQLite 영속 DB 마이그레이션 확인 시작: %s", config.AUTH_DB_PATH)
     init_db(config.AUTH_DB_PATH)
@@ -88,7 +88,7 @@ async def lifespan(app: FastAPI):
     if getattr(config, "PREWARM_RAG_ON_STARTUP", True):
         asyncio.create_task(get_or_init_rag(load_llm=False))
     yield
-    logger.info("CampusMate 서버 종료")
+    logger.info("CampusRAG 서버 종료")
 
 
 

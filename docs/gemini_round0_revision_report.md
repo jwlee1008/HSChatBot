@@ -1,4 +1,4 @@
-# CampusMate R0 수정 라운드 완료 보고서 (Gemini)
+# CampusRAG R0 수정 라운드 완료 보고서 (Gemini)
 
 - **작성 일자:** 2026-09-23
 - **작성자:** 구현 담당 (Gemini)
@@ -9,7 +9,7 @@
 
 ## 1. 지적사항별 수정 내역
 
-### 1.1 [P1] 정답표 원문 대조 및 오류 수정 (`docs/campusmate_evaluation_baseline.md`)
+### 1.1 [P1] 정답표 원문 대조 및 오류 수정 (`docs/campusrag_evaluation_baseline.md`)
 
 로컬 지식 베이스 파일(`data/unified_campus_knowledge.json`, SHA-256: `c6969ec41faa332b660186cf5407f07dc9621fcbccd2158e124e9b62c225359e`)과 10대 대표 사례를 전수 재대조하여 사실과 다른 내용 및 추측성 서술을 정정하였습니다.
 
@@ -74,7 +74,7 @@
 
 ---
 
-### 1.4 [P2] R1 데이터 계약의 날짜-only 보존 필드 및 모델 분리 (`docs/campusmate_evaluation_baseline.md`)
+### 1.4 [P2] R1 데이터 계약의 날짜-only 보존 필드 및 모델 분리 (`docs/campusrag_evaluation_baseline.md`)
 
 1. **시간 모델의 Date-only vs Datetime 분리:**
    - 기존의 nullable datetime(`start_at`, `end_at`)만으로는 "10월 15일 개교기념일" 같은 날짜 전용 일정을 저장할 때 임의의 시각(`00:00` 또는 `23:59`)을 지어내야 하고, UTC 변환 시 날짜가 전날로 밀리는 결함이 발생함을 명시.
@@ -91,7 +91,7 @@
 
 ---
 
-### 1.5 보고 정확성 보완 (`docs/campusmate_evaluation_baseline.md` 및 본 보고서)
+### 1.5 보고 정확성 보완 (`docs/campusrag_evaluation_baseline.md` 및 본 보고서)
 
 1. **3차원 평가 상태 모델 도입:**
    - 실행 모드(MOCK / LIVE), 호출 결과(SUCCESS / API_ERROR / NOT_RUN / NO_CALL_ABSTAIN), 정답 판정(PASS / FAIL / NEEDS_REVIEW)을 독립적으로 분리 정의.
@@ -114,7 +114,7 @@
 | `scripts/build_unified_dataset.py` | [MODIFY] | `parse_iso_datetime`: 하이픈/점 패턴 분리(혼합 구분자 거부), 기본 ISO(`YYYYMMDD`) 지원, 콜론 없는 오프셋 지원, 오프셋 분(00~59)/시(00~23) 엄격 검증, docstring 보강 |
 | `tests/test_date_parsing.py` | [MODIFY] | 비정상 오프셋 분/시(5종), 혼합 구분자(4종), 기본 ISO, 콜론 없는 오프셋 테스트 추가; fixture 사용자 확인 필수, sched-20 null timestamp, 원문 부분문자열 일치, 취소 공지 전수 검증 추가 (총 34개 테스트) |
 | `tests/fixtures/schedule_extraction_cases.json` | [MODIFY] | 23건 케이스: 모든 후보 `requires_user_confirmation: true`, `is_ambiguous` 분리, sched-20 timestamp null 처리 및 interpretation_options 추가, sched-18 원문 무손실 발췌, sched-23 취소 공지 신설 |
-| `docs/campusmate_evaluation_baseline.md` | [MODIFY] | 10대 대표 사례 원문 전수 대조(TOPCIT 보증금 20,000원/응시료 10,000원 분리, 졸업유예 6237 페이지 및 자격 정정, 휴학 6248 정정, OCR 노이즈 메모), 다차원 상태 보고 정의, R1 시간 모델(Date-only vs Datetime) 분리 계약 명세 |
+| `docs/campusrag_evaluation_baseline.md` | [MODIFY] | 10대 대표 사례 원문 전수 대조(TOPCIT 보증금 20,000원/응시료 10,000원 분리, 졸업유예 6237 페이지 및 자격 정정, 휴학 6248 정정, OCR 노이즈 메모), 다차원 상태 보고 정의, R1 시간 모델(Date-only vs Datetime) 분리 계약 명세 |
 | `docs/gemini_round0_revision_report.md` | [NEW] | Codex 지적 1~4번 및 보고 정확성 보완에 대한 수정 내역, 실행 명령, 실제 결과 보고서 (본 문서) |
 
 ---

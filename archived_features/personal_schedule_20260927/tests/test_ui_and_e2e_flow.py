@@ -1,7 +1,7 @@
 """
 tests/test_ui_and_e2e_flow.py
 
-CampusMate R3 & R5 통합 UI 정적 서빙 및 End-to-End 전체 흐름 검증 테스트 슈트.
+CampusRAG R3 & R5 통합 UI 정적 서빙 및 End-to-End 전체 흐름 검증 테스트 슈트.
 1. 프론트엔드 정적 서빙 (GET / 및 에셋 200 OK)
 2. E2E 전체 라이프사이클:
    - 계정 등록 및 로그인 -> 토큰 획득
@@ -94,7 +94,7 @@ def test_frontend_static_serving_root(client: TestClient):
     assert resp.status_code == 200
     assert "text/html" in resp.headers.get("content-type", "")
     assert '<div id="root">' in resp.text
-    assert "CampusMate" in resp.text or "campusrag" in resp.text.lower() or "한성대" in resp.text
+    assert "CampusRAG" in resp.text or "campusrag" in resp.text.lower() or "한성대" in resp.text
 
 
 # ── 2. E2E 전체 라이프사이클 흐름 검증 ─────────────────────────

@@ -1,4 +1,4 @@
-# CampusMate R3 & R5 구현 완료 보고서 — 캘린더 통합 UI, Zero-Auto-Save 확인 흐름, 마감 알림 배너, 정적 서빙 및 E2E 테스트
+# CampusRAG R3 & R5 구현 완료 보고서 — 캘린더 통합 UI, Zero-Auto-Save 확인 흐름, 마감 알림 배너, 정적 서빙 및 E2E 테스트
 
 - **보고일**: 2026-09-24
 - **구현 담당**: Gemini (Backend & Frontend Worker)
@@ -8,7 +8,7 @@
 
 ## 1. 개요 및 요약
 
-CampusMate R3(최소 캘린더 통합 UI & Zero-Auto-Save 확인 흐름) 및 R5(마감 알림 배너, 정적 서빙 연동 및 E2E 테스트) 마일스톤에 따라, React/Vite 기반 웹 프론트엔드와 FastAPI 백엔드를 완전 통합하고 사용자 관점의 전체 라이프사이클 E2E 검증을 성공적으로 완료하였습니다.
+CampusRAG R3(최소 캘린더 통합 UI & Zero-Auto-Save 확인 흐름) 및 R5(마감 알림 배너, 정적 서빙 연동 및 E2E 테스트) 마일스톤에 따라, React/Vite 기반 웹 프론트엔드와 FastAPI 백엔드를 완전 통합하고 사용자 관점의 전체 라이프사이클 E2E 검증을 성공적으로 완료하였습니다.
 
 ### 핵심 달성 성과
 1. **Zero-Auto-Save 확인 흐름 완성 (`frontend-web/src/App.tsx`)**:
@@ -26,7 +26,7 @@ CampusMate R3(최소 캘린더 통합 UI & Zero-Auto-Save 확인 흐름) 및 R5(
    - 배너 클릭 시 캘린더 뷰로 즉시 전환.
    - 브라우저 표준 Notification API 연동 (`🔔 알림 켜기` 버튼 클릭 시 권한 요청 및 시스템 푸시 알림 발송).
 4. **계정 세션 및 원클릭 게스트 로그인**:
-   - `localStorage`(`campusmate_token`, `campusmate_username`) 기반 세션 영속화.
+   - `localStorage`(`campusrag_token`, `campusrag_username`) 기반 세션 영속화.
    - 로그인/회원가입 모달 및 테스트·평가를 위한 `⚡ 원클릭 게스트로 바로 시작` 기능 제공.
 5. **백엔드 정적 서빙 및 E2E 테스트 (`tests/test_ui_and_e2e_flow.py`)**:
    - `frontend-web` 빌드(`npm run build` -> `dist/index.html`, `dist/assets/*`) 정상 수행 (265ms).

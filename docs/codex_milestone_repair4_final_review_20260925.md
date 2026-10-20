@@ -1,4 +1,4 @@
-# CampusMate repair4 최종 재검수 — 2026-09-25
+# CampusRAG repair4 최종 재검수 — 2026-09-25
 
 ## 판정: 이번 수정 라운드 승인
 

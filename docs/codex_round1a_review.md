@@ -46,7 +46,7 @@ init_db에 합성 실패를 주입해도 lifespan이 성공하고 /health는 200
 
 위치: .gitignore의 SQLite 패턴.
 
-git check-ignore로 data/campusmate.db는 제외되지만 data/campusmate.db-wal 및 data/campusmate.db-shm은 제외되지 않음을 확인했다. WAL 모드에서는 계정·세션 레코드가 WAL에 들어갈 수 있다. 사용하는 SQLite 확장자의 sidecar도 제외하고, 기존 추적 파일 유무를 확인하되 사용자 DB를 삭제하지 않는다.
+git check-ignore로 data/campusrag.db는 제외되지만 data/campusrag.db-wal 및 data/campusrag.db-shm은 제외되지 않음을 확인했다. WAL 모드에서는 계정·세션 레코드가 WAL에 들어갈 수 있다. 사용하는 SQLite 확장자의 sidecar도 제외하고, 기존 추적 파일 유무를 확인하되 사용자 DB를 삭제하지 않는다.
 
 ## 증거 및 문서 보완
 

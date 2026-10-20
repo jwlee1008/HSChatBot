@@ -188,7 +188,7 @@ def normalize_whitespace(text: str) -> str:
 
 def verify_all_cases() -> bool:
     print("=" * 72)
-    print(" CampusMate RAG 대표 10사례 근거 전수 대조 검증 (Read-Only)")
+    print(" CampusRAG RAG 대표 10사례 근거 전수 대조 검증 (Read-Only)")
     print("=" * 72)
 
     # 1. 파일 확인 및 SHA-256 검증

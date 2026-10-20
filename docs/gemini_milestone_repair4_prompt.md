@@ -1,4 +1,4 @@
-# CampusMate repair4 — 연도 보정 회귀만 수정
+# CampusRAG repair4 — 연도 보정 회귀만 수정
 
 `docs/codex_milestone_repair3_review_20260925.md`를 읽고 남은 연도 처리 결함만 수정해줘. B/C 해결과 기존 공통 날짜·시각 검증은 유지해.
 

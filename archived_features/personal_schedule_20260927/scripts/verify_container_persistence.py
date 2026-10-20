@@ -24,22 +24,22 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--image', required=True)
     args = parser.parse_args()
-    project = 'campusmate-check-' + secrets.token_hex(5)
+    project = 'campusrag-check-' + secrets.token_hex(5)
     before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest()
               for p in (ROOT / 'data').rglob('*') if p.is_file()}
     with socket.socket() as sock:
         sock.bind(('127.0.0.1', 0))
         port = sock.getsockname()[1]
-    env = dict(os.environ, CAMPUSMATE_PORT=str(port), PREWARM_RAG_ON_STARTUP='false',
+    env = dict(os.environ, CAMPUSRAG_PORT=str(port), PREWARM_RAG_ON_STARTUP='false',
                LLM_PROVIDER='local', GEMINI_API_KEY='', OPENAI_API_KEY='')
     base_url = f'http://127.0.0.1:{port}'
     checks = []
     with tempfile.TemporaryDirectory() as tmp:
         override = Path(tmp) / 'override.json'
-        def write_override(db='campusmate.db'):
+        def write_override(db='campusrag.db'):
             override.write_text(json.dumps({'services': {'backend': {
                 'image': args.image,
-                'environment': {'AUTH_DB_PATH': '/var/lib/campusmate/' + db,
+                'environment': {'AUTH_DB_PATH': '/var/lib/campusrag/' + db,
                                 'PREWARM_RAG_ON_STARTUP': 'false'},
             }}}))
         write_override()
@@ -107,9 +107,9 @@ def main():
             verify_record()
             checks.append('new_container_preserves_named_volume')
             run('exec', '-T', 'backend', 'python', 'scripts/sqlite_snapshot.py',
-                '/var/lib/campusmate/campusmate.db', '/var/lib/campusmate/audit-backup.db')
+                '/var/lib/campusrag/campusrag.db', '/var/lib/campusrag/audit-backup.db')
             backup = Path(tmp) / 'backup.db'
-            run('cp', 'backend:/var/lib/campusmate/audit-backup.db', str(backup))
+            run('cp', 'backend:/var/lib/campusrag/audit-backup.db', str(backup))
             assert backup.stat().st_size > 0
             checks.append('online_sqlite_backup_and_export')
             api('/api/v1/schedules/' + schedule['id'], token=token, method='DELETE')
@@ -117,11 +117,11 @@ def main():
             run('stop', 'backend')
             # Clean restore volume: prove the backup alone is sufficient, with no WAL files.
             override.write_text(json.dumps({'services': {'backend': {
-                'image': args.image, 'environment': {'AUTH_DB_PATH': '/var/lib/campusmate/campusmate.db'},
-                'volumes': ['restore_data:/var/lib/campusmate'],
+                'image': args.image, 'environment': {'AUTH_DB_PATH': '/var/lib/campusrag/campusrag.db'},
+                'volumes': ['restore_data:/var/lib/campusrag'],
             }}, 'volumes': {'restore_data': {}}}))
             run('run', '--rm', '--no-deps', '-v', f'{backup}:/backup/input.db:ro', 'backend',
-                'python', 'scripts/sqlite_snapshot.py', '/backup/input.db', '/var/lib/campusmate/campusmate.db')
+                'python', 'scripts/sqlite_snapshot.py', '/backup/input.db', '/var/lib/campusrag/campusrag.db')
             run('up', '-d', '--no-build', '--force-recreate', 'backend')
             healthy()
             verify_record()

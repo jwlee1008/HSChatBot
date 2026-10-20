@@ -1,14 +1,14 @@
-# CampusMate R3 & R5 PM 검수 보고서 — 전체 개선 마일스톤 완수 승인 (Approved)
+# CampusRAG R3 & R5 PM 검수 보고서 — 전체 개선 마일스톤 완수 승인 (Approved)
 
 - **검수일**: 2026-09-24
 - **검수자**: PM (Antigravity Orchestrator)
-- **대상 마일스톤**: CampusMate R3 (최소 캘린더 통합 UI & Zero-Auto-Save 확인 흐름) 및 R5 (마감 알림 배너, 정적 서빙 및 E2E 테스트)
+- **대상 마일스톤**: CampusRAG R3 (최소 캘린더 통합 UI & Zero-Auto-Save 확인 흐름) 및 R5 (마감 알림 배너, 정적 서빙 및 E2E 테스트)
 
 ---
 
 ## 1. 종합 판정: 전원 승인 (Full Milestone Approved)
 
-CampusMate 프로젝트의 핵심 과제인 **인증(R1-A) → 개인 일정 CRUD(R1-B) → 일정 후보 추출(R2) → 최소 캘린더 통합 UI 및 Zero-Auto-Save 확인 모달(R3) → 마감 알림 배너 및 웹 정적 서빙 E2E(R5)**에 이르는 전체 개선 마일스톤이 성공적으로 구현 및 검수 완료되었다.
+CampusRAG 프로젝트의 핵심 과제인 **인증(R1-A) → 개인 일정 CRUD(R1-B) → 일정 후보 추출(R2) → 최소 캘린더 통합 UI 및 Zero-Auto-Save 확인 모달(R3) → 마감 알림 배너 및 웹 정적 서빙 E2E(R5)**에 이르는 전체 개선 마일스톤이 성공적으로 구현 및 검수 완료되었다.
 
 독립적인 PM 검수 결과:
 1. **프론트엔드 빌드**: `frontend-web` TypeScript + Vite 프로덕션 빌드 **정상 통과 (255ms)** 및 `frontend-web/dist` 정적 에셋 생성 완료.
@@ -70,4 +70,4 @@ tests/test_date_parsing.py (34 tests) PASSED
 
 ## 4. 최종 결론
 
-CampusMate 서비스는 공지 검색/답변(CampusRAG)과 더불어, 사용자 계정 영속성, 개인 캘린더 CRUD, 지능형 일정 후보 추출, 사용자 확인 강제(Zero-Auto-Save) UI, 마감 임박 알림 배너, 그리고 모바일/웹 반응형 React 프론트엔드가 하나로 통합된 완전한 서비스 상태를 갖추었다.
+CampusRAG 서비스는 공지 검색/답변(CampusRAG)과 더불어, 사용자 계정 영속성, 개인 캘린더 CRUD, 지능형 일정 후보 추출, 사용자 확인 강제(Zero-Auto-Save) UI, 마감 임박 알림 배너, 그리고 모바일/웹 반응형 React 프론트엔드가 하나로 통합된 완전한 서비스 상태를 갖추었다.

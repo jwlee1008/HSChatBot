@@ -1,10 +1,10 @@
-# CampusMate 챗봇 진행 상황과 남은 과제
+# CampusRAG 챗봇 진행 상황과 남은 과제
 
 기준일: 2026년 10월 7일
 
-CampusMate는 **로그인 없이 한성대학교 공식 공지와 학사 안내를 질문하고, 답변과 공식 원문을 확인하는 챗봇**으로 정리한다. 현재 작업 폴더에서는 챗봇 전용 코드 분리와 PRD 개정이 이미 완료돼 있다. 개발 단계는 **챗봇 MVP 구현과 선별 회귀 검증 완료, 최신 데이터와 실제 답변 품질 및 운영 배포 검증 진행 전**으로 판단한다.
+CampusRAG는 **로그인 없이 한성대학교 공식 공지와 학사 안내를 질문하고, 답변과 공식 원문을 확인하는 챗봇**으로 정리한다. 현재 작업 폴더에서는 챗봇 전용 코드 분리와 PRD 개정이 이미 완료돼 있다. 개발 단계는 **챗봇 MVP 구현과 선별 회귀 검증 완료, 최신 데이터와 실제 답변 품질 및 운영 배포 검증 진행 전**으로 판단한다.
 
-10월 7일 후속 작업으로 **P0 산출물 통일을 완료했다.** 현재 제출·발표 기준은 [챗봇 산출물 묶음](chatbot_release_20261007/README.md)의 PRD v1.2, 수행 계획서, 발표자료, 마일스톤, WBS와 대본이다. 기존 자료는 이전 버전으로 보존한다. 현재 Gemini 설정과 데이터 반영 연결 및 Cloudtype 무료 환경 조사는 [추가 계획](campusmate_data_and_cloudtype_plan_20261007.md)을 따른다.
+10월 7일 후속 작업으로 **P0 산출물 통일을 완료했다.** 현재 제출·발표 기준은 [챗봇 산출물 묶음](chatbot_release_20261007/README.md)의 PRD v1.2, 수행 계획서, 발표자료, 마일스톤, WBS와 대본이다. 기존 자료는 이전 버전으로 보존한다. 현재 Gemini 설정과 데이터 반영 연결 및 Cloudtype 무료 환경 조사는 [추가 계획](campusrag_data_and_cloudtype_plan_20261007.md)을 따른다.
 
 전체 진척률을 임의의 백분율로 제시하지 않는다. 기존 WBS의 완료 비율은 과거 기획 시점 값이며, 현재 기능·평가·배포 상태를 반영한 계산이 아니다.
 
@@ -57,9 +57,9 @@ CampusMate는 **로그인 없이 한성대학교 공식 공지와 학사 안내�
 
 | 자료 | 현재 활용 방법 | 필요한 정리 |
 |---|---|---|
-| `docs/저학년의_반란_CampusMate_챗봇_PRD_v1.1_20260927.docx` | 현재 제품 요구사항의 기준 | 팀원 역할·일정 확정, 이후 실측 평가 결과 반영 |
+| `docs/저학년의_반란_CampusRAG_챗봇_PRD_v1.1_20260927.docx` | 현재 제품 요구사항의 기준 | 팀원 역할·일정 확정, 이후 실측 평가 결과 반영 |
 | `docs/저학년의_반란_기능흐름도_(v1.0)_20260927.pptx` | 현재 사용자 흐름의 기준 | 질문별 독립 처리와 예외 흐름을 실제 UI와 계속 대조 |
-| `저학년의 반란_CampusMate_PRD_v1.0_20260919.docx` | 이전 개인 일정 제품의 역사 기록 | 최신 PRD로 대체하고 제출 기준에서 제외 |
+| `저학년의 반란_CampusRAG_PRD_v1.0_20260919.docx` | 이전 개인 일정 제품의 역사 기록 | 최신 PRD로 대체하고 제출 기준에서 제외 |
 | `프로젝트_계획서_CampusRAG.docx` | 공지 탐색 문제와 RAG 목표 참고 | React·선택 LLM·현 검증 기준으로 기술과 로드맵 정리. 3초·탐색시간 단축은 목표로 표시 |
 | `CampusRAG_발표자료.pptx` | 챗봇 문제 정의와 기술 구조 참고 | 1,340여 건·130 tests 등 과거값 갱신. 개인화 D-Day 알림 제외. 탐색시간 90% 단축 등 미측정 문구 수정 |
 | 프로젝트 마일스톤 PPT | 크롤러→검색→웹→첨부·FAQ→배포·UT의 순서 참고 | 성과 목표와 실제 완료 구분, 최신 날짜·팀명·버전 정리 |
@@ -103,17 +103,17 @@ BM25, 카카오톡 연동, 로컬 모델 추가 운영, 다회차 대화, 전 �
 
 발표에서는 다음처럼 설명할 수 있다.
 
-> CampusMate는 한성대학교의 분산된 공식 공지와 학사 정보를 검색하고, 근거를 바탕으로 답변과 원문 링크를 제공하는 챗봇입니다. 현재 1,366문서와 3,447청크의 검색 기반, 웹과 API, 근거 부족 및 오류 처리를 구현했고 핵심 회귀 검사 65개를 통과했습니다. 앞으로 최신 자료를 갱신하고 실제 모델의 답변 정확도와 응답시간을 평가한 뒤, 최신 챗봇판 배포와 학생 사용자 테스트를 진행합니다.
+> CampusRAG는 한성대학교의 분산된 공식 공지와 학사 정보를 검색하고, 근거를 바탕으로 답변과 원문 링크를 제공하는 챗봇입니다. 현재 1,366문서와 3,447청크의 검색 기반, 웹과 API, 근거 부족 및 오류 처리를 구현했고 핵심 회귀 검사 65개를 통과했습니다. 앞으로 최신 자료를 갱신하고 실제 모델의 답변 정확도와 응답시간을 평가한 뒤, 최신 챗봇판 배포와 학생 사용자 테스트를 진행합니다.
 
 최신 챗봇판의 외부 배포 완료는 확인되지 않았다. 마지막 Cloudtype 점검 기록은 9월 26일의 관찰값이므로 오늘 운영 상태로 단정하지 않는다. 이번 점검은 로컬 파일·데이터·코드와 선별 회귀 검사에 한정했고, 외부 모델 호출·재크롤링·배포·commit/push는 수행하지 않았다. 챗봇 변경과 여러 문서가 작업 폴더의 미커밋 변경으로 남아 있으므로 릴리스할 변경 묶음과 버전 정리도 필요하다.
 
 ## 주요 근거
 
-- 현재 범위: [campusmate_chatbot_scope_20260927.md](campusmate_chatbot_scope_20260927.md)
+- 현재 범위: [campusrag_chatbot_scope_20260927.md](campusrag_chatbot_scope_20260927.md)
 - 분리와 당시 검증: [codex_chatbot_separation_report_20260927.md](codex_chatbot_separation_report_20260927.md)
 - 이전 작업 범위 감사: [codex_scope_audit_20260926.md](codex_scope_audit_20260926.md)
 - 데이터 버전과 구성: [unified_manifest.json](../data/unified_manifest.json), [통합 데이터](../data/unified_campus_knowledge.json), [적재 보고서](../data/integrated_eval_chroma_db/ingest_report.json)
 - 실제 모델 평가의 한계: [gemini_core5_live_review.md](gemini_core5_live_review.md), [multidomain_audit.md](multidomain_audit.md), [gemini_integration_correction_report.md](gemini_integration_correction_report.md)
-- 평가 기준: [campusmate_evaluation_baseline.md](campusmate_evaluation_baseline.md)
-- 실행과 배포 구분: [campusmate_local_container_guide.md](campusmate_local_container_guide.md)
+- 평가 기준: [campusrag_evaluation_baseline.md](campusrag_evaluation_baseline.md)
+- 실행과 배포 구분: [campusrag_local_container_guide.md](campusrag_local_container_guide.md)
 - 현재 코드: [backend/main.py](../backend/main.py), [frontend-web/src/App.tsx](../frontend-web/src/App.tsx), [core/rag.py](../core/rag.py)

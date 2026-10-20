@@ -1,7 +1,7 @@
 """
 tests/test_browser_e2e.py
 
-CampusMate Playwright Browser End-to-End Test Suite.
+CampusRAG Playwright Browser End-to-End Test Suite.
 Verifies real Chromium browser interaction with the FastAPI + React frontend:
 1. User registration, authentication, and server-side token revocation on logout (F3).
 2. Zero-Auto-Save enforcement: candidates extracted from chat messages are never auto-persisted (F2, F5).
@@ -135,8 +135,8 @@ def test_browser_e2e_full_lifecycle(browser: Browser, browser_server: tuple[str,
     try:
         # ── 1. 페이지 로드 & 기본 렌더링 검증 ─────────────────────────
         page.goto(base_url)
-        page.wait_for_selector("text=CampusMate")
-        assert "CampusMate" in page.content()
+        page.wait_for_selector("text=CampusRAG")
+        assert "CampusRAG" in page.content()
 
         # ── 2. 회원가입 및 로그인 흐름 (F3: 게스트 자동로그인 제거 검증) ───
         login_btn = page.locator("button:has-text('로그인')").first
@@ -538,7 +538,7 @@ def test_browser_e2e_full_lifecycle(browser: Browser, browser_server: tuple[str,
         time.sleep(0.5)
 
         # ── 10. 서버 로그아웃 및 토큰 즉시 무효화 검증 (F3, R4) ────────────────
-        user_token = page.evaluate("() => localStorage.getItem('campusmate_token')")
+        user_token = page.evaluate("() => localStorage.getItem('campusrag_token')")
         assert user_token is not None, "로그아웃 전에는 토큰이 존재해야 합니다."
 
         # 헤더의 로그아웃 버튼 클릭
@@ -549,7 +549,7 @@ def test_browser_e2e_full_lifecycle(browser: Browser, browser_server: tuple[str,
         page.wait_for_selector("button:has-text('로그인')", timeout=5000)
 
         # 브라우저 localStorage에서 token 제거 확인
-        stored_token = page.evaluate("() => localStorage.getItem('campusmate_token')")
+        stored_token = page.evaluate("() => localStorage.getItem('campusrag_token')")
         assert stored_token is None, "로그아웃 시 localStorage 토큰이 삭제되어야 합니다."
 
         # R4: 이전 토큰으로 /api/v1/auth/me 직접 호출 시 401 Unauthorized 반환 검증!
@@ -610,7 +610,7 @@ def test_browser_real_notice_source_card_flow(browser: Browser, browser_server: 
 
     try:
         page.goto(base_url)
-        page.wait_for_selector("text=CampusMate")
+        page.wait_for_selector("text=CampusRAG")
 
         # ── 1. 회원가입 및 로그인 ──────────────────────────────────────────
         login_nav_btn = page.locator("button:has-text('로그인')")
@@ -859,7 +859,7 @@ def test_mentoring_real_notice_title_conflict_browser_flow(
 
     try:
         page.goto(base_url)
-        page.wait_for_selector("text=CampusMate")
+        page.wait_for_selector("text=CampusRAG")
 
         # 1. 회원가입 및 로그인
         login_nav_btn = page.locator("button:has-text('로그인')")

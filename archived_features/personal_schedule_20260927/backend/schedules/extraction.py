@@ -1,7 +1,7 @@
 """
 backend/schedules/extraction.py
 
-CampusMate R2 자연어/공지 -> 일정 후보 추출 엔진.
+CampusRAG R2 자연어/공지 -> 일정 후보 추출 엔진.
 - 규칙/문맥 기반 결정적(Deterministic) 하이브리드 일반 파서 (하드코딩 제거)
 - 외부 LLM API(Gemini) 호출 없이 오프라인으로 100% 안전하게 동작
 - 동적 기준 일시(reference_time): 미지정 시 현재 Asia/Seoul 시각 사용

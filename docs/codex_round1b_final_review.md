@@ -11,7 +11,7 @@ R1-B 개인 일정 CRUD와 사용자별 접근 격리 백엔드를 승인한다.
 ## 검토 자료
 
 - docs/gemini_round1b_revision2_report.md
-- docs/campusmate_schedule_api_guide.md
+- docs/campusrag_schedule_api_guide.md
 - backend/schemas.py의 URL 검증과 backend/schedules/service.py의 시간/CRUD 처리
 - tests/test_schedules.py의 URL parametrize 및 migration 실패/복구 검사
 - 기존 인증·RAG·날짜 파싱 관련 회귀

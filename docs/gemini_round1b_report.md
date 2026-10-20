@@ -1,4 +1,4 @@
-# CampusMate R1-B 구현 완료 보고서 — 개인 일정 CRUD 및 사용자별 접근 격리
+# CampusRAG R1-B 구현 완료 보고서 — 개인 일정 CRUD 및 사용자별 접근 격리
 
 보고일: 2026-09-23  
 구현 담당: Gemini  
@@ -8,7 +8,7 @@
 
 ## 1. 개요 및 요약
 
-CampusMate R1-B 마일스톤에 따라, 기존 R1-A 계정·인증 및 파일 기반 영속 저장소를 기반으로 **사용자가 확인한 개인 일정의 CRUD 및 사용자별 접근 격리(BOLA/IDOR 방어) 백엔드**를 성공적으로 구현하고 검증을 완료했습니다.
+CampusRAG R1-B 마일스톤에 따라, 기존 R1-A 계정·인증 및 파일 기반 영속 저장소를 기반으로 **사용자가 확인한 개인 일정의 CRUD 및 사용자별 접근 격리(BOLA/IDOR 방어) 백엔드**를 성공적으로 구현하고 검증을 완료했습니다.
 
 ### 주요 달성 결과
 1. **SQLite 마이그레이션 v2 구축**: 기존 v1 `users` 및 `sessions` 테이블과 데이터를 100% 보존하며 신규 `personal_schedules` 테이블 및 2종 인덱스를 추가했습니다.
@@ -36,7 +36,7 @@ CampusMate R1-B 마일스톤에 따라, 기존 R1-A 계정·인증 및 파일 �
 | [수정] | `backend/main.py` | `schedules_router` 등록 (정적 파일 서빙 mount 전 등록) |
 | [수정] | `tests/test_auth_persistence.py` | Codex R1-A 최종 검수 피드백 반영: `dependency_overrides` 사본 저장/복구, 기본 DB 미접근 assertion 강화, 숫자 비밀번호 assert 분리 |
 | [신규] | `tests/test_schedules.py` | 5대 유형 CRUD, BOLA 격리, 서버 관리 필드 차단, 서울 날짜 일치, PATCH 의미, 캘린더 필터, v1->v2 보존, 서브프로세스 영속성 테스트 |
-| [신규] | `docs/campusmate_schedule_api_guide.md` | 개인 일정 REST API 개발자 및 사용자 가이드 (요청 예시, PATCH null 의미, 필터링 등) |
+| [신규] | `docs/campusrag_schedule_api_guide.md` | 개인 일정 REST API 개발자 및 사용자 가이드 (요청 예시, PATCH null 의미, 필터링 등) |
 | [신규] | `docs/gemini_round1b_report.md` | 본 R1-B 완료 보고서 |
 
 ---
@@ -129,7 +129,7 @@ tests/test_schedules.py::test_subprocess_schedule_persistence PASSED     [100%]
 실행 결과:
 ```text
 ========================================================================
- CampusMate RAG 대표 10사례 근거 전수 대조 검증 (Read-Only)
+ CampusRAG RAG 대표 10사례 근거 전수 대조 검증 (Read-Only)
 ========================================================================
 Data file: data/unified_campus_knowledge.json (4,782,727 bytes)
 Expected SHA-256: c6969ec41faa332b660186cf5407f07dc9621fcbccd2158e124e9b62c225359e
@@ -173,7 +173,7 @@ Loaded 1,366 documents into memory.
 
 Codex의 R1-A 최종 재검수 피드백 3건을 `tests/test_auth_persistence.py`에 충실히 반영했습니다:
 1. **`dependency_overrides` 사본 저장 및 복원**: fixture 시작 시 `orig_overrides = dict(app.dependency_overrides)`를 저장하고 `finally`에서 `clear()` 후 `update(orig_overrides)`로 복구하도록 개선.
-2. **`test_default_account_db_isolation` 검증 강화**: `config.AUTH_DB_PATH`가 실제 임시 경로를 가리키고 `data/campusmate.db`와 상이함을 assert하며, v1/v2 테이블(`personal_schedules` 포함) 생성을 명시적으로 검증.
+2. **`test_default_account_db_isolation` 검증 강화**: `config.AUTH_DB_PATH`가 실제 임시 경로를 가리키고 `data/campusrag.db`와 상이함을 assert하며, v1/v2 테이블(`personal_schedules` 포함) 생성을 명시적으로 검증.
 3. **숫자 비밀번호 assert 분리**: `or` 조건문을 제거하고 `assert "12345678" not in reg_type.text`와 `assert any(err["type"] == "string_type" for err in reg_type.json()["detail"])`를 독립적으로 검증.
 
 ---
