@@ -6,7 +6,7 @@ CampusRAG는 한성대학교의 공개 공지, 학사 안내, FAQ와 서식을 �
 
 - 기준 저장소: [jwlee1008/HSChatBot](https://github.com/jwlee1008/HSChatBot), 브랜치 `main`
 - [문서 목록](docs/README.md) · [저장소 구성과 형상관리](docs/repository_structure.md)
-- [중간발표 PPT와 10분 대본](outputs/campusrag_midterm_20261019/README.md)
+- [중간발표 최종 PPT와 Word 대본](outputs/campusrag_midterm_final_20261021/README.md): 8장, 설명 7분·시연 3분
 - [홈서버 최신 코드·명칭 적용 및 발표 인계 프롬프트](docs/campusrag_home_server_presentation_handoff_20261021.md)
 - [최신 설계 산출물 4종](outputs/campusrag_design_20261018/README.md) · [제품 요구사항과 수행 계획](docs/chatbot_release_20261007/README.md)
 
