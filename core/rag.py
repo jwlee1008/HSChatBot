@@ -208,10 +208,14 @@ class CampusRAG:
 
     def _load_local_llm(self) -> BaseLLM:
         """HuggingFace 로컬 모델을 로드한다."""
+        import os
+        import torch
         from langchain_huggingface import HuggingFacePipeline
         from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
         device = config.get_device()
+        if device == "cpu":
+            torch.set_num_threads(min(os.cpu_count() or 4, 8))
         logger.info("로컬 LLM 로딩: %s (device: %s)", config.LOCAL_LLM_MODEL, device)
 
         tokenizer = AutoTokenizer.from_pretrained(config.LOCAL_LLM_MODEL)
@@ -230,6 +234,7 @@ class CampusRAG:
             return_full_text=False,  # 프롬프트 제외, 생성 텍스트만 반환
             do_sample=False,
             repetition_penalty=1.05,
+            clean_up_tokenization_spaces=False,
         )
 
         def chat_prompt(prompt):
@@ -777,9 +782,10 @@ class CampusRAG:
                 "error": None,
             }
         else:
+            max_chars = 300 if provider == "local" and config.get_device() == "cpu" else None
             answer, meta = self._invoke_llm_with_error_handling({
                 "question": question,
-                "context": format_retrieved_docs(context_docs),
+                "context": format_retrieved_docs(context_docs, max_chars_per_doc=max_chars),
             })
 
         # LLM이 관련 공지를 찾지 못했다고 답변한 경우 출처 카드 비우기

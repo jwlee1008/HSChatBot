@@ -17,7 +17,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:53.996624+00:00"
+    "last_checked_at": "2026-10-14T21:06:08.276034+00:00"
   },
   {
     "id": "bb0451ae80e4c7e878f672792107f40979c5183fc4629a3df136b00f12981dd9",
@@ -42,7 +42,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:31.208716+00:00"
+    "last_checked_at": "2026-10-11T21:03:45.055185+00:00"
   },
   {
     "id": "e2d5d72fa9140dc88b52ca807bc8c85345805eff37caf5c78a9bbae1539c5dbd",
@@ -67,7 +67,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:32.198760+00:00"
+    "last_checked_at": "2026-10-11T21:03:46.060068+00:00"
   },
   {
     "id": "a7998db0b055141b00d000b5903bb671cbb815f5d3bfd06e35000c8e8e991aa3",
@@ -334,7 +334,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:42.969315+00:00"
+    "last_checked_at": "2026-10-18T21:03:38.417710+00:00"
   },
   {
     "id": "22bd8822f040c11e1896e9e789aae2824f06c2b87643c2dfe83872bdb5bc5e78",
@@ -357,7 +357,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:43.923461+00:00"
+    "last_checked_at": "2026-10-18T21:03:39.419933+00:00"
   },
   {
     "id": "292c3dddf2eb25cae1761f94f3e1757b4fd31c4ff1fedc6018076d5dd39d5d9c",
@@ -380,7 +380,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:44.928768+00:00"
+    "last_checked_at": "2026-10-16T09:58:33.247140+00:00"
   },
   {
     "id": "229e245197923997761efa929c2b13738c0601b6df34a06aaea47d27c70ce36e",
@@ -412,7 +412,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:45.937336+00:00"
+    "last_checked_at": "2026-10-16T09:58:34.237121+00:00"
   },
   {
     "id": "d25507b92d8c26858a77a96480d47426bd073b533f922ac6feaa1d1de932d77a",
@@ -432,7 +432,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:46.945481+00:00"
+    "last_checked_at": "2026-10-16T09:58:35.240221+00:00"
   },
   {
     "id": "9424524178915da708d40717bd5964f0db42e083be3db6fcfbb621d78d0df702",
@@ -455,7 +455,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:47.941592+00:00"
+    "last_checked_at": "2026-10-16T09:58:36.241472+00:00"
   },
   {
     "id": "00b97b74dfb500ed98904788198153b55ac46d6cd7f103af5e7c5909bb841813",
@@ -475,7 +475,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:48.956686+00:00"
+    "last_checked_at": "2026-10-16T09:58:37.243805+00:00"
   },
   {
     "id": "24aed7b079cb200cc5237e5838d96506b97cb35a3ea948efae41c431a51feb49",
@@ -495,7 +495,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:49.948586+00:00"
+    "last_checked_at": "2026-10-16T09:58:38.235707+00:00"
   },
   {
     "id": "f150d176d832e83a8c4954245442c917a7e20991b783ec48d2b0b25760276a67",
@@ -518,7 +518,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:50.951242+00:00"
+    "last_checked_at": "2026-10-16T09:58:39.241006+00:00"
   },
   {
     "id": "3251139b3b925877c0045fd058a47a22eb43ff036e38a855e0d063adb192fce4",
@@ -538,7 +538,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:51.945369+00:00"
+    "last_checked_at": "2026-10-14T21:06:06.252871+00:00"
   },
   {
     "id": "476c839c456d61bc170ec1d76f81202d864ee6d8ce30d19933d5f9e194633bd6",
@@ -558,7 +558,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:52.958080+00:00"
+    "last_checked_at": "2026-10-14T21:06:07.258164+00:00"
   },
   {
     "id": "37b58655d7271b471d53bde39655361b46f8d746c2b5153f248305c0b27a667a",
@@ -581,7 +581,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:54.980756+00:00"
+    "last_checked_at": "2026-10-14T21:06:09.258986+00:00"
   },
   {
     "id": "70c756d2fa1e745299ba0f4f3f6c337223cfd6015ae0ec536dba332acba6b1f3",
@@ -606,7 +606,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:55.996123+00:00"
+    "last_checked_at": "2026-10-14T21:06:10.274565+00:00"
   },
   {
     "id": "0d7016f6e31e3375ec9f3abc76bf7852f06a2c133a82436b8b212480ab6f2bed",
@@ -626,7 +626,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:57.987890+00:00"
+    "last_checked_at": "2026-10-14T21:06:11.267291+00:00"
   },
   {
     "id": "5bdbf4ae564d300f15f7a4f1c091ffdeab510e1120c39db746379c15d28ab500",
@@ -649,7 +649,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:59.010898+00:00"
+    "last_checked_at": "2026-10-14T21:06:12.242942+00:00"
   },
   {
     "id": "9bd24496a22ff2e5da92c7a8da235e808fdc83e26f314e9eec4cc623c3370dbd",
@@ -674,7 +674,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:00.065908+00:00"
+    "last_checked_at": "2026-10-14T21:06:13.283555+00:00"
   },
   {
     "id": "ad3c684579f0d5390f28f334e5219d3250b7e922c8fc39b61caa2ec605eea2fd",
@@ -690,7 +690,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:20:01.036088+00:00"
+    "last_checked_at": "2026-10-14T21:06:14.268041+00:00"
   },
   {
     "id": "02c3052a6b5e35e97a98cb618f99df6579ae67baa8c1b9334f38c9302d4ff9d5",
@@ -706,7 +706,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:20:02.070885+00:00"
+    "last_checked_at": "2026-10-14T21:06:15.267387+00:00"
   },
   {
     "id": "70458b25fd21ba5f6c3f8009c1766fa4f2ee886e53000dfba4d3c9c5a60359b8",
@@ -726,7 +726,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:03.007576+00:00"
+    "last_checked_at": "2026-10-13T21:03:30.973508+00:00"
   },
   {
     "id": "f0a5104c93b8ca68851e56a0bcc121f40da33b496f276b2f459db45c9a7a91be",
@@ -749,7 +749,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:04.010282+00:00"
+    "last_checked_at": "2026-10-13T21:03:31.970973+00:00"
   },
   {
     "id": "641c7151cc76cfcbc8023040bd7886392a36970fb5892e66469a49caf1143993",
@@ -772,7 +772,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:05.028730+00:00"
+    "last_checked_at": "2026-10-13T21:03:32.981921+00:00"
   },
   {
     "id": "4d5a64d2f8d3bc3ea24a23826a9bbf2301a56bae6c3e49110cb5e12d5cf99c78",
@@ -797,7 +797,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:06.027501+00:00"
+    "last_checked_at": "2026-10-13T21:03:33.980482+00:00"
   },
   {
     "id": "95f06d9e8cc31101383c6311d4bd645efcaebd503b9f5ef0760609fcb9e37809",
@@ -842,7 +842,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:07.035462+00:00"
+    "last_checked_at": "2026-10-13T21:03:34.964808+00:00"
   },
   {
     "id": "32f427c75c13f2a34a3b50e2c848ffac4a483176d25b27e8b288541a07c5eb6f",
@@ -900,7 +900,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:08.039257+00:00"
+    "last_checked_at": "2026-10-13T21:03:35.965632+00:00"
   },
   {
     "id": "7315051911dd61481bf87fa8f2347f5b01e7be395623a44d9e41bdd14fa5d308",
@@ -929,7 +929,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:09.071729+00:00"
+    "last_checked_at": "2026-10-13T21:03:36.998945+00:00"
   },
   {
     "id": "4d0d9d3dbeaaa3864a011f5e72cef6778747d3d9cd429cbc38bb9596fd1928ef",
@@ -952,7 +952,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:10.046577+00:00"
+    "last_checked_at": "2026-10-13T21:03:37.966179+00:00"
   },
   {
     "id": "e7c409c29d0d66ffbb2faa5912cfd6ce662aaa72e054c02061fd202e4541b8de",
@@ -972,7 +972,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:11.042527+00:00"
+    "last_checked_at": "2026-10-13T21:03:38.964322+00:00"
   },
   {
     "id": "4a1f131b97d5f6a2eadf9dd80d13938c73bc2cdf1cbd0a3bc5d2a90801a95518",
@@ -992,7 +992,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:12.039130+00:00"
+    "last_checked_at": "2026-10-13T21:03:39.969361+00:00"
   },
   {
     "id": "92471b14fc212f9069d55120b385f4667ebce8c34a01af430e7e11ada9b5caba",
@@ -1015,7 +1015,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:13.079398+00:00"
+    "last_checked_at": "2026-10-13T21:03:41.002562+00:00"
   },
   {
     "id": "332c220d0da048fe3e2f6307cc6524bd0b2441bf8df3504e9e76197660960afe",
@@ -1041,7 +1041,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:14.109516+00:00"
+    "last_checked_at": "2026-10-13T21:03:41.969092+00:00"
   },
   {
     "id": "64e16365748d99bd4a1881e4db4e76c560090f016581edea6df6dcca16da5b15",
@@ -1070,7 +1070,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:15.069499+00:00"
+    "last_checked_at": "2026-10-12T21:03:27.820791+00:00"
   },
   {
     "id": "fce30d21da519cd8516ed9ba29e9fee0ec30d896311ffb38bd14da8d25df3202",
@@ -1093,7 +1093,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:16.076943+00:00"
+    "last_checked_at": "2026-10-12T21:03:28.820972+00:00"
   },
   {
     "id": "dbc59f5fe465799dcbef54ca163341193fadd231d1ee6a96b54836c10f23702f",
@@ -1113,7 +1113,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:17.076312+00:00"
+    "last_checked_at": "2026-10-12T21:03:29.825868+00:00"
   },
   {
     "id": "5a597e1b8baad31f6a4a032392f09a0fab08b0dc078f27364d490be96d77501c",
@@ -1148,7 +1148,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:19.077563+00:00"
+    "last_checked_at": "2026-10-12T21:03:30.820106+00:00"
   },
   {
     "id": "e8ef6be49a4035bf045418f414546e2acf10952f2e134f168183eed0d8c10864",
@@ -1164,7 +1164,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:20:20.135543+00:00"
+    "last_checked_at": "2026-10-12T21:03:31.852243+00:00"
   },
   {
     "id": "4a423b5d0f6995c1404c3a4f1308d9f2e48a4f54546e005cb47e6e37f66856cd",
@@ -1185,7 +1185,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:21.096585+00:00"
+    "last_checked_at": "2026-10-12T21:03:32.821223+00:00"
   },
   {
     "id": "5366082b5b2f789578561d6e7a87594b8dba0d71c88c05d66afc46ef08df9c18",
@@ -1208,7 +1208,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:22.101149+00:00"
+    "last_checked_at": "2026-10-12T21:03:33.825677+00:00"
   },
   {
     "id": "a4e0bb630f37c4cb53c98a2aeee6df677fedce730ad4ff542251f5e27d1a9944",
@@ -1231,7 +1231,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:23.102774+00:00"
+    "last_checked_at": "2026-10-12T21:03:34.820801+00:00"
   },
   {
     "id": "74be050ea0d7af56d97e701666c6d7e478cf134632ddf1336001ce7caa312558",
@@ -1251,7 +1251,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:24.115812+00:00"
+    "last_checked_at": "2026-10-12T21:03:35.824733+00:00"
   },
   {
     "id": "1a676b27ed5c8142545bbfb02958d03031276fbb0f5491a7264b47471e598ae1",
@@ -1276,7 +1276,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:25.135162+00:00"
+    "last_checked_at": "2026-10-12T21:03:36.849909+00:00"
   },
   {
     "id": "a27063c4dc9b7bbea3269768c2cc62bed31b01c55f3b5e28bf4eb4b1f880d106",
@@ -1296,7 +1296,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:26.096431+00:00"
+    "last_checked_at": "2026-10-12T21:03:37.819815+00:00"
   },
   {
     "id": "bd3f3da3c35a25c30695d8c17b74fd329b1c3e00c124d7bebcf8defa1ac8f8e8",
@@ -1316,7 +1316,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:27.116207+00:00"
+    "last_checked_at": "2026-10-12T21:03:38.824407+00:00"
   },
   {
     "id": "eafd4f67b51a3baa360cf453e50753d315856db67d0b0c69118249af418df88f",
@@ -1348,7 +1348,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:28.128127+00:00"
+    "last_checked_at": "2026-10-11T21:03:42.080493+00:00"
   },
   {
     "id": "c977758c36b8c341eb4e61e1ea589c47ba2399ecd36e14b19773ac6ccf1e40ee",
@@ -1368,7 +1368,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:29.136409+00:00"
+    "last_checked_at": "2026-10-11T21:03:43.030794+00:00"
   },
   {
     "id": "8a9929b1fe30c18f095a59d0ed10aa04c810029f5fdf552044d59c72bfa1cc0b",
@@ -1388,7 +1388,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:30.228601+00:00"
+    "last_checked_at": "2026-10-11T21:03:44.041306+00:00"
   },
   {
     "id": "01e20a552206eb98ccf6e45edfee8a7b1dfc455867e7e05489bc239dce09c342",
@@ -1411,7 +1411,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:33.160136+00:00"
+    "last_checked_at": "2026-10-11T21:03:47.035520+00:00"
   },
   {
     "id": "1532b483c5bafcdb623d4a883784d3e6fa5066b8d80c675d8cdbce72fb5e8c47",
@@ -1440,7 +1440,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:34.179475+00:00"
+    "last_checked_at": "2026-10-11T21:03:48.034589+00:00"
   },
   {
     "id": "3a6f38ae2050d4b2e234134e5f6195ca02bc3f9e1374567c088cdf134e89f661",
@@ -1465,7 +1465,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:35.216428+00:00"
+    "last_checked_at": "2026-10-11T21:03:49.049331+00:00"
   },
   {
     "id": "30107064ce958d80d29d78b5f49db3d441056f460c6c70adf2d870cb2c89dd6b",
@@ -1485,7 +1485,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:36.205049+00:00"
+    "last_checked_at": "2026-10-11T21:03:51.041838+00:00"
   },
   {
     "id": "f41456827b33a6b5d9d36cb973b2c02178f4ec6e080cd4e232c0b816fc757de8",
@@ -1508,7 +1508,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:37.203253+00:00"
+    "last_checked_at": "2026-10-11T21:03:52.037275+00:00"
   },
   {
     "id": "bf25559f6eebd233e4e2e172fc3a33f84e8e1893baccb775531dabd70af670ae",
@@ -1528,7 +1528,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:38.216750+00:00"
+    "last_checked_at": "2026-10-11T21:03:53.033165+00:00"
   },
   {
     "id": "f71e9881af1135a30cae71e92ccd85c34b95f444f269369e62f7988689a7d33f",
@@ -1551,7 +1551,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:20:40.223111+00:00"
+    "last_checked_at": "2026-10-11T21:03:54.037369+00:00"
   },
   {
     "id": "cf28cffc6d69c90653cbdb7fcdf5d63ab127f8e1981d5e47f809958a20d675e8",
@@ -5659,7 +5659,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:38.894029+00:00"
+    "last_checked_at": "2026-10-18T21:03:33.415057+00:00"
   },
   {
     "id": "e3d0e7e4c002a85ae586982a0c000ebb46b1c494a6f0ab6577536818f696dc3c",
@@ -5690,7 +5690,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:39.898138+00:00"
+    "last_checked_at": "2026-10-18T21:03:34.408870+00:00"
   },
   {
     "id": "1b348e05fc9565f4abcf1a08cecfd21a02fb56ddcd49a16f536364ec4aa1ad96",
@@ -5721,7 +5721,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:40.909085+00:00"
+    "last_checked_at": "2026-10-18T21:03:36.417154+00:00"
   },
   {
     "id": "a74ae303ba7ace3c181ae2a1518d6f8a8d7195bb36f20aef9f598d3bc2faec1f",
@@ -5737,7 +5737,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:19:34.882618+00:00"
+    "last_checked_at": "2026-10-19T21:03:22.218875+00:00"
   },
   {
     "id": "3d311f899aca6d538b7d238184226c860226c36e2f592dd17b5237134ae27c73",
@@ -5762,7 +5762,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:36.890312+00:00"
+    "last_checked_at": "2026-10-18T21:03:31.428539+00:00"
   },
   {
     "id": "49ce49aefa070d20d4dd6b0d215c1a7dfcaf297aeb6adc846affb67bf53e1b11",
@@ -5790,7 +5790,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:37.878874+00:00"
+    "last_checked_at": "2026-10-18T21:03:32.408650+00:00"
   },
   {
     "id": "05362cbbb2034c1011349115ec8f374138a2263c1412cc040c99fb21b60f34d7",
@@ -5818,7 +5818,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:41.924940+00:00"
+    "last_checked_at": "2026-10-18T21:03:37.416264+00:00"
   },
   {
     "id": "e26fc75c15c66cf4a984d8875fa456c614778c00097b8c3a99bb3d993cfd1b87",
@@ -23402,12 +23402,12 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:30.222608+00:00"
+    "last_checked_at": "2026-10-19T21:00:33.190637+00:00"
   },
   {
     "id": "f54327a70aa60210dfc457a61aeeca8adf5adfa86083ff1c446d39615db3224c",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225181/artclView.do",
-    "title": "2026학년도 2학기 다전공(복수/부전공, 연계전공, 제3트랙, MD과정) 신청취소 안내",
+    "title": "학사 2026학년도 2학기 다전공(복수/부전공, 연계전공, 제3트랙, MD과정) 신청취소 안내",
     "date": "2026-10-02",
     "source": "학사운영팀",
     "category": "공지",
@@ -23418,7 +23418,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:17:31.228736+00:00"
+    "last_checked_at": "2026-10-19T21:01:49.206094+00:00"
   },
   {
     "id": "180301d85e517849c9344a0b8741ff06f400e33f5994e14b8322f534c91e21dd",
@@ -23429,13 +23429,13 @@
     "category": "공지",
     "source_type": "notice",
     "board_id": "2127",
-    "content": "농협경제지주는 건강한 아침밥 문화를 확산하고 우리 쌀 소비를 활성화하기 위해\n농협 쌀 소비촉진 홍보대사 아일릿\n(ILLIT)\n과 함께\n「\nLike me Like\n米\n」\n아침밥 챌린지 및\n중간고사 시험준비를 하고 있는 한성대 학생들을 위한 행복米밥차 행사를\n진행하고자 합니다.\n많은 참여 바랍니다.\n■\n아침밥 챌린지 행사 안내\n-\n이벤트명\n:\n아일릿과 함께하는\n「\nLike me Like\n米\n」\n아침밥 챌린지\n-\n기간\n:\n2026. 10. 23.(\n금\n)\n까지\n-\n대상\n:\n한성대학교 학생을 포함한 이벤트 참여자 누구나\n-\n내용\n:\n아일릿\n(ILLIT)\n아침밥 템플릿 활용 나만의 아침밥 소개하기\n-\n참여방법\n:\n아래 이벤트 페이지 링크 또는 포스터 내\nQR\n코드를 통해 참여\n-\n혜택\n:\n추첨을 통해 한정판 아일릿 엽서 및 저당 쌀 시리얼\n·\n쌀 수프\n2\n종 증정\n(200\n명\n)\n▶\n이벤트 참여하기\nhttps://www.instagram.com/p/DdiXBfzieV4/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA\n==\n■\n행복米밥차 행사 안내\n-\n이벤트명\n:\n행복米밥차가 한성대학교에 찾아 옵니다.\n- 일시:\n2026년 10월 21일(수) 11:00 ~ 13:00\n* 재료 소진 시 조기 종료될 수 있습니다.\n- 장소:  한성대학교 미래관 앞\n- 메뉴: 참차마요 주먹밥, 김치지즈햄밥샌드\n- 대상: 한성대학교 재학생(모바일 학생증 확인 필수)",
+    "content": "농협경제지주는 건강한 아침밥 문화를 확산하고 우리 쌀 소비를 활성화하기 위해\n농협 쌀 소비촉진 홍보대사 아일릿\n(ILLIT)\n과 함께\n「\nLike me Like\n米\n」\n아침밥 챌린지 및\n중간고사 시험준비를 하고 있는 한성대 학생들을 위한 행복米밥차 행사를\n진행하고자 합니다.\n많은 참여 바랍니다.\n■\n아침밥 챌린지 행사 안내\n-\n이벤트명\n:\n아일릿과 함께하는\n「\nLike me Like\n米\n」\n아침밥 챌린지\n-\n기간\n:\n2026. 10. 23.(\n금\n)\n까지\n-\n대상\n:\n한성대학교 학생을 포함한 이벤트 참여자 누구나\n-\n내용\n:\n아일릿\n(ILLIT)\n아침밥 템플릿 활용 나만의 아침밥 소개하기\n-\n참여방법\n:\n아래 이벤트 페이지 링크 또는 포스터 내\nQR\n코드를 통해 참여\n-\n혜택\n:\n추첨을 통해 한정판 아일릿 엽서 및 저당 쌀 시리얼\n·\n쌀 수프\n2\n종 증정\n(200\n명\n)\n▶\n이벤트 참여하기\nhttps://www.instagram.com/p/DdiXBfzieV4/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA\n==\n■\n행복米밥차 행사 안내\n-\n이벤트명\n:\n행복米밥차가 한성대학교에 찾아 옵니다.\n- 일시:\n2026년 10월 22일(목) 11:00 ~ 13:00\n* 재료 소진 시 조기 종료될 수 있습니다.\n- 장소:  한성대학교 미래관 앞\n- 메뉴: 참차마요 주먹밥, 김치지즈햄밥샌드\n- 대상: 한성대학교 재학생(모바일 학생증 확인 필수)",
     "images": [
       {
         "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000414/(260928)_아일릿_포스터_최종.png"
       },
       {
-        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000414/KakaoTalk_20260928_153649755_1.png"
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000418/행복밥차.png"
       },
       {
         "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000414/KakaoTalk_20260928_153649755_01.png"
@@ -23450,12 +23450,12 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:32.253641+00:00"
+    "last_checked_at": "2026-10-19T21:00:34.190959+00:00"
   },
   {
     "id": "0f990d084ddcb1088636015fb2bf43c91348694e25772635c856678da510b3b8",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224995/artclView.do",
-    "title": "내일을 여는 상상 Insight 「마스터 클래스」 5회차 신청 안내",
+    "title": "한성공지 내일을 여는 상상 Insight 「마스터 클래스」 5회차 신청 안내",
     "date": "2026-09-23",
     "source": "학생복지팀",
     "category": "공지",
@@ -23470,12 +23470,12 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:33.238722+00:00"
+    "last_checked_at": "2026-10-19T21:02:23.220527+00:00"
   },
   {
     "id": "1fee7030449c3973aa0e7357157b532ac5039f3ad006fba6b74b782ca417a986",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224924/artclView.do",
-    "title": "한성대 학군단에서 '26년도 후반기 67·68기 학군사관(ROTC) 후보생을 모집합니다.",
+    "title": "한성공지 한성대 학군단에서 '26년도 후반기 67·68기 학군사관(ROTC) 후보생을 모집합니다.",
     "date": "2026-09-21",
     "source": "학생군사교육단",
     "category": "공지",
@@ -23493,12 +23493,12 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:34.225708+00:00"
+    "last_checked_at": "2026-10-19T21:02:55.213371+00:00"
   },
   {
     "id": "1b367487432cc0a5651954e2222321837e230d68c34580ec36b836238cec622d",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225287/artclView.do",
-    "title": "채용정보 [추천채용] Hermès Korea 세일즈 신입(1년 약) (~10/29) 새글",
+    "title": "채용정보 [추천채용] Hermès Korea 세일즈 신입(1년 약) (~10/29)",
     "date": "2026-10-08",
     "source": "지역청년고용팀",
     "category": "공지",
@@ -23513,12 +23513,12 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:35.260458+00:00"
+    "last_checked_at": "2026-10-19T21:01:20.196052+00:00"
   },
   {
     "id": "374bc0f019a8cb6cb737a3f6c47df43180a2f6f63f8146199b3cd321311be2aa",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225283/artclView.do",
-    "title": "현장실습 2027년도 상반기 중남미 지역기구 파견 인턴 선발 공고 홍보 (학생 개별 지원) 새글",
+    "title": "현장실습 2027년도 상반기 중남미 지역기구 파견 인턴 선발 공고 홍보 (학생 개별 지원)",
     "date": "2026-10-08",
     "source": "현장실습지원센터",
     "category": "공지",
@@ -23538,12 +23538,12 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:36.268679+00:00"
+    "last_checked_at": "2026-10-19T21:01:21.216370+00:00"
   },
   {
     "id": "b238861675dd5f9377ec40374d30165a6c1bce262c3d5cd68811c0443ebb1a44",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225278/artclView.do",
-    "title": "한성공지 [도봉구육아종합지원센터] '제 15회 도담도담놀이터' 자원봉사자 모집 새글",
+    "title": "한성공지 [도봉구육아종합지원센터] '제 15회 도담도담놀이터' 자원봉사자 모집",
     "date": "2026-10-08",
     "source": "ESG센터",
     "category": "공지",
@@ -23558,12 +23558,12 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:37.238755+00:00"
+    "last_checked_at": "2026-10-19T21:01:22.187048+00:00"
   },
   {
     "id": "7e42de2a8b63a1b5698bb519ef2de40b03f206e303a4389f7992b1eb4dabd802",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225275/artclView.do",
-    "title": "교외장학금 [우양재단] 2026년 동행 장학생 모집 안내 새글",
+    "title": "교외장학금 [우양재단] 2026년 동행 장학생 모집 안내",
     "date": "2026-10-07",
     "source": "학생복지팀",
     "category": "공지",
@@ -23583,12 +23583,12 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:38.254940+00:00"
+    "last_checked_at": "2026-10-19T21:01:23.205731+00:00"
   },
   {
     "id": "c03a158b77c22543c3863489a6806768fc2b9bf666428aab74d084c34ea9da23",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225274/artclView.do",
-    "title": "교외장학금 26년 든든학업지원금 안내 새글",
+    "title": "교외장학금 26년 든든학업지원금 안내",
     "date": "2026-10-07",
     "source": "학생복지팀",
     "category": "공지",
@@ -23608,12 +23608,12 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:39.239710+00:00"
+    "last_checked_at": "2026-10-19T21:01:24.199711+00:00"
   },
   {
     "id": "240be2b02ad2032a0fe636483666ab605a14e1c2616d1a9823ba9aab558dd738",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225273/artclView.do",
-    "title": "교외장학금 [대산농촌재단] 2027년도 대산농촌재단 장학생 선발 안내 새글",
+    "title": "교외장학금 [대산농촌재단] 2027년도 대산농촌재단 장학생 선발 안내",
     "date": "2026-10-07",
     "source": "학생복지팀",
     "category": "공지",
@@ -23633,12 +23633,12 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:40.252017+00:00"
+    "last_checked_at": "2026-10-19T21:01:25.185649+00:00"
   },
   {
     "id": "03df15ff16ca7038d5299deb0be6c774b4e915349e2c8219c96974ad7c6cb477",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225267/artclView.do",
-    "title": "한성공지 [채용] 학군단(학생군사교육단)에서 행정조교 채용 공고 새글",
+    "title": "한성공지 [채용] 학군단(학생군사교육단)에서 행정조교 채용 공고",
     "date": "2026-10-07",
     "source": "학생복지팀",
     "category": "공지",
@@ -23658,12 +23658,12 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:41.284167+00:00"
+    "last_checked_at": "2026-10-19T21:01:26.197178+00:00"
   },
   {
     "id": "7d304429719fca2d7f1e02e65e3db7c8dcf6dd6dcf217b8ef7633d13054dee96",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225265/artclView.do",
-    "title": "기타 [가천대/ 대학일자리플러스센터] 거점형 특화 프로그램 [실시간 ZOOM] (~10/21,13:00) 새글",
+    "title": "기타 [가천대/ 대학일자리플러스센터] 거점형 특화 프로그램 [실시간 ZOOM] (~10/21,13:00)",
     "date": "2026-10-07",
     "source": "지역청년고용팀",
     "category": "공지",
@@ -23681,12 +23681,12 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:42.297514+00:00"
+    "last_checked_at": "2026-10-19T21:01:27.196155+00:00"
   },
   {
     "id": "f3193466ed6a78d6ec9f867216e034b00d6947b1ec8a1e3c6690007762329d49",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225264/artclView.do",
-    "title": "채용정보 [에이아이티스토리(주)] AI 및 플랫폼 신입 개발자 모(~10/15) 새글",
+    "title": "채용정보 [에이아이티스토리(주)] AI 및 플랫폼 신입 개발자 모(~10/15)",
     "date": "2026-10-07",
     "source": "지역청년고용팀",
     "category": "공지",
@@ -23707,12 +23707,12 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:43.279554+00:00"
+    "last_checked_at": "2026-10-19T21:01:28.197893+00:00"
   },
   {
     "id": "ffe226b8041c143d38863e314d52758fbad5eb7badbf6cf134606a9f94efd674",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225261/artclView.do",
-    "title": "강소기업채용 ★[26.10.07.]강소 및 교내 추천 채용 리스트★ 새글",
+    "title": "강소기업채용 ★[26.10.07.]강소 및 교내 추천 채용 리스트★",
     "date": "2026-10-07",
     "source": "지역청년고용팀",
     "category": "공지",
@@ -23727,7 +23727,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:44.304800+00:00"
+    "last_checked_at": "2026-10-19T21:01:29.207638+00:00"
   },
   {
     "id": "b58dfc8f38ee90f7718da5050df225df18af4f054a7c5f8920ebc660f456bdbb",
@@ -23767,7 +23767,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:46.342044+00:00"
+    "last_checked_at": "2026-10-19T21:01:30.225879+00:00"
   },
   {
     "id": "5353eba64305b7d05683b02a6e0959a334fa505fd203e4c993e462e1500e11c9",
@@ -23796,7 +23796,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:47.299555+00:00"
+    "last_checked_at": "2026-10-19T21:01:31.191785+00:00"
   },
   {
     "id": "6cca2c4a202a144a2a3ce13c94c1379208924ba8a97044a42b1bfee136cb8270",
@@ -23825,7 +23825,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:48.304708+00:00"
+    "last_checked_at": "2026-10-19T21:01:32.192370+00:00"
   },
   {
     "id": "0316d7a6d245f36530bf8f0cf202dec84415352056c26505c33cd1f1c84b37c5",
@@ -23848,7 +23848,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:49.304271+00:00"
+    "last_checked_at": "2026-10-19T21:01:33.190972+00:00"
   },
   {
     "id": "0d8960f03ec6840d26c2cc0df10fc9d24cbb5a80c42184d13ea521578a76eb55",
@@ -23869,7 +23869,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:50.320076+00:00"
+    "last_checked_at": "2026-10-19T21:01:34.200274+00:00"
   },
   {
     "id": "eb485959bc9ff60c78f320345f452529cea2f49aadc2fbafe0644aadf0c8a859",
@@ -23892,7 +23892,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:51.319275+00:00"
+    "last_checked_at": "2026-10-19T21:01:35.194280+00:00"
   },
   {
     "id": "bbcf4ea8167d54e9e948c8dfba9ea2c357f7e347c710a7d9982a194205a4427c",
@@ -23917,7 +23917,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:52.338646+00:00"
+    "last_checked_at": "2026-10-19T21:01:37.209215+00:00"
   },
   {
     "id": "0156a1fe2b78518c5f70fc9c0ec159aa09b2f76617d2322eaa37ee934d0c0aef",
@@ -23955,7 +23955,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:53.346172+00:00"
+    "last_checked_at": "2026-10-19T21:01:38.191828+00:00"
   },
   {
     "id": "9d7695a480ed50213769599d4fe77b822294c4354b3385604947b6dee91c7a36",
@@ -23983,7 +23983,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:55.336065+00:00"
+    "last_checked_at": "2026-10-19T21:01:39.196741+00:00"
   },
   {
     "id": "ec867a5b8527319c977862e49c228b091b043a8707b5c7b3c5ef17af253a1533",
@@ -24008,7 +24008,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:56.365682+00:00"
+    "last_checked_at": "2026-10-19T21:01:40.214791+00:00"
   },
   {
     "id": "53a062798a7a4192763751cf4f9c3796499d6a0646619997af5052c04584ed9e",
@@ -24033,7 +24033,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:57.360764+00:00"
+    "last_checked_at": "2026-10-19T21:01:41.217053+00:00"
   },
   {
     "id": "3acf71ccdcc67f32f9c3738eb23a025a26bd4417790704c29ae823ffcd250632",
@@ -24056,7 +24056,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:58.362453+00:00"
+    "last_checked_at": "2026-10-19T21:01:42.208563+00:00"
   },
   {
     "id": "5c2d69c81cda19e395da0846e9e9d8936236b94b2c84632eb2c0b2c6f3c03f2a",
@@ -24076,7 +24076,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:17:59.403193+00:00"
+    "last_checked_at": "2026-10-19T21:01:43.214541+00:00"
   },
   {
     "id": "53ecb9e87899a16bc25f097c23b69642b3737798ed4964c1d58498c61b08e229",
@@ -24092,7 +24092,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:18:00.441739+00:00"
+    "last_checked_at": "2026-10-19T21:01:44.224215+00:00"
   },
   {
     "id": "2ed8b36f3e00a25796d6a1cc7637e96844f2e0bf5287ff5d35c753cd08e31bf4",
@@ -24115,7 +24115,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:01.361645+00:00"
+    "last_checked_at": "2026-10-19T21:01:45.200485+00:00"
   },
   {
     "id": "d613aa682e3482a1a8fb576fccd3d2a81fec6bc09b285dbe96fdec86d1975c08",
@@ -24138,7 +24138,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:02.377822+00:00"
+    "last_checked_at": "2026-10-19T21:01:46.203152+00:00"
   },
   {
     "id": "132c8e129c17bbc5a0821258c995ecdeb455e8f6a53c73b8f1a3758dd590538f",
@@ -24163,7 +24163,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:03.395112+00:00"
+    "last_checked_at": "2026-10-19T21:01:47.198382+00:00"
   },
   {
     "id": "74f651f6bacc66cd3f09a04d83a7b437896ac5917600a79a5fd460b985b71045",
@@ -24188,7 +24188,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:04.384796+00:00"
+    "last_checked_at": "2026-10-19T21:01:48.212480+00:00"
   },
   {
     "id": "39b100b1811e311b04a4cc05a93b2a709a7f41437a0ee585b5c0143fcb057bbe",
@@ -24209,7 +24209,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:05.386128+00:00"
+    "last_checked_at": "2026-10-19T21:01:50.203020+00:00"
   },
   {
     "id": "2c599a9ccfe5ac2cff208dbfdc357bf8c52c43251fde9ecf860d52d3efcff148",
@@ -24229,7 +24229,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:06.384742+00:00"
+    "last_checked_at": "2026-10-19T21:01:51.200252+00:00"
   },
   {
     "id": "70b81aba849c6f905fe358f31093d664fe35ee9d1db7778de03bbff728834e60",
@@ -24249,7 +24249,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:07.385562+00:00"
+    "last_checked_at": "2026-10-19T21:01:52.194732+00:00"
   },
   {
     "id": "ba41db4e1e2d427e5cd3d6e36ac85ee7367cc8eea46b6b74bc900f66727cfa35",
@@ -24272,7 +24272,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:08.395578+00:00"
+    "last_checked_at": "2026-10-19T21:01:53.204621+00:00"
   },
   {
     "id": "5a3e6e3c74daf3cea6dc17af8bd0fcf834b80cd162b7761af1ad9b36cdf5492d",
@@ -24295,7 +24295,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:09.411874+00:00"
+    "last_checked_at": "2026-10-19T21:01:54.246083+00:00"
   },
   {
     "id": "f81376c3034ccc82e4c4c03ee872ee3c9c531fc950997d98c5277152b532ea05",
@@ -24318,7 +24318,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:10.415520+00:00"
+    "last_checked_at": "2026-10-19T21:01:55.207852+00:00"
   },
   {
     "id": "23042ce014d3f87a501ca6e1d41c1bf546852fe32af9b98b52556b46dbc5618f",
@@ -24341,7 +24341,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:11.426886+00:00"
+    "last_checked_at": "2026-10-19T21:01:56.205301+00:00"
   },
   {
     "id": "423dbe90ef538365fa2d5fc432b0fd2920fb184a68c0a131a99006ab34a9e8ed",
@@ -24364,7 +24364,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:12.433433+00:00"
+    "last_checked_at": "2026-10-19T21:01:58.213068+00:00"
   },
   {
     "id": "0cdc2e8aa678171e18aa222f58ee15fbebb81da9575a56eb92e9460056d861fa",
@@ -24384,18 +24384,18 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:13.523138+00:00"
+    "last_checked_at": "2026-10-19T21:01:59.207163+00:00"
   },
   {
     "id": "a22bab3ccc1f0b59e1634110a9d7cd84a61fe8df3a5cc0d6950fb215f3c1e9d7",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225151/artclView.do",
-    "title": "한성공지 [SW중심대학사업단] 2026학년도 2학기 「제머나이소프트」 인턴십 프로그램 참여 학생 모집",
+    "title": "한성공지 [SW중심대학사업단] 2026학년도 2학기 「제머나이소프트」 인턴십 프로그램 참여 학생 모집(기간연장~ 10/21(수)까지)",
     "date": "2026-10-01",
     "source": "SW중심대학사업단",
     "category": "공지",
     "source_type": "notice",
     "board_id": "2127",
-    "content": "SW\n중심대학사업단에서\n2026\n학년도\n2\n학기\n「\n제머나이소프트\n」\n인턴십 프로그램 참여 학생을 모집합니다\n.\n관심 있는 학생들의 많은 참여 바랍니다\n.\n1.\n참여대상\n-\n한성대학교\n3~4\n학년 재학생 중\nSW\n학과 재학생\n- SW\n학과 학생\n: 1\n트랙이\n\"\n컴퓨터공학부\n[\n모바일소프트웨어트랙\n,\n빅데이터트랙\n,\n디지털콘텐츠\n·\n가상현실트랙\n,\n웹공학트랙\n], AI\n응용학과\n,\n융합보안학과\n\"\n인 학생\n※\n휴학생\n,\n졸업유예자\n,\n수료자\n,\n졸업생 참여 불가\n2.\n모집개요\n-\n기업명\n:\n제머나이소프트\n(\n서울특별시 마포구 월드컵북로\n402,\n상암동 케이지아이티센터\n)\n-\n모집인원\n: 4\n명\n-\n자격요건 및 우대사항\n담당업무\n- MYMY 아카이브 기능·성능·보안·UX 분석 및 개선점 도출\n- REST API 문서 분석 및 연동 테스트(HTTP 통신, JSON 처리, API 키 인증)\n- 개선 제안서 작성(예시 방향: 시맨틱 검색·추천 고도화, 홈페이지 연계 백엔드 서비스, AI 기반 미디어 검색 서비스, 그래프·지도·얼굴인식API 활용 서비스 등)\n- API 기반 프로토타입 설계·구현 및 테스트\n- 결과물 시연 및 최종 보고서 작성\n자격요건\n- AI\n응용학과\n,\n컴퓨터공학부\n,\n융합보안학과\n3~4\n학년\n- RESTful\nAPI\n연동\n기초\n역량\n보유자\n(HTTP\n통신\n,\nJSON\n처리\n,\nAPI\n키\n인증\n)\n-\n백엔드\n개발\n언어\n1\n개\n이상\n활용\n가능자\n(Node.js\n또는\nPython)\n우대사항\n-\n웹\n프론트엔드\n기초\n경험자\n(React\n등\n)\n- AI(LLM,\nRAG,\n임베딩\n),\nWebhook,\n보안\n도구\n경험자\n-\n미디어\n검색\n·\n추천\n,\n그래프\n·\n지도\n·\n얼굴인식\nAPI\n활용\n프로젝트\n경험자\n3.\n실습내용\n실습기관 부서명\n개발부서\n직무명\nOpen API\n를 활용한\nMYMY\n미디어아카이브\n(MAM)\n개선\n교육목표\n미디어 자산관리 플랫폼과\nopen API\n를 다루며 문제정의\n-\n분석\n/\n개발\n-\n검증\n-\n보고의 전 과정을 경험한다\n직무개요\n제머나이소프트\n자사의\nMYMY\n미디어아카이브\n(MAM)\n솔루션을\n직접\n사용\n·\n분석하여\n기능\n·\n성능\n·\n보안\n·UX\n개선\n아이디어를\n도출하고\n,\n제공된\nAPI\n를\n활용하여\n개선사항을\n설\n계\n·\n구현한\n후\n시연까지\n수행한다\n.\n구분\n/\n주차\n직무교육 내용\n실습 내용\n1\n주차\nMYMY\n솔루션\n이해\n및\n기본\n사용\n실습 계정 생성\n, MYMY\n주요 기능 직접 사용\n,\n기본 검색\n·\n조회 실습\n,\n사용자\n관점에서\n기능\n및\n사용\n흐름\n파악\n2\n주차\n현황\n분석\n및\n개선과제\n발굴\nMYMY\n기능별 현황 분석\n,\n사용 과정의 불편사항 및 개선 가능성 조사\n,\n기능\n·\n성능\n·\n보안\n·UX\n관점의\n개선\n후보\n도출\n3\n주차\nOpen\nAPI\n이해\n및\n개선과제\n구체화\n주요\nAPI\n호출 및\nRequest/Response\n분석\n,\n개선 후보와\nAPI\n연계 가능성 검토\n,\n개선과제\n우선순위\n선정\n4\n주차\n개선안\n설계\n및\n프로토타입\n개발\n개선안\n구체화\n,\n사용자\n시나리오\n및\n시스템\n구성\n설계\n,\nAPI\n기반\n핵심\n기능\n구현\n5\n주차\n프로토타입\n검증\n및\n고도화\n기능\n테스트\n,\nAPI\n연동\n검증\n,\n오류\n수정\n,\n사용성\n및\n기능\n개선\n,\n시연\n시나리오\n작성\n6\n주차\n최종\n시연\n및\n결과\n보고\n최종 기능 검증\n,\n개선 전\n·\n후 비교\n,\n프로토타입\n시연\n,\n개선\n효과\n및\n향후\n고도화\n방향\n정리\n,\n최종\n보고서\n작성\n총\n120\n시간\n4.\n학생 혜택\n- 1\n인당 실습지원비\n: 80\n만원\n(\n학교에서 지급\n)\n-\n비교과 포인트\n20P\n지급\n-\n인턴십 프로그램 수료증 발급\n(SW\n중심대학사업단장명\n)\n5.\n운영 일정\n-\n절차별 운영 일정\n진행절차\n일정\n모집기간\n(\n이력서 제출\n)\n2026.10.01.(\n목\n) ~ 2026.10.18.(\n일\n)\n서류전형 합격자 통보\n2026.10.22.(\n목\n)\n개별 통보\n면접 전형\n2026.10.26.(\n월\n)\n최종 합격자 통보\n2026.10.29.(\n목\n)\n개별 통보\n인턴십 기간\n2026.11.02.(\n월\n) ~ 2026.12.11.(\n금\n)\n총\n30\n일\n※\n선발 학생의 근무 가능 시간에 따라 업무 수행 시간은 조정될 수 있으며\n,\n온라인과 오프라인을 병행하여 운영할 수 있음\n-\n총 인턴십 시간\n:\n총\n120\n시간\n6.\n제출서류\n-\n제출서류\n:\n이력서\n(\n붙임\n) 1\n부\n(\n포트폴리오 별도 첨부 가능\n)\n-\n제출처\n:\nsw_center@hansung.ac.kr\n※\n메일 제목\n: [\n제머나이소프트인턴십\n_\n이름\n_\n학번\n]\n[\n문의\n]\nSW\n중심대학사업단\n: 02-760-8059",
+    "content": "SW\n중심대학사업단에서\n2026\n학년도\n2\n학기\n「\n제머나이소프트\n」\n인턴십 프로그램 참여 학생을 모집합니다\n.\n관심 있는 학생들의 많은 참여 바랍니다\n.\n1.\n참여대상\n-\n한성대학교\n3~4\n학년 재학생 중\nSW\n학과 재학생\n- SW\n학과 학생\n: 1\n트랙이\n\"\n컴퓨터공학부\n[\n모바일소프트웨어트랙\n,\n빅데이터트랙\n,\n디지털콘텐츠\n·\n가상현실트랙\n,\n웹공학트랙\n], AI\n응용학과\n,\n융합보안학과\n\"\n인 학생\n※\n휴학생\n,\n졸업유예자\n,\n수료자\n,\n졸업생 참여 불가\n2.\n모집개요\n-\n기업명\n:\n제머나이소프트\n(\n서울특별시 마포구 월드컵북로\n402,\n상암동 케이지아이티센터\n)\n-\n모집인원\n: 4\n명\n-\n자격요건 및 우대사항\n담당업무\n- MYMY 아카이브 기능·성능·보안·UX 분석 및 개선점 도출\n- REST API 문서 분석 및 연동 테스트(HTTP 통신, JSON 처리, API 키 인증)\n- 개선 제안서 작성(예시 방향: 시맨틱 검색·추천 고도화, 홈페이지 연계 백엔드 서비스, AI 기반 미디어 검색 서비스, 그래프·지도·얼굴인식API 활용 서비스 등)\n- API 기반 프로토타입 설계·구현 및 테스트\n- 결과물 시연 및 최종 보고서 작성\n자격요건\n- AI\n응용학과\n,\n컴퓨터공학부\n,\n융합보안학과\n3~4\n학년\n- RESTful\nAPI\n연동\n기초\n역량\n보유자\n(HTTP\n통신\n,\nJSON\n처리\n,\nAPI\n키\n인증\n)\n-\n백엔드\n개발\n언어\n1\n개\n이상\n활용\n가능자\n(Node.js\n또는\nPython)\n우대사항\n-\n웹\n프론트엔드\n기초\n경험자\n(React\n등\n)\n- AI(LLM,\nRAG,\n임베딩\n),\nWebhook,\n보안\n도구\n경험자\n-\n미디어\n검색\n·\n추천\n,\n그래프\n·\n지도\n·\n얼굴인식\nAPI\n활용\n프로젝트\n경험자\n3.\n실습내용\n실습기관 부서명\n개발부서\n직무명\nOpen API\n를 활용한\nMYMY\n미디어아카이브\n(MAM)\n개선\n교육목표\n미디어 자산관리 플랫폼과\nopen API\n를 다루며 문제정의\n-\n분석\n/\n개발\n-\n검증\n-\n보고의 전 과정을 경험한다\n직무개요\n제머나이소프트\n자사의\nMYMY\n미디어아카이브\n(MAM)\n솔루션을\n직접\n사용\n·\n분석하여\n기능\n·\n성능\n·\n보안\n·UX\n개선\n아이디어를\n도출하고\n,\n제공된\nAPI\n를\n활용하여\n개선사항을\n설\n계\n·\n구현한\n후\n시연까지\n수행한다\n.\n구분\n/\n주차\n직무교육 내용\n실습 내용\n1\n주차\nMYMY\n솔루션\n이해\n및\n기본\n사용\n실습 계정 생성\n, MYMY\n주요 기능 직접 사용\n,\n기본 검색\n·\n조회 실습\n,\n사용자\n관점에서\n기능\n및\n사용\n흐름\n파악\n2\n주차\n현황\n분석\n및\n개선과제\n발굴\nMYMY\n기능별 현황 분석\n,\n사용 과정의 불편사항 및 개선 가능성 조사\n,\n기능\n·\n성능\n·\n보안\n·UX\n관점의\n개선\n후보\n도출\n3\n주차\nOpen\nAPI\n이해\n및\n개선과제\n구체화\n주요\nAPI\n호출 및\nRequest/Response\n분석\n,\n개선 후보와\nAPI\n연계 가능성 검토\n,\n개선과제\n우선순위\n선정\n4\n주차\n개선안\n설계\n및\n프로토타입\n개발\n개선안\n구체화\n,\n사용자\n시나리오\n및\n시스템\n구성\n설계\n,\nAPI\n기반\n핵심\n기능\n구현\n5\n주차\n프로토타입\n검증\n및\n고도화\n기능\n테스트\n,\nAPI\n연동\n검증\n,\n오류\n수정\n,\n사용성\n및\n기능\n개선\n,\n시연\n시나리오\n작성\n6\n주차\n최종\n시연\n및\n결과\n보고\n최종 기능 검증\n,\n개선 전\n·\n후 비교\n,\n프로토타입\n시연\n,\n개선\n효과\n및\n향후\n고도화\n방향\n정리\n,\n최종\n보고서\n작성\n총\n120\n시간\n4.\n학생 혜택\n- 1\n인당 실습지원비\n: 80\n만원\n(\n학교에서 지급\n)\n-\n비교과 포인트\n20P\n지급\n-\n인턴십 프로그램 수료증 발급\n(SW\n중심대학사업단장명\n)\n5.\n운영 일정\n-\n절차별 운영 일정\n진행절차\n일정\n모집기간\n(\n이력서 제출\n)\n2026.10.01.(\n목\n) ~ 2026.10.21.(수\n)\n서류전형 합격자 통보\n2026.10.22.(\n목\n)\n개별 통보\n면접 전형(온라인)\n2026.10.28.(수\n) 오전\n최종 합격자 통보\n2026.10.29.(\n목\n)\n개별 통보\n인턴십 기간\n2026.11.02.(\n월\n) ~ 2026.12.11.(\n금\n)\n총\n30\n일\n※\n선발 학생의 근무 가능 시간에 따라 업무 수행 시간은 조정될 수 있으며\n,\n온라인과 오프라인을 병행하여 운영할 수 있음\n-\n총 인턴십 시간\n:\n총\n120\n시간(\n직무교육시간 60%, 실습시간 40%로 구성\n)\n6.\n제출서류\n-\n제출서류\n:\n이력서\n(\n붙임\n) 1\n부\n(\n포트폴리오 별도 첨부 가능\n)\n-\n제출처\n:\nsw_center@hansung.ac.kr\n※\n메일 제목\n: [\n제머나이소프트인턴십\n_\n이름\n_\n학번\n]\n[\n문의\n]\nSW\n중심대학사업단\n: 02-760-8059",
     "images": [],
     "attachments": [
       {
@@ -24405,7 +24405,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:15.584299+00:00"
+    "last_checked_at": "2026-10-19T21:02:00.252365+00:00"
   },
   {
     "id": "42c8897afce21e5515ffaf7d0b7208ea7c5d84ff88923efb289d29ed614cabc4",
@@ -24430,7 +24430,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:16.507285+00:00"
+    "last_checked_at": "2026-10-19T21:02:01.221528+00:00"
   },
   {
     "id": "5135208903b32586ca5172a5605617f609a3cc46bf92e79e1f00f8739326facd",
@@ -24455,7 +24455,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:17.500440+00:00"
+    "last_checked_at": "2026-10-19T21:02:02.226664+00:00"
   },
   {
     "id": "a43f55eeed0fe6482ef2d952f9363455aef7f16e913c0124ce590240eade31d6",
@@ -24483,7 +24483,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:18.523142+00:00"
+    "last_checked_at": "2026-10-19T21:02:03.213915+00:00"
   },
   {
     "id": "c59b6f855677e8b4726bfb68cef105f4ba990f1e1955b9695f41c05b0634b784",
@@ -24508,7 +24508,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:19.532185+00:00"
+    "last_checked_at": "2026-10-19T21:02:04.209777+00:00"
   },
   {
     "id": "fbbc154662a0c8cf97b3de9f3d4679eeb544e92acb17255302ebe3888353e8e1",
@@ -24529,7 +24529,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:20.533445+00:00"
+    "last_checked_at": "2026-10-19T21:02:05.203404+00:00"
   },
   {
     "id": "d1164faa69c01ddda2e4203fd1230b5040dd7e13b7750e82d572bc1d6ad7a1cc",
@@ -24554,7 +24554,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:21.547179+00:00"
+    "last_checked_at": "2026-10-19T21:02:06.198113+00:00"
   },
   {
     "id": "66b5f32f1558024c626b35d6d439beeb66332c7ffead68807a929795b7d48893",
@@ -24574,7 +24574,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:22.558742+00:00"
+    "last_checked_at": "2026-10-19T21:02:07.211511+00:00"
   },
   {
     "id": "4f250e10fc277d5ec7307695d7cea3359b04c4e72adc7bc6664afad3fe2363be",
@@ -24597,7 +24597,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:23.581530+00:00"
+    "last_checked_at": "2026-10-19T21:02:08.202658+00:00"
   },
   {
     "id": "bf4db64a615873cf91122b1db6ef6b9c22928359f15f9aae60189fe74583d8c4",
@@ -24617,7 +24617,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:24.553367+00:00"
+    "last_checked_at": "2026-10-19T21:02:09.209972+00:00"
   },
   {
     "id": "ac54905c9c237299fa4666b862a41d7cfaedf46be163211181539a956b58998e",
@@ -24637,7 +24637,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:25.540293+00:00"
+    "last_checked_at": "2026-10-19T21:02:10.208659+00:00"
   },
   {
     "id": "7b5db213c0ffe608af37081115614c67dbce56e7ebc99615bc7e323895e58198",
@@ -24657,7 +24657,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:26.607509+00:00"
+    "last_checked_at": "2026-10-19T21:02:11.243249+00:00"
   },
   {
     "id": "98b9709a61ad174b1af016b746b02b14b41803cf6c6b6f5789a60ef2e22c2bce",
@@ -24686,7 +24686,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:27.562950+00:00"
+    "last_checked_at": "2026-10-19T21:02:12.211224+00:00"
   },
   {
     "id": "37b1c16ee8c25384919e82e9346e453f41f3fe51ad98ed7e9fe909db60511793",
@@ -24711,7 +24711,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:28.576937+00:00"
+    "last_checked_at": "2026-10-19T21:02:13.226132+00:00"
   },
   {
     "id": "8af2b29a48f450bac679e2e7f99bc14bc5f83c89a784142468ce050df8c7e112",
@@ -24736,7 +24736,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:29.686360+00:00"
+    "last_checked_at": "2026-10-19T21:02:14.243899+00:00"
   },
   {
     "id": "4f250bd6263fb9ec352eae782fa1fba8c4dec59c44bc0e1509fc4d4ff944912f",
@@ -24757,7 +24757,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:30.587544+00:00"
+    "last_checked_at": "2026-10-19T21:02:15.213417+00:00"
   },
   {
     "id": "0c72af34b0b4ef2b0418eaa485bc0a9293773b68f129a07ad82ff5f62aa2abc9",
@@ -24782,7 +24782,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:31.613035+00:00"
+    "last_checked_at": "2026-10-19T21:02:16.220545+00:00"
   },
   {
     "id": "7682e3c4aee2e156ed877873582d557e25879e3bc452c86cf9dd64c7f2150e98",
@@ -24798,7 +24798,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:18:32.640084+00:00"
+    "last_checked_at": "2026-10-19T21:02:18.218883+00:00"
   },
   {
     "id": "d329d7b0e478ad040a7509bc2215a0be1fbd6e31152726487f1d31f80d09222c",
@@ -24818,7 +24818,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:33.607132+00:00"
+    "last_checked_at": "2026-10-19T21:02:19.199021+00:00"
   },
   {
     "id": "e37b5a10328b24d572278bab9ce854f2b47141c5d21a3da3ddd726ea0f3e61c3",
@@ -24829,7 +24829,7 @@
     "category": "공지",
     "source_type": "notice",
     "board_id": "2127",
-    "content": "⭐유의사항⭐\n👉 1인 1개 소모임 참여 가능 (중복지원, 중복참여 불가)\n*확인 시 서류탈락\n(신청 전 꼭 구성원 확인할것)\n👉 26년 2학기 재학생 외 지원 불가\n*확인 시 서류탈락 (신청 전 꼭 구성원 확인할것)\n👉 신청서 첨부파일 모두 작성하여 제출할 것, 하나라도 누락 시 서류탈락\n👉 소모임 활동 월 2회 이상 원칙, 3인 이상 활동 필수\n👉 최종 선발된 소모임은 이후 진행되는 설명회 참석 필수 (소모임 인원 중 1人)\n👉 긴존 학과 · 학부에서 지원받고 있는 소모임 혹은 동아리의 경우 중복지원 및 혜택으로, 지원 불가함.\n👉 단순 수업 커리큘럼에 따른 학술소모임의 형신은 선발하지 않음 (선발 이후 확인 시, 지원 대상에서 제외함)\n⭐첨부된 문서를 꼭 확인해주세요⭐",
+    "content": "⭐유의사항⭐\n👉 1인 1개 소모임 참여 가능 (중복지원, 중복참여 불가)\n*확인 시 서류탈락\n(신청 전 꼭 구성원 확인할것)\n👉\n26년 2학기 재학생 외 지원\n불가\n(휴학생, 졸업생, 초과학기생(9학기 이상) 지원 불가)\n*확인 시 서류탈락 (신청 전 꼭 구성원 확인할것)\n👉 신청서 첨부파일 모두 작성하여 제출할 것, 하나라도 누락 시 서류탈락\n👉 소모임 활동 월 2회 이상 원칙, 3인 이상 활동 필수\n👉 최종 선발된 소모임은 이후 진행되는 설명회 참석 필수 (소모임 인원 중 1人)\n👉 긴존 학과 · 학부에서 지원받고 있는 소모임 혹은 동아리의 경우 중복지원 및 혜택으로, 지원 불가함.\n👉 단순 수업 커리큘럼에 따른 학술소모임의 형신은 선발하지 않음 (선발 이후 확인 시, 지원 대상에서 제외함)\n⭐첨부된 문서를 꼭 확인해주세요⭐",
     "images": [
       {
         "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000416/제목을_입력해주세요._(7).jpg"
@@ -24851,7 +24851,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:35.591442+00:00"
+    "last_checked_at": "2026-10-19T21:02:20.205116+00:00"
   },
   {
     "id": "d14d9cd37a81ee9a4807065ec5ac729742bd098197b81a9c229f2888150dac5d",
@@ -24876,7 +24876,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:36.611585+00:00"
+    "last_checked_at": "2026-10-19T21:02:21.223934+00:00"
   },
   {
     "id": "710de0557c7d2f91506f580372933d601681ede2bb4bda082a258837137b3c56",
@@ -24896,7 +24896,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:37.618943+00:00"
+    "last_checked_at": "2026-10-19T21:02:22.218435+00:00"
   },
   {
     "id": "a9b61befa0d556db0d1cc3b8a8aebd217ff291c411b472a94d4addb7f99dc057",
@@ -24917,7 +24917,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:38.642634+00:00"
+    "last_checked_at": "2026-10-19T21:02:24.230087+00:00"
   },
   {
     "id": "814fffe829bbfcc4ce97175f8894268e60039b1f0ecf14f663158d728635f615",
@@ -24937,7 +24937,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:39.657970+00:00"
+    "last_checked_at": "2026-10-19T21:02:25.206258+00:00"
   },
   {
     "id": "ab3dcaa09b29dffff6101451d158aa0365b4bc4a00a0feca71d325058cd050a0",
@@ -24957,7 +24957,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:40.628738+00:00"
+    "last_checked_at": "2026-10-19T21:02:26.207192+00:00"
   },
   {
     "id": "a11aaf5b18859003046f18ab29a9731179763239ebef09dcd1b5c7818195e720",
@@ -24995,7 +24995,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:41.680059+00:00"
+    "last_checked_at": "2026-10-19T21:02:27.225004+00:00"
   },
   {
     "id": "02503ffb16106222d02deb88b5b5c849bed2aef1e9e54ac86e3d721870eeb5e7",
@@ -25018,7 +25018,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:42.655972+00:00"
+    "last_checked_at": "2026-10-19T21:02:28.204680+00:00"
   },
   {
     "id": "292715b0603343984558f8dfaab319af74e914af42c501a263092a34a37c08c1",
@@ -25038,7 +25038,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:43.638362+00:00"
+    "last_checked_at": "2026-10-19T21:02:29.204891+00:00"
   },
   {
     "id": "971e35ada497e7a859c51ab1cbf731b829e85d5cab3ecfa8b75a83de378e763a",
@@ -25061,7 +25061,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:44.714985+00:00"
+    "last_checked_at": "2026-10-19T21:02:30.203854+00:00"
   },
   {
     "id": "841d3a9f96fc34d847e57dc1bb8c63dcb2449c72a6c531181c8786fea9c97406",
@@ -25081,7 +25081,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:45.653308+00:00"
+    "last_checked_at": "2026-10-19T21:02:31.214942+00:00"
   },
   {
     "id": "8973cd7b1a7bdd7d738a533024fdbbc71723f0f2184e5148f536d3df6a8a9e4a",
@@ -25104,7 +25104,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:46.669268+00:00"
+    "last_checked_at": "2026-10-19T21:02:32.206111+00:00"
   },
   {
     "id": "20a118db5210cde329290f050d52d42908b16e751beeff422458a506dce3f1eb",
@@ -25124,7 +25124,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:47.745850+00:00"
+    "last_checked_at": "2026-10-19T21:02:33.204152+00:00"
   },
   {
     "id": "c9511c53d1c139bc4cf1ea279bc295340f67bd9fab7f9dc97fc6daebcf67a436",
@@ -25144,7 +25144,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:48.667420+00:00"
+    "last_checked_at": "2026-10-19T21:02:34.206284+00:00"
   },
   {
     "id": "f78209f4d27096aeee7ad63820ddd476101364109dcd6b3a45962b9e9447c8fb",
@@ -25164,7 +25164,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:49.685657+00:00"
+    "last_checked_at": "2026-10-19T21:02:35.202133+00:00"
   },
   {
     "id": "a015d87dcc586edf23b42d5ef8a88ca8dd7f1bc77edddee237f9cbebc5c479a6",
@@ -25187,7 +25187,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:50.664829+00:00"
+    "last_checked_at": "2026-10-19T21:02:36.203979+00:00"
   },
   {
     "id": "35875331f35c1030d62e789bbf1ff8cdeeb5b0f3dc7b46e6dd0233e5ffa3c900",
@@ -25207,7 +25207,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:51.685842+00:00"
+    "last_checked_at": "2026-10-19T21:02:37.199958+00:00"
   },
   {
     "id": "498f8caf0edfc13d2d9a91783ff8b99041e67d398306da54d70f558c928560cc",
@@ -25230,12 +25230,12 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:52.712869+00:00"
+    "last_checked_at": "2026-10-19T21:02:39.204410+00:00"
   },
   {
     "id": "761bcb78561b8d02a6659c1813743267c09919e0631ce56f5f1b1efa842a9df5",
     "url": "https://www.hansung.ac.kr/bbs/hansung/2127/224950/artclView.do",
-    "title": "창업행사 2026 제4회 SB 스타트업 네트워킹 페스티벌 「AI 기반 지역문제 해결 해커톤」 참가자 모집 (~9/30)",
+    "title": "창업행사 2026년 제4회 SB 스타트업 네트워킹 페스티벌 「AI 기반 지역문제 해결 해커톤」 참가자 모집 (~9/30)",
     "date": "2026-09-21",
     "source": "창업기업육성ICC",
     "category": "공지",
@@ -25270,7 +25270,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:53.695569+00:00"
+    "last_checked_at": "2026-10-19T21:02:40.221020+00:00"
   },
   {
     "id": "2d01024eb4d8e304160750d3bd174126aca9a5e3b0451336208b226f66a0bc16",
@@ -25286,7 +25286,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:18:55.761671+00:00"
+    "last_checked_at": "2026-10-19T21:02:41.218587+00:00"
   },
   {
     "id": "2b3dcfdcca13e28f79370ba3925c88c2308fff5090966034c8a091d2e3068276",
@@ -25302,7 +25302,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:18:56.764738+00:00"
+    "last_checked_at": "2026-10-19T21:02:42.224598+00:00"
   },
   {
     "id": "c0f60672672a64e99a0e3aec0eaccc32bfbff0b0e43b9617f86e9fc75e570290",
@@ -25322,7 +25322,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:57.727853+00:00"
+    "last_checked_at": "2026-10-19T21:02:43.210249+00:00"
   },
   {
     "id": "c983c9920668b6736a630fa38ba8a3a927b946737e98343d2f9b01a1a11e0520",
@@ -25338,7 +25338,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "not_applicable",
-    "last_checked_at": "2026-10-08T05:18:58.721099+00:00"
+    "last_checked_at": "2026-10-19T21:02:44.202549+00:00"
   },
   {
     "id": "55a647d4e171b147c1a27b9b42ee0ccbe802c940d11149adbc7618e420e25317",
@@ -25361,7 +25361,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:18:59.724902+00:00"
+    "last_checked_at": "2026-10-19T21:02:45.208631+00:00"
   },
   {
     "id": "fc8581d2763d4d427bbb3a2d5d616d10d7ea84edc5ee22eb6e812063921f93e7",
@@ -25384,7 +25384,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:00.728603+00:00"
+    "last_checked_at": "2026-10-19T21:02:46.208100+00:00"
   },
   {
     "id": "81917add86c3756ad0700762c5b11e5af347554a5d7310c2b5f704862f54f62a",
@@ -25407,7 +25407,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:01.832397+00:00"
+    "last_checked_at": "2026-10-19T21:02:47.217433+00:00"
   },
   {
     "id": "b70553d146886006ebe10d01461c0a62649aa1a809fd6382685e966b4b15ce12",
@@ -25439,7 +25439,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:02.794712+00:00"
+    "last_checked_at": "2026-10-19T21:02:48.207196+00:00"
   },
   {
     "id": "4318995575dc46d83bbebf4272a4ded31843a0ed31de8566473251f4faa949f3",
@@ -25462,7 +25462,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:03.772635+00:00"
+    "last_checked_at": "2026-10-19T21:02:49.206858+00:00"
   },
   {
     "id": "63ecc600f7081f12775aa6a6fd98fb9687fe779afbfe5f7a2b062825c18e5248",
@@ -25485,7 +25485,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:04.764232+00:00"
+    "last_checked_at": "2026-10-19T21:02:50.211301+00:00"
   },
   {
     "id": "c2717232ea80c35ed57a3d5581ae2df81ab515a80126d58b9ec957d39f2e51be",
@@ -25508,7 +25508,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:05.757871+00:00"
+    "last_checked_at": "2026-10-19T21:02:51.205865+00:00"
   },
   {
     "id": "7565c3807118f3c667046d47b0a28399832b13e15f1f9fdc4bd0f53bb3e711db",
@@ -25519,7 +25519,7 @@
     "category": "공지",
     "source_type": "notice",
     "board_id": "2127",
-    "content": "[\n2026\n학년도\n2\n학기 고시반 입반생 모집 안내\n]\n안녕하세요\n.\n대학일자리플러스센터입니다\n.\n2026\n학년도\n2\n학기 분야별 국가고시 및 전문 자격 시험을 준비하는 학생들을 위한 고시반 입반생을 모집합니다\n.\n학생 여러분의 많은 참여 부탁드립니다\n.\n1.\n운영 분야 및 정원\n구분\n운영 분야\n정원\n주\n2)\n일반 고시반\n감정평가사반\n,\n공무원반\n,\n공인회계사반\n,\n관세사반\n,\n공인노무사반\n,\n변호사반\n(6\n개 반\n)\n학기당 최대\n30\n명\n주니어 고시반\n주\n1)\n감정평가사반\n,\n관세사반\n,\n공인노무사반\n,\n변호사반, 공인회계사반\n*일반 고시반: 공무원반은 9급도 입반신청 가능\n주\n1)\n공인회계사반은\n2\n학기에만 주니어 고시반 운영\n.\n공무원반은 주니어 고시반 운영하지 않음\n.\n주\n2)\n과락이나 기타 선발기준 미충족 시 선발인원은 정원보다 적을 수 있음\n.\n2.\n신청 및 접수 방법\n구분\n일정\n접수\n2026. 9. 23.(\n수\n) ~ 9. 30.(\n수\n) 15:00\n까지\n선발 평가\n-\n이메일 제출\n(\n대학일자리플러스센터\njob1@hansung.ac.kr\n)\n-\n메일 발송 시 메일 제목은 반드시\n‘2026-2\n고시반 입반 신청\n_(\n고시반명\n)_\n성명\n(\n학번\n)’\n으로 기재\n예\n) 2026-2\n고시반 입반 신청\n_\n감정평가사반\n_\n김한성\n(2334441)\n-\n파일명에도 학번 및 이름 기재 필수\n제출 서류\n-\n(\n필수\n)\n신청서 및 학업계획서\n,\n성적 증명서\n-\n(\n선택\n)\n공인 영어 성적표 및 고시 합격증 또는 관련 증빙 서류\n선발 발표\n2026. 10. 8.(\n목\n)\n3.\n전체 운영 일정\n구분\n일정\n내용\n선\n발\n접수\n2026. 9. 23.(\n수\n)\n~ 9. 30.(\n수\n)\n학생\n:\n신청서 제출 및 접수\n*\n대면 혹은 비대면 고시반 설명회를 통한 모집 홍보 예정\n선발 평가\n2026. 9. 30.(\n수\n)\n~ 10. 7.(\n수\n)\n진로취업지원팀\n:\n직전\nA\n등급자\n, 1\n차 합격자 확인\n지도교수\n:\n성적\n,\n학업계획서 평가 및 유선 면접\n선발 발표\n2026. 10. 8.(\n목\n)\n진로취업지원팀\n:\n최종 선발자 발표\n운영\n오리엔테이션\n2026. 10. 8.(\n목\n)\n진로취업지원팀\n:\n합격자 대상 오리엔테이션 진행\n고시반 운영\n2026. 10. 8.(\n목\n)\n~ 12. 18.(\n금\n)\n학생\n:\n입반 및 자기주도 학습\n-\n지도교수\n:\n학생 지도 및 상담\n,\n상담일지 일괄 제출\n결과 보고\n2026. 12. 10.(\n목\n)\n~ 12. 17.(\n목\n)\n학생\n:\n결과보고서 제출\n(\n지도교수 요청 고시반만\n)\n평\n가\n최종 평가\n2026. 12. 21.(\n월\n)\n~ 12. 28.(\n월\n)\n진로취업지원팀\n:\n고시 합격자 명단 확인\n(1\n차\n,\n최종\n)\n지도교수\n:\n학생 최종 평가\n장학금 지급\n2027. 1\n월 중순\n~\n행정 부서\n:\n장학금 지급\n*\n비고\n:\n졸업 일자\n2027. 02. 19.(\n금\n)\n※\n상기 일정은 운영 상황에 따라 변동될 수 있음\n※\n결과 보고는 지도교수 평가에 필요한 경우에 한해서만 입반생에 제출 안내 예정\n4.\n고시반 혜택\n-\n고시반 장학금 지원\n구분\n일반 고시반\n주니어 고시반\n일반 장학금\n500,000\n원\n300,000\n원\n성과 장학금\n활동 평가에 따라\n30~10\n만원 차등 지급 예정\n(A : 30\n만원\n, B : 20\n만원\n, C : 10\n만원\n,\n미달\n:\n미지급\n)\n강의수강료 및 교재 구입 지원\n대면\n/\n비대면 강의수강료 및 교재 구입 지원\n(1\n인당\n10\n만원 한도\n)\n-\n등록 후 휴학생의 경우 휴학 해당 학기에만 장학금을 지급함\n(\n등록 후 휴학 첫 학기까지만 인정\n)\n-\n초과학기자와 미등록 휴학자의 경우 장학금 지급 불가\n5.\n자격요건\n구분\n응시자격\n주\n4)\n일반 고시반\n감정평가사반\n주\n3)\n공무원반\n공인회계사반\n관세사반\n공인노무사반\n변호사반\n1) 2\n학년 이상 재학생\n(\n졸업 유예자\n,\n졸업생 참여 불가\n)\n*\n초과학기자의 경우\n,\n장학금 지급이 불가함\n.\n*\n미등록 휴학생의 경우\n,\n장학금 지급이 불가함\n.\n2)\n직전 학기 평점\n3.0\n이상\n3)\n고시반 직전 학기\nA\n등급자 무시험 선발\n4) 1\n차 합격자는 무시험 선발\n주\n5)\n주니어 고시반\n감정평가사반\n관세사반\n공인노무사반\n변호사반\n1)\n한성대\n1\n학년 재학생\n2)\n일부 고시\n1\n차 합격자는 관련 고시반 무시험 선발\n3) (2\n학기 이상 수료자\n)\n직전 학기 평점\n3.0\n이상\n주\n3)\n감정평가사반은 한국토지주택공사\n(LH),\n한국국토정보공사\n(LX),\n한국농어촌공사\n,\n한국수자원공사\n(K-water),\n한국주택금융공사\n(HF),\n각 지자체 토지\n·\n주택 개발 관련 지방공사 지원자 포함\n주\n4)\n등록 후 휴학생의 경우\n,\n휴학 해당 학기에만 장학금을 지급함\n.\n(\n등록 후 휴학 첫 학기까지만 인정\n)\n주\n5)\n아래 시험\n1\n차 합격 시 고시반 무시험 선발\n-\n행정고등고시\n,\n기술고등고시\n,\n입법고등고시\n,\n지방고등고시\n,\n공인회계사\n,\n미국공인회계사\n,\n세무사\n,\n감정평가사\n,\n관세사\n,\n공인노무사\n평가 항목\n배점\n평가 기준\n선발평가 성적\n30\n점\n-\n선발 평가 성적\n30\n점 만점 환산 점수\n-\n면접 선발의 경우 면접 점수\n고시반 참여도\n40\n점\n-\n상담을 위한 준비\n-\n상담 태도 및 적극성\n목표 달성도\n30\n점\n-\n학업계획서를 기준으로 학기 말 학업성취도 평가\n-\n시험 준비 및 응시 결과 등\n합계\n100\n점\n6.\n고시반 활동 평가 안내\n*\n배점 및 항목은 고시반별 다를 수 있음\n7.\n고시 합격자 지원\n1. (학생복지팀)\n대상 시험\n-\n국가기관 또는 이에 상당하다고 인정되는 기관에서 시행한 고등고시 및 전문 자격 시험으로 다음 각 호의 하나에 해당하는 시험\n1.\n사법고시\n,\n행정고등고시\n,\n외무고등고시\n,\n기술고등고시\n,\n입법고등고시\n,\n지방 고등고시\n2.\n변리사\n, CPA(\n공인회계사\n), AICPA(\n미국공인회계사\n),\n감정평가사\n,\n관세사\n,\n세무사\n,\n공인노무사\n,\n국가직\n‧\n지방직\n7\n급\n(\n경찰공무원 경위\n,\n소방공무원 소방위 상당\n)\n*일반 고시반: 공무\n원반은 9급도 입반\n신청 가능/ 위 내용은 학생복지팀에서 1차 및 최종 합격자에게 지원하는 고시합격지원을 의미.\n2.\n국가 전문 자격 시험 합격 혜택\n1)\n장학금 지급\n:\n장학금 지급 관련 규정에 따름\n■\n재학 중 합격자\n(\n합격 후\n3\n개월 이내 신청시\n)\n➤\n1\n차 합격자\n:\n격려장학금\n(100\n만원\n)\n만 지급\n➤\n최종합격자\n:\n격려장학금\n(150\n만원\n)\n및 수업료\n(2\n학기\n)\n를 감면\n.\n단\n,\n해당 학기 합격자 수가 예산 범위를 초과할 경우 고시반 운영위원회의 심의에 의해 지급 금액 조정 가능\n[\n최종합격자 발표 후 장학금 신청 일자 기준으로 재학 중인\n4\n학년 학생은 해당 학기\n(2\n학기\n)\n수업료 감면\n(\n등록 기간 이후에는 소급 감면\n)]\n■\n졸업 후 합격자\n➤\n고등고시 최종합격자\n①\n(\n합격 후\n5\n년 이내 신청 시\n)\n-\n사법고시\n,\n행정고등고시\n,\n외무고등고시\n,\n기술고등고시\n,\n입법고등고시\n,\n지방고등고시와 중등교원 임용고사 최종합격자의 경우 격려 장학금\n(100\n만원\n)\n지급\n➤\n국가 전문 자격 시험 최종합격자\n②\n(\n합격 후\n1\n년 이내 신청 시\n) -\n변리사\n, CPA(\n공인회계사\n), AICPA(\n미국공인회계사\n),\n감정평가사\n,\n관세사\n,\n세무사\n,\n공인노무사\n,\n국가직\n‧\n지방직\n7\n급\n(\n경찰공무원 경위\n,\n소방공무원 소방위 상당\n)\n최종합격자의 경우 격려장학금\n50\n만원 지급\n■\n예외\n:\n동일인이 장학금 수여 해당 기간 중\n2\n개 이상의 시험에 합격하는 경우에는\n1\n개의 시험만        적용하며\n,\n중복하여 지급하지 않는다\n.\n2)\n현수막 게재\n(\n예산 가능\n시\n)\n3)\n한성 이슈 등 홈페이지 게재\n3.\n신청서 제출 방법\n1)\n제출 기간\n:\n국가 전문자격 시험 최종 합격 후\n3\n개월 이내\n(*\n휴학생은 복학한 학기에 신청하여야 함\n)\n2)\n제출 서류\n-\n재학증명서\n(\n또는 졸업증명서\n) 1\n부\n-\n국가고시 합격자 장학금 신청서\n1\n부\n(\n양식\n1)\n-\n국가 전문 자격 시험 합격수기\n1\n부\n(\n양식\n2)\n★\n-\n개인정보 수집\n·\n이용\n·\n제공 동의서 및 저작물 활용 동의서\n1\n부\n(\n양식\n3)\n-\n증빙 자료\n(\n합격증 등\n) 1\n부\n(\n양식\n4)\n3)\n제출 방법\n:\n학생복지팀\n(\n진리관\n105\n호\n)\n방문 제출 또는 이메일 제출\n(scholarship@hansung.ac.kr)\n★\n신청서와 함께 합격 수기도 함께 제출하여야 함\n4.\n고시합격자 장학금 문의\n:\n학생복지팀\n(02-760-5601, 4221)\n*\n문의\n: 02-760-5614/4295(\n한성 고시반 담당자\n)",
+    "content": "[\n2026\n학년도\n2\n학기 고시반 입반생 모집 안내\n]\n안녕하세요\n.\n대학일자리플러스센터입니다\n.\n2026\n학년도\n2\n학기 분야별 국가고시 및 전문 자격 시험을 준비하는 학생들을 위한 고시반 입반생을 모집합니다\n.\n학생 여러분의 많은 참여 부탁드립니다\n.\n1.\n운영 분야 및 정원\n구분\n운영 분야\n정원\n주\n2)\n일반 고시반\n감정평가사반\n,\n공무원반\n,\n공인회계사반\n,\n관세사반\n,\n공인노무사반\n,\n변호사반\n(6\n개 반\n)\n학기당 최대\n30\n명\n주니어 고시반\n주\n1)\n감정평가사반\n,\n관세사반\n,\n공인노무사반\n,\n변호사반, 공인회계사반\n*일반 고시반: 공무원반은 9급도 입반신청 가능\n주\n1)\n공인회계사반은\n2\n학기에만 주니어 고시반 운영\n.\n공무원반은 주니어 고시반 운영하지 않음\n.\n주\n2)\n과락이나 기타 선발기준 미충족 시 선발인원은 정원보다 적을 수 있음\n.\n2.\n신청 및 접수 방법\n구분\n일정\n접수\n2026. 9. 23.(\n수\n) ~ 9. 30.(\n수\n) 15:00\n까지\n선발 평가\n-\n이메일 제출\n(\n대학일자리플러스센터\njob1@hansung.ac.kr\n)\n-\n메일 발송 시 메일 제목은 반드시\n‘2026-2\n고시반 입반 신청\n_(\n고시반명\n)_\n성명\n(\n학번\n)’\n으로 기재\n예\n) 2026-2\n고시반 입반 신청\n_\n감정평가사반\n_\n김한성\n(2334441)\n-\n파일명에도 학번 및 이름 기재 필수\n제출 서류\n-\n(\n필수\n)\n신청서 및 학업계획서\n,\n성적 증명서\n-\n(\n선택\n)\n공인 영어 성적표 및 고시 합격증 또는 관련 증빙 서류\n선발 발표\n2026. 10. 8.(\n목\n)\n3.\n전체 운영 일정\n구분\n일정\n내용\n선\n발\n접수\n2026. 9. 23.(\n수\n)\n~ 9. 30.(\n수\n)\n학생\n:\n신청서 제출 및 접수\n*\n대면 혹은 비대면 고시반 설명회를 통한 모집 홍보 예정\n선발 평가\n2026. 9. 30.(\n수\n)\n~ 10. 7.(\n수\n)\n진로취업지원팀\n:\n직전\nA\n등급자\n, 1\n차 합격자 확인\n지도교수\n:\n성적\n,\n학업계획서 평가 및 유선 면접\n선발 발표\n2026. 10. 8.(\n목\n)\n진로취업지원팀\n:\n최종 선발자 발표\n운영\n오리엔테이션\n2026. 10. 8.(\n목\n)\n진로취업지원팀\n:\n합격자 대상 오리엔테이션 진행\n고시반 운영\n2026. 10. 8.(\n목\n)\n~ 12. 18.(\n금\n)\n학생\n:\n입반 및 자기주도 학습\n-\n지도교수\n:\n학생 지도 및 상담\n,\n상담일지 일괄 제출\n결과 보고\n2026. 12. 10.(\n목\n)\n~ 12. 17.(\n목\n)\n학생\n:\n결과보고서 제출\n(\n지도교수 요청 고시반만\n)\n평\n가\n최종 평가\n2026. 12. 21.(\n월\n)\n~ 12. 28.(\n월\n)\n진로취업지원팀\n:\n고시 합격자 명단 확인\n(1\n차\n,\n최종\n)\n지도교수\n:\n학생 최종 평가\n장학금 지급\n2027. 1\n월 중순\n~\n행정 부서\n:\n장학금 지급\n*\n비고\n:\n졸업 일자\n2027. 02. 19.(\n금\n)\n※\n상기 일정은 운영 상황에 따라 변동될 수 있음\n※\n결과 보고는 지도교수 평가에 필요한 경우에 한해서만 입반생에 제출 안내 예정\n4.\n고시반 혜택\n-\n고시반 장학금 지원\n구분\n일반 고시반\n주니어 고시반\n일반 장학금\n500,000\n원\n300,000\n원\n성과 장학금\n활동 평가에 따라\n30~10\n만원 차등 지급 예정\n(A : 30\n만원\n, B : 20\n만원\n, C : 10\n만원\n,\n미달\n:\n미지급\n)\n강의수강료 및 교재 구입 지원\n대면\n/\n비대면 강의수강료 및 교재 구입 지원\n(1\n인당\n10\n만원 한도\n)\n-\n등록 후 휴학생의 경우 휴학 해당 학기에만 장학금을 지급함\n(\n등록 후 휴학 첫 학기까지만 인정\n)\n-\n초과학기자와 미등록 휴학자의 경우 장학금 지급 불가\n5.\n자격요건\n구분\n응시자격\n주\n4)\n일반 고시반\n감정평가사반\n주\n3)\n공무원반\n공인회계사반\n관세사반\n공인노무사반\n변호사반\n1) 2\n학년 이상 재학생\n(\n졸업 유예자\n,\n졸업생 참여 불가\n)\n*\n초과학기자의 경우\n,\n장학금 지급이 불가함\n.\n*\n미등록 휴학생의 경우\n,\n장학금 지급이 불가함\n.\n2)\n직전 학기 평점\n3.0\n이상\n3)\n고시반 직전 학기\nA\n등급자 무시험 선발\n4) 1\n차 합격자는 무시험 선발\n주\n5)\n주니어 고시반\n감정평가사반\n관세사반\n공인노무사반\n변호사반\n1)\n한성대\n1\n학년 재학생\n2)\n일부 고시\n1\n차 합격자는 관련 고시반 무시험 선발\n3) (2\n학기 이상 수료자\n)\n직전 학기 평점\n3.0\n이상\n주\n3)\n감정평가사반은 한국토지주택공사\n(LH),\n한국국토정보공사\n(LX),\n한국농어촌공사\n,\n한국수자원공사\n(K-water),\n한국주택금융공사\n(HF),\n각 지자체 토지\n·\n주택 개발 관련 지방공사 지원자 포함\n주\n4)\n등록 후 휴학생의 경우\n,\n휴학 해당 학기에만 장학금을 지급함\n.\n(\n등록 후 휴학 첫 학기까지만 인정\n)\n주\n5)\n아래 시험\n1\n차 합격 시 고시반 무시험 선발\n-\n행정고등고시\n,\n기술고등고시\n,\n입법고등고시\n,\n지방고등고시\n,\n공인회계사\n,\n미국공인회계사\n,\n세무사\n,\n감정평가사\n,\n관세사\n,\n공인노무사\n평가 항목\n배점\n평가 기준\n선발평가 성적\n30\n점\n-\n선발 평가 성적\n30\n점 만점 환산 점수\n-\n면접 선발의 경우 면접 점수\n고시반 참여도\n40\n점\n-\n상담을 위한 준비\n-\n상담 태도 및 적극성\n- 고시반 열람실 이용률\n목표 달성도\n30\n점\n-\n학업계획서를 기준으로 학기 말 학업성취도 평    가\n-\n시험 준비 및 응시 결과 등\n합계\n100\n점\n6.\n고시반 활동 평가 안내\n*\n배점 및 항목은 고시반별 다를 수 있음\n7.\n고시 합격자 지원\n1. (학생복지팀)\n대상 시험\n-\n국가기관 또는 이에 상당하다고 인정되는 기관에서 시행한 고등고시 및 전문 자격 시험으로 다음 각 호의 하나에 해당하는 시험\n1.\n사법고시\n,\n행정고등고시\n,\n외무고등고시\n,\n기술고등고시\n,\n입법고등고시\n,\n지방 고등고시\n2.\n변리사\n, CPA(\n공인회계사\n), AICPA(\n미국공인회계사\n),\n감정평가사\n,\n관세사\n,\n세무사\n,\n공인노무사\n,\n국가직\n‧\n지방직\n7\n급\n(\n경찰공무원 경위\n,\n소방공무원 소방위 상당\n)\n*일반 고시반: 공무\n원반은 9급도 입반\n신청 가능/ 위 내용은 학생복지팀에서 1차 및 최종 합격자에게 지원하는 고시합격지원을 의미.\n2.\n국가 전문 자격 시험 합격 혜택\n1)\n장학금 지급\n:\n장학금 지급 관련 규정에 따름\n■\n재학 중 합격자\n(\n합격 후\n3\n개월 이내 신청시\n)\n➤\n1\n차 합격자\n:\n격려장학금\n(100\n만원\n)\n만 지급\n➤\n최종합격자\n:\n격려장학금\n(150\n만원\n)\n및 수업료\n(2\n학기\n)\n를 감면\n.\n단\n,\n해당 학기 합격자 수가 예산 범위를 초과할 경우 고시반 운영위원회의 심의에 의해 지급 금액 조정 가능\n[\n최종합격자 발표 후 장학금 신청 일자 기준으로 재학 중인\n4\n학년 학생은 해당 학기\n(2\n학기\n)\n수업료 감면\n(\n등록 기간 이후에는 소급 감면\n)]\n■\n졸업 후 합격자\n➤\n고등고시 최종합격자\n①\n(\n합격 후\n5\n년 이내 신청 시\n)\n-\n사법고시\n,\n행정고등고시\n,\n외무고등고시\n,\n기술고등고시\n,\n입법고등고시\n,\n지방고등고시와 중등교원 임용고사 최종합격자의 경우 격려 장학금\n(100\n만원\n)\n지급\n➤\n국가 전문 자격 시험 최종합격자\n②\n(\n합격 후\n1\n년 이내 신청 시\n) -\n변리사\n, CPA(\n공인회계사\n), AICPA(\n미국공인회계사\n),\n감정평가사\n,\n관세사\n,\n세무사\n,\n공인노무사\n,\n국가직\n‧\n지방직\n7\n급\n(\n경찰공무원 경위\n,\n소방공무원 소방위 상당\n)\n최종합격자의 경우 격려장학금\n50\n만원 지급\n■\n예외\n:\n동일인이 장학금 수여 해당 기간 중\n2\n개 이상의 시험에 합격하는 경우에는\n1\n개의 시험만        적용하며\n,\n중복하여 지급하지 않는다\n.\n2)\n현수막 게재\n(\n예산 가능\n시\n)\n3)\n한성 이슈 등 홈페이지 게재\n3.\n신청서 제출 방법\n1)\n제출 기간\n:\n국가 전문자격 시험 최종 합격 후\n3\n개월 이내\n(*\n휴학생은 복학한 학기에 신청하여야 함\n)\n2)\n제출 서류\n-\n재학증명서\n(\n또는 졸업증명서\n) 1\n부\n-\n국가고시 합격자 장학금 신청서\n1\n부\n(\n양식\n1)\n-\n국가 전문 자격 시험 합격수기\n1\n부\n(\n양식\n2)\n★\n-\n개인정보 수집\n·\n이용\n·\n제공 동의서 및 저작물 활용 동의서\n1\n부\n(\n양식\n3)\n-\n증빙 자료\n(\n합격증 등\n) 1\n부\n(\n양식\n4)\n3)\n제출 방법\n:\n학생복지팀\n(\n진리관\n105\n호\n)\n방문 제출 또는 이메일 제출\n(scholarship@hansung.ac.kr)\n★\n신청서와 함께 합격 수기도 함께 제출하여야 함\n4.\n고시합격자 장학금 문의\n:\n학생복지팀\n(02-760-5601, 4221)\n*\n문의\n: 02-760-5614/4295(\n한성 고시반 담당자\n)",
     "images": [
       {
         "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000413/20260921134057261_4HW2128C.jpg"
@@ -25533,7 +25533,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:06.831236+00:00"
+    "last_checked_at": "2026-10-19T21:02:52.260945+00:00"
   },
   {
     "id": "4370ede030827cba24d2d7e8f82df49aef4bd60bc6e55b04ef889d70cf578976",
@@ -25553,7 +25553,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:07.784128+00:00"
+    "last_checked_at": "2026-10-19T21:02:53.218739+00:00"
   },
   {
     "id": "d6be6bb6a2b0b6c1f9d87e299b99a35963e5e893f13e2c32b660380b074200b7",
@@ -25573,7 +25573,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:08.779785+00:00"
+    "last_checked_at": "2026-10-19T21:02:54.205975+00:00"
   },
   {
     "id": "c54d27d1f6e6a537d6c6f37b3534f3673c8a9af28ee1489bbc209b178e4768a2",
@@ -25593,7 +25593,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:09.768951+00:00"
+    "last_checked_at": "2026-10-19T21:02:56.213820+00:00"
   },
   {
     "id": "b42ea46bab033a27fae10bbaa445cce50dba4d040cb37cb0b5d1ef452849380c",
@@ -25618,7 +25618,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:10.782946+00:00"
+    "last_checked_at": "2026-10-19T21:02:57.228815+00:00"
   },
   {
     "id": "d0648662bf41c85313c27dbc9060aa1a288e5094750f0c60dff047c2341b0e61",
@@ -25647,7 +25647,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:11.777336+00:00"
+    "last_checked_at": "2026-10-19T21:02:58.211819+00:00"
   },
   {
     "id": "90929ec91fc6dac6e7e917f238784a3e397fb554ed15e9ccd14d8eea5ac3cfb8",
@@ -25670,7 +25670,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:12.795492+00:00"
+    "last_checked_at": "2026-10-19T21:03:00.211832+00:00"
   },
   {
     "id": "bf0f4837e1599fa9bee18c9c4f5ed86a68da185f973b38a4ced540e18952b0c5",
@@ -25696,7 +25696,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:13.779860+00:00"
+    "last_checked_at": "2026-10-19T21:03:01.219757+00:00"
   },
   {
     "id": "a39f6fabc02511a791b60c088713ed9bb6913c92a782cb409c1144fbe05c9b2e",
@@ -25719,7 +25719,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:15.778105+00:00"
+    "last_checked_at": "2026-10-19T21:03:02.246177+00:00"
   },
   {
     "id": "664624891c0e6c25e353e868bfc53adaa300618f91e22cb16b89eb6aec70f840",
@@ -25739,7 +25739,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:16.782666+00:00"
+    "last_checked_at": "2026-10-19T21:03:03.213687+00:00"
   },
   {
     "id": "bfb14c0708917cf5595d650402cc9bc4a9f644bdde7518f5461eae8f6fb7b031",
@@ -25764,7 +25764,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:17.780007+00:00"
+    "last_checked_at": "2026-10-19T21:03:04.217506+00:00"
   },
   {
     "id": "b8bcca81d0de2e8d2f61f7749fd6c3c7abc63d1fde489c73ce7b42dd41f5adfc",
@@ -25784,7 +25784,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:18.803264+00:00"
+    "last_checked_at": "2026-10-19T21:03:05.216877+00:00"
   },
   {
     "id": "090a8b05c3f668930f31d4f1c36e1146aa0dbe329b8453300f2fde4d02e5b318",
@@ -25804,7 +25804,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:19.883681+00:00"
+    "last_checked_at": "2026-10-19T21:03:06.216154+00:00"
   },
   {
     "id": "a979e53bbe85c04423299793d85f8c11c863f024f6a5aa219564cbb1bf1532ca",
@@ -25829,7 +25829,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:20.877092+00:00"
+    "last_checked_at": "2026-10-19T21:03:07.239724+00:00"
   },
   {
     "id": "e9db7f6aca8e7103b2485e979910ccc24d21bb52388e6a4947758ab9f541fa4f",
@@ -25849,7 +25849,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:21.826710+00:00"
+    "last_checked_at": "2026-10-19T21:03:08.205757+00:00"
   },
   {
     "id": "fd52070bd2ff4def962efc3865be439aee315ca27e7be7d70feb3922f92174b7",
@@ -25870,7 +25870,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:22.832072+00:00"
+    "last_checked_at": "2026-10-19T21:03:09.214421+00:00"
   },
   {
     "id": "eb9da83249b669dd10969f66817d9c60bf37c86b11ac5965fb216e02e331e6f0",
@@ -25925,7 +25925,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:23.823084+00:00"
+    "last_checked_at": "2026-10-19T21:03:10.213227+00:00"
   },
   {
     "id": "03aea8eb7a22a845394a4fd972ce6919c1cddc78d09369bc0e0542d02d28b38e",
@@ -25948,7 +25948,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:24.828171+00:00"
+    "last_checked_at": "2026-10-19T21:03:11.218099+00:00"
   },
   {
     "id": "98357345597a8dbf377162fa6abd9b5f4bbf7041ed67ff3d526ed2778bdac440",
@@ -25971,7 +25971,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:25.858856+00:00"
+    "last_checked_at": "2026-10-19T21:03:12.216907+00:00"
   },
   {
     "id": "0c8f2a1f5074fd8cb7bab00d78f81b7302c2a7c0e520093090ac4c4a254bfaf9",
@@ -25991,7 +25991,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:26.962733+00:00"
+    "last_checked_at": "2026-10-19T21:03:13.231445+00:00"
   },
   {
     "id": "2c8f35491bc986d8276814ecc82607da74a5e1abd8f91cb559c302439c5fa131",
@@ -26011,7 +26011,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:27.846472+00:00"
+    "last_checked_at": "2026-10-19T21:03:14.215340+00:00"
   },
   {
     "id": "cd98aebb4c4ef0c7cca7b04bd3588ad92cbec296c0227c74af76a5abbf355cce",
@@ -26042,7 +26042,7 @@
     ],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:28.844852+00:00"
+    "last_checked_at": "2026-10-19T21:03:15.210215+00:00"
   },
   {
     "id": "3ea23a88998f6c201d8d99dd876dfa91d8cb7c49238937e71466ee668cbe2789",
@@ -26062,7 +26062,7 @@
     "attachments": [],
     "content_status": "title_only",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:29.867526+00:00"
+    "last_checked_at": "2026-10-19T21:03:16.213288+00:00"
   },
   {
     "id": "00ca0eccf05d992b97278cab21533afb024cc5c47198e35bdf9076694d3526e9",
@@ -26085,7 +26085,7 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:30.868961+00:00"
+    "last_checked_at": "2026-10-19T21:03:17.220475+00:00"
   },
   {
     "id": "11351476b7f2fc5dc1451861f6974a4a728a05c80d2235b154983d4202f0014b",
@@ -26114,7 +26114,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:31.866612+00:00"
+    "last_checked_at": "2026-10-19T21:03:18.218630+00:00"
   },
   {
     "id": "5f25c293c9284a4c00a8f1dcdb362a6d6e4b1452ca2ab71b93606fb7cf47418d",
@@ -26135,7 +26135,7 @@
     ],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:32.900027+00:00"
+    "last_checked_at": "2026-10-19T21:03:19.232032+00:00"
   },
   {
     "id": "f9a1b694256e8ca1bacae4cc04037dae1bfd9523a67290b6e758b13a767ec62b",
@@ -26155,6 +26155,972 @@
     "attachments": [],
     "content_status": "text",
     "attachment_extraction_status": "pending",
-    "last_checked_at": "2026-10-08T05:19:33.874883+00:00"
+    "last_checked_at": "2026-10-19T21:03:21.229867+00:00"
+  },
+  {
+    "id": "f7f1e4eee3f335482078ad319f930ac32236cc3cf6343c34695b63ecba873490",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225292/artclView.do",
+    "title": "한성공지 2026학년도 2학기 HS CREW 재학생 소모임 선발 결과 안내",
+    "date": "2026-10-08",
+    "source": "학생복지팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "2026학년도   2학기 HS CREW 재학생 소모임 지원 프로그램 심사 결과\n순위\n대표학생\n학번\n소모임명\n1\n박현준\n24***0\n스피킹 부기(Speaking   Boogi)\n2\n한승원\n26***4\nRe:roll\n3\n양정범\n22***4\n407 Outdoor\n4\n김우영\n22***5\n전환점\n5\n윤민혁\n22***0\n페어링 테이블\n6\n박수진\n22***6\n에디트\n7\n서동주\n25***5\nHS FOUNDERS\n8\n이원준\n22***2\n핑키퐁허브\n9\n윤주희\n22***5\n스픽업(Speak up)\n10\n김지우\n22***0\nContainer Arts Guild   (CAG)\n11\n박서영\n24***5\ngrit\n12\n이지원\n23***6\n취뽀LAB\n13\n김재석\n21***8\nSTRIKE\n14\n정찬혁\n23***4\n뛰뛰빵빵\n15\n김하은\n23***3\nSpeak up\n16\n이초빈\n24***4\n서시투\n17\n정영준\n21***2\nSAYEE\n18\n이예지\n24***0\n코스피\n19\n김채연\n24***4\n모락모락\n20\n이가림\n22***3\n디지\n21\n이유진\n23***8\n갓생영문\n22\n강윤지\n22***9\n삼삼오오 취업독서단\n23\n이우혁\n25***4\n한성기니\n24\n윤여울\n26***4\n읽씹금지(책 읽고 씹지말고 토론하자!)\n25\n황유림\n24***7\nPiSun\n26\n이규림\n25***4\n오늘부터 1일\n27\n임희진\n24***2\nJust Say It\n28\n윤소정\n25***8\n똑독(똑똑하게 독서하기)\n29\n홍서연\n23***1\n스위밍부기\n30\n이지원\n25***8\n니트워크\n31\n손주환\n22***3\n루틴업\n32\n김진원\n21***8\n김부각\n33\n이지원\n24***5\nBTS(Behind The   Scenes)\n34\n백승진\n24***0\n고새터(고래싸움에새우등터진다)\n35\n진성원\n21***9\nHorse Circle\n36\n김예나\n23***9\n개발마스터\n37\n김가람\n25***6\n한본어\n38\n정민혁\n25***7\n블루밍(Blooming)\n39\n송민준\n23***9\n차트밭의 파수꾼\n40\n김지우\n26***6\n오브젝터\n41\n김나현\n24***3\n후메익디스\n42\n김민재\n26***0\n혜화 문화 탐방단\n문의: 학생복지팀 02-760-4221(진리관 105호)",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000417/20261008172058174_XNWCJ5YH.png"
+      }
+    ],
+    "attachments": [
+      {
+        "name": "소모임 활동 중간, 결과보고서.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64113/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:17.223779+00:00"
+  },
+  {
+    "id": "122c8b6a2bb7bf0b15617a4da3a9477853c5b12020b9ff9cfe01cd281486bfa9",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225290/artclView.do",
+    "title": "한성공지 2026학년도 2학기 고시반 입반생 선발 결과 안내",
+    "date": "2026-10-08",
+    "source": "진로취업지원팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "2026\n학년도\n2\n학기 고시반 입반생 선발 결과를 아래와 같이 안내드립니다\n.\n한성대학교에서 고시 및 전문자격을 준비하는 학부생을 지원하고자 운영하는 고시반에 관심가져주셔서 감사합니다.\n다음과 같이 2026-2학기 한성 고시반 최종 선발 결과를 발표합니다\n.\n1.\n선발된 입반생 명단\n<일 반>\n-감정평가사반(일반): 5명\n감정평가사1\n공*배\n25@@@@6\n감정평가사2\n김*은\n24\n@@@@\n7\n감정평가사3\n김*영\n22\n@@@@\n5\n감정평가사4\n김*민\n20\n@@@@\n8\n감정평가사5\n박*서\n20\n@@@@\n5\n-공무원반: 15명\n공무원1\n김*혜\n23\n@@@@\n5\n공무원2\n노*현\n23\n@@@@\n6\n공무원3\n공*인\n24\n@@@\n@7\n공무원4\n전*현\n24\n@@@@\n6\n공무원5\n임*빈\n22\n@@@@\n8\n공무원6\n황*영\n23\n@@@@\n5\n공무원7\n임*수\n24\n@@@@\n3\n공무원8\n강*빈\n24\n@@@@\n9\n공무원9\n김*욱\n24\n@@@@\n7\n공무원10\n김*준\n20\n@@@@\n2\n공무원11\n김*민\n20\n@@@@\n3\n공무원12\n백*연\n23\n@@@@\n4\n공무원13\n정*석\n21\n@@@@\n5\n공무원14\n이*비\n21\n@@@@\n3\n공무원15\n임*현\n20\n@@@@\n6\n-공인노무사반(일반): 1명\n공인노무사\n이*규\n22\n@@@@\n5\n-공인회계사반(일반): 3명\n공인회계사(일반)1\n정*영\n18\n@@@@\n3\n공인회계사(일반)2\n고*한\n20\n@@@@\n5\n공인회계사(일반)3\n김*수\n20\n@@@@\n6\n-관세사반(일반): 2명\n관세사(일반)1\n김*훈\n24\n@@@@\n5\n관세사(일반)2\n최*현\n25\n@@@@\n3\n-변호사반(일반): 2명\n변호사(일반)2\n김*경\n25\n@@@@\n5\n변호사(일반)1\n강*\n24\n@@@@\n3\n<주니어반>\n-감정평가사반(주니어반): 2명\n감정평가사(주니어)1\n김*찬\n26\n@@@@\n2\n감정평가사(주니어)2\n길*욱\n26\n@@@@\n8\n2. 미선발자\n안내\n미선발자분들께.\n이번 학기 고시반에 지원해 주신 모든 분들께 감사드리며\n,\n역량과 고시 준비에 대한 열정이 뛰어남에도 불구하고 한정된 선발인원으로 인하여 선발하지 못한 점, 양해해주시길 바랍니다.\n이번 학기에 입반생으로 선발되지 못한 분들은 다음 기회에 다시 도전해 주시기 바랍니다\n.\n미선발자 명단은 따로 게시하지 않으며\n,\n별도의 개별 안내는 하지 않음을 양해 부탁드립니다\n.\n3.\n입반생 오리엔테이션 안내\n선발된 입반생들은 아래 기한까지 오리엔테이션 영상 수강 및 서약서 / 개인정보활용동의서 / 고시반 퀴즈(이용 수칙에 관한 사항) 을 제출해주시길 바랍니다.\n일시\n: 2026\n년 10\n월 23일\n금요일 15:00까지\n장소\n:\n고시반 홈페이지\n(\n학교 홈페이지\n>\n우측\nQUICK MENU> e-class > 2026-2\n학기 고시반 커뮤니티 가입. 비밀번호는 선발자 대상으로 문자 발송\n)\n오리엔테이션에서는 고시반의 운영 계획\n,\n학사 일정\n,\n필수 사항 등에 대해 안내드릴 예정입니다\n.\n장학금 미대상자\n,\n유의사항\n,\n고시반 출입방법 등의 미숙지 시의 불이익을 책임지지 않으므로 반드시 수강해 주시기 바랍니다\n.\n4.\n문의 사항\n문의 사항은\n02-760-5614\n로 연락 주시기 바랍니다\n.\n고시반에서의 학습과 성취를 기원합니다\n.\n감사합니다\n.\n진로취업지원팀\n고시반 운영 담당 드림",
+    "images": [],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "not_applicable",
+    "last_checked_at": "2026-10-19T21:01:18.222326+00:00"
+  },
+  {
+    "id": "8f2d4b19ca969bccfb947bbbb0863d2b4df12b25ccf1e6dfe531b721612cd1aa",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225288/artclView.do",
+    "title": "한성공지 2026학년도 [융합적 상상력] 영역 신규 교양교과목 개발 공모전",
+    "date": "2026-10-08",
+    "source": "상상교양연구소",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "안녕하십니까\n?\n상상력교양대학에서는 교양 교육과정의 다양성을 확대하고\n,\n학문 간 융합을 바탕으로 학생들의 창의적 문제해결 역량을 강화하기 위하여\n「\n융합적 상상력\n」\n영역의 신규 교과목을 공모합니다\n.\n핵심교양 교육과정의\n「\n융합적 상상력\n」\n영역은\n둘 이상의 학문 분야의 지식과 방법을 연계하여 복합적인 현상을 새롭게 이해하거나\n현실의 문제를 창의적으로 해결하는 역량을 기르는 교육과정입니다\n.\n단순히 여러 학문의 내용을 병렬적으로 다루거나 기술의 사용법을 익히는 데 그치지 않고\n,\n학문 간 실질적인 통합과 적용이 이루어지는 교과목을 대상으로 합니다\n.\n과목 선정시\n,\n추후 교육과정 개편에 따라\n「\n창의융합 영역\n」\n으로 배치될 수 있습니다\n.\n공모 대상 교과목은 다음 세 가지 유형 중 하나에 해당하여야 합니다\n.\n학제간 지식 융합형\n두 개 이상의 서로 다른 학문 분야의 핵심 개념\n,\n이론\n,\n방법론을 유기적으로 연계\n·\n통합하여 하나의 학문적 관점만으로 다루기 어려운 주제나 현상을 새로운 관점에서 탐구하는 교과목\n현재 해당 영역 운영중인 교과목\n)\n다른 학문분야 교수자\n2\n명의 팀티칭 기반\n「\n융합주제 세미나\n」\n사회문제해결형\n사회\n·\n지역사회\n·\n세계가 직면한 실제 문제를 주제로 하여 프로젝트 기반 학습\n(PBL),\n리빙랩\n(Living Lab)\n등의 방식으로 문제 해결을 모색하는 교과목\n현재 해당 영역 운영중인 교과목\n)\n리빙랩 활동으로 과학의 사회\n·\n문화적 맥락을 이해하고\n,\n생활 문제 해결을 위한 과학적 가치관과 문제해결력을 정립하는\n「\n인류 문제해결을 위한 융합과학\n」\n기술기반 융합형\n인공지능\n(AI),\n빅데이터\n,\n메타버스 등 신기술과 다양한 학문 분야를 결합하여 새로운 가치를 창출하고 문제를 해결하는 교과목\n.\n단순한 기술 활용 교육이 아니라 기술의 원리와 인문\n·\n사회\n·\n예술적 관점 등을 함께 다루는 교과목\n현재 해당 영역 운영중인 교과목\n)\n최신 디지털 기술의 원리와 응용을 익히고\n,\n윤리\n·\n법적 문제 탐구 및 비판적 정보 관리 역량을 함양하는\n「\n디지털 리터러시의 이해\n」\n관심 있는 교수님들의 많은 참여를 바랍니다\n.\n1.\n공모 분야\n-\n핵심교양 교육과정\n「\n융합적 상상력\n」\n영역 신규 교과목\n-\n학제간 지식 융합형\n/\n사회문제해결형\n/\n기술기반 융합형 중 하나 선택\n※\n추후 교육과정 개편에 따라\n「\n창의융합 영역\n」\n으로 배치될 수 있음\n2.\n공모자격\n:\n본교 전임교원\n3.\n공모 기간\n2026. 10. 8.(\n목\n) ~ 10. 25.(\n일\n)\n자정\n까지\n4.\n심사 기간\n2026. 10. 26.(\n월\n) ~ 10. 30.(\n금\n)\n5.\n결과 발표\n2026. 11. 2.(\n월\n)\n예정\n6.\n제출 서류 및 제출 방법\n첨부 파일\n[\n양식\n)\n신규 교양교과목 개발 계획서\n]\n작성 후 인트라넷\n(\n상상교양연구소\n.\nt_722gg@hansung.kr\n)\n으로 제출\n7.\n유의사항\n-\n교과목 개발에 대한 저작권 등의 산출물은 본교에 귀속함을 원칙으로 함\n-\n선정 개발된 교과목은 개발자를 운영자로 함\n- 선정 교과목의 표절 등의 문제 발생 시 교과목 운영을 중단함\n8.\n문의\n상상력교양대학 상상교양연구소\n(02-760-5852, 5851)\n새로운 학문적 시각과 다양한 교육방법을 통해 학생들의 창의적 사고와 문제해결 역량을 키울 수 있는 교과목이 개발될 수 있도록 많은 관심과 참여를 부탁드립니다\n.",
+    "images": [],
+    "attachments": [
+      {
+        "name": "양식) 신규 교양교과목 개발 계획서.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64039/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:19.205505+00:00"
+  },
+  {
+    "id": "0c444ae99027031477cc2b781d6eabf4bfa453714e2f895a30da9e8b225de7ec",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225320/artclView.do",
+    "title": "교외장학금 2026년도 은평구민장학재단 하반기 선발공고",
+    "date": "2026-10-11",
+    "source": "학생복지팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000417/20261011131138860_3KRM8QM5.png"
+      }
+    ],
+    "attachments": [
+      {
+        "name": "【붙임】 2026. 하반기 은평구민 장학생 선발 공고.pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64061/download.do"
+      }
+    ],
+    "content_status": "title_only",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:15.194137+00:00"
+  },
+  {
+    "id": "68e6f6101ae282c91ce5cdde1a616ed0a9bb41eec4b7f94e9e52c5e924db8750",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225351/artclView.do",
+    "title": "기타 [국민대학교] 2026 졸업선배와 함께하는 직무박람회 (10/28, 10:00~17:00)",
+    "date": "2026-10-12",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "안녕하세요. 한성대학교 대학일자리플러스센터입니다.\n국민대학교에서 재학생·졸업생 및 지역 청년의 진로 탐색과 취업 준비를 지원하고, 다양한 직무에 대한 이해를 높이고자 「2026 국민대학교 졸업선배와 함께하는 직무박람회」를 개최합니다. 많은 관심과 참여 바랍니다.\n[행사 개요]\n행사명: 2026 국민대학교 졸업선배와 함께하는 직무박람회\n일시: 2026.10.28(수) 10:00 ~ 17:00\n장소: 국민대학교 운동장(대운동장)\n참여대상: 재학생, 졸업생, 지역 청년\n사전접수: 10.6(화) ~ 10.26(월) (포스터 QR코드)\n[주요 프로그램]\n현직 졸업선배와의 1:1 진로·직무 상담 및 멘토링\n대학일자리플러스센터 및 현장실습 프로그램 안내·상담\n청년고용정책 및 청년지원사업 안내\n참여 이벤트 등\n[행사 포스터]\n※ 상세 내용은 포스터를 참고하세요.",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89546/%EA%B5%AD%EB%AF%BC%EB%8C%80_%EC%A7%81%EB%AC%B4%EB%B0%95%EB%9E%8C%ED%9A%8C_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:08.182690+00:00"
+  },
+  {
+    "id": "ce6c0e5af823b07ebdb39fcfd95727228d4b11b65f10a682a6a6b79d22d79d4f",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225345/artclView.do",
+    "title": "한성공지 [대학원 총동문회] 2026 한성인의 밤 개최 안내",
+    "date": "2026-10-12",
+    "source": "대학원 교학팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "[한성대학교 대학원 총동문회 2026 한성인의 밤]\n졸업 후 바쁜 일상 속에서 잠시 잊고 지냈던 반가운 얼굴들과 함께 하는 자리!\n<\n2026 한성인의 밤>\n에 동문 여러분들을 초대합니다.\n- 일시: 2026. 11. 13.(금) 오후 6시 30분\n- 장소: 더리버사이드호텔(서울 서초구 강남대로107길 6)\n※ 참가 관련 문의: 김덕환 사무총장(하단 연락처 참조)",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000417/KakaoTalk_20261008_155125438_1.png"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:09.191001+00:00"
+  },
+  {
+    "id": "433df8243d541c9beda786235e0b8444ef5619b7f163bd43c4923be5f60d2aa4",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225344/artclView.do",
+    "title": "강소기업채용 [고용노동부] 청년일자리 강소기업 정보는 어떻게 찾나요? (사람인 활용)",
+    "date": "2026-10-12",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "고용노동부에서 청년일자리 강소기업 명단 및 채용관(사람인) 을 통해 관련 기업 정보를 직접 확인 하실 수 있습니다 :)\n○ 고용노동부-중소벤처기업부는 중소·중견기업 인식개선 등을 위해 청년고용 실적과 기업 경쟁력이 우수한 청년일자리 강소기업을 선정하여 기업정보 제공 및 홍보 등 지원을 추진하고 있습니다.\n2024~2026년 청년일자리 강소기업 선정기업 현황(배포).pdf1.39MB\n□ 청년일자리 강소기업 채용관(사람인)\n○ 바로가기:\nhttps://www.saramin.co.kr/zf_user/jobs/theme/kangso",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89538/banner2.jpg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:10.185922+00:00"
+  },
+  {
+    "id": "7656cfa46d88fc770731241f16aa072e1630d9701816808da9e82ee5bf95a136",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225336/artclView.do",
+    "title": "채용정보 [에코마케팅] 2026 하반기 신입·경력 집중채용 - 3차 모집 (~10/19 까지)",
+    "date": "2026-10-12",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "안녕하세요. 한성대학교 대학일자리플러스센터입니다.\n에코마케팅에서 2026 하반기 신입·경력 집중채용 <3차 모집>을 진행합니다. 관심 있는 학생들의 많은 지원 바랍니다.\n[에코마케팅] 2026 하반기 신입·경력 집중채용 - 3차 모집 (~10/19)\nCREATE WHAT'S NEXT, 새로운 마케팅의 미래를 함께 만들어갑니다. No.1 AI Marketing Company\n자기소개서 문항 1개: 집요하고 끈질기게 노력해서 성취하거나 실패한 여러분만의 이야기\n넉넉한 모집 기간: 9월 7일부터 10월 19일까지 6주간, 1차·2차·3차로 나누어 진행\nSpeed 채용: 지원부터 최종 합격까지 약 한 달\n두 자릿수 채용: 마케팅·데이터·테크 전 직군에서 두 자릿수 규모로 채용\n● 모집분야\n: 퍼포먼스 마케터, 커머스 마케터, 글로벌 마케터, 데이터 분석가, 데이터 엔지니어, 테크(FDE, 클라우드 보안, 웹 퍼블리셔), 영상 크리에이터(VC)\n● 모집구분\n: 신입 · 경력\n● 지원기간 및 전형절차\n3차 지원기간: 10월 6일(화) ~ 10월 19일(월) 18:00\n서류 발표: 10월 3주차\n사전 과제(마케터 신입): 10월 4주차\n면접 전형: 10월 4주 ~ 11월 1주\n최종 결과 발표: 11월 2~3주차 (직군별 상이)\n※ 직군별로 업무 적합도 테스트/코딩테스트 등이 진행되며, 자세한 내용은 해당 공고를 참고해주세요.\n※ 경력직 전형은 위 일정과 별도로 운영되며, 서류 검토 후 개별 연락 예정입니다.\n● 지원방법\n: 에코마케팅 커리어 사이트 지원\nhttps://m.site.naver.com/2impC\n● 채용 문의\n:\nrecruit@echomarketing.co.kr",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89528/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      },
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89527/104257_3588492_1788915352656259802.jpg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:11.190843+00:00"
+  },
+  {
+    "id": "a3281575a3c3d50a47f67df42b2f11eac8fa5ee447a3c119ac32a9bb8b7ef974",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225335/artclView.do",
+    "title": "기타 [삼성전자 협력사 온라인 채용박람회] 비대면 채용설명회 참가자 모집 (~10/25)",
+    "date": "2026-10-12",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "안녕하세요. 한성대학교 대학일자리플러스센터입니다.\n삼성전자 협력사 온라인 채용박람회 기간 중 참가기업과 구직자가 소통할 수 있는 비대면(화상) 채용설명회 참가자를 모집합니다. 관심 있는 학생들의 많은 신청 바랍니다!\n[2026 하반기 삼성전자 협력사 온라인 채용박람회]\n기간: 2026.10.28(수) ~ 11.15(일)\n규모: 채용계획이 있는 협력사 40여개\n장소:\n협력사 온라인 채용관 내 채용박람회 Zone (10.28 00시 오픈 예정)\n참가기업: 뉴파워프라즈마, 에어프로덕츠코리아, 와이솔, 와이씨, 이오테크닉스, 티에스이 등\n[삼성전자 협력사 비대면 채용설명회]\n일시: 2026.11.3(화) 14:00 ~ 15:30\n방법: 화상 플랫폼(Knox Meeting)\n내용: 채용박람회 소개, 참가기업 소개(채용직무 및 자격요건 등), 지원방법, Q&A 등\n참가기업: 에어프로덕츠코리아, 이오테크닉스, 티에스이 등 다수 반도체 기업 (신입 채용계획이 있는 기업 3~4개사, 현재 기업 모집중)\n대상: 26년 하반기 입사 가능한 이공계(전기, 전자, 기계, 컴퓨터 등) 취준생 중심 (학교별 신청인원 최대 10명)\n혜택: 당일 설명회 참석자 대상 '사람인 인적성검사' 상품 제공 예정\n[신청 방법]\n신청 마감: 2026.10.23(금)\n하단 첨부된 참가자 명단 양식과 개인정보 수집·이용 동의서를 모두  작성하여\n대학일자리플러스센터 원영은T에게 10/25(일) 까지 제출\nhswye@hansung.kr\n★2026 하반기 삼성전자 협력사 온라인 채용박람회 채용설명회 관련 개인정보 수집,이용 동의서_2610 (2).docx\n21.73KB\n★(양식) 26년(하) 삼성전자 협력사 채용박람회 온라인 채용설명회 참가자 명단_학교명_인원 (1).xlsx\n16.67KB\n※ 삼성전자 협력사 채용관:\n사람인 삼성전자 협력회사 채용관",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89523/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:12.194505+00:00"
+  },
+  {
+    "id": "747a8ed5cc12501808b04bb07a637bb340c914c3c27f1dc92639526ce91e97c9",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225334/artclView.do",
+    "title": "채용정보 [추천채용] 한큐한신익스프레스코리아 포워더(해상 수출입) 신입(~10/22)",
+    "date": "2026-10-12",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "[회사 개요]\n■ 한큐한신익스프레스코리아 (Hankyu Hanshin Express (KOREA) CO., LTD.)\n■ 일본 한큐한신홀딩스 그룹 소속 (한큐한신토호 그룹)\n■ 사업분야 : 포워딩, 물류업, 전자제품 A/S센터 등\n■ 설립 : 2004년\n■ 본사 : 서울특별시 서대문구 서소문로 21, 13층\n[추천전형 지원방법]\n- 지원방법 : 10/22(목) 23시59분 까지\n원영은T 하단 메일로 입사 서류 전달\n※ 지원자 수시 면접으로 진행되어 조기 채용마감 될 수 있으니, 마감 전 상시 추천 중입니다.\n입사지원서_한큐한신익스프레스코리아(지원자명_지원직무)(로그인 후 다운로드가능).xls\n67.58KB\n- 지원사실 회신처 : hswye@hansung.kr 대학일자리플러스센터  원영은 컨설턴트\n- 추천채용 문의: 02-760-5840\n---------------------------------------------------------------------------------------------------------------------------------\n한큐한신익스프레스코리아는 일본 한큐한신홀딩스 그룹 소속으로, 2004년 설립 후 포워딩, 물류업, 전자제품 A/S센터 등의 사업분야에서 지속적인 성장을 이루고 있습니다.\n한큐한신홀딩스는 철도, 호텔, 여행 등 생활 관련 다양한 서비스를 제공하며, 한큐/한신백화점 등 유통사업의 H2O Retailing 그룹, 영화 및 연극 등의 사업을 전개하는 토호 그룹과 함께 한큐한신토호 그룹을 형성하고 있습니다.\n------------------------------------------------------------------------------------------------------------------------------------\n[모집부문]\n- 모집부문/업무 : 신입 / 포워딩(해상 수출입 업무)\n- 근무지역 : 본사(서울특별시 서대문구, 충정로)\n- 근무조건 : 4대 보험, 퇴직금/성과급, 주 5일 근무, 건강검진, 교육지원 등 (연봉은 당사 내규에 따름)\n- 전형절차 : 1차 서류전형 → 2차 실무면접 → 3차 임원면접\n[자격 조건]\n-전공무관 (상경계, 무역계열 우대)\n-기졸업자(26년 8월 졸업자 포함) 및 27년 2월 졸업예정자 (업무에 지장 없는 경우)\n-영어 또는 일본어 가능자 우대\n-관련 인턴 경험자 우대",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/85378/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:13.197901+00:00"
+  },
+  {
+    "id": "336cbdcfe83d43f4d179e873e97474bda88e01e5ff19a6abd3ca7bc17f6b0ce6",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225325/artclView.do",
+    "title": "한성공지 [SW중심대학사업단] 2026학년도 2학기 「퓨처렉스」 인턴십 프로그램 참여 학생 모집",
+    "date": "2026-10-12",
+    "source": "SW중심대학사업단",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "SW\n중심대학사업단에서\n2026\n학년도\n2\n학기\n「\n퓨처렉스\n」\n인턴십 프로그램 참여 학생을 모집합니다\n.\n관심 있는 학생들의 많은 참여 바랍니다\n.\n1.\n참여대상\n-\n한성대학교\n3~4\n학년 재학생 중\nSW\n학과 재학생\n- SW\n학과 학생\n: 1\n트랙이\n\"\n컴퓨터공학부\n[\n모바일소프트웨어트랙\n,\n빅데이터트랙\n,\n디지털콘텐츠\n·\n가상현실트랙\n,\n웹공학트랙\n], AI\n응용학과\n,\n융합보안학과\n\"\n인 학생\n※\n휴학생\n,\n졸업유예자\n,\n수료자\n,\n졸업생 참여 불가\n2.\n모집개요\n-\n기업명\n:\n퓨처렉스\n(\n경기도 의왕시 안양판교로\n82, 701\n호\n)\n-\n모집인원\n:\n총\n4\n명\n(\n각 부서별\n1\n명\n)\n실습기관 부서명\n직무명\n모집인원\nAI\n사업부\n[AI\n비전\n] 3D\n비전\n‧\n빈피킹\nR&D\n인턴\n(3D\n비전\n‧\n리버스 엔지니어링\nR&D\n실무과정\n)\n1\n명\nAX\n사업부\n[AX\n‧\n로봇\n]\n재제조 배터리 공정 자동화 분석 인턴\n(\n재제조 배터리 공정 로봇 자동화\nAX\n프로젝트 과정\n)\n1\n명\n기업부설연구소\n[\n데이터\nR&D] xEV DSC\n진단데이터\n‧\nDB\n설계 인턴\n(xEV DSC\n진단데이터 표준화\n‧\nDB\n설계 연구과정\n)\n1\n명\n모빌리티사업부\n[\n모빌리티\nAI] BFG AI CCTV\n화재관제 인턴\n(BFG\n화재관제\nAI CCTV\n데이터\n‧\n프로토타입 과정\n)\n1\n명\n※\n실습 세부내용을 반드시 확인하고 지원하기 바랍니다\n([\n붙임\n1]\n파일 참조\n).\n3.\n학생 혜택\n- 1\n인당 실습지원비\n:\n총\n1,400,000\n원 예정\n(\n학교지원금\n800,000\n원\n,\n실습기관지원금\n600,000\n원\n)\n-\n비교과 포인트\n20P\n지급\n-\n인턴십 프로그램 수료증 발급\n(SW\n중심대학사업단장명\n)\n4.\n운영 일정\n-\n절차별 운영 일정\n진행절차\n일정\n모집기간\n(\n이력서 제출\n)\n2026.10.12.(\n월\n) ~ 2026.10.21.(\n수\n)\n서류전형 합격자 통보\n2026.10.22.(\n목\n)\n개별 통보\n면접 전형\n2026.10.26.(\n월\n)~2026.10.27.(\n화\n)\n최종 합격자 통보\n2026.10.29.(\n목\n)\n개별 통보\n인턴십 기간\n2026.11.02.(\n월\n) ~ 2026.12.11.(\n금\n)\n총\n30\n일\n인턴십 시간\n- [\n주\n4\n일\n]\n원격\n‧\n온라인 실습\n: 1\n일\n3\n시간\n※\n선발 학생의 학기 중 수업 일정을 고려하여 탄력 운영 예정\n-\n[\n주\n1\n일\n]\n회사\n(\n경기도 의왕시\n)\n방문\n‧\n대면 멘토링 실습\n: 1\n일\n8\n시간\n※\n09:00~18:00,\n휴게시간\n12:00~13:00\n포함\n※\n선발 학생의 근무 가능 시간에 따라 업무 수행 시간은 조정될 수 있으며\n,\n온라인과 오프라인을 병행하여 운영할 수 있음\n-\n총 인턴십 시간\n:\n총\n120\n시간\n(\n직무교육시간\n60%,\n실습시간\n40%\n로 구성\n)\n5.\n제출서류\n-\n제출서류\n:\n이력서\n(\n붙임\n2) 1\n부\n(\n포트폴리오 별도 첨부 가능\n)\n-\n제출처\n:\nsw_center@hansung.ac.kr\n※\n메일 제목\n: [\n퓨처렉스인턴십_실습지원부서\n_\n이름\n_\n학번\n]\n[\n문의\n]\nSW\n중심대학사업단\n: 02-760-8059",
+    "images": [],
+    "attachments": [
+      {
+        "name": "붙임2. 이력서 양식.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64065/download.do"
+      },
+      {
+        "name": "붙임1 인턴십 프로그램 운영 계획서_퓨처렉스 AI사업부(공지용).pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64066/download.do"
+      },
+      {
+        "name": "붙임1 인턴십 프로그램 운영 계획서_퓨처렉스 AX사업부(공지용).pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64067/download.do"
+      },
+      {
+        "name": "붙임1 인턴십 프로그램 운영 계획서_퓨처렉스 기업부설연구소(공지용).pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64068/download.do"
+      },
+      {
+        "name": "붙임1 인턴십 프로그램 운영 계획서_퓨처렉스 모빌리티사업부(공지용).pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64069/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:14.212750+00:00"
+  },
+  {
+    "id": "092ffe713ec70fa45662c1b81507cb7e290bc6d1104a6996c3c97e742e7bfb54",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225380/artclView.do",
+    "title": "채용정보 [추천채용/서류면제] (주)삼원페이퍼 본사 지류영업관리 신입/경력(3년 이하) (~10/25)",
+    "date": "2026-10-13",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "■ 채용정보\n· 모집부문: 본사 영업 신입/경력(3년 이하)\n·\n담당업무: 지류(종이) 관련 B2B 영업(인쇄 및 포장 관련), 문구(화방) 유통 B2B 영업, 기존 거래처 관리 및 신규업체 개발영업\n· 자격요건: 경력 신입/경력 3년 이하, 차량운전면허 소지자\n· 우대사항: 인쇄·패키지 및 동종 업계 경험자, 문구·화방 유통 및 동종 업계 경험자, 도전적이고 적극적인 성향을 보유한 자\n· 고용형태: 정규직 (수습기간 있음)\n· 근무시간: 주 5일(월~금) 09:00 ~ 18:00 (휴게시간 12:00 ~ 13:00)\n· 근무지역: 서울 군자역 근무 (G-TOWER, 광진구 천호대로 549)\n· 근무환경: ERP 전산 시스템, 그룹웨어 전자결재 시스템 사용\n· 연봉: 회사 내규에 따름\n■ 전형절차 :서류전형\n(추천전형으로 지원시, 서류 전형 면제)\n→ 실무면접 → 임원면접 → 최종합격\n■ 추천전형 제출서류 및 접수방법\n· 제출서류: 이력서, 자기소개서 (경력 중심 작성), 희망연봉 필수 기재\n·\n지원방법 :\n입사지원서_기업명(지원자명_지원직무)(로그인 후 다운로드가능).doc\n318.46KB\n10/25(일) 23시59분 까지\n원영은T  메일로 입사 서류 전달\nhswye@hansung.kr 대학일자리플러스센터  원영은 컨설턴트\n·  추천채용 문의: 02-760-5840\n※ 지원자 수시 면접으로 진행되어 조기 채용마감 될 수 있으니, 마감 전 상시 추천 중입니다.\n· 유의사항: 각 전형별 합격자에게 개별 안내 예정이며, 입사지원 서류에 허위사실이 발견될 경우 채용확정 이후라도 채용이 취소될 수 있습니다.\n※ 모집 상세 내용은 아래 첨부 채용공고 이미지(지류/포장, 문구/화방)를 참고해 주세요.",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89612/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      },
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89599/%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0_%EC%98%81%EC%97%85%EC%A7%80%EB%A5%98.jpg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:02.201332+00:00"
+  },
+  {
+    "id": "5ab1df0fff8a10f140091764b52924de258e7f59829bd445df5741ef4dd23ebd",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225378/artclView.do",
+    "title": "학사 선택 트랙 간 상호(제1트랙⇄제2트랙) 전공과목 변경신청 시행 안내",
+    "date": "2026-10-13",
+    "source": "학사운영팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "선택 트랙 간 상호\n(\n제\n1\n트랙\n⇄\n제\n2\n트랙\n)\n전공과목 변경신청 시행 안내\n트랙제 정착 및 자유로운 트랙선택 제도운영에 의거 기취득한 성적 중에서 트랙간 전공이수구분의 변경을 학생 자율로 선택할 수 있도록 다음과 같이 소속 트랙 상호\n(\n제\n1\n트랙\n⇄\n제\n2\n트랙\n)\n전공이수구분 변경 신청 접수를 진행하오니 기간 내에 신청해 주시기 바랍니다\n.\n1.\n제도시행 취지\n:\n트랙 선택 및 변경으로 인해 이미 취득한 성적 중 전공과목의 이수구분이 제\n1\n트랙과 제\n2\n트랙간 상호 인정되는 과목에 한하여 학생 자율로 인정트랙을 선택하도록 함으로써 졸업 시 선택 트랙별 전공이수학점의 불균형을 해소하기 위함\n2.\n신청기간\n:\n2026. 10\n.\n14\n.(\n수\n) 10:00 ~ 10. 30.(\n금\n) 17:00\n3.\n신청대상\n:\n트랙제 학생 중 선택 트랙 간 상호\n(\n제\n1\n트랙\n⇄\n제\n2\n트랙\n)\n전공과목 변경을 희망하는 자\n3-1. 신청과목: 두 개 트랙이 서로 전공상호인정하고 있는 과목\n4.\n신청방법\n:\n종합정보시스템\n→\n성적\n→\n성적조회\n(\n누적\n)\n에서 활성화된\n(\n하늘색 음영표시\n)\n과목 중 변경희망 과목을 클릭하면 변경 신청 중(짙은 파란색 음영표시로 전환)으로 전환되며 신청완료 됨\n5.\n결과확인\n:\n최종 승인 결과는 11\n월 6\n일\n(금)\n이후 종합정보시스템 성적조회에서 확인 할 수 있음\n6.\n유의사항\n:\n(1)\n신청과목은 이미 성적이 나온 과목으로\n이번 학기 수강신청 중인 과목은 해당되지 않음\n(\n누적 성적에 표기된 교과목만 신청 대상임\n)\n(2)\n변경신청 가능 과목은 전공과목에 한하므로 교양과목은 해당사항 없으며, 전공과목에서 변경 신청 시 일선으로 바뀌는 경우도 신청 불가능함\n(3)\n이번학기 졸업대상자는\n신청 내역 반영 시 각 트랙의 이수학점을 반드시 확인해야 함\n(4)\n휴학 중인 학생은 신청대상에서 제외되므로 복학한 학기 신청기간에 신청해야 함\n(5)\n신청기간 외에 추가신청 불가\n(\n신청기한 엄수\n)\n(6)\nMicro Degree과정 이수 학생 중 본인의 1,2트랙과 전공상호인정되는 MD과목에 한해 선택트랙 이수구분 변경을 희망하는 학생은 첨부한 별도의 신청서 양식을 작성하여, haksa@hansung.ac.kr로 이메일 송부\n- 보다 자세한 내용은 첨부1_Micro Degree 이수교과목 선택트랙간 전공 이수구분 변경 신청서 참고\n- 이메일 제목: \"MD 선택트랙이수구분 변경(학번)(성명)\"\n7.\n문의\n:\n학사운영팀\n(760-4219,\n우촌관\n3\n층\n)\n2026. 10. 13.\n교육혁신처장",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000172/20230413091704538_M76GCK71.png"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:03.195464+00:00"
+  },
+  {
+    "id": "4035c93477ff478729da08b25e40b5c89b35e0a9c8489636d94b5cef343e9743",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225375/artclView.do",
+    "title": "한성공지 2027학년도 1학기 정년계열 전임교원 초빙 공고 (~2026.10. 27. 14:00 까지)",
+    "date": "2026-10-13",
+    "source": "교수지원팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "공고일: 2026.10.13.(화)\n온라인 접수:\nhttps://recruit.hansung.ac.kr/\n※ 공고문 하단에 첨부된 자기소개 및 교육\n·연구계획서를 반드시 작성하여 자기소개서 작성 시 PDF 형식으로 첨부하시기 바랍니다.",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000418/2027학년도_1학기_정년계열_전임교원_초빙공고_통합이미지.png"
+      }
+    ],
+    "attachments": [
+      {
+        "name": "붙임1. 2027학년도 1학기 전임교원 초빙 공고문 (정년계열).pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64115/download.do"
+      },
+      {
+        "name": "붙임2. (양식) 자기소개 및 교육 연구계획서.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64116/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:04.188521+00:00"
+  },
+  {
+    "id": "0e9809885124861025e7a6288e5e387fce7b4664f2ba721c9eff6984c9c0ae70",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225371/artclView.do",
+    "title": "한성공지 [채용]컴퓨터공학부 실습조교 채용 공고(지원 일정 : 10/18까지)",
+    "date": "2026-10-13",
+    "source": "컴퓨터공학부",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "한성대학교 컴퓨터공학부에서는 아래와 같이 실습조교를 모집하오니 적극 지원해 주시기 바랍니다.\n1. 모집분야 : 실습조교(주간) 2명.\n2. 지원자격\n가. 학사학위 이상 소지자(전공 무관)\n나. 기타 조교임용에 결격 사유가 없는 자\n다. 2026년 11월 01일 또는 11월 15일부터 근무 가능한 자\n라. 우대사항 : 컴퓨터 전공자 또는 실습/기자재 조교 경험자\n3. 담당업무 : 컴퓨터공학부 실습업무\n4. 근무 조건\n가. 계약직으로 1년(1회에 한해 재임용 가능)간 근무. 최대 2년\n나. 주간근무(주5일) 오전 9시 ~ 오후 5시 30분 (방학 중 근무 : 오전 10시 ~ 오후 4시)\n다. 근무시작 예정일 : 26년 11월 01일 또는 11월 15일 (추후 협의 가능)\n라. 한성대학교 공학관B동 115호 실습사무실\n5. 채용 절차\n가. 1차 : 서류심사(합격자에 한해 개별 통지)\n나. 2차 : 면접심사(1차 합격자에 한함)\n6. 제출서류 및 접수 방법\n가. 지원 시 제출서류 : 입사지원서 1부(첨부 양식) - 사진(3개월 이내)은 필히 부착\n나. 추후 채용자 제출 서류 : 대학(학사학위)졸업증명서, 성적증명서, 등 추후 안내\n다. e-mail 접수( hscomputer1005@gmail.com )\n라. 제출기간 : 10월 18일 17시 마감\n7. 기타사항\n가. 면접일 및 면접심사 결과는 개별 통보 예정\n나. 제출된 서류는 반환하지 않음\n기타 문의사항은 컴퓨터공학부 사무실로 문의하시기 바랍니다.(02-760-5772)",
+    "images": [],
+    "attachments": [
+      {
+        "name": "붙임. 이력서 양식.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64111/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:05.190164+00:00"
+  },
+  {
+    "id": "1994312399e1f997fd35c35694448d52fb838d7003731e5d8ec097304cc25c47",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225360/artclView.do",
+    "title": "교육프로그램 [대한상공회의소 서울기술교육센터] 국비 지원 채용연계 과정 온디바이스 AI SW 개발 2기(마감임박,~11/2)",
+    "date": "2026-10-13",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "[대한상공회의소서울기술교육센터]\n온디바이스 AI SW 개발 (2기) 11월 개강 채용연계과정 모집\n교육비 전액무료! 자비부담 0원!\nNo.1 국내 반도체 및 로봇 실무 교육기관 대한상공회의소 서울기술교육센터에서\n프로젝트 기반 채용연계 부트캠프 교육생을 모집합니다.\n*\nMOU 협약대학(한성대)에 한정하여, 채용연계과정 원서접수 시 서류전형 가산점을 부여합니다!\n* 3개년 평균 취업률: 85.7%, 수강생 평균 만족도: ★★★★★ 4.73/5점\n단순 코딩이 아니라, 실제 디바이스 위에서 AI가 동작하는\n구조를 이해하고 구현하는 실무형 SW 역량을 키울 수 있습니다.\n이력서에 담을 수 있는 포트폴리오를 7개월 만에 완성하여\n채용연계까지 이어지는 실전형 교육과정입니다.\n1) 과정명 : [Telechips, 넥스트칩, 에이텍] 온디바이스 AI SW개발(2기)\n2) 교육기간\n- 2026.11.03.(화) ~ 2027.06.03.(목)\n- 월~금 09:00~17:00 (980시간 / 오프라인 교육)\n3) 교육내용 (980시간)\n- AI 기초 프로그래밍·데이터 엔지니어링 (80시간)\n- 임베디드 리눅스·펌웨어 프로그래밍 (100시간)\n- 딥러닝 아키텍처·프레임워크 최적화 (80시간)\n- 온디바이스 AI HW 아키텍처·HDL (100시간)\n- 임베디드 런타임 최적화 및 모델 포팅 (100시간)\n- ROS2 로봇 제어·미들웨어 (80시간)\n- 엣지 비전 추론 최적화 프로젝트 (100시간)\n- 엣지 AI 온디바이스 최적화·통합 프로젝트 (120시간)\n- 도메인 특화 AI 융합 서비스 개발 프로젝트 (160시간)\n- 기타 재량교과 (60시간)\n4) 신청대상 : 내일배움카드 발급(가능)자 및 KDT 수강이력 없는 자\n5) 추천대상\n- 전기전자, 컴퓨터공학, 정보통신 등 유관계열 전공자\n- 온디바이스 AI · 임베디드 SW 분야 취업을 준비하고 있는 분\n- 실무 프로젝트 경험과 포트폴리오가 필요한 분\n- 혼자 공부하는 것보다 기업 연계 프로젝트와 취업지원을 함께 받고 싶은 분\n6) 모집인원 : 25명\n7) 신청기간 : ~ 2026.11.02.(월) (*모집인원 도달 시 조기 마감)\n8) 교육장소 : 대한상공회의소 서울기술교육센터 (5호선 화곡역 인근)\n9) 참여혜택\n- 교육비 전액 국비지원\n- 매월 지원금 지급 (최대 100만원 수준 가능, 국민취업지원제도 1유형 선발 시)\n- 현업 전문가 실무 직강\n- 개인별 포트폴리오 제작 지원\n- 자기소개서 첨삭 및 모의면접 지원\n- 우수기업 채용연계 및 취업지원\n▶ 신청방법\n- 홈페이지 온라인 접수 :\nhttps://www.kccistc.net/education/professionalSkillEduDetail.do?rootMenuId=3916&menuId=3922&gaebalwon_cd=09000&gwajeong_no=M2026013\n▶ 기타 문의\n- 대한상공회의소 서울기술교육센터 02-311-1000",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89541/%EA%B5%AD%EB%B9%84+%EC%A7%80%EC%9B%90+%EC%B1%84%EC%9A%A9%EC%97%B0%EA%B3%84+%EA%B3%BC%EC%A0%95+%EC%98%A8%EB%94%94%EB%B0%94%EC%9D%B4%EC%8A%A4+AI+SW+%EA%B0%9C%EB%B0%9C+2%EA%B8%B0.jpg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:06.205587+00:00"
+  },
+  {
+    "id": "4d0583186a538806ee5cc5e757a4f78955aa4627e24e6f74d066a20987300bb2",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225355/artclView.do",
+    "title": "한성공지 대학일자리플러스센터 만족도 조사",
+    "date": "2026-10-13",
+    "source": "진로취업지원팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "기본 선물은 수량 마감되었습니다\n=========================================================\n여러분의 목소리가 더 나은 취업 지원 서비스를 만듭니다!\n<2026>\n1. 기간 : ~10월30일(금)\n2. 대상: 재학생, 졸업생, 지역청년 외\n** 한디칼 학생, 대학원생 분들은 지역청년으로 체크해주세요!\n3. 내용: 청년정책 인지도 및 대학교일자리플러스센터에서 제공하는 서비스 만족도\n4. 만족도조사 URL\nhttps://r.survey.co.kr/?ACCESS_KEY=f791db5c629140acadf8&grpid=L1&UNIID=U115\n5. 참여혜택: 조사 참여자 대상 조사 주관기관의 추첨을 통한 경품 증정(12월 중 연락 예정) 커피 기프티콘, 배민 상품권, 에어팟 프로3, 아이폰 17일반 등(고용노동부 선물 당첨 인원은 1만명)\n*** 만족도 조사 완료 후 10월4주차(10.19.~10.23. 10:00~16:00) 상상관 1층 부스 방문하면 핸드크림, 마스크팩, 립밤 등 겨울 뷰티 보습템 증정(택 1) (선착순)\n상상관1층에서 설문조사 제출했다는 증빙 제출 시\n겨울 보습템 증정(300명 한정)",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000418/20261013085847612_5PJB0AHW.png"
+      },
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000418/20261013090234322_2M1FL86X.png"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:07.197863+00:00"
+  },
+  {
+    "id": "f6526fe7b755dde46ec13429980e2a0b6b10f4221723da21d8ad99d4abe5e4aa",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225417/artclView.do",
+    "title": "채용정보 [추천채용] (주)디라이트파트너 제조 데이터·AI 신입 엔지니어 채용 (~10/29)",
+    "date": "2026-10-14",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "■ 채용정보\nhttp://www.d-light.co.kr\n· 회사: ㈜디라이트파트너 (스마트제조 전문기업)\n· 모집부문: 제조 데이터·AI 엔지니어 (신입), 1명\n· 주요업무: 이상 탐지, 공구 수명 예측, 설비 예지보전 AI 모델 개발, 정부 R&D 과제 연구 참여\n· 자격요건: 대학 졸업(예정)자 또는 데이터·AI 교육과정 수료(예정)자\n(컴퓨터공학·AI·데이터·통계·산업공학 등 관련 전공자 또는 관련 교육 이수자)\n· 우대사항: Python, SQL 활용 가능자, 머신러닝·딥러닝 프로젝트 경험자, 제조 또는 시계열 데이터에 관심 있는 분\n· 근무지: 서울 금천구 가산디지털 1로 146 (가산디지털단지역 인근)\n· 근무시간: 주 5일 09:00~18:00\n· 처우: 면접 후 협의 / 수습 3개월\n· 입사시기: 2026년 11월 (예정)\n· 복리후생: 생일 축하 선물(모바일 상품권 10만 원), 매주 금요일 1시간 조기 퇴근, 여름휴가 3일 별도 제공(연차 차감 없음), 업무용 생성형 AI 유료 구독 지원\n■ 추천전형 지원방법\n· 제출서류: 이력서, 자기소개서 (포트폴리오, GitHub 링크는 선택 제출)\n· 지원방법 :\n공과대용_입사지원서_기업명(지원자명_지원직무).doc\n948.22KB\n10/29(목) 23시59분 까지\n원영은T  메일로 입사 서류 전달\nhswye@hansung.kr 대학일자리플러스센터  원영은 컨설턴트\n· 추천채용 문의: 대학일자리플러스센터 원영은 컨설턴트 02-760-5840\n※ 상세 모집 내용은 첨부된 채용공고를 참고해 주세요.",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89635/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      },
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89656/%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0_%EB%94%94%EB%9D%BC%EC%9D%B4%ED%8A%B8%ED%8C%8C%ED%8A%B8%EB%84%88_261001.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:51.194225+00:00"
+  },
+  {
+    "id": "479c98dd039184fa011183a8d7fb014386b8e4cd0839118d96fff764d5033b5a",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225415/artclView.do",
+    "title": "한성공지 2026 SAP 관련직무 졸업생 특강 및 멘토링",
+    "date": "2026-10-14",
+    "source": "산업시스템공학부",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "안녕하세요. 산업시스템공학부 학과 사무실입니다.\n저희 학과에서는 SAP 관련 직무로의 취업에 관심 있는 재학생들의 진로 탐색과 멘토링을 위해\n「2026 SAP 관련직무 졸업생 특강 및 멘토링」\n행사를 진행합니다.\n1.\n행 사 명\n:\n산업시스템공학부\nSAP\n관련직무 졸업생 멘토링\n2.\n실시목적\n:\n1) SAP\n관련직무\n/\n기업으로 취업한 졸업생과 재학생들의 만남\n2) SAP\n관련직무 졸업생 멘토의 진로 멘토링 및 취업 정보 제공\n3) SAP\n관련 교육 및 교과목에 대한 재학생 안내\n4)\nSAP\n관련 교과목의 현장 적용에 대해 졸업생 피드백 확인 및 교육과정 반영\n3.\n실시시간\n:\n2026\n년\n11\n월\n13\n일\n(\n금\n) 17:00 ~ 20:30\n4.\n실시장소\n:\n(\n주 공간\n)\n탐구관\nPBL\n강의실\nB101\n호\n/ (\n멘토링 공간\n) B103~106\n호\n이번 행사에서는 「AI 시대의 포스트 ERP와 SAP 컨설팅」 특강과 직무·기업별 졸업생 멘토링이 진행됩니다. 관련 업계에서 일하고 있는 선배들과 소그룹 N:N 방식으로 깊이 있는 대화를 나눌 수 있는 자리이니 많은 관심과 참여 바랍니다.\n참석을 희망하는 학생은 아래 설문 링크를 통해 신청해 주세요.\n신청링크 : https://forms.gle/rhQyvinyW72VrCo66\n<기타> 참여자 비교과 포인트 10P 제공\n행사 세부 계획은 학과 및 학교 공지사항을 참고해 주세요.\n감사합니다.",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000418/20261014170609293_3LMUX02D.png"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:52.202667+00:00"
+  },
+  {
+    "id": "76fd2e15d0415a87c35a91cce180f484aeb707535eced169efca1147e7f92ea9",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225412/artclView.do",
+    "title": "한성공지 [채용] 한성대학교 산학교육지원센터 팀원(임시직) 모집 공고(~ 10/16 오전 10시까지)",
+    "date": "2026-10-14",
+    "source": "산학교육지원센터",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "★한성대학교 산학교육지원센터 행정전담 임시직 채용\n★\n고용형태\n계약직 행정 전담자\n(\n임시직\n)\n인원\n1\n명\n모집 분야\n및\n주요 업무\n- 산학교육 프로그램 운영 및 지원\n- 산학협력교육 지원\n- 기타 산학교육지원센터 관련 행정업무\n자격요건\n- 학사학위 이상 소지자\n- 국가공무원법 제\n33\n조 각 호의 결격사유가 없는 자\n- 「\n아동청소년의 성보호에 관한 법률\n」\n에 따른 취업제한 대상에 해당되지 않는 자\n- 한글\n, MS Office(\n엑셀\n)\n등 컴퓨터 활용이 가능한 자\n근무조건\n- 근무기간\n: 2026. 11. 1. ~ 2027. 4. 30.(6\n개월\n)\n- 근무시간\n:\n주\n5\n일\n09:00~17:30 (\n방학 중 교내 정책에 따른 단축근무 실시\n)\n- 급여\n:\n본교 규정에 따름\n(4\n대 보험 가입\n)\n- 근무예정일\n: 2026\n년\n11\n월\n1\n일\n(\n실제 근무일은\n11\n월\n2\n일\n(\n월\n)\n부터\n)\n※\n근무 예정일 전 업무 인수인계를 위하여 사전 출근이 있으며\n,\n근무기간 중 대체휴무로 갈음함\n우대사항\n- 대학 행정업무 유경험자\n- 대학 학사행정 관련 업무 경력 보유자\n- 대학혁신지원사업 등 국고사업 관련 업무 경력 보유자\n- 캡스톤디자인\n,\n산학협력교육프로그램 등 관련 업무 경험자 우대\n※\n우대사항에 해당될 경우 서류심사에서 가산점이 부여되며\n,\n필수 요건은 아님\n■\n전형방법\n- 1\n차 전형\n:\n서류심사\n- 2\n차 전형\n:\n면접\n(\n서류심사 통과자에 한하여 일정 개별 통보\n)\n■\n지원서 접수\n-\n접수기간\n: ~ 2026. 10. 16.(\n금\n)\n오전\n10:00\n까지\n- 접수방법\n:\n이메일\n(\n방문접수 불가\n)\n- 접수처\n:\nshedu@hansung.ac.kr\n※\n메일 제목은\n“\n임시직\n_\n산학교육지원센터\n_\n성명\n”\n으로 기재\n■\n면접 안내\n면접대상자 통보\n:\n별도 안내\n■\n제출서류\n구분\n제출서류\n원서 접수 시 제출서류\n필수 제출\n1. 산학교육지원센터 입사지원서 및 자기소개서\n([\n붙임\n1])\n※\n서명 후\nPDF\n파일 형태와\nHWP\n파일 원본 함께 제출\n2. 최종 학력 졸업증명서\n1\n부\n3. 성적증명서\n1\n부\n4.\n개인정보수집 및 활용 동의서\n([\n붙임\n2])\n※\n서명 후\nPDF\n파일 형태와\nHWP\n파일 원본 함께 제출\n해당 시 제출\n(\n우대사항\n)\n5.\n경력\n(\n재직\n)\n증명서\n(\n해당자에 한함\n)\n※\n건강보험자격득실확인서 우선제출 가능\n6.\n자격증\n(\n해당자에 한함\n)\n최종 합격 시 제출서류\n1.\n건강검진결과표\n1\n부\n2.\n성범죄경력조회 동의서\n1\n부\n3.\n통장사본\n1\n부\n4.\n주민등록등본\n1\n부\n■\n기타\n-\n입사지원서 기재내용 및 제출서류 내용 중 허위가 있거나 채용 내정 후 신체검사 및 신원조사에서 결격사유 발생 시\n합격 및 임용 후에라도 임용을 취소함\n.\n-\n제출 서류는 반환하지 않음\n.\n-\n적격자가 없을 경우 채용하지 않을 수도 있으며\n,\n임용포기\n,\n결격사유 등으로 합격취소로 최종합격자가 임용되지 못하는 경우를 대비하기 위하여 예비합격자를 결정할 수 있음\n.\n-\n문의처\n:\n산학교육지원센터\n(02-760-4240)",
+    "images": [],
+    "attachments": [
+      {
+        "name": "붙임1. 산학교육지원센터 입사지원서 및 자기소개서.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64134/download.do"
+      },
+      {
+        "name": "붙임2. 개인정보수집 및 활용 동의서.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64135/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:53.220809+00:00"
+  },
+  {
+    "id": "564668267bb1d8cf339708cd649beb5a17eaf0fe7afe0961ad7534adb31981cb",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225411/artclView.do",
+    "title": "채용정보 [추천채용/서류면제] KG모빌리티플랫폼(K Car) 2026 하반기 차량평가사(신입) (~10/25)",
+    "date": "2026-10-14",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "■ 채용정보\n·\n모집부문: 차량평가사 (신입, 정규직)\n· 담당업무:\n직영 중고차 판매 및 고객 응대, 보증·금융상품 소개 및 판매, 중고차 성능·상태 진단/평가 및 가격 산정·매입, 자동차 매매 관련 서류 행정\n· 자격요건: 운전면허 보유 (1종 보통 이상, 수동 운전 가능자)\n· 필요자질: 자동차를 좋아하고 지속적으로 학습하는 분, 친화력과 커뮤니케이션으로 협상에 자신 있는 분, 바른 인성과 정직한 마인드를 지닌 분\n·\n우대사항: 자동차 관련 자격증 보유자, 자동차 관련 학과 졸업(예정)자, 영업/마케팅 업무 경험자\n· 지원요건:27.02 졸업예정자 또는 기졸업자  (남성은 병역필 또는 면제자)\n· 고용형태: 정규직 (수습 3개월 적용)\n· 근무지역: K Car 전국 직영점 (서울, 경기, 인천, 대전, 충청, 광주, 경북, 울산 등)\n· 급여: 회사 내규에 따름\n■ 전형일정\n·\n추천전형 원서접수: 10/15(목) ~ 10/25(월) 23시\n· 서류결과 발표: 10/30(금)\n· 온라인 인성/적성검사: 10/30(금) ~ 11/2(월)\n· 면접일정 안내: 11/5(목)\n· 면접: 11/10(화) ~ 11/13(금) (서울 을지로 사무실)\n· 채용검진: 11/16(월) ~ 11/23(월)\n· 입사: 12/1(화) ※ 일정은 진행 상황에 따라 변동될 수 있습니다.\n■ 추천전형 지원방법\n·\n방법1\n: K Car 채용 홈페이지에서 온라인 지원 (https://recruit.kcar.com/job_posting/J0fEQM0U)  온라인 개별 지원시, 추천서  함께 첨부시 , [ 서류면제 혜택 부여됨 ]\n(개인로그인 후 파일 다운로드 가능)\n케이카_입사지원서(차량평가사)_성명.docx36.28KB\n1. 우수인재 추천서.docx78.71KB\n·\n방법2\n: 지원서류 및 지원 사실을 원영은T(hswye@hansung.kr)에게 메일로 통보 해주시면, 추천서 와 함께 기업전달 예정\n■ 추천채용 문의: 대학일자리플러스센터 원영은 컨설턴트 02-760-5840\n※ 입사지원 서류에 허위사실이 발견될 경우 채용 확정 이후라도 채용이 취소될 수 있습니다.",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89635/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      },
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89636/1791958405519.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:54.196979+00:00"
+  },
+  {
+    "id": "a9b348440141e69e8bbfdf3d9ae8f59b010a02499984c6b98773e4fac56a9853",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225410/artclView.do",
+    "title": "한성공지 [채용] 미래모빌리티학과 행정조교 모집 (기간연장 : ~ 10월 23일 (금) 23:59)",
+    "date": "2026-10-14",
+    "source": "미래모빌리티학과",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "미래모빌리티학과 행정조교 모집 공고\n1. 채용분야(채용부서) : 행정 및 실습업무 (미래모빌리티학과)\n2. 채용인원 : 1명\n3. 모집기간 : 26. 10. 13 ~ 26. 10. 23.\n4. 지원자격\n가. 학사학위 이상 소지자\n나. 우대사항 : 한글, 엑셀 능통자 우대\n다. 기타사항 : 남자의 경우 병역필 또는 면제자, 기타 조교 임용에 결격사유가 없는 자\n5. 근무조건\n가. 기간 : 1년 단위 계약(재계약 가능, 최대 2년)\n나. 급여 : 본교 규정에 따름(주 40시간 이내)\n다. 근무처 : 창의융합대학 교학팀 (진리관 404호)\n라. 근무시간 : 평일 09:00 ~ 17:30 근무 (방중 10:00 ~ 16:00 단축근무 시행)\n6. 전형방법\n가. 1차 서류심사\n나. 2차 면접심사\n다. 임용예정일 : 2026. 11. 01.\n7. 제출서류\n가. 입사지원서 1부(첨부 양식)\n나. 최종학교 졸업(예정) 증명서 1부\n다. 성적증명서 1부(학부 및 대학원)\n8. 제출기한 및 방법\n가. 제출기한 : ~ 26. 10. 23(금) 23:59까지\n나. 제출방법 : dongmin@hansung.ac.kr 이메일 제출\n다. 서류심사 합격자에 한하여 면접일정 개별 통보\n9. 기타사항\n가. 제출서류 내용에 허위사실이 발견될 경우 임용 취소 가능\n나. 문의 : 미래모빌리티학과 사무실(02-760-5730)",
+    "images": [],
+    "attachments": [
+      {
+        "name": "입사지원서(조교).hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64133/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:56.196706+00:00"
+  },
+  {
+    "id": "f92125881645ae00bdb8daea23bf9f0e326e8e9e9f97561c7b9f85d08b3036f7",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225403/artclView.do",
+    "title": "강소기업채용 ★[26.10.14.]강소 및 교내 추천 채용 리스트★",
+    "date": "2026-10-14",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "▮10-2주차 주요 산업 이슈 및 동향\n↑상단 이미지 클릭시 확인 가능\n▮교내[추천] 채용의 경우,지원 시 별도의 혜택이 부여될 수 있는 기업으로 적극 지원 바랍니다.\n▮ 상세한 채용 정보는 각 기업 홈페이지를 참고해주세요.\n- [강소기업]은 높은 고용 유지율과 일 생활 균형, 임금 수준, 고용 안정성, 혁신 역량 등을 검증 받은 기업으로  교내 추천채용과 함께 정기 공유 하오니 적극 활용해주세요  (●'◡'●)\nhttps://www.smes.go.kr/gsmb/company/excellence_employment\n- 대기업협력사의 경우 관련 경력개발 지원 및 복지 프로그램을 제공 받을 기회가 있으며, 최신 기술과 트렌드를 접할 수 있는 기회가 많아요!\n▮ (1) 추천 채용 관련 문의 :  원영은 02-760-5840  /\nhswye@hansung.kr\n(2) 졸업생 특화 프로그램 신청 문의: 이미진 02-760-5874 /\nmijin.lee@hansung.kr\n구분\n유형\n기업명/주관\n모집직무\n지원마감일\n고용형태\n근무지/장소\n중소기업\n추천\n에이아이티스토리(주)\nAI 및 플랫폼 신입 개발자\n10월 15일\n정규직\n서울 서초구\n중소기업\n추천\n특허법인 YNP\n출원관리 사무직 3개월 전환형인턴\n10월 15일\n정규직\n성남시 분당구\n강소/우수\n일반\n㈜에스피엘\nSPL 국내영업부 신입사원 모집\n10월 17일\n정규직\n경기 포천시\n강소/우수\n일반\n(주)일삼\n인사·총무Team 신입사원 모집\n10월 17일\n정규직\n서울 중구\n강소/우수\n일반\n(주)리얼통상\n주류 브랜드 해외영업 담당자 채용, 영어 능통자\n10월 18일\n정규직\n서울 금천구\n강소/우수\n일반\n성훈엔지니어링(주)\n생산관리 기사 채용\n10월 18일\n정규직\n경기 시흥시\n강소/우수\n일반\n에프알텍\nO-RU SW 개발 엔지니어(신입, 경력) 채용\n10월 18일\n정규직\n경기 의왕시\n강소/우수\n일반\n(주)모은넷\n기술연구소 SW개발자 채용 (JAVA/C#/.NET)(신입/경력)\n10월 21일\n정규직\n경기 수원시\n중소기업\n추천\n한큐한신익스프레스코리아\n포워더(해상 수출입) 신입\n10월 22일\n정규직\n서울 서대문구\n강소/우수\n일반\n(주)세온이앤엣스\n사이버보안 컨설턴트/개발자 채용 공고\n10월 23일\n정규직\n서울 금천구\n강소/우수\n일반\n제룡산업(주)\n[제룡산업] IT 부문 신입사원 모집\n10월 23일\n정규직\n서울 광진구\n강소/우수\n일반\n(주)모아교육그룹\n[신입/영등포] 교육 콘텐츠 기획 및 운영\n10월 25일\n정규직\n서울 영등포구\n중소기업\n추천\n(주)삼원페이퍼\n본사 영업 신입/경력(3년 이하) (지류·포장 / 문구·화방)\n10월 25일\n정규직\n서울 광진구\n중소기업\n추천\n파수 AI\n26년 3차 신입공채 직군별 모집 (채용연계형 인턴 3개월)\n10월 25일\n인턴(채용연계)\n서울 마포구\n강소/우수\n일반\n(주)나눔기술\n(주)나눔기술 소프트웨어 개발자 신입사원 모집\n10월 28일\n정규직\n서울전체 외\n강소/우수\n일반\n(주)에스피씨테크놀로지\n디자인/마케팅 부문 콘텐츠 제작 및 운영\n(디자인툴 사용가능자)\n10월 28일\n정규직\n서울 금천구\n강소/우수\n일반\n더나은파트너스(주)\n경영컨설턴트(연구원) 신입 채용\n10월 28일\n정규직\n서울 송파구\n강소/우수\n일반\n제이제이툴스(주)\n(Global No.1 PE 투자 기업)제이제이툴스 해외영업 신입 채용\n10월 29일\n정규직\n서울 금천구\n기타\n추천\nHermès Korea\n(보이시리테일 한국지사)\nSales Associate 세일즈 신입 (1년 계약)\n10월 29일\n계약직\n서울(지점 선택)\n강소/우수\n일반\n(주)위드텍\n공정기술팀 분석장비 개발 연구원 채용\n10월 30일\n정규직\n경기 화성시\n강소/우수\n일반\n(주)에이스엔지니어링\n시장분석 및 사업계획 수립 및 관리 지원\n10월 31일\n정규직\n서울 서초구\n강소/우수\n일반\n㈜엠뷰티코스메틱\n수출무역사무 해외영업지원\n10월 31일\n정규직\n경기 안양시\n강소/우수\n일반\n㈜이노소프트기술\n(고객사:영림원)ERP컨설팅 및유지보수 지원\n10월 31일\n정규직\n서울 성동구",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89628/2610141.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:57.204239+00:00"
+  },
+  {
+    "id": "9c448526afbaf973090755692379186a57968072c9429c17c76befe805bc9fec",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225402/artclView.do",
+    "title": "채용정보 [추천채용] (주)스타일딜리셔스(슈트패브릭) 정장 렌탈센터 매장직 채용(~10/28)",
+    "date": "2026-10-14",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "■ 회사 소개\n맞춤정장·기성복 판매 및 정장 대여 서비스를 운영하는 패션 브랜드입니다.\n청담 비스포크하우스 등 백화점 입점 매장을 포함해 전국 12개 지점을 운영하고 있으며, 체계적인 대여 서비스를 위해 별도의 렌탈센터를 운영하고 있습니다.\n■ 채용 정보\n모집 직무: 정장 렌탈센터 운영 및 피팅 지원\n근무지: 슈트패브릭 렌탈센터 (서울 강남구 선릉로152길 32, JNJ빌딩 5층)\n고용 형태: 3\n개월 기간제 근로계약\n(수습 3개월 종료 시 근무 평가를 통해 정규직 전환 여부 결정)\n근무 시간: 주 5일 오전 10시 ~ 오후 8시 (휴게 1시간), 주말 고정근무, 월요일 포함 주중 2일 휴무\n급여: 기본급 월 2,497,440원 (기본급·고정OT·식대 포함), 월별 인센티브 및 분기별 경영성과금 지급\n연봉: 인센티브 포함 연 3,700만 원 이상 가능 (개인 실적 및 지급 기준에 따라 상이)\n■ 주요 업무\n고객 응대 및 대여 정장 스타일링 상담\n고객 체형에 따른 사이즈 측정 및 피팅 보조\n대여복 기장 수선 접수 및 의상 준비\n대여 일정에 따른 대여 품목 준비 및 출고 관리\n매장 운영 및 관련 업무 전반\n■ 지원 자격 및 우대 사항\n지원 자격: 학력 및 전공 무관, 패션·의류 분야에 관심이 있는 분, 고객과 원활하게 소통하고 적극적으로 업무에 임할 수 있는 분\n우대 사항: 의류·패션·유통·서비스 관련 경험, 고객 상담 및 판매 업무 경험, 정장 스타일링 및 피팅 업무에 관심이 있는 분\n■ 복리후생\n판매 인센티브 및 분기별 경영성과금 지급, 장기근속자 시상금 및 리프레시 휴가\n자유로운 연차·반차 사용, 여름 휴가 지원\n생일 축하금, 명절 선물, 경조사 지원 (경조휴가 및 경조비)\n야근 식대 및 택시비 지원, 팀 회식비 지원\n복지포인트(슈페이) 적립 및 자사 제품 구매 시 사용 가능\n신규 입사자 온보딩, 팀장 법인카드 지급\n■ 추천채용 지원 방법 및 채용 절차\n- 지원방법 :\n온라인 지원 완료 후,  10/29(목) 오전 11시 까지  원영은T에게 메일로 지원사실을 반드시 알려주세요!\n(메일필수 기재 내용:  학번/ 성명/ 유선 연락처/지원직무:부문-직무   )\n- 개별 지원 링크 :\n채용 사이트에서 지원하기\n- 추천전형 지원기한 :\n10/28(수) 23:59까지\n- 지원 전후  반드시 회신 요망  : hswye@hansung.kr  대학일자리플러스센터  원영은 컨설턴트\n- 추천채용 문의: 02-760-5840\n입사지원서_기업명(지원자명_지원직무)(로그인 후 다운로드가능).doc\n318.46KB\n채용 절차: 서류 검토 → 면접 → 최종 합격\n※ 채용 조기 마감될 수 있으니 관심 있는 학생은 빠르게 지원해 주세요.\n※ 추천채용 문의: 대학일자리플러스센터 원영은 컨설턴트 (hswye@hansung.kr, 02-760-5840)",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89624/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      },
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89627/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpeg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:58.190218+00:00"
+  },
+  {
+    "id": "bda6805583f4fab5ea23d72f3ec00776f366338222014e1481079bbe3c77d4d6",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225397/artclView.do",
+    "title": "한성공지 [채용] 글로벌인재대학 학과조교 모집",
+    "date": "2026-10-14",
+    "source": "글로벌인재대학교학팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "1. 채용분야(채용부서) : 글로벌인재대학 학과조교\n2. 채용인원 : 1명\n3. 지원 자격\n가. 학사학위(이상) 소지자 ※ 졸업예정자 가능\n나. 기타 조교 임용에 결격사유가 없는 자\n다. 2026년 11월 2일부터 근무 가능한 자\n4. 전형방법\n가. 1차 : 서류심사(합격자에 한해 개별 통지, 제출된 서류는 반환하지 않음)\n나. 2차 : 면접심사(1차 합격자에 한함, 개인별 일정 별도 통보)\n※ 면접심사 후 합격자 개별 통보, 지원서 및 제출 서류의 내용이 허위로 판명되는 경우 합격 또는 임용 취소\n5. 제출서류\n가. 입사지원서(첨부 양식)\n나. 졸업증명서, 성적증명서 각 1부\n※ 졸업예정자의 경우 졸업예정증명서와 성적증명서를 제출하고, 졸업 후 졸업증명서 제출\n6. 제출기한 및 접수방법\n가. 제출기한 : 2026년 10월 14일(수) ~ 2026년 10월 21일(수)\n나. 접수방법 : 이메일(\nleedg@hansung.kr\n) 제출\n7. 근무조건\n가. 기간 : 1년 단위 계약(재계약 가능, 최대 2년)\n나. 근무시간 : 본교 규정에 따름(주 40시간 이내)\n다. 근무장소 : 우촌관 306호(글로벌인재대학 교학팀)\n라. 급여 : 본교 규정에 따름\n마. 근무 시작일 : 2026년 11월 2일\n8. 문의 : 글로벌인재대학 교학팀 02-760-5759",
+    "images": [],
+    "attachments": [
+      {
+        "name": "첨부 1. 입사지원서(양식).hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64130/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:59.193402+00:00"
+  },
+  {
+    "id": "176a2077be0029e48fd622d32cf75c5fd0ca46ea2a545e1b04c84d56b9e6dfb1",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225396/artclView.do",
+    "title": "교육프로그램 [SK텔레콤] FLY AI Challenger 10기 모집 (~11/8)",
+    "date": "2026-10-14",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "세상을 이롭게 하는 AI, 미래 인재의 꿈. FLY AI Challenger와 함께 키워보세요.\nSK텔레콤에서 SK Tech 기반의 핵심 미래 인재 양성 교육 FLY AI Challenger 10기를 모집합니다.\n■ 모집기간\n: 2026.10.14.(수) ~ 11.8.(일)\n■ 지원방법\n: 홈페이지 접속 후 지원서 작성 (\nhttps://www.skttechacademy.com/\n)\n■ 교육생 지원사항\n- 우수 교육생 SK텔레콤 SW 개발 분야 신입 채용 지원 시 우대\n- 우수 교육생 SK브로드밴드 AI/DT 분야 신입 채용 지원 시 우대\n- 수료 장학금 지급\n- 다양한 학습 지원 제도 운영 (유관 자격증 응시료 지원 등)",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89621/sk_fly_ai_poster.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:01:00.189817+00:00"
+  },
+  {
+    "id": "cf894ffc69ae9af3998d57117a05ac6eea3bd64d24b33650440da636eb5706bd",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225385/artclView.do",
+    "title": "국가장학금 (정정) 26년도 2학기 중소기업 취업연계 장학사업 신규장학생 선발기준 안내",
+    "date": "2026-10-14",
+    "source": "진로취업지원팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "(정정) 2026년 2학기 한국장학재단 중소기업 취업연계 장학사업(희망사다리 1유형) 신규장학생 선발기준을 안내드립니다.\n구분\n직전학기 학업성적\n학생 취업 의지\n저소득층 우대\n백분위 점수\n4)\n배점\n(40\n점\n)\n항목\n배점\n(60\n점\n)\n항목\n가산점\n(10\n점\n)\n평가\n기준\n5)\n97\n점 이상\n~ 100\n점\n40\n취업\n준비계획 제출\n1)\n(30)\n작성의 충실성\n30\n기초생활수급자\n생계급여수급자\n10\n의료급여수급자\n93\n점 이상\n~\n97\n점 미만\n38\n누적 비교과 포인트\n2)\n(20)\n3\n학년\n500\n점 이상\n20\n차상위\n계층\n주거급여수급자\n5\n4\n학년\n700\n점 이상\n편입생\n250\n점 이상\n90\n점 이상\n~\n93\n점 미만\n36\n3\n학년\n250\n점 이상\n~500\n점 미만\n15\n교육급여수급자\n4\n학년\n500\n점 이상\n~700\n점 미만\n편입생\n150\n점 이상\n~250\n점 미만\n3\n학년\n250\n점 미만\n10\n한부모가족보호대상자\n87\n점 이상\n~\n90\n점 미만\n34\n4\n학년\n500\n점 미만\n차상위장애연금대상자\n편입생\n150\n점 미만\n83\n점 이상\n~\n87\n점 미만\n32\n교육장학금\n지급액\n3)\n(10)\n55\n만원 이상\n10\n차상위장애수당\n/\n장애아동수당대상자\n35\n만원 이상\n~55\n만원 미만\n8\n80\n점 이상\n~\n83\n점 미만\n30\n15\n만원 이상\n~35\n만원 미만\n6\n차상위자활대상자\n5\n만원 이상\n~15\n만원 미만\n4\n차상위본인부담경감대상자\n5\n만원 미만\n2\n차상위 계층 대상자\n70점 이상~\n80\n점 미만\n20\n1)\n취\n·\n창업지원금 사용계획서 제출 및 작성의 충실성 서면평가.\n단, 사용계획서 미제출 시 대학심사 탈락 처리\n2)\n비교과포인트 지급 완료 건\n(2026.10.1.\n기준\n)\n3)\n교육장학금 신청 금액 중 지급 완료 건\n(2026.10.1.\n기준\n)\n4)\n직전 학기 백분위 성적이\n100\n점 만점의\n70\n점 미만인 자는 대학심사 탈락 처리\n.\n단\n,\n신입\n·\n편입\n·\n재입학생의 경우 첫 학기에 한하여 성적 심사 제외하고 학생 취업 의지 항목을\n100\n점으로 환산하여 평가\n5)\n동점자의 경우 직전학기 성적이 높은 순으로 선발",
+    "images": [],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "not_applicable",
+    "last_checked_at": "2026-10-19T21:01:01.216135+00:00"
+  },
+  {
+    "id": "0f0e1320cdf2e5fd06d700cb2ba74e52d2f594c745f99a41dd37214ccbcf69eb",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225481/artclView.do",
+    "title": "한성공지 2026년 제4회 SB 스타트업 네트워킹 페스티벌 「플리마켓」 참가자 모집 (~10/22)",
+    "date": "2026-10-16",
+    "source": "창업기업육성ICC",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000419/1016_플리마켓_홍보_포스터(저).png"
+      }
+    ],
+    "attachments": [],
+    "content_status": "title_only",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:40.175693+00:00"
+  },
+  {
+    "id": "5b105a0902b58fcc12cd1534100e4f7f30b901363d3a62dd1704a5842153afcf",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225480/artclView.do",
+    "title": "한성공지 [채용] 한성대학교 캠퍼스스타트업지원단 계약직원 모집 공고",
+    "date": "2026-10-16",
+    "source": "창업기업육성ICC",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000419/붙임__1._2026년_모두의_창업_프로젝트(2차)_계약직원_채용_공고_1_1.png"
+      },
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000419/붙임__1._2026년_모두의_창업_프로젝트(2차)_계약직원_채용_공고_2_1.png"
+      }
+    ],
+    "attachments": [
+      {
+        "name": "붙임 1. 한성대학교 캠퍼스스타트업지원단 입사지원서 및 자기소개서.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64174/download.do"
+      },
+      {
+        "name": "붙임 2. 개인정보수집 및 활용 동의서.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64175/download.do"
+      },
+      {
+        "name": "2026년 한성대학교 캠퍼스스타트업지원단 계약직원 채용 공고.pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64176/download.do"
+      }
+    ],
+    "content_status": "title_only",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:41.182270+00:00"
+  },
+  {
+    "id": "8e230a3da40f8a2c7c53edecd7ae19f8f024179982916c1e85b357e0dd19d086",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225478/artclView.do",
+    "title": "학사 2026학년도 2학기 중간고사 및 기말고사 시행 안내",
+    "date": "2026-10-16",
+    "source": "학사운영팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "2026학년도 2학기 중간고사 및 기말고사 시행 안내\n2026\n학년도\n2\n학기 중간고사 및 기말고사 시행과 관련하여 다음과 같이 안내드립니다\n.\n모든 학생은 안전하고 공정한 시험이 진행될 수 있도록 반드시 안내사항을 숙지하고 준수하여 주시기 바랍니다\n.\n1.\n중간고사 및 기말고사 기간\n구분\n기간\n중간고사\n2026.10.19.(\n월\n) ~ 10.24.(\n토\n)\n기말고사\n/\n보강주\n2026.12. 7.(\n월\n) ~ 12.19.(\n토\n)\n2.\n유의사항\n:\n부정행위 방지 안내\n가\n.\n수강생은\n｢\n학사운영규정 제\n24\n조\n(\n부정행위자의 처리\n)\n｣\n에 따라 다음의 사항을 반드시 준수해야 합니다\n.\n-\n타인의 과제나 답안을 그대로 복사하거나\n,\n일부만 바꾸어 제출하는 등 표절 행위 금지\n-\n담당 교수자가 허용한 범위 이외의 온\n·\n오프라인 자료를 무단으로 검색\n·\n복사하거나\n,\n인공지능 프로그램\n(ChatGPT\n등\n)\n을 활용하여 과제 또는 답안을 작성\n·\n제출하는 행위 금지\n-\n타인이 본인의 시험에 대신 응시하게 하거나\n,\n본인이 타인의 시험에 대리로 응시하는 행위 금지\n-\n그 외 부정한 방법 및 허용되지 않은 기기\n(\n스마트워치\n,\n스마트안경 등\n)\n를 사용하여 시험 또는 평가에 참여하는 일체의 행위 금지\n나\n.\n시험 중 부정행위가 적발될 경우\n,\n｢\n성적평가에 관한 시행세칙 제\n8\n조\n(\n성적의 취소\n)\n｣\n및\n｢\n학생상벌에 관한 시행세칙 제\n8\n조\n(\n징계의 사유 및 절차\n)\n｣\n에 따라 엄중한 조치가 취해지며\n,\n이에 따른 불이익을 받을 수 있습니다\n.\n-\n해당 과목 또는 전 과목의 성적 취소\n-\n관련 규정에 따른 징계 처분 및 추가적인 조치\n다\n.\n부정행위로 인한 불이익은 추후 학업 및 진로에 중대한 영향을 미칠 수 있으므로\n,\n모든 평가는 본인의 성실한 노력과 역량으로 임해 주시기 바랍니다\n.\n2026. 10. 16.\n교육혁신처장",
+    "images": [],
+    "attachments": [
+      {
+        "name": "2026학년도 2학기 중간고사 및 기말고사 시행 안내(학생 대상).pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64173/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:42.193686+00:00"
+  },
+  {
+    "id": "3f87d0ce9ed2e57e34b3499bce4cb15f845999a3c82be3eb00caaed7ebb58a03",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225466/artclView.do",
+    "title": "채용정보 [추천채용] (주)파트론(삼성전자협력사)_기구설계 2개 부문 (전자담배/웨어러블) 신입(~10/22)",
+    "date": "2026-10-16",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "#재무평가_상위4% #매출1조이상 #TOP중견#삼성우수협력사#글로벌제조강자#카메라센서전문기업#R&D중심기술기업\n삼성전자 청년일자리센터(상생협력아카데미)에서 지원자는 추가 취업지원 연계 가능\n기계설계 역량을 보유하고 있거나, 자동차 부품 개발 분야에 관심 있는 분들의 많은 지원 바랍니다. 현재 한성대 동문 선배 재직중이며  사업확장 중!\n1. 회사명 :(주)파트론 ▶ 회사 홈페이지: http://www.partron.co.kr/\n- 삼성전자 협력사, 코스닥 상장 중견기업\n- 2003년 설립 , (2025년 말 기준) 매출액 1조3,495억 ,임직원 약483명\n- 주요사업 (제조)휴대폰용 부품 중심 사업 : 전체 사업, 안테나 사업, 아이솔레이터 사업, 크리스탈 사업, 카메라모듈 사업 스마트밴드, 음향기기, 의료기기 등 제조 (유통)안테나, 카메라모듈 등을 납품.음향기기, 의료기기 등 판매\n- 매출 및 임직원 수 : 483명 / (2024년말) 1조 3,851억\n- 대졸 초임 연봉: 4,100만원 (업무 성과급 별도)\n- 근무지: 본사 (경기도 화성) ※ 기숙사 제공 가능\n2. 모집부문 : 전자담배기기 / 웨어러블 기기 기구설계 (2개 분야)\n※ 지원자 제출 시 지원분야 기재 (1. 전자담배 2. 웨어러블)\n- 2D / 3D 기구설계 (Auto CAD, NX, Creo 등)\n- 소형 디바이스 개발 및 기구설계\n- Event 대응 및 양산 지원 (도면 및 BOM 작성, 환경유해물질)\n- 사출 및 금형 관련 기술 이해 필요\n- 책임감 있게 업무 수행하고 협업이 원활한 분\n[우대사항 및 필수 지원자격] (4년제 졸업자 및 졸업예정자로 출근 가능자)\n- 기구설계 관련 전공자\n- 학점 3.4↑, 토익 700점↑ 또는 OPIC/토익스피킹 IM2↑\n- 해외 출장에 결격 사유가 없는 자 (베트남 등 해외사업장 출장 다수)\n3. 근로조건\n- 근무지: (기숙사 제공 가능 男) 경기도 화성시 삼성1로2길 22 본사\n- 연봉 4,100만원 (업무 성과급 별도) ※ 입사 후 인턴 3개월 기간 (250만원 정액지급)\n- 복리후생: 각종 경조금 및 휴가, 이익분배금(PS)최대 300%지급,구내식당, 통신비 지원, 명절선물,생일선물 등\n4. 추천전형 지원방법\n- 제출기한 : 10월 21일(수) 23:59까지\n- 제출서류 :  입사지원서 작성 (이력서(사진 첨부), 자기소개서 포함), 어학 및 자격증 사본 함께 제출 必\n공과대용_입사지원서_기업명(지원자명_지원직무).doc\n948.22KB\n- 제출방법 : 대학일자리플러스센터 추천채용 담당 원영은 hswye@hansung.kr 에게 입사지원서 전달\n* 면접시, 최종학력 졸업증명서 및 성적 증명서 제출 필요\n- 문의 : 02-760-5840 원영은 취업지원관",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89721/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:44.185676+00:00"
+  },
+  {
+    "id": "bd4330fcc8d569846a8dd45be75d396196298861a1b5b5bb6330013ec991e6dc",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225462/artclView.do",
+    "title": "인턴쉽 [추천채용/서류가산] [케이엔유(KNU Cosmetics)] 수입화장품 마케팅 Assistant BM 인턴 (~10/27,18:00)",
+    "date": "2026-10-16",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "[회사 개요]\n- (주)케이엔유(KNU Cosmetics)는 1999년 설립된 화장품 유통·마케팅 회사로, 약국·올리브영 등 H&B스토어, 면세점, 코스트코, 이커머스, 홈쇼핑 채널에서 더모코스메틱 브랜드를 유통합니다.\n- 취급 브랜드: 유리아쥬(URIAGE), 눅스(NUXE), 라우쉬(RAUSCH), 타이거밤(TIGER BALM), 에스브이알(SVR)\n- 회사 홈페이지:\nhttp://www.knucos.com\n[모집 내용]\n- 채용분야: 수입화장품 마케팅 Assistant BM(Brand Manager) 인턴\n- 근무기간: 1년\n- 담당업무 및 지원자격\n○ 수입화장품 브랜드매니저 (BM) 업무지원\n-시장 자료 조사 및 모니터링\n-사내 ERP 등 전산 입력\n-기타 마케팅 업무 Assist\n○ 지원자격\n-졸업자 혹은 27.02 졸업 예정자\n-신입 or 경력 1년이하\n-1년 근무가능자\n-컴퓨터활용능력(엑셀) 우수자\n[지원 방법]\n- 제출서류: 이력서(사진 첨부), 자기소개서 하단 양식 활용\n입사지원서_기업명(지원자명_지원직무)(로그인 후 다운로드가능).doc\n318.46KB\n- 추천전형 서류접수 방법 : 2026.10.27(월) 09:00까지\n메일로 입사 서류 전달\nhswye@hansung.kr 대학일자리플러스센터  원영은 컨설턴트\n· 추천채용 문의: 대학일자리플러스센터 원영은 컨설턴트 02-760-5840",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89717/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:45.183414+00:00"
+  },
+  {
+    "id": "43a9b58381a92ad60e82a6f08d639ea4ed7a40316cdbc750cc809ad3be063269",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225442/artclView.do",
+    "title": "교육프로그램 [동아대학교 거점형 특화프로그램] 금융직무로드맵: 금융직무특화교육과정(온라인)(~10/27)",
+    "date": "2026-10-15",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "■ 모집대상: 재학생 및 졸업생, 지역청년\n■ 모집일정: 2026.10.12(월) ~ 10.27(화) 자정까지\n■ 지원방법: QR코드 스캔 후 구글폼 지원서 작성 (포스터 QR 참고)\n■ 교육일정: 2026.11.02(월) ~ 11.20(금) 19:30 ~ 22:00\n■\n교육방법: 줌(ZOOM)을 활용한 온라인 수업\n■ 교육과정: 은행 기업금융 / 자산운용 주식운용 / 증권 IB 기업상장 / 증권 리서치 / 자산운용 부동산 운용 (부문별 3회 강의, 복수 부문 참여 시 수료증 각각 발급)\n■ 문의: 대학일자리플러스센터 051-200-8770",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89698/%5B%EA%B1%B0%EC%A0%90%ED%98%95%ED%8A%B9%ED%99%94%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%5D%EA%B8%88%EC%9C%B5%EC%A7%81%EB%AC%B4%EB%A1%9C%EB%93%9C%EB%A7%B5_%EA%B8%88%EC%9C%B5%EC%A7%81%EB%AC%B4%ED%8A%B9%ED%99%94%EA%B5%90%EC%9C%A1%EA%B3%BC%EC%A0%95.jpg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:46.186658+00:00"
+  },
+  {
+    "id": "b3c2a345080400cf37828395d73b31933ed875533df4cc47d72ba8ed06ef4d39",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225440/artclView.do",
+    "title": "교육프로그램 [경남대학교 대학일자리플러스센터] 2026 미래산업 취업역량강화 프로그램 전국 온라인 강좌 (10/26~10/29)",
+    "date": "2026-10-15",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "2026 미래산업 취업역량강화 프로그램 전국 온라인 강좌(무료) 안내\n■ 운영기간: 2026.10.26(월) ~ 10.29(목), 총 10시간 (온라인)\n■ 대상: 만 18~34세 미취업 청년, 대학 또는 고등학교 졸업자(졸업예정자)\n■ 운영분야 (4개 분야 중 1개 선택): 첨단 조선·해운 / K방산·모빌리티·우주항공 / AI 에이전트 기반 사무·행정 혁신 / 차세대 에너지·원전\n■ 주관: 경남대학교 대학일자리플러스센터\n■ 일정\n-\n10/26(월) 공통특강 (캐치TV, 18~20시, 2H): 산업지형으로 찾는 취업전략 (캐치TV 특강은 1일차 공통특강에만 해당)\n- 10/27(화) 직무캠프 1 (18~21시, 3H): 밸류체인·핵심직무 분석\n- 10/28(수) 직무캠프 2 (18~21시, 3H): 직무 요구역량 및 개인 로드맵\n- 10/29(목) 현직자 멘토링 (18~20시, 2H): 멘토링 및 로드맵 검토\n■ 혜택: 우수 참여자 기프티콘 제공\n■ 신청방법: 포스터 QR로 신청서 제출 후 카톡방 입장(안내 예정), '잇폼' 회원가입 완료 시 최종 신청 완료\n■ 교육 종료 후 희망자는 전담 컨설턴트를 통한 취업 컨설팅 및 사후관리 지원\n■ 문의: 교육운영(트루웍스) 02-3429-3193 / 주관(경남대) 055-249-2286",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89687/2026_%EB%AF%B8%EB%9E%98%EC%82%B0%EC%97%85_%EC%B7%A8%EC%97%85%EC%97%AD%EB%9F%89%EA%B0%95%ED%99%94_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpeg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:47.185428+00:00"
+  },
+  {
+    "id": "393df006092283b1d0c518e453e49d55a35d5ef6f1935403cb930767701713c8",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225434/artclView.do",
+    "title": "교육프로그램 [유비온] 고용노동부 국비지원 AI 기반 스마트금융 전문가 양성과정 (10/30 개강)",
+    "date": "2026-10-15",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "[고용노동부 국비지원] 유비온 AI 기반 스마트금융 전문가 양성과정\n금융 데이터 직무에 바로 통하는 AI·데이터 분석 역량을 완성하는 과정입니다. 전공 무관, 비전공자도 기초부터 단계적으로 AI 금융전문가로 성장할 수 있습니다.\n■ 교육 개요\n- 교육기간: 2026.10.30 ~ 2027.04.16 (약 5.5개월)\n- 수업시간: 월~금 09:00 ~ 18:00 (전일 오프라인)\n- 교육장소: 유비온 디지털교육센터 (구로디지털단지역 2번 출구 도보 1분)\n- 지원하기: ai.ubion.co.kr\n■ 커리큘럼\n- 1개월: 금융 이해 & 데이터 리터러시\n- 2개월: 금융 데이터 분석 & AI 기초 (Python · SQL)\n- 3~4개월: AI 모델링 & 실전 프로젝트\n- 4~5.5개월: 파이널 AI 프로젝트 & 포트폴리오 완성\n■ 교육 지원\n- 수강료 97% 국비지원 (1,600만 원 상당 과정을 50만 원으로 수강)\n- 훈련지원금 월 약 30만 원 지급 (총 약 160만 원)\n- 우수 수료생 장학금 30만 원 / 취업 성공 시 축하금 최대 30만 원\n- 교육용 노트북 무상 지원, 투자자산운용사 교재 + 동영상 강의, 금융·데이터 자격증 강의, AI Tool 이용료 지원\n■ 취업 지원\n- 1:1 취업 컨설팅 (자기소개서 첨삭 · 모의면접)\n- 실무기업 멘토링 & 튜터링\n- 포트폴리오 완성 과정 포함\n■ 선발 절차\n신청서 작성 → 유선 상담 → 줌 면접 → 최종 선발\n■ 문의\n: 유비온 디지털교육센터 1588-1381 / 신청:\nai.ubion.co.kr",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89675/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.jpeg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:48.185925+00:00"
+  },
+  {
+    "id": "437e8bcd72471d866e8a993116ad605a61c9c62f5f86423bfac2827327c87d16",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225433/artclView.do",
+    "title": "학사 2026학년도 겨울계절학기 학점교류 안내",
+    "date": "2026-10-15",
+    "source": "학사운영팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "2026학년도 겨울계절학기 학점교류 안내\n※ 신청기간 종료 후 학점교류를 취소할 경우, 반드시 '학점교류 취소원'을 작성하여 학사운영팀(420526\n@hansung.kr\n)으로  제출하여 주시기 바랍니다.\n※ 자세한 내용은 학교별 첨부파일 및 취소원 양식을 참고하여 주시기 바랍니다.\n학점교류 대학 안내 (총 31개 대학)\n가톨릭대학교\n,\n건국대학교\n, 경일대학교,\n강서대학교,\n광운대학교\n, 국민대학교,\n덕성여자대학교\n,\n동국대학교\n,\n동덕여자대학교\n,\n동의대학교,\n명지대학교\n,\n부경대학교\n,\n삼육대학교\n,\n상명대학교\n,\n서경대학교\n,\n서울과학기술대학교\n,\n서울시립대학교\n,\n서울여자대학교\n,\n성공회대학교\n,\n성신여자대학교\n,\n세종대학교\n,\n숙명여자대학교\n,\n숭실대학교\n,\n중앙대학교\n,\n추계예술대학교\n,\n한국외국어대학교\n,\n홍익대학교\n,\n한경국립대학교, 한국방송통신대학교, 한국항공대학교, 호서대학교\n※ 현재('26. 10. 19. 기준) 신청가능 대학 볼드표기하였으며, 최신화되므로 매번 공지 확인 요청바람.\n신청자격\n① 재학기간의 학업성적 평균평점이\n3.0 이상\n이면서 1학년 이상(1학년 이상 수료한 학생) ~ 4학년 1학기(7학기)이며 학칙에 의해 징계받은 사실이 없는 학생\n(휴학생 불가)\n-\n8학기 이상 혹은 졸업예정자는 졸업을 위해 꼭 필요한 경우에 한하여 학점교류를 허가 (신청 전 반드시 담당자와 상담 후, 학점교류가 필요하다고 인정받아야 신청 가능)\n(평균평점\n3.0이상\n은 반드시 충족해야함)\n② 학점교류를 희망하는 대학의 조건에 충족하는 학생\n신청학점\n6학점\n(학점교류 신청학점은 교내 수강신청학점과 합산되어 계산됨)\n성적 처리 방법\n● 학점교류로 이수한 과목에 대한 성적 처리는 다음과 같이 진행함.\n- 학기가 끝난 후 각 소속 대학으로부터\n100점 만점의 원점수\n를 기재한 성적 공문 접수.\n- 해당 성적을 본교의\n절대평가 성적 변환 기준에 따라 등급으로 환산\n하여 성적 부여.\n(P/N과목은 P/N로 인정\n)\n- 학점교류로 수강한 과목은 재수강이 불가함.\n타대학 학점교류 신청방법\n신청방법\nⅰ.\n종합정보시스템 → 교무 → ‘\n학점교류 신청’\n메뉴 선택\nⅱ. ‘교류대학’ 선택 후 ‘교과구분’ 선택\nⅲ. 교류대학 ‘신청과목’ 입력 (전공과목 수강시 전공 체크, 교양과목 수강시 교양 체크)\nⅳ. ‘신청’ 클릭하면 저장됨\n신청기간\n(학점교류\n요청접수 순)\n대학명\n기간\n1. 세종대학교\n(개설과목 조회: 11.13.(금) 예정)\n10월 15일 12시 ~ 11월 17일 12시(5명 이내)\n2. 덕성여자대학교\n(개설과목 조회: 10. 29.(목) 예정)\n10월 19일 14시 ~ 10월 30일 15시\n3. 동국대학교\n(개설과목 조회: 10. 26.(월)~10.27.(화) 예정)\n10월 19일 14시 ~ 10월 28일 13시\n제출서류\n●\n전공으로 인정받고자 하는 경우: 전공학점 인정요청서\n- 전공학점 인정요청서: 종합정보시스템에서 출력 → 본인 서명 → 학과(부)장/학장 결재(트랙사무실 방문)\n제출처\n우촌관 301호 학사운영팀 방문 / 이메일(haksa@hansung.ac.kr) 제출\n※ 이메일 제출은 반드시 전화로 서류 수신여부를 확인바람\n제출기한\n2026학년도 겨울계학기 개강 전까지\n※ 경일대학교, 동의대학교, 호서대학교는 RISE사업단에서 별도 모집\n※ 각 대학별 안내사항은 첨부파일 참고 바랍니다.\n※ 각 대학별 공문을 수신하는대로 위 내용은 계속 업데이트 예정입니다.\n※ 학점교류 신청기간(상단 참조: 대학별)을 각 대학별 학점교류생 추천기간(첨부파일 내 표기)보다 2~3일 일찍 마감하는 이유는 학생들이 제출한 서류 내용을 점검하고 해당 대학에 학점교류생을\n추천하기 위해 필요한 학사운영팀의 내부절차를 진행하기 위함이니 학생분들의 양해 바랍니다.\n※ 2027. 02. 졸업예정자의 경우 학점교류대학에서 성적이 1월 셋째주까지 우리대학으로 송부되어야 해당 과목까지 포함하여 졸업사정이 이루어질 수 있습니다.\n졸업예정자는 이를 학점교류대학에 직접 확인하여 졸업에 문제가 없도록 준비하기 바랍니다.\n※ 신청 기간 종류 후,\n학점교류를 전체 취소하거나 일부 교과목만 취소하고자 하는 경우\n, 원활한 학사 처리를 위해\n반드시 학사운영팀에 사전 연락한 후,\n첨부된「학점교류 취소원 양식」을 작성하여\n제출\n처로 제출해 주시기 바랍니다.\n(학점교류 취소 가능 기간은 교류대학의 학사일정에 따르며,\n교류대학의 학사일정이 종료된 이후에는 취소가 불가능합니다.)\n※ 문의 : 학사운영팀(02-760-4219) / 우촌관 301",
+    "images": [],
+    "attachments": [
+      {
+        "name": "학점교류 취소원 양식.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64144/download.do"
+      },
+      {
+        "name": "1. 세종대학교.zip",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64145/download.do"
+      },
+      {
+        "name": "2. 덕성여자대학교.zip",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64203/download.do"
+      },
+      {
+        "name": "3. 동국대학교.zip",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64204/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:49.204117+00:00"
+  },
+  {
+    "id": "c8f45b282403f28269bf855015973f170442b19d28169603b1fca307c12767d2",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225431/artclView.do",
+    "title": "기타 [숙명여대/ 대학일자리플러스센터] SK 기업문화 및 반도체 산업 특강 신청 (10/27,13:00~15:30)",
+    "date": "2026-10-15",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "신청 링크:\nhttps://docs.google.com/forms/d/e/1FAIpQLSeFulUmtpAsDBSvt02rq1JPXELSdEYyFzf39dbrTHbe9qAzmg/viewform",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89670/SK_poster.jpg?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:50.184960+00:00"
+  },
+  {
+    "id": "e573ede9a36e520ae043a254edcbc9e771292016b64a5d43c1110a120e39d625",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225520/artclView.do",
+    "title": "교외장학금 2026년 2학기 거창군 지역출신 대학생 등록금 지원사업 안내 새글",
+    "date": "2026-10-19",
+    "source": "학생복지팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000419/2026년_2학기_거창군_지역출신_대학생_등록금_지원사업.jpg"
+      }
+    ],
+    "attachments": [
+      {
+        "name": "공고문_2026년 2학기 거창군 지역출신 대학생 등록금 지원사업.pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64207/download.do"
+      },
+      {
+        "name": "신청서 서식.hwp",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64208/download.do"
+      }
+    ],
+    "content_status": "title_only",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:35.181276+00:00"
+  },
+  {
+    "id": "d355eb1b391e30263cf20d2f515b75679860e0891ef1efe1e8776336652e9ee2",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225519/artclView.do",
+    "title": "인턴쉽 [추천채용/포폴제출시, 서류가산] 대림바스(주) 디자인팀 체험형 인턴(6개월) (~10/25) 새글",
+    "date": "2026-10-19",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "[회사 개요]\n회사명: 대림바스(주)\n본사 주소: 서울특별시 영등포구 버드나루로 84 제일빌딩 9층\n홈페이지:\nhttps://www.daelimbath.com/\n[모집 부문 및 주요 업무]\n디자인팀 체험형 인턴 (6개월)\n-시장조사 및 디자인 트렌드 분석\n-위생도기, 수전, 비데 등 제품디자인 업무\n-프로젝트 제안서, 홍보이미지, 카탈로그 이미지 제작 등 3D렌더링 업무\n[지원 자격]\n-학력: 학사 이상\n-경력: 무관\n-자격: 산업디자인, 공업디자인, 제품디자인 전공자, 졸업 및 졸업예정자\n-포트폴리오 필수 제출 (미제출 시 서류 검토 대상에서 제외)\n-해외여행 결격사유가 없어야 함 (병역필 또는 면제자)\n[우대]\n-Oracle 사용 경험 보유자\n-Web 프로그램 개발 경험 보유자\n-UNI ERP 운영 경험 보유자\n[채용  절차]\n서류전형 → 1차 면접 → 최종합격 (필요시 평판조회)\n[기타 사항]\n-허위 사실이 발견될 경우 채용이 취소될 수 있음\n-공인 어학성적 제출 시 2년 이내의 것으로 제출\n-이력서 작성 시 전공/복수전공 입력 필수\n[추천전형 지원방법]\n-접수기간:~ 2026.10.25(일) 23:50까지 하단 원영은 메일로 포폴 및 지원서 제출\n-지원방법: 첨부 입사지원서 양식 작성 후 포트폴리오와 함께 추천 지원자 정보 회신처 hswye@hansung.kr 로 전달\ndaelim_form.docx\n40.56KB\n-지원경로: '추천채용' 선택 및 추천인 정보 기입\n-추천채용 문의: 대학일자리플러스센터 원영은 컨설턴트 02-760-5840 (hswye@hansung.kr)",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89721/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      },
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89775/%EB%8C%80%EB%A6%BC%EB%B0%94%EC%8A%A4%28%EC%A3%BC%29+%EB%94%94%EC%9E%90%EC%9D%B8%ED%8C%80+%EC%9D%B8%ED%84%B4+%EC%B1%84%EC%9A%A9+JD+%282%29.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:36.186830+00:00"
+  },
+  {
+    "id": "16635408623d311653b310ab09f37810c2b2320923b0a497980dd5d0287e69b0",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225509/artclView.do",
+    "title": "교외장학금 [한국고등교육재단] 인재림 장학생 선발 안내 새글",
+    "date": "2026-10-19",
+    "source": "학생복지팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000419/2026_인재림_제7기_포스터.jpg"
+      }
+    ],
+    "attachments": [
+      {
+        "name": "[한국고등교육재단] 인재림 제7기 장학생 선발 모집 요강.docx",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64206/download.do"
+      }
+    ],
+    "content_status": "title_only",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:37.177729+00:00"
+  },
+  {
+    "id": "db06f7dd32fed175f9e58b2fe78e82f7520e5d3dfff27c7798fee7a6c13165f5",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225506/artclView.do",
+    "title": "국가근로 2026학년도 2학기 국가근로장학금 학생 추가 신청 기간 안내(10/29 목 18시까지) 새글",
+    "date": "2026-10-19",
+    "source": "학생복지팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "1. 학생신청 기간:\n2026. 10. 21.(수) 9시 ~ 10. 29.(목) 18시까지\n※주말 및 공휴일 포함 신청기간 내 24시간 신청가능(\n단, 마감일 제외\n)\n2.\n신\n청\n대\n상:\n2\n0\n26\n년\n2\n학\n기\n국\n가\n근\n로\n장\n학\n금\n일\n반\n유\n형\n근\n로\n를\n희\n망\n하\n는\n학\n생\n3. 신청방법: 한국장학재단 홈페이지 및 모바일 어플을 이용하여 신청(첨부파일 참조)\n4. 기타사항\n- 해당 기간에 신청한 학생은 국가근로장학금 일반유형(일반교내, 일반교외)및 동계방학집중근로 프로그램 참여 가능\n※ 봉사유형 및 취업연계유형은 기존과 동일하게 상시신청 가능",
+    "images": [],
+    "attachments": [
+      {
+        "name": "2026년 2학기 국가근로장학금 일반유형(추가) 학생신청 매뉴얼.pdf",
+        "url": "https://www.hansung.ac.kr/bbs/hansung/2127/64205/download.do"
+      }
+    ],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:38.181070+00:00"
+  },
+  {
+    "id": "520983561d030e5b40a7d97a4064f335f69a88d11b77d68400f41bb7bceb29a6",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225505/artclView.do",
+    "title": "채용정보 [추천채용] (주)풀릭스 채용전환형 인턴(소프트웨어 엔지니어) (~10/29) 새글",
+    "date": "2026-10-19",
+    "source": "지역청년고용팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "■ 회사 소개\n풀릭스 허브 소개서.pdf\n20.30MB\n- 식품 데이터와 커머스 기반 식품 제조사·크리에이터·파트너사를 연결하는\n푸드테크 스타트업\n- 2025.09 신용보증기금 혁신 스타트업 육성 프로그램 리틀펭귄 선정 / 2025.07 TIPS 선정\n-주요 업무, 자격 요건, 기술 스택, 전형 절차 등 자세한 채용공고는 아래 링크에서 확인하실 수 있습니다. 학생 공지 시 이 링크를 함께 안내해 주시면 지원자분들께 도움이 될 것 같습니다.\n▶ 상세 채용공고:\nhttps://poolix.notion.site/Software-Engineer-Internship-78c930aa7817831f9dbc815fbee3f0ec\n■ 모집 개요\n[풀릭스]채용공고_채용전환형인턴_엔지니어.pdf\n78.63KB\n- 모집 분야: 채용전환형 인턴(소프트웨어 엔지니어)\n- 고용 형태: 3개월 기간제 인턴(평가를 거쳐 정규직 전환 /수습 2주 포함, 최대 9개월)\n- 근무 시간: 주 5일(월~금) 09:00~18:00, 시차출퇴근제\n- 급여: 월 250만 원(세전), 정규직 전환 시 연봉 별도 협의\n- 근무지: 서울특별시 강남구 역삼로5길 19, 3층\n- 지원 자격: 졸업자 또는 27.02 졸업예정자, 정규직 전환 후 계속 근무 가능자\n■ 주요 업무\n- MVP 개발부터 출시·운영까지 F&B 데이터·커머스 서비스 전 과정 참여\n- 식품 시장의 비효율 문제를 발굴하고 이를 해결할 코드와 아키텍처 설계\n- 신규 커머스 기능·프로모션 기획 및 트래픽·매출 데이터 기반 개선\n- Claude 등 LLM과 AI 개발 도구를 활용한 요구사항 정의·설계·구현·리팩토링\n■ 우대 사항\n- AI 도구를 개발 워크플로우에 적극 활용해 본 경험\n- 서비스를 직접 기획·개발·운영해 본 프로젝트 경험\n- 커머스 또는 데이터 관련 개발 경험\n- 기술 스택 일치 여부보다\n엔지니어로서의 기본기와 문제 해결 능력을 중요하게 봅니다.\n■ 전형 절차\n- 서류 전형 → 직무 과제 → 면접 → 최종 합격 → 인턴 근무(3개월) → 평가 후 인턴십 연장 또는 정규직 전환\n■ 추천전형 지원 방법\n· 제출서류: 이력서, 자기소개서 (포트폴리오, GitHub 링크는 선택 제출)\n· 지원방법 :\n공과대용_입사지원서_기업명(지원자명_지원직무).doc948.22KB\n10/29(목) 23시59분 까지\n원영은T  메일로 입사 서류 전달\nhswye@hansung.kr 대학일자리플러스센터  원영은 컨설턴트\n· 추천채용 문의: 대학일자리플러스센터 원영은 컨설턴트 02-760-5840",
+    "images": [
+      {
+        "url": "https://career.hansung.ac.kr/attachment/view/89721/%EC%83%81%EB%8B%B4%EC%8B%A0%EC%B2%AD%EC%9D%B4%EB%AF%B8%EC%A7%80.png?ts=0"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:39.187156+00:00"
+  },
+  {
+    "id": "71ca4d59c76b247e3af8dd96500bc7cbe4f7b7493862e67f5a9aec0337aaa90f",
+    "url": "https://www.hansung.ac.kr/bbs/hansung/2127/225468/artclView.do",
+    "title": "학사 2026학년도 2학기 수업평가 중간조사 시행 안내",
+    "date": "2026-10-16",
+    "source": "학사운영팀",
+    "category": "공지",
+    "source_type": "notice",
+    "board_id": "2127",
+    "content": "2026학년도 2학기 수업평가 중간조사 시행 안내\n본 설문조사는 중간 수업 만족도와 요구사항을 파악하여, 이번 학기 수업의 품질 개선을 목적으로 실시됩니다\n.\n수업평가 중간조사는 응답률 제고와 실질적인 수업 개선을 위해 매 학기 9주차에 진행됩니다.\n또한 「통계법」 제\n33\n조\n(\n비밀의 보호\n) 및 제34\n조\n(\n통계종사자의 의무\n)\n에 따라, 여러분의 응답 내용은 철저하게 보호되며\n통계 작성 외의 목적으로 사용되지 않습니다\n.\n하단의 조사 방법 및 기간을 확인하여 적극적인 참여 바랍니다\n.\n-\n다 음\n-\n1.\n조사 기간\n:\n2026. 10. 26.(\n월\n) 10:00 ~ 10. 30.(금) 23:59\n2.\n조사 과목\n: 2026\n학년도\n2\n학기 수강 과목\n3.\n조사 방법\n:\n종합정보시스템 로그인\n→\n교무\n→\n수업평가  메뉴\n→\n대상과목  클릭\n→\n평가 후 저장\n※\n설문 응답자의 신상정보는 해당 과목 교수님께 절대 공개되지 않습니다\n.\n※\n조사화면 안내\n①\n[\n종합정보시스템\n]\n로그인 후\n, [\n교무\n]\n메뉴의\n[\n수업평가\n]\n클릭\n②\n과목 선택 후, 평가항목 모두 응답\n③\n응답 후, 반드시\n[\n저장\n]\n버튼 클릭하여 저장\n※\n수업평가 중간조사는 현재 수강 중인 강의의 개선을 위한 참고 자료로 활용되오니, 진\n솔하게 평가하여 주시기 바랍니다\n.\n기타 자세한 사항은 학사운영팀\n(\n☎\n760-4219)으로 문의\n바랍니다\n.\n2026. 10. 19.\n교 육 혁 신 처 장",
+    "images": [
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000056/20211007171915316_19QNTI00.png"
+      },
+      {
+        "url": "https://www.hansung.ac.kr/CrossEditor/binary/images/000056/20211007171932434_J5INSH90.png"
+      }
+    ],
+    "attachments": [],
+    "content_status": "text",
+    "attachment_extraction_status": "pending",
+    "last_checked_at": "2026-10-19T21:00:43.192588+00:00"
   }
 ]

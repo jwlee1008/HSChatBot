@@ -1,10 +1,10 @@
 # Verified scope: Linux ARM64, Python 3.12 Docker image.
 # macOS uses an unpinned torch compatibility range; not a complete macOS lock.
 # Linux AMD64 markers are retained but have not been build-tested.
-# ── PyTorch CPU 전용 인덱스 및 플랫폼별 조건 분기 ─────────────
---extra-index-url https://download.pytorch.org/whl/cpu
+# ── PyTorch CUDA 12.4 및 플랫폼별 조건 분기 ─────────────
+--extra-index-url https://download.pytorch.org/whl/cu124
 torch>=2.5.0; sys_platform == 'darwin'
-torch==2.6.0+cpu; sys_platform != 'darwin' and platform_machine == 'x86_64'
+torch==2.6.0+cu124; sys_platform != 'darwin' and platform_machine == 'x86_64'
 torch==2.6.0; sys_platform != 'darwin' and platform_machine != 'x86_64'
 
 # ── 검증된 환경 기반 완전 고정(Pinned) 의존성 ───────────────────
