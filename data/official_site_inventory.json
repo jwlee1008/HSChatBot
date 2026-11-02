@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-01T00:11:25.487895+00:00",
+  "checked_at": "2026-11-02T00:51:35.327830+00:00",
   "scope": [
     "교육정보",
     "대학생활",
@@ -583,7 +583,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "changed",
+      "collection_status": "unchanged",
       "boards": []
     },
     {
@@ -1053,6 +1053,30 @@
       "kind": "guidance",
       "interval_days": 14,
       "collection_status": "not_due"
+    },
+    {
+      "url": "https://www.jobda.im/",
+      "title": "잡다 커리어센터(AI역량검사)",
+      "menu_path": [
+        "대학생활",
+        "제휴서비스",
+        "잡다 커리어센터(AI역량검사)"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
+    },
+    {
+      "url": "https://inface.ai/hansung",
+      "title": "에듀스 온라인&AI솔루션",
+      "menu_path": [
+        "대학생활",
+        "제휴서비스",
+        "에듀스 온라인&AI솔루션"
+      ],
+      "kind": "guidance",
+      "interval_days": 14,
+      "collection_status": "external_or_dynamic_review"
     },
     {
       "url": "https://comento.kr/univ/index/%ED%95%9C%EC%84%B1%EB%8C%80%ED%95%99%EA%B5%90?univ=wuy3cp62ge1P2I2Qtslash7MNg%3D%3D&std_no=&utm_source=affiliate-university&utm_medium=link&utm_campaign=hansung&utm_term=undefined&utm_content=undefined",
@@ -2090,7 +2114,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "changed",
+      "collection_status": "unchanged",
       "boards": []
     },
     {
