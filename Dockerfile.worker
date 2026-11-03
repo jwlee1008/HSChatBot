@@ -1,0 +1,20 @@
+# server01 전용: 지식 수집·OCR·색인 worker 이미지
+# 서비스 이미지(Dockerfile)와 같은 Python/의존성 계층을 공유하고,
+# Tesseract(한국어) OCR만 추가한다. 저장소는 /app 에 bind mount 해서 실행한다.
+FROM python:3.12-slim@sha256:2f17fc044b579bab302c2e8054d3a686e2cb9a83de48e70534b94cd8ebbe06a9
+
+WORKDIR /app
+
+COPY requirements-lock.txt requirements.txt ./
+RUN pip install --no-cache-dir -r requirements-lock.txt
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends tesseract-ocr tesseract-ocr-kor tesseract-ocr-eng tzdata \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONPATH=/app \
+    TZ=Asia/Seoul \
+    PREWARM_RAG_ON_STARTUP=false
+
+CMD ["python", "scripts/refresh_knowledge.py", "--help"]

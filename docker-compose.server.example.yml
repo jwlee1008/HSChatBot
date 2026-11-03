@@ -1,0 +1,40 @@
+# 홈서버 설정 예제. 자동 로드 안 함.
+# 요구: NVIDIA Container Toolkit, 검증된 data/knowledge_runtime/active 묶음.
+# 적용 예: docker compose -f docker-compose.yml -f docker-compose.server.example.yml ...
+# Windows 예약 작업·Cloudflare Tunnel·비밀키는 서버 외부 관리.
+services:
+  backend:
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    volumes:
+      - ./data/knowledge_runtime:/app/knowledge_runtime
+      - ./core:/app/core
+      - ./config.py:/app/config.py
+    environment:
+      - CHROMA_PERSIST_DIR=/app/knowledge_runtime/active/chroma_db
+      - NOTICES_PATH=/app/knowledge_runtime/active/unified_campus_knowledge.json
+      - CHROMA_COLLECTION_NAME=campus_knowledge
+      - LLM_PROVIDER=local
+      - LOCAL_LLM_MODEL=Qwen/Qwen2.5-1.5B-Instruct
+      - LOCAL_LLM_MAX_NEW_TOKENS=512
+      - PREWARM_RAG_ON_STARTUP=true
+
+  worker:
+    profiles: ["worker"]
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    image: hs-chatbot-worker:latest
+    working_dir: /app
+    volumes:
+      - .:/app
+      - model_cache:/root/.cache/huggingface
+    environment:
+      - TZ=Asia/Seoul
+      - PREWARM_RAG_ON_STARTUP=false
+    restart: "no"

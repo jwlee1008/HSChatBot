@@ -1,6 +1,6 @@
 # CampusRAG 저장소 구성과 형상관리
 
-기준일은 2026년 10월 18일입니다. 이 문서는 현재 `main`의 파일 역할과 변경 관리 원칙을 설명합니다. 코드 재배치나 운영 데이터 교체를 수행한 기록은 아닙니다.
+기준일은 2026년 11월 4일입니다. 현재 `main`의 소스·서버 확장 코드·산출물과 운영 데이터 관리 원칙을 설명합니다.
 
 ## 기준 저장소와 브랜치
 
@@ -9,15 +9,15 @@
 | 문서·산출물 반영 저장소 | [jwlee1008/HSChatBot](https://github.com/jwlee1008/HSChatBot) |
 | 기준 브랜치 | `main` |
 | 원본 협업 저장소 | [pregeon/HSChatBot](https://github.com/pregeon/HSChatBot) |
-| 이번 정리의 코드 기준 | `8349320` |
+| 코드 통합 기준 | 서버 `4c7928c`와 원격 `7c297d2` 이후 11월 4일 변경 통합 |
 | 프로젝트와 팀 | CampusRAG / 저학년의 반란 |
 
-현재 로컬 checkout은 `myrepo`가 `jwlee1008/HSChatBot`, `origin`이 `pregeon/HSChatBot`을 가리키며 `codex/official-information` 브랜치가 `origin/codex/official-information`을 추적합니다. 새 clone의 remote 이름은 이와 다를 수 있습니다. 따라서 원격 이름만으로 대상 저장소를 판단하지 않고 URL과 브랜치를 함께 확인합니다.
+홈서버 checkout은 `origin=https://github.com/jwlee1008/HSChatBot.git`입니다. 서버 작업 브랜치에서 원격 main을 병합하고 해당 커밋을 원격 main에 반영합니다. 과거 문서의 `myrepo`·`pregeon` remote는 당시 환경 기록입니다. 원격 URL과 브랜치를 함께 확인합니다.
 
 ```bash
 git remote -v
 git branch -vv
-git fetch myrepo main
+git fetch origin main
 ```
 
 이번 문서·보고서 반영은 `jwlee1008/HSChatBot`의 `main`을 대상으로 합니다. 원본 저장소의 작업 브랜치에만 push한 변경이 자동으로 이 저장소의 `main`에 반영되는 것은 아닙니다.
@@ -46,7 +46,7 @@ git fetch myrepo main
 
 소스와 실행 설정은 코드 리뷰와 회귀 검증의 대상입니다. 공개 자료 JSON과 manifest는 수집 범위·시각·입력 해시를 확인하고, 생성한 색인은 원본과 일치하는지 따로 검증합니다. 제출 문서는 해당 자료·코드 기준을 적어 코드 완료나 운영 적용과 혼동하지 않게 합니다.
 
-현재 설계 묶음은 [outputs/campusrag_design_20261018](../outputs/campusrag_design_20261018/README.md)에 둡니다. TRD·프로그램 목록·StoryBoard의 요구사항과 화면 ID를 유지하고, 형상관리표에는 기준 저장소와 README·구성 문서의 상태를 기록합니다. 최신 파일은 묶음 README에서 안내합니다.
+최신 프로그램 목록·WBS·Charter는 [11월 4일 묶음](../outputs/campusrag_docs_20261104/README.md), TRD·StoryBoard·형상관리표는 [10월 18일 설계 묶음](../outputs/campusrag_design_20261018/README.md)에서 확인합니다. 기존 요구사항·화면 ID를 유지하며 날짜별 산출물을 보존합니다.
 
 구형 루트 문서와 과거 기능은 이번 작업에서 이동하거나 삭제하지 않습니다. [문서 목록](README.md)에서 현재 제출 자료와 역사 기록을 구분합니다.
 
@@ -64,9 +64,9 @@ git fetch myrepo main
 
 `.env`, API 키, 가상환경, `node_modules`, 다운로드·모델 캐시와 개인 DB는 소스·제출 문서에 포함하지 않습니다. `.gitignore`는 새 비추적 파일에 대한 규칙이므로 이미 추적되는 파일이 자동으로 제외되지는 않습니다.
 
-이 저장소에는 기존 `data/integrated_eval_chroma_db/` seed가 추적되어 있습니다. 10월 9일 확장된 약 258MiB의 로컬 SQLite와 HNSW 파일은 이번 문서·보고서 커밋에 포함하지 않습니다. 해당 DB와 런타임 추가 코드는 별도 검증·전달·적용 작업으로 관리합니다.
+기존 `data/integrated_eval_chroma_db/`는 1,366문서·3,447청크 seed입니다. Git 통합 JSON 1,485문서와 버전이 다르므로 같은 JSON으로 새 후보 색인을 생성하고 strict 검증 후 사용합니다. 대용량 확장 DB·활성 스냅샷은 Git에서 제외합니다. 서버 확장 수집·검증·적용 CLI와 worker Dockerfile은 main에서 관리합니다.
 
-`myrepo/main`에서 갱신된 공식 원본 JSON, 로컬 통합 JSON, 현재 Chroma 색인과 운영 서버의 데이터는 서로 다른 버전일 수 있습니다. 원본 갱신, 색인 생성, 운영 반영을 각각 기록합니다. 실행 중인 DB는 파일 단위로 덮어쓰지 않고 같은 후보의 JSON·manifest·DB를 적용합니다.
+공식 원본 JSON, 통합 JSON, 기본 Chroma와 서버 활성본은 서로 다른 버전일 수 있습니다. 원본 갱신, 색인 생성, 운영 반영을 각각 기록합니다. 실행 중인 DB는 파일 단위로 덮어쓰지 않고 같은 후보의 JSON·manifest·DB를 적용합니다. 로컬 `docker-compose.override.yml`은 별도 관리하며 공개 예제는 `docker-compose.server.example.yml`입니다. Windows 예약 작업·터널·제어 스크립트는 서버 외부 구성입니다.
 
 ## 이번 최신화 범위
 
@@ -74,4 +74,4 @@ git fetch myrepo main
 - 현재 웹 `frontend-web/`과 이전 Streamlit 경로, 보관된 개인 일정 기능을 구분했습니다.
 - 문서 목록과 설계 산출물 묶음의 진입점을 추가했습니다.
 - TRD·프로그램 목록·StoryBoard와 갱신한 형상관리표 4종을 함께 관리합니다.
-- 로컬 런타임 수정과 확장 DB는 유지하며 이번 문서 반영과 분리합니다. 운영 재배포를 완료했다는 뜻은 아닙니다.
+- 서버 런타임·지식 갱신 코드를 통합하고 최신 3종 문서를 추가했습니다. 활성 DB·비밀값·로컬 운영 override는 별도 관리합니다. 확인 시점 서버는 수동 정지 상태입니다.
