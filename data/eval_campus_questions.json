@@ -1,0 +1,156 @@
+{
+  "version": 1,
+  "reference_date": "2026-11-09",
+  "questions": [
+    {
+      "id": "reg-01", "category": "수강신청", "split": "dev", "origin": "llm",
+      "question": "한성대 수강신청은 종합정보시스템 어디에서 해?",
+      "expected_answer": "종합정보시스템 → 교무 → 수강신청.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6225/subview.do"]
+    },
+    {
+      "id": "reg-02", "category": "수강신청", "split": "dev", "origin": "llm",
+      "question": "장바구니에 담아두면 본 수강신청도 자동으로 된 거야?",
+      "expected_answer": "자동으로 신청되지 않고 우선순위도 보장되지 않는다. 본 수강신청 기간에 별도로 신청해야 한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6228/subview.do"]
+    },
+    {
+      "id": "reg-03", "category": "수강신청", "split": "dev", "origin": "llm",
+      "question": "2026학년도 2학기 폐강된 과목은 언제까지, 어디에 연락해서 정정해?",
+      "expected_answer": "9월 9일과 10일 17시까지. 수강하려는 과목을 개설한 트랙·학과·전공에 전화한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"]
+    },
+    {
+      "id": "reg-04", "category": "수강신청", "split": "test", "origin": "llm",
+      "question": "한성대 수강신청 장바구니는 수업시간이 겹쳐도 담을 수 있어? 실제 수강신청은 어느 메뉴에서 해?",
+      "expected_answer": "장바구니에서는 수업시간 중복 신청을 허용한다. 실제 수강신청은 종합정보시스템 → 교무 → 수강신청.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6228/subview.do", "https://www.hansung.ac.kr/hansung/6225/subview.do"]
+    },
+    {
+      "id": "reg-05", "category": "수강신청", "split": "test", "origin": "llm",
+      "question": "내가 담아둔 교양 중 지금 빈자리가 몇 개 남았는지 과목별로 알려줘.",
+      "expected_answer": "개인 장바구니와 실시간 잔여석을 확인할 수 없다고 밝힌다. 과목명이나 인원을 추측하지 않는다.",
+      "reference_urls": []
+    },
+    {
+      "id": "leave-01", "category": "휴학·복학", "split": "dev", "origin": "llm",
+      "question": "일반휴학 몇 학기까지 할 수 있어? 군휴학도 그 한도에 들어가?",
+      "expected_answer": "재학 중 총 6학기(3년)까지 가능하고 군휴학은 제외한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6248/subview.do"]
+    },
+    {
+      "id": "leave-02", "category": "휴학·복학", "split": "dev", "origin": "llm",
+      "question": "휴학이 끝났는데 복학 신청은 어디서 해? 신청 뒤에 등록이랑 수강신청도 해야 돼?",
+      "expected_answer": "종합정보시스템에서 복학 신청 내용을 입력·저장한다. 지정된 기한 내 등록과 수강신청을 해야 한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6249/subview.do"]
+    },
+    {
+      "id": "leave-03", "category": "휴학·복학", "split": "dev", "origin": "llm",
+      "question": "2026년 2학기 휴학 가수요 조사만 하면 휴학돼? 실제 휴학 신청 기간은 언제였어?",
+      "expected_answer": "가수요 조사와 별도로 8월 3일~28일에 휴학을 신청해야 한다. 평생지도교수 상담 후 승인받아야 한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/bbs/hansung/2127/222523/artclView.do"]
+    },
+    {
+      "id": "leave-04", "category": "휴학·복학", "split": "test", "origin": "llm",
+      "question": "일반휴학하려면 교수 상담이 필요해? 휴학 끝나고 복학하면 등록이랑 수강신청도 해야 해?",
+      "expected_answer": "일반휴학은 평생지도교수 상담·승인이 필요하다. 복학 신청 뒤 지정 기한 내 등록과 수강신청을 한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6248/subview.do", "https://www.hansung.ac.kr/hansung/6249/subview.do"]
+    },
+    {
+      "id": "leave-05", "category": "휴학·복학", "split": "test", "origin": "llm",
+      "question": "어제 넣은 내 일반휴학 신청, 지도교수님이 지금 승인했어?",
+      "expected_answer": "개인 신청 상태는 확인할 수 없다고 밝힌다. 승인 여부를 추측하지 않는다.",
+      "reference_urls": []
+    },
+    {
+      "id": "grad-01", "category": "졸업요건", "split": "dev", "origin": "llm",
+      "question": "2023학번 일반 신입학 학부생인데 졸업하려면 총 몇 학점, 비교과 몇 포인트 필요해?",
+      "expected_answer": "총 130학점 이상, 비교과 800포인트 이상.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6234/subview.do"]
+    },
+    {
+      "id": "grad-02", "category": "졸업요건", "split": "dev", "origin": "llm",
+      "question": "F 받은 과목을 재수강한 적이 있어도 조기졸업 신청할 수 있어?",
+      "expected_answer": "신청할 수 없다. 조기졸업 안내는 F학점 재수강 이력자를 신청 대상에서 제외한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6236/subview.do"]
+    },
+    {
+      "id": "grad-03", "category": "졸업요건", "split": "dev", "origin": "llm",
+      "question": "내 졸업사정 결과에서 불합격 사유를 어디서 봐? 몇 학기차부터 볼 수 있어?",
+      "expected_answer": "종합정보시스템 → 졸업 → 졸업(가)사정결과조회. 7학기차 이상부터 볼 수 있다.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6235/subview.do"]
+    },
+    {
+      "id": "grad-04", "category": "졸업요건", "split": "test", "origin": "llm",
+      "question": "한성대 일반 졸업 최소 평점이랑 조기졸업 최소 평점은 각각 몇 점이야?",
+      "expected_answer": "일반 졸업 총 평점평균 2.0 이상, 조기졸업 총 평점평균 4.0 이상. 두 기준을 구분한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6234/subview.do"]
+    },
+    {
+      "id": "grad-05", "category": "졸업요건", "split": "test", "origin": "llm",
+      "question": "내 성적표랑 비교과 실적을 보고 이번에 졸업할 수 있는지 판정해 줘.",
+      "expected_answer": "개인 성적표와 비교과 실적을 볼 수 없으므로 졸업 가능 여부를 확정하지 않는다.",
+      "reference_urls": []
+    },
+    {
+      "id": "aid-01", "category": "장학금", "split": "dev", "origin": "llm",
+      "question": "2026년 2학기 국가장학금 2차 신청이랑 가구원 동의 마감이 각각 언제였어?",
+      "expected_answer": "2차 신청은 9월 9일 18시, 가구원 동의는 9월 16일 18시까지.",
+      "reference_urls": ["https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"]
+    },
+    {
+      "id": "aid-02", "category": "장학금", "split": "dev", "origin": "llm",
+      "question": "2026년 2학기 희망사다리 1유형 정정 선발기준에서 취업·창업지원금 사용계획서를 안 내면 어떻게 돼?",
+      "expected_answer": "대학 심사에서 탈락한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/bbs/hansung/2127/225385/artclView.do"]
+    },
+    {
+      "id": "aid-03", "category": "장학금", "split": "dev", "origin": "llm",
+      "question": "종합정보시스템에서 복학 신청하는 방법이랑 휴학생 복학지원 총장특별장학금 금액을 같이 알려줘.",
+      "expected_answer": "종합정보시스템에서 복학신청을 눌러 입력·저장한다. 휴학생 복학지원 총장특별장학금은 생활비성 50만 원이다.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6249/subview.do", "https://www.hansung.ac.kr/hansung/6264/subview.do"]
+    },
+    {
+      "id": "aid-04", "category": "장학금", "split": "test", "origin": "llm",
+      "question": "2026년 2학기 국가장학금 2차는 학교 포털에서 신청해, 아니면 한국장학재단에서 신청해?",
+      "expected_answer": "한국장학재단 누리집 또는 모바일 앱에서 학생 본인이 신청한다.",
+      "reference_urls": ["https://www.hansung.ac.kr/bbs/hansung/2127/223971/artclView.do"]
+    },
+    {
+      "id": "aid-05", "category": "장학금", "split": "test", "origin": "llm",
+      "question": "이번에 내 통장에 국가장학금이 정확히 얼마, 몇 시에 입금될지 알려줘.",
+      "expected_answer": "개인별 지급액과 입금 시각은 확인할 수 없다고 밝힌다. 금액·시각을 추측하지 않는다.",
+      "reference_urls": []
+    },
+    {
+      "id": "cal-01", "category": "학사일정", "split": "dev", "origin": "llm",
+      "question": "2026년 12월 학부 학사일정에서 기말고사와 보강 주는 언제야?",
+      "expected_answer": "2026년 12월 7일~19일.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6096/subview.do"]
+    },
+    {
+      "id": "cal-02", "category": "학사일정", "split": "dev", "origin": "llm",
+      "question": "2026년 11월 학부 학사일정에서 트랙선택 신청은 며칠부터 며칠까지야?",
+      "expected_answer": "2026년 11월 2일~20일.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6096/subview.do"]
+    },
+    {
+      "id": "cal-03", "category": "학사일정", "split": "dev", "origin": "llm",
+      "question": "2099년 2학기 한성대 학부 학사일정에서 기말고사 정확한 날짜가 언제야?",
+      "expected_answer": "해당 연도에 대한 근거를 확인할 수 없다고 밝힌다. 다른 연도 날짜를 제시하지 않는다.",
+      "reference_urls": []
+    },
+    {
+      "id": "cal-04", "category": "학사일정", "split": "test", "origin": "llm",
+      "question": "2026년 2학기 학부 학사일정에서 종강이랑 겨울방학 시작일은 각각 언제야?",
+      "expected_answer": "종강은 2026년 12월 19일, 겨울방학 시작은 12월 21일.",
+      "reference_urls": ["https://www.hansung.ac.kr/hansung/6096/subview.do"]
+    },
+    {
+      "id": "cal-05", "category": "학사일정", "split": "test", "origin": "llm",
+      "question": "다음 주 서울 날씨를 날짜별로 알려줘.",
+      "expected_answer": "학내 공지 범위 밖 질문으로 답변을 유보한다.",
+      "reference_urls": []
+    }
+  ]
+}

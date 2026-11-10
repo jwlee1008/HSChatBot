@@ -107,6 +107,57 @@ def _official_subject(query: str, candidates: list) -> tuple[str, str] | None:
     return None
 
 
+def _academic_guide_titles(query: str) -> set[str]:
+    """Identify standing policy pages, leaving term-specific notices to notice ranking."""
+    compact = re.sub(r"\s+", "", query)
+    if re.search(r"(?:\d{2,4}(?:학년도|년)|[12]학기|\d{1,2}월|공지|폐강|가수요)", compact):
+        return set()
+    titles = set()
+    if "장바구니" in compact:
+        titles.add("수강신청 장바구니")
+    if re.search(r"수강신청(?:은|을)?(?:종합정보시스템)?(?:어디|어느|메뉴|방법)|어떻게수강신청", compact):
+        titles.add("수강신청")
+    if re.search(r"일반휴학|군휴학|휴학(?:을|은)?(?:신청|기간|하려|몇)", compact):
+        titles.add("휴학")
+    if re.search(r"복학(?:을|은)?(?:신청|등록|절차|어디|하면)", compact):
+        titles.add("복학")
+    if "졸업사정" in compact:
+        titles.add("졸업사정절차")
+    elif "조기졸업" in compact:
+        titles.add("조기졸업")
+        if "일반졸업" in compact:
+            titles.add("졸업 및 학위")
+    elif "졸업" in compact and re.search(r"학점|포인트|요건|기준|평점", compact):
+        titles.add("졸업 및 학위")
+    if "총장특별장학금" in compact and "신입생" not in compact:
+        titles.add("교내장학(재학생)")
+    return titles
+
+
+def _term_pairs(text: str) -> set[tuple[str, str]]:
+    """Read explicit year/semester pairs rather than inferring a term from publication."""
+    return {(f"20{year}" if len(year) == 2 else year, semester) for year, semester in
+            re.findall(r"(?<!\d)((?:19|20)\d{2}|\d{2})\s*(?:학년도|년도|년|-)\s*([12])\s*학기", text)}
+
+
+def _notice_revision(title: str) -> tuple[str, bool]:
+    # Some board rows prepend a category before the notice title.
+    title = re.sub(r"\s+", "", title)
+    return title.replace("(정정)", "", 1), "(정정)" in title
+
+
+def _requires_live_lookup(question: str) -> bool:
+    """Detect direct requests for account or live data outside the public index."""
+    compact = re.sub(r"\s+", "", question)
+    if re.search(r"어디서|어느메뉴|확인방법|조회방법", compact):
+        return False
+    return bool(
+        re.search(r"지금|현재|실시간", compact) and re.search(r"빈자리|잔여석", compact)
+        or re.search(r"(?:내|제)(?:성적표|성적내역|장바구니|통장).*(?:판정|입금|남았|확인해|조회해)", compact)
+        or re.search(r"(?:내|제)(?:일반|군)?(?:휴학|복학|장학금)신청.*(?:승인했|승인됐|승인되었|승인여부|승인상태)", compact)
+    )
+
+
 def _query_subject_terms(query: str) -> list[str]:
     """Extract Korean subject words without generic application/date language."""
     generic = {"안내", "신청", "신청서", "장학", "장학생", "장학금", "모집", "서류", "기간",
@@ -149,7 +200,9 @@ def _requested_date_bonus(body: str, entities: dict) -> float:
         return -0.10 if dates else 0.0
     if entities.get("day") and any(day == entities["day"] for _, _, day in matching):
         return 0.26
-    return 0.18
+    # An overlap chunk may start with only the end of an event's range.
+    starts_mid_range = body.lstrip().startswith("~") and dates[0] in matching
+    return 0.02 if starts_mid_range else 0.18
 
 
 class CampusRAG:
@@ -494,28 +547,49 @@ class CampusRAG:
             is_off_topic = True
         elif not has_campus_intent and re.search(r"(?:이진\s*탐색|이진\s*트리|자료구조)", query, re.IGNORECASE):
             is_off_topic = True
+        if is_off_topic:
+            return []
+
+        guide_titles = _academic_guide_titles(query)
+        missing_titles = guide_titles - {
+            doc.metadata.get("title") for doc, score in raw_results
+            if doc.metadata.get("source_type") == "guidance" and score >= threshold
+        }
+        calendar = _official_subject(query, raw_results)
+        if entities.get("month") and calendar in {("guidance", "학부학사일정"), ("guidance", "대학원학사일정")}:
+            missing_titles.add(calendar[1])
+        if missing_titles:
+            try:
+                existing_chunks = {doc.metadata.get("chunk_id") for doc, _ in raw_results}
+                additional = self.vectorstore.similarity_search_with_relevance_scores(
+                    query, k=candidate_k,
+                    filter={"$and": [{"source_type": "guidance"}, {"title": {"$in": sorted(missing_titles)}}]},
+                )
+                raw_results.extend((doc, score) for doc, score in additional
+                                   if doc.metadata.get("chunk_id") not in existing_chunks)
+            except Exception as exc:
+                logger.warning("학사 안내 보조 검색 실패 (exception=%s)", type(exc).__name__)
 
         SPECIALIZED_TERMS = {
             "topcit", "toeic", "toefl", "cpa", "aicpa", "k-mooc", "kmooc", "ipp", "rotc"
         }
         # 고유 전문 약어 또는 영문 대문자 3자 이상 약어만 추출
         distinctive_subject_words = []
-        if not is_off_topic:
-            for w in re.findall(r"[a-zA-Z0-9\-_]{2,}", query):
-                w_low = w.lower()
-                if w_low in SPECIALIZED_TERMS or (w.isupper() and len(w) >= 3 and w not in {"FOR", "THE", "AND", "NOT"}):
-                    distinctive_subject_words.append(w_low)
+        for w in re.findall(r"[a-zA-Z0-9\-_]{2,}", query):
+            w_low = w.lower()
+            if w_low in SPECIALIZED_TERMS or (w.isupper() and len(w) >= 3 and w not in {"FOR", "THE", "AND", "NOT"}):
+                distinctive_subject_words.append(w_low)
 
         filtered_raw = []
+        requested_terms = _term_pairs(query)
         for doc, score in raw_results:
             title = doc.metadata.get("title", "")
             adj_score = score
 
-            # 무관 질문(off-topic)은 어휘 가산점을 절대 부여하지 않으며 높은 임계값을 요구
-            if is_off_topic:
-                if score >= 0.40:
-                    filtered_raw.append((doc, score))
-                continue
+            if requested_terms and doc.metadata.get("source_type", "notice") == "notice":
+                notice_terms = _term_pairs(title)
+                if notice_terms and requested_terms.isdisjoint(notice_terms):
+                    continue
 
             # 단축 쿼리("TOPCIT 평가" 등) 고유 전문 약어 구제 (원시 점수 0.15 이상일 때만 적용)
             if distinctive_subject_words and score >= 0.15:
@@ -525,23 +599,43 @@ class CampusRAG:
             if adj_score >= threshold:
                 filtered_raw.append((doc, adj_score))
 
+        if "정정 전" not in query and "정정전" not in query:
+            revisions = {}
+            for doc, _ in filtered_raw:
+                if doc.metadata.get("source_type", "notice") == "notice":
+                    name, corrected = _notice_revision(doc.metadata.get("title", ""))
+                    if corrected:
+                        revisions[name] = max(revisions.get(name, ""), doc.metadata.get("date", ""))
+            filtered_raw = [(doc, score) for doc, score in filtered_raw
+                            if doc.metadata.get("source_type", "notice") != "notice"
+                            or revisions.get(_notice_revision(doc.metadata.get("title", ""))[0], "")
+                            <= doc.metadata.get("date", "")]
+
         if not filtered_raw:
             logger.info("원시 관련성 임계값(%.3f) 이상의 유효 후보 문서가 없습니다.", threshold)
             return []
 
         # A current annual calendar cannot establish a different year's dates.
         # Check the actual chunk body, excluding its repeated publication header.
-        if entities.get("year") and re.search(r"학사일정|학사달력", query):
+        compact_query = re.sub(r"\s+", "", query)
+        if entities.get("year") and re.search(r"학사일정|학사달력", compact_query):
             requested_date = re.compile(rf"(?<!\d){entities['year']}\s*[.\-/]\s*\d{{1,2}}\s*[.\-/]\s*\d{{1,2}}")
             filtered_raw = [(doc, score) for doc, score in filtered_raw
-                            if not (doc.metadata.get("source_type") == "guidance"
-                                    and "학사일정" in re.sub(r"\s+", "", doc.metadata.get("title", "")))
-                            or requested_date.search(_chunk_body(doc))]
+                            if requested_date.search(_chunk_body(doc))
+                            or (doc.metadata.get("source_type", "notice") == "notice"
+                                and entities["year"] in doc.metadata.get("title", ""))]
             if not filtered_raw:
                 return []
 
-        official_subject = None if is_off_topic else _official_subject(query, filtered_raw)
-        subject_terms = [] if is_off_topic else _query_subject_terms(query)
+        official_subject = _official_subject(query, filtered_raw)
+        guide_hits = [(doc, score) for doc, score in filtered_raw
+                      if doc.metadata.get("source_type") == "guidance"
+                      and doc.metadata.get("title") in guide_titles]
+        if guide_hits and not official_subject:
+            filtered_raw = guide_hits
+        else:
+            guide_hits = []
+        subject_terms = _query_subject_terms(query)
 
         # 최신 공지 기준일 탐색 (임계값을 통과한 후보군 대상)
         max_dt = None
@@ -668,8 +762,9 @@ class CampusRAG:
                     final_score += 0.08 * len(matched_title)
 
             # 핵심 키워드 일치 보정
-            if "국가장학금" in query:
-                if "국가장학금" in title:
+            if "국가장학금" in compact_query:
+                program_title = title.removeprefix("국가장학금").strip()
+                if "국가장학금" in program_title or title == "국가장학금":
                     final_score += 0.18
                 elif "국가장학금" in content:
                     final_score += 0.10
@@ -689,6 +784,13 @@ class CampusRAG:
 
         # 리랭킹 점수 기준 내림차순 정렬
         scored_candidates.sort(key=lambda x: x[1], reverse=True)
+        if guide_hits:
+            first_chunks, other_chunks, seen_titles = [], [], set()
+            for candidate in scored_candidates:
+                title = candidate[0].metadata.get("title")
+                (other_chunks if title in seen_titles else first_chunks).append(candidate)
+                seen_titles.add(title)
+            scored_candidates = first_chunks + other_chunks
 
         # 4. 청크 선택 및 사실 혼입(context bleeding) 방지
         # 상위 1위 문서가 높은 관련도(top_score >= 0.70)를 가진 주 공지인 경우,
@@ -709,7 +811,7 @@ class CampusRAG:
             url = doc.metadata.get("url") or doc.metadata.get("parent_url") or doc.metadata.get("id")
 
             # 서로 다른 공지 간 사실 혼입 방지 필터
-            if threshold >= 0 and url != top_url and len(context_docs) >= 1:
+            if not guide_hits and threshold >= 0 and url != top_url and len(context_docs) >= 1:
                 if top_score >= 0.70 and (top_score - cand_score > 0.12):
                     logger.info(
                         "타 공지 노이즈 청크 제외: top_score=%.3f, cand_score=%.3f, doc=%s",
@@ -727,7 +829,7 @@ class CampusRAG:
 
         return context_docs
 
-    def query(self, question: str, top_k: int | None = None) -> dict:
+    def query(self, question: str, top_k: int | None = None, *, include_retrieved: bool = False) -> dict:
         """
         RAG 전체 파이프라인을 수행한다.
         유사도 검색(무관 질문 임계값 차단) → 리랭킹 → LLM 생성 → 요약 응답 + 고유 출처 카드 반환.
@@ -742,12 +844,20 @@ class CampusRAG:
         }.get(provider, "unknown")
 
         # 유사도 검색 및 리랭킹
-        context_docs = self.retrieve(question, top_k=top_k)
+        requires_lookup = _requires_live_lookup(question)
+        context_docs = [] if requires_lookup else self.retrieve(question, top_k=top_k)
+        evidence = {}
+        if include_retrieved:
+            evidence["retrieved"] = [
+                {"content": doc.page_content, "metadata": doc.metadata.copy()}
+                for doc in context_docs
+            ]
 
         # 원시 관련성 임계값(0.25)을 통과한 공지가 없으면 LLM 호출 없이 즉시 유보
         if not context_docs:
             return {
-                "answer": "관련 공지를 찾지 못했습니다.",
+                "answer": ("개인 계정 정보나 실시간 상태는 조회할 수 없습니다."
+                           if requires_lookup else "관련 공지를 찾지 못했습니다."),
                 "sources": [],
                 "status": "no_context",
                 "api_called": False,
@@ -755,6 +865,7 @@ class CampusRAG:
                 "model": model_name,
                 "latency_seconds": 0.0,
                 "error": None,
+                **evidence,
             }
 
         if self.llm is None:
@@ -795,12 +906,21 @@ class CampusRAG:
                 "answer": answer,
                 "sources": [],
                 **meta,
+                **evidence,
             }
+
+        # Use the cited chunk numbers when the model supplies them.
+        source_docs = context_docs
+        citations = re.search(r"\n\[근거\s+([\d, ]+)\]\s*$", clean_ans)
+        if citations and meta["status"] == "success":
+            indexes = {int(index) for index in re.findall(r"\d+", citations[1])}
+            source_docs = [doc for index, doc in enumerate(context_docs, 1) if index in indexes]
+            answer = clean_ans[:citations.start()].rstrip()
 
         # 출처 카드는 URL 기준으로 중복 제거하여 사용자에게 제공
         seen_urls = set()
         deduped_sources = []
-        for doc in context_docs:
+        for doc in source_docs:
             url = doc.metadata.get("url") or doc.metadata.get("parent_url")
             if url and url not in seen_urls:
                 seen_urls.add(url)
@@ -819,6 +939,7 @@ class CampusRAG:
             "answer": answer,
             "sources": deduped_sources,
             **meta,
+            **evidence,
         }
 
 

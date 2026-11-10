@@ -184,3 +184,54 @@ def test_dining_menu_change_notice_retains_requested_notice_policy():
                    "등록된 주간 식단 대신 변경된 메뉴를 제공합니다.", date="2029-10-07")
     docs = retrieval([(guide, 0.61), (notice, 0.52)], "2029년 천원의 아침밥 식단 변경 공지 메뉴는?")
     assert docs[0].metadata["parent_id"] == "dining-change"
+
+
+def test_term_and_corrected_notice_exclude_stale_sources():
+    body = "지원하려는 학생은 신청 기간에 종합정보시스템에서 신청하고 필요서류를 제출해야 합니다."
+    corrected = chunk("corrected", "장학금 (정정) 2031년 2학기 우수장학 선발기준", body)
+    original = chunk("original", "장학금 2031년 2학기 우수장학 선발기준", body, date="2031-09-01")
+    spring = chunk("spring", "장학금 2031년 1학기 우수장학 선발기준", body)
+    docs = retrieval([(spring, 0.85), (original, 0.70), (corrected, 0.58)],
+                     "2031년 2학기 우수장학 선발기준 알려줘")
+    assert [doc.metadata["parent_id"] for doc in docs] == ["corrected"]
+
+
+def test_compound_policy_query_keeps_one_chunk_per_matched_guide():
+    leave = chunk("leave", "휴학", "일반휴학은 평생지도교수 상담과 승인이 필요합니다.", source_type="guidance")
+    extension = chunk("leave", "휴학", "일반휴학은 통산 6학기 가능합니다.", source_type="guidance", index=1)
+    returning = chunk("return", "복학", "복학 신청 후 등록과 수강신청을 해야 합니다.", source_type="guidance")
+    docs = retrieval([(leave, 0.8), (extension, 0.7), (returning, 0.4)],
+                     "일반휴학하려면 교수 상담이 필요해? 복학 신청하면 등록도 해야 돼?", top_k=2)
+    assert [doc.metadata["parent_id"] for doc in docs] == ["leave", "return"]
+
+
+def test_query_keeps_full_trace_but_links_only_cited_chunks(monkeypatch):
+    rag = CampusRAG.__new__(CampusRAG)
+    rag.llm = object()
+    wrong = chunk("wrong", "관련 없는 공지", "일부 청크", index=0)
+    cited = chunk("correct", "수강신청", "종합정보시스템 > 교무 > 수강신청", source_type="guidance")
+    retrieve = MagicMock(return_value=[wrong, cited])
+    monkeypatch.setattr(rag, "retrieve", retrieve)
+    monkeypatch.setattr(rag, "_invoke_llm_with_error_handling",
+                        lambda _: ("교무 메뉴에서 신청하세요.\n[근거 2]", {"status": "success"}))
+    result = rag.query("수강신청 어디서 해?", include_retrieved=True)
+    retrieve.assert_called_once()
+    assert result["answer"] == "교무 메뉴에서 신청하세요."
+    assert [item["url"] for item in result["sources"]] == [cited.metadata["url"]]
+    assert [item["metadata"]["parent_id"] for item in result["retrieved"]] == ["wrong", "correct"]
+
+
+@pytest.mark.parametrize("question", [
+    "장바구니 과목 지금 잔여석 몇 개야?",
+    "내 휴학 신청 승인됐어?",
+    "내 성적표 보고 졸업 여부 판정해줘",
+])
+def test_personal_status_never_uses_public_notices_as_evidence(monkeypatch, question):
+    rag = CampusRAG.__new__(CampusRAG)
+    retrieve = MagicMock()
+    monkeypatch.setattr(rag, "retrieve", retrieve)
+    result = rag.query(question, include_retrieved=True)
+    retrieve.assert_not_called()
+    assert result["status"] == "no_context"
+    assert result["sources"] == result["retrieved"] == []
+    assert "조회할 수 없습니다" in result["answer"]

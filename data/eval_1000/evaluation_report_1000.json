@@ -1,0 +1,342 @@
+{
+  "benchmark_metadata": {
+    "total_questions": 1000,
+    "evaluated_questions": 1000,
+    "applicable_retrieval_cases": 850,
+    "abstain_cases": 150,
+    "model_config": {
+      "mode": "retrieve",
+      "collection": "campus_knowledge",
+      "top_k": 5,
+      "provider": "local",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "local_max_tokens": 512,
+      "embedding": "jhgan/ko-sroberta-multitask",
+      "threshold": 0.25,
+      "device": "cuda",
+      "packages": {
+        "chromadb": "1.5.9",
+        "langchain-core": "1.7.6",
+        "sentence-transformers": "6.2.0",
+        "torch": "2.6.0+cu124",
+        "transformers": "5.22.2"
+      }
+    }
+  },
+  "overall_metrics": {
+    "single_top1_accuracy": 82.14,
+    "single_top3_accuracy": 83.14,
+    "single_top5_accuracy": 85.57,
+    "multi_top5_full_hit_accuracy": 16.0,
+    "multi_top5_partial_hit_accuracy": 54.67,
+    "overall_top5_retrieval_accuracy": 73.29
+  },
+  "by_category": {
+    "수강신청": {
+      "total_items": 200,
+      "applicable_items": 170,
+      "abstain_items": 30,
+      "top1_hits": 104,
+      "top3_hits": 109,
+      "top5_hits": 114,
+      "top5_recall_percent": 67.06,
+      "multi_partial_hits": 26
+    },
+    "휴학·복학": {
+      "total_items": 200,
+      "applicable_items": 170,
+      "abstain_items": 30,
+      "top1_hits": 114,
+      "top3_hits": 115,
+      "top5_hits": 117,
+      "top5_recall_percent": 68.82,
+      "multi_partial_hits": 8
+    },
+    "졸업요건": {
+      "total_items": 200,
+      "applicable_items": 170,
+      "abstain_items": 30,
+      "top1_hits": 121,
+      "top3_hits": 143,
+      "top5_hits": 153,
+      "top5_recall_percent": 90.0,
+      "multi_partial_hits": 28
+    },
+    "장학금": {
+      "total_items": 200,
+      "applicable_items": 170,
+      "abstain_items": 30,
+      "top1_hits": 104,
+      "top3_hits": 107,
+      "top5_hits": 107,
+      "top5_recall_percent": 62.94,
+      "multi_partial_hits": 20
+    },
+    "학사일정": {
+      "total_items": 200,
+      "applicable_items": 170,
+      "abstain_items": 30,
+      "top1_hits": 132,
+      "top3_hits": 132,
+      "top5_hits": 132,
+      "top5_recall_percent": 77.65,
+      "multi_partial_hits": 0
+    }
+  },
+  "by_split": {
+    "dev": {
+      "total_items": 800,
+      "applicable_items": 680,
+      "abstain_items": 120,
+      "top1_hits": 455,
+      "top3_hits": 482,
+      "top5_hits": 496,
+      "top5_recall_percent": 72.94
+    },
+    "test": {
+      "total_items": 200,
+      "applicable_items": 170,
+      "abstain_items": 30,
+      "top1_hits": 120,
+      "top3_hits": 124,
+      "top5_hits": 127,
+      "top5_recall_percent": 74.71
+    }
+  },
+  "missed_cases_count": 227,
+  "missed_sample": [
+    {
+      "id": "COURSE-0002",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "학기별 정규 수강신청은 대략 몇 월에 진행돼?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6225/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223881/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223881/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223881/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0013",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "한성대 학점이월제도가 뭐야?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6226/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224491/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223731/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223731/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0016",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "수강포기(철회) 신청은 종합정보시스템 어디서 해?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6227/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0017",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "수강포기 신청은 보통 매학기 언제 진행돼?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6227/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0018",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "수강포기 신청을 한 뒤에 취소할 수 있어?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6227/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0019",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "1학년 학생이 학교에서 일괄 배정해준 교양과목을 수강포기할 수 있어?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6227/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223881/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223881/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/225682/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/225433/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0020",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "수강인원이 몇 명 이하인 강좌는 수강포기 신청을 할 수 없어?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6227/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0023",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "헤이영 캠퍼스 전자출결 앱에서 제공하는 주요 기능에는 뭐가 있어?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6229/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224292/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224292/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224292/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0025",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "초과 학기자 중 휴학생도 계절학기 수강할 수 있어?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6224/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=9",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=10",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/225433/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/225623/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0027",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "계절학기에서 주간 학생이 야간 과목 교차 수강할 수 있어?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6224/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=16",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=5",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/225623/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=16",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=16"
+      ]
+    },
+    {
+      "id": "COURSE-0029",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "상상더학기를 수강하는 학생은 2학기 등록을 꼭 해야 해?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6223/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223660/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223662/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2148/artclList.do?page=4",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223660/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0030",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "상상더학기 수강 대상에서 제외되는 학생은 누구야?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6223/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/225535/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222519/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223881/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224013/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/222519/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0052",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "수강신청 전 강의시간표 변경 내용은 어디서 확인해야 해?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6225/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223881/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223881/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/223881/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224608/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/225378/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0053",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "15학번 이전 학생이 직전학기에 16학점 이하를 수강했으면 다음 학기에 몇 학점 이월돼?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6226/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224949/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224949/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224588/artclView.do"
+      ]
+    },
+    {
+      "id": "COURSE-0055",
+      "category": "수강신청",
+      "split": "dev",
+      "case_type": "single",
+      "question": "수강포기 기간은 학사공지에 따라 변동될 수 있어?",
+      "expected": [
+        "https://www.hansung.ac.kr/hansung/6227/subview.do"
+      ],
+      "retrieved_top5": [
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do",
+        "https://www.hansung.ac.kr/bbs/hansung/2127/224460/artclView.do"
+      ]
+    }
+  ]
+}
