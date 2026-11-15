@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-11-14T01:29:21.097085+00:00",
+  "checked_at": "2026-11-15T01:06:06.414440+00:00",
   "scope": [
     "교육정보",
     "대학생활",
     "한성소식"
   ],
   "documents": 145,
-  "attempted": 32,
+  "attempted": 165,
   "errors": [],
   "targets": [
     {
@@ -19,8 +19,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "unchanged",
-      "boards": []
+      "collection_status": "not_due"
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6097/subview.do",
@@ -32,8 +31,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "unchanged",
-      "boards": []
+      "collection_status": "not_due"
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6212/subview.do",
@@ -45,7 +43,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6217/subview.do",
@@ -57,7 +56,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6222/subview.do",
@@ -69,7 +69,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6225/subview.do",
@@ -81,7 +82,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://info.hansung.ac.kr/jsp_21/student/kyomu/siganpyo_aui.jsp?viewMode=oc",
@@ -105,7 +107,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6104/subview.do",
@@ -117,7 +120,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6105/subview.do",
@@ -129,7 +133,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6231/subview.do",
@@ -141,7 +146,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6234/subview.do",
@@ -153,7 +159,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6108/subview.do",
@@ -165,7 +172,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6239/subview.do",
@@ -192,7 +200,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6244/subview.do",
@@ -204,7 +213,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6246/subview.do",
@@ -216,7 +226,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6113/subview.do",
@@ -228,7 +239,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6248/subview.do",
@@ -240,7 +252,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6251/subview.do",
@@ -252,7 +265,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6253/subview.do",
@@ -264,7 +278,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6117/subview.do",
@@ -276,7 +291,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6255/subview.do",
@@ -288,7 +304,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6259/subview.do",
@@ -315,7 +332,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6172/subview.do",
@@ -373,7 +391,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://career.hansung.ac.kr/ko/career/eduscholarship",
@@ -411,7 +430,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6788/subview.do",
@@ -423,7 +443,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6789/subview.do",
@@ -435,7 +456,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6796/subview.do",
@@ -447,7 +469,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6791/subview.do",
@@ -474,7 +497,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6270/subview.do",
@@ -486,7 +510,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6128/subview.do",
@@ -498,8 +523,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "unchanged",
-      "boards": []
+      "collection_status": "not_due"
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6129/subview.do",
@@ -511,7 +535,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6130/subview.do",
@@ -523,7 +548,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6272/subview.do",
@@ -535,7 +561,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6132/subview.do",
@@ -547,7 +574,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6279/subview.do",
@@ -559,7 +587,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6134/subview.do",
@@ -571,7 +600,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6332/subview.do",
@@ -583,8 +613,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "unchanged",
-      "boards": []
+      "collection_status": "not_due"
     },
     {
       "url": "https://www.hansung.ac.kr/sites/esg/index.do",
@@ -644,7 +673,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6139/subview.do",
@@ -656,7 +686,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6029/subview.do",
@@ -755,7 +786,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6691/subview.do",
@@ -767,7 +799,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6298/subview.do",
@@ -779,7 +812,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6338/subview.do",
@@ -791,7 +825,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6146/subview.do",
@@ -861,7 +896,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://hansung.ac.kr/sites/humanright/index.do",
@@ -885,7 +921,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6155/subview.do",
@@ -897,7 +934,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6156/subview.do",
@@ -909,7 +947,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://career.hansung.ac.kr/ko/",
@@ -992,7 +1031,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6161/subview.do",
@@ -1004,7 +1044,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6318/subview.do",
@@ -1016,7 +1057,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6321/subview.do",
@@ -1028,7 +1070,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6164/subview.do",
@@ -1040,7 +1083,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6165/subview.do",
@@ -1052,7 +1096,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.jobda.im/",
@@ -1142,7 +1187,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6176/subview.do",
@@ -1169,7 +1215,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6178/subview.do",
@@ -1226,7 +1273,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6183/subview.do",
@@ -1264,7 +1312,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/sites/hspress/index.do",
@@ -1299,7 +1348,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6214/subview.do",
@@ -1312,7 +1362,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6215/subview.do",
@@ -1325,7 +1376,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6216/subview.do",
@@ -1338,7 +1390,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/7436/subview.do",
@@ -1351,7 +1404,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/7635/subview.do",
@@ -1364,7 +1418,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6218/subview.do",
@@ -1377,7 +1432,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6219/subview.do",
@@ -1390,7 +1446,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6220/subview.do",
@@ -1403,7 +1460,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6221/subview.do",
@@ -1416,7 +1474,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6223/subview.do",
@@ -1429,7 +1488,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6224/subview.do",
@@ -1442,7 +1502,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6226/subview.do",
@@ -1455,7 +1516,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6227/subview.do",
@@ -1468,7 +1530,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6228/subview.do",
@@ -1481,7 +1544,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6230/subview.do",
@@ -1494,7 +1558,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6232/subview.do",
@@ -1507,7 +1572,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6233/subview.do",
@@ -1520,7 +1586,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6235/subview.do",
@@ -1533,7 +1600,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6236/subview.do",
@@ -1546,7 +1614,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6237/subview.do",
@@ -1559,7 +1628,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6238/subview.do",
@@ -1572,7 +1642,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6240/subview.do",
@@ -1585,7 +1656,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6241/subview.do",
@@ -1598,7 +1670,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6242/subview.do",
@@ -1611,7 +1684,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6243/subview.do",
@@ -1624,7 +1698,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6245/subview.do",
@@ -1637,7 +1712,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6247/subview.do",
@@ -1650,7 +1726,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6249/subview.do",
@@ -1663,7 +1740,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6250/subview.do",
@@ -1676,7 +1754,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6252/subview.do",
@@ -1689,7 +1768,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6254/subview.do",
@@ -1702,7 +1782,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6641/subview.do",
@@ -1715,7 +1796,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6642/subview.do",
@@ -1728,7 +1810,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6258/subview.do",
@@ -1741,7 +1824,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6261/subview.do",
@@ -1754,7 +1838,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6309/subview.do",
@@ -1863,7 +1948,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6264/subview.do",
@@ -1876,7 +1962,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6265/subview.do",
@@ -1889,7 +1976,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6797/subview.do",
@@ -1902,7 +1990,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6267/subview.do",
@@ -1915,7 +2004,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6268/subview.do",
@@ -1928,7 +2018,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6269/subview.do",
@@ -1941,7 +2032,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6271/subview.do",
@@ -1954,7 +2046,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6273/subview.do",
@@ -1967,7 +2060,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6274/subview.do",
@@ -1980,7 +2074,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6275/subview.do",
@@ -1993,7 +2088,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6276/subview.do",
@@ -2006,7 +2102,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6277/subview.do",
@@ -2019,7 +2116,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6278/subview.do",
@@ -2032,7 +2130,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6280/subview.do",
@@ -2045,7 +2144,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6281/subview.do",
@@ -2058,7 +2158,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6282/subview.do",
@@ -2071,7 +2172,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6283/subview.do",
@@ -2100,8 +2202,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "unchanged",
-      "boards": []
+      "collection_status": "not_due"
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6334/subview.do",
@@ -2114,8 +2215,7 @@
       ],
       "kind": "guidance",
       "interval_days": 1,
-      "collection_status": "unchanged",
-      "boards": []
+      "collection_status": "not_due"
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6285/subview.do",
@@ -2128,7 +2228,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6286/subview.do",
@@ -2141,7 +2242,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6287/subview.do",
@@ -2154,7 +2256,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6289/subview.do",
@@ -2167,7 +2270,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6295/subview.do",
@@ -2180,7 +2284,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6335/subview.do",
@@ -2193,7 +2298,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6336/subview.do",
@@ -2206,7 +2312,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6299/subview.do",
@@ -2219,7 +2326,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6300/subview.do",
@@ -2232,7 +2340,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6301/subview.do",
@@ -2245,7 +2354,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6302/subview.do",
@@ -2258,7 +2368,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/7591/subview.do",
@@ -2271,7 +2382,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6303/subview.do",
@@ -2284,7 +2396,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6339/subview.do",
@@ -2297,7 +2410,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6340/subview.do",
@@ -2310,7 +2424,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6341/subview.do",
@@ -2323,7 +2438,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/7590/subview.do",
@@ -2336,7 +2452,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6342/subview.do",
@@ -2349,7 +2466,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6306/subview.do",
@@ -2362,7 +2480,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6307/subview.do",
@@ -2375,7 +2494,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6317/subview.do",
@@ -2404,7 +2524,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6320/subview.do",
@@ -2417,7 +2538,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6322/subview.do",
@@ -2430,7 +2552,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6323/subview.do",
@@ -2443,7 +2566,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6324/subview.do",
@@ -2456,7 +2580,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6326/subview.do",
@@ -2469,7 +2594,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6188/subview.do",
@@ -2482,7 +2608,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "changed",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6189/subview.do",
@@ -2495,7 +2622,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6327/subview.do",
@@ -2508,7 +2636,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6328/subview.do",
@@ -2521,7 +2650,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6329/subview.do",
@@ -2534,7 +2664,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6330/subview.do",
@@ -2547,7 +2678,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     },
     {
       "url": "https://www.hansung.ac.kr/hansung/6331/subview.do",
@@ -2560,7 +2692,8 @@
       ],
       "kind": "guidance",
       "interval_days": 14,
-      "collection_status": "not_due"
+      "collection_status": "unchanged",
+      "boards": []
     }
   ]
 }
